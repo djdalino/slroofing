@@ -3,7 +3,7 @@ import { ProductConsumer } from "../../stateManagement/context";
 import Service from "./Service";
 function OurServiceList() {
   return (
-    <div className="container-box mb-5">
+    <div className="container-fluid mb-5">
       <div className="our-service-gallery">
         <ProductConsumer>
           {(value) => {
