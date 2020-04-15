@@ -1,38 +1,217 @@
-.App {
-  text-align: center;
+:root {
+  --mainBlue: #0873a9;
+  --mainDark: #000000;
+  --mainWhite: #ffffff;
+  --mainRed: #ff0000;
+  --titleText: "Fjalla One", sans-serif !important;
+  --regularText: "Source Sans Pro" !important;
+}
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: var(--mainDark) !important;
+  overflow-x: hidden;
+}
+.main-dark {
+  color: var(--mainDark);
+}
+.main-blue {
+  color: var(--mainBlue);
+}
+h1 {
+  font-size: 3.5rem;
+  font-weight: 600;
+  font-family: var(--titleText);
+  padding: 15px 0;
+}
+h5 {
+  color: var(--mainBlue);
+  font-family: var(--titleText);
+}
+p {
+  font-family: var(--regularText) !important;
+}
+.my-15 {
+  margin: 4rem auto !important;
+}
+.py-15 {
+  padding: 15px auto !important;
+}
+.mainText {
+  font-family: var(--titleText) !important;
+}
+.secondaryText {
+  font-family: var(--regularText) !important;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container-box {
+  width: 1680px;
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+  align-items: center;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media screen and (max-width: 1737px) {
+  .container-box {
+    width: 1537px !important;
+  }
+  .banner-container {
+    transform: translate(17%);
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+@media screen and (max-width: 1537px) {
+  .container-box {
+    width: 1337px !important;
+  }
+  .banner-container {
+    transform: translate(17%);
+  }
+}
+@media screen and (max-width: 1339px) {
+  .container-box {
+    width: 1137px !important;
+  }
+  .banner-container {
+    transform: translate(17%);
+  }
+}
+
+.nav-link {
+  color: var(--mainDark) !important;
+  font-family: var(--titleText) !important;
+}
+
+.icon-logo img {
+  width: 8rem !important;
+}
+.defaultHero {
+  height: 800px;
+  background: url("./img/sl-roof-banner.jpg") center/cover no-repeat;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  position: relative;
+  margin-top: 6rem;
+}
+.banner {
+  position: absolute;
+  background: url("./img/blue-overlay-banner.png") center/cover no-repeat;
+  height: 800px;
+  width: 100%;
+  transform: translate(-25%);
 }
 
-.App-link {
-  color: #61dafb;
+.banner-container {
+  margin: auto;
+  width: 1680px;
+  position: absolute;
+  z-index: 100;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.box-container {
+  width: 30rem;
+}
+.box-container h1 {
+  color: var(--mainWhite);
+  font-family: var(--titleText);
+  font-size: 6rem;
+}
+.box-container p {
+  margin-top: 3rem;
+  color: var(--mainWhite);
+  font-size: 1.7rem;
+  line-height: 1.7rem;
+  font-family: var(--regularText);
+}
+.text-sm {
+  font-size: 0.9rem !important;
+}
+.btn-danger {
+  background-color: #ff0000 !important;
+  font-size: 1.4rem;
+  font-weight: 500;
+  border-radius: 10px;
+  padding: 1.1rem !important;
+  font-family: var(--regularText);
+}
+.button-container {
+  margin-top: 3rem;
+  transform: translate(10%);
+}
+
+/* Our services */
+.ourServicesFont {
+  font-size: 1.2rem;
+  font-family: var(--titleText);
+}
+.our-service-gallery {
+  margin: auto;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(388px, 1fr));
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+}
+.our-service-gallery img {
+  width: 100%;
+}
+.our-service-gallery div {
+  margin: auto;
+}
+
+/* subsribe */
+
+.subscribe {
+  background: url("./img/subscribe-bg.jpg") center/cover no-repeat;
+
+  width: 100%;
+}
+
+h1.text-center.text-capitalize.mainText {
+  padding-bottom: 0 !important;
+  margin-bottom: 0 !important;
+}
+.subscribe-box {
+  width: 50rem;
+  height: 100%;
+  color: var(--mainWhite);
+  margin: 0 auto;
+  padding: 4rem 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+.subscribe-box h1 {
+  font-family: var(--titleText);
+  padding-bottom: 0 !important;
+}
+.subscribe-box p {
+  font-weight: var(--regularText);
+  padding: 1.3rem 0;
+}
+.subscribe input[type="text"] {
+  font-family: var(--titleText);
+  width: 22rem;
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
+}
+
+.subscribe .subscribe-container button {
+  padding: 6px;
+  margin-top: 8px;
+  background: var(--mainRed);
+  color: var(--mainWhite);
+  font-family: var(--titleText);
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+  border-radius: 0 5px 5px 0;
+}
+
+.subscribe .subscribe-container button:hover {
+  background: #ccc;
 }
