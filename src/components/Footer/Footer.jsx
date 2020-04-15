@@ -1,9 +1,9 @@
 import React from "react";
 
-function Footer(props) {
+function Footer() {
   return (
     <div className="footer-container">
-      <div className="container-box border text-light mt-5">
+      <div className="container-box text-light mt-5">
         <div className="column footer-box">
           <h4 className="text-uppercase mainText">sl roofing & renovations</h4>
           <h4 className="text-uppercase secondaryText">
