@@ -56,6 +56,19 @@ p {
   display: flex;
   align-items: center;
 }
+.btn-danger {
+  background-color: var(--mainRed) !important;
+}
+.btn-book {
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  width: 12rem;
+  border-radius: 1rem;
+  background: var(--mainRed);
+  color: var(--mainWhite);
+  font-family: var(--mainText);
+  border: 1px solid var(--mainRed);
+}
 @media screen and (max-width: 1737px) {
   .container-box {
     width: 1637px !important;
@@ -291,6 +304,13 @@ h1.text-center.text-capitalize.mainText {
 .footer-box {
   height: 200px;
 }
+.footer-box-container {
+  width: 1680px;
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+}
 .footer-container h4 {
   font-size: 1.2rem;
 }
@@ -301,4 +321,8 @@ h1.text-center.text-capitalize.mainText {
 .footer-container input[type="text"] {
   width: 225px;
   margin: 0 !important;
+}
+
+.footer-copy-right {
+  width: 480px;
 }
