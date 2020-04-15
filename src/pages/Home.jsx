@@ -4,6 +4,7 @@ import Banner from "../components/Banner";
 import OurServices from "../components/OurServices/OurServices";
 import Subscribe from "../components/Subscribe";
 import Testimonial from "../components/Testimonial/Testimonial";
+import Footer from "../components/Footer/Footer";
 function Home() {
   return (
     <div>
@@ -29,6 +30,7 @@ function Home() {
       <OurServices />
       <Subscribe />
       <Testimonial />
+      <Footer />
     </div>
   );
 }

@@ -25,7 +25,6 @@ class ProductProvider extends Component {
     });
   };
   render() {
-    console.log(this.state.activeCategory);
     return (
       <ProductContext.Provider
         value={{
