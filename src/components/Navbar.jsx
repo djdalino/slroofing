@@ -43,7 +43,7 @@ function Navbar() {
               </Link>
             </li>
             <li className="nav-item active mx-auto">
-              <Link className="nav-link mx-3" to="/">
+              <Link className="nav-link mx-3" to="/blog">
                 Blog
               </Link>
             </li>

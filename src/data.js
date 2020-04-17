@@ -5,7 +5,7 @@ import Garages from "./img/thumbnail-4.png";
 import Decks from "./img/thumbnail-5.png";
 import OutdoorKitchens from "./img/thumbnail-6.png";
 import RetainingWalls from "./img/thumbnail-7.png";
-import Landscaping from "./img/thumbnail-7.png";
+import Landscaping from "./img/thumbnail-8.png";
 
 export const servicesOffer = [
   {

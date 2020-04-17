@@ -42,6 +42,9 @@ p {
 .py-15 {
   padding: 15px auto !important;
 }
+.margin-top {
+  margin-top: 97px;
+}
 .mainText {
   font-family: var(--titleText) !important;
 }
@@ -68,6 +71,10 @@ p {
   color: var(--mainWhite);
   font-family: var(--mainText);
   border: 1px solid var(--mainRed);
+}
+
+.navbar-logo {
+  margin-right: 0 !important;
 }
 @media screen and (max-width: 1737px) {
   .container-box {
@@ -167,7 +174,19 @@ p {
 }
 .defaultHero {
   height: 800px;
+  width: 100%;
   background: url("./img/sl-roof-banner.jpg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-top: 6rem;
+}
+.ourServicesHero {
+  height: 200px;
+  width: 100%;
+  background-color: var(--mainDark) !important;
+  background: url("./img/thumbnail-1.png") center/contain no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -238,6 +257,10 @@ p {
 }
 .our-service-gallery div {
   margin: auto;
+}
+
+.cursor-pointer {
+  cursor: pointer;
 }
 
 /* subsribe */
