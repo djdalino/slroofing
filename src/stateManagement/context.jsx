@@ -7,18 +7,22 @@ class ProductProvider extends Component {
     services: [],
     posts: [],
     activeCategory: "all",
+    isDark: true
   };
   componentDidMount() {
     this.setService();
     this.getPost();
   }
-
+  //handle change color
+  handleChangeColor = () => {
+    this.setState({ isDark: !this.state.isDark });
+  };
   //BLOG
   getPost = async () => {
     const res = await axios.get("http://localhost:5000/posts/");
     let tempPosts = [];
 
-    res.data.forEach((item) => {
+    res.data.forEach(item => {
       const singleItem = { ...item };
       tempPosts = [...tempPosts, singleItem];
     });
@@ -27,7 +31,7 @@ class ProductProvider extends Component {
     });
   };
 
-  getDate = (dateString) => {
+  getDate = dateString => {
     const month = [
       "January",
       "February",
@@ -40,25 +44,25 @@ class ProductProvider extends Component {
       "September",
       "October",
       "November",
-      "December",
+      "December"
     ];
     const date = new Date(dateString);
 
     return `${month[date.getMonth()]} ${date.getDate()}, ${date.getFullYear()}`;
   };
 
-  handleSinglePost = (id) => {
+  handleSinglePost = id => {
     window.location.pathname = `/blog/${id}`;
   };
 
   // END BLOG
-  handleChange = (category) => {
+  handleChange = category => {
     this.setState({ activeCategory: category });
   };
 
   setService = () => {
     let tempServices = [];
-    servicesOffer.forEach((item) => {
+    servicesOffer.forEach(item => {
       const singleItem = { ...item };
       tempServices = [...tempServices, singleItem];
     });
@@ -75,6 +79,7 @@ class ProductProvider extends Component {
           getDate: this.getDate,
           handleSinglePost: this.handleSinglePost,
           handleGetPost: this.handleGetPost,
+          handleChangeColor: this.handleChangeColor
         }}
       >
         {this.props.children}

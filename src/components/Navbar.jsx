@@ -1,16 +1,18 @@
 import React from "react";
-import logo from "../img/LOGO.jpg";
+import logo from "../img/slroofing-logo.png";
 import { Link } from "react-router-dom";
 function Navbar() {
   return (
-    <nav className="navbar fixed-top navbar-expand-xl navbar-light bg-light px-sm-5 ">
+    <nav className="navbar fixed-top navbar-expand-xl navbar-light bg-color-light px-sm-5 ">
       <div className="container-fluid">
         <Link to="/" className="navbar-brand icon-logo">
           <img src={logo} alt="" />
-          712-898-0211-424-SL-ROOFS
+        </Link>
+        <Link to="/" className="phone-number">
+          402-414-4000
         </Link>
         <button
-          className="navbar-toggler"
+          className="navbar-toggler rad"
           type="button"
           data-toggle="collapse"
           data-target="#navbarSupportedContent"
@@ -28,17 +30,12 @@ function Navbar() {
               </Link>
             </li>
             <li className="nav-item active mx-auto">
-              <Link className="nav-link mx-3" to="/">
+              <Link className="nav-link mx-3" to="/about">
                 About
               </Link>
             </li>
             <li className="nav-item active mx-auto">
-              <Link className="nav-link mx-3" to="/">
-                Contact Us
-              </Link>
-            </li>
-            <li className="nav-item active mx-auto">
-              <Link className="nav-link mx-3" to="/">
+              <Link className="nav-link mx-3" to="/services">
                 Services
               </Link>
             </li>
@@ -48,7 +45,14 @@ function Navbar() {
               </Link>
             </li>
             <li className="nav-item active mx-auto">
-              <button className="btn-book text-uppercase mx-3">book now</button>
+              <Link className="nav-link mx-3" to="/contact-us">
+                Contact Us
+              </Link>
+            </li>
+            <li className="nav-item active mx-auto">
+              <button className="btn-book text-uppercase mx-3 rad">
+                book now
+              </button>
             </li>
           </ul>
         </div>
