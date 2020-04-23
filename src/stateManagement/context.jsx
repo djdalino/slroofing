@@ -11,18 +11,23 @@ class ProductProvider extends Component {
     blogPost: [],
     categoryList: [],
     activeCategory: "all",
+<<<<<<< HEAD
     title: "",
     article: "",
     selected: [],
     blogImage: null,
     email: "",
     password: "",
+=======
+    isDark: true
+>>>>>>> 39e76b2fa4bbc5fe8b90e148a001e729ae090e96
   };
   componentDidMount() {
     this.setService();
     this.getPost();
     this.getCategory();
   }
+<<<<<<< HEAD
 
   //LOGIN
   login = (user) => {
@@ -106,6 +111,12 @@ class ProductProvider extends Component {
     });
   };
 
+=======
+  //handle change color
+  handleChangeColor = () => {
+    this.setState({ isDark: !this.state.isDark });
+  };
+>>>>>>> 39e76b2fa4bbc5fe8b90e148a001e729ae090e96
   //BLOG
   getBlogitem = (id) => {
     const blog = this.state.posts.find((item) => item._id === id);
@@ -148,7 +159,7 @@ class ProductProvider extends Component {
     const res = await axios.get("http://localhost:5000/posts/");
     let tempPosts = [];
 
-    res.data.forEach((item) => {
+    res.data.forEach(item => {
       const singleItem = { ...item };
       tempPosts = [...tempPosts, singleItem];
     });
@@ -157,7 +168,7 @@ class ProductProvider extends Component {
     });
   };
 
-  getDate = (dateString) => {
+  getDate = dateString => {
     const month = [
       "January",
       "February",
@@ -170,21 +181,28 @@ class ProductProvider extends Component {
       "September",
       "October",
       "November",
-      "December",
+      "December"
     ];
     const date = new Date(dateString);
 
     return `${month[date.getMonth()]} ${date.getDate()}, ${date.getFullYear()}`;
   };
 
+<<<<<<< HEAD
+=======
+  handleSinglePost = id => {
+    window.location.pathname = `/blog/${id}`;
+  };
+
+>>>>>>> 39e76b2fa4bbc5fe8b90e148a001e729ae090e96
   // END BLOG
-  handleChange = (category) => {
+  handleChange = category => {
     this.setState({ activeCategory: category });
   };
 
   setService = () => {
     let tempServices = [];
-    servicesOffer.forEach((item) => {
+    servicesOffer.forEach(item => {
       const singleItem = { ...item };
       tempServices = [...tempServices, singleItem];
     });
@@ -203,8 +221,14 @@ class ProductProvider extends Component {
           handleSubmitPost: this.handleSubmitPost,
           handleChange: this.handleChange,
           getDate: this.getDate,
+<<<<<<< HEAD
           handleBlogView: this.handleBlogView,
           onSubmit: this.onSubmit,
+=======
+          handleSinglePost: this.handleSinglePost,
+          handleGetPost: this.handleGetPost,
+          handleChangeColor: this.handleChangeColor
+>>>>>>> 39e76b2fa4bbc5fe8b90e148a001e729ae090e96
         }}
       >
         {this.props.children}
