@@ -21,17 +21,16 @@ class Blog extends Component {
         </Hero>
         <div className="my-5 our-blog-gallery">
           <ProductConsumer>
-            {(value) => {
+            {value => {
               const { posts } = value;
               if (posts.length === 0)
                 return <h1 className="text-center">No Record</h1>;
-              return posts.map((post) => {
+              return posts.map(post => {
                 return <BlogList key={post._id} post={post} value={value} />;
               });
             }}
           </ProductConsumer>
         </div>
-        <Footer />
       </React.Fragment>
     );
   }

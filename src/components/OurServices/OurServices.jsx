@@ -8,22 +8,22 @@ export default class OurServices extends React.Component {
       <React.Fragment>
         <div className="my-15">
           <div className="container mx-15">
-            <div className="text-center d-none d-lg-block mb-5 services-mb">
+            <div className="text-center d-lg-block mb-5 services-mb">
               <h5 className="text-uppercase">what we can do</h5>
               <h1 className="text-uppercase">our services</h1>
               <div className="row">
                 <ProductConsumer>
-                  {(value) => {
+                  {value => {
                     const { services } = value;
                     const arrayCategory = ["all"];
-                    services.forEach((item) => {
-                      item.category.forEach((category) => {
+                    services.forEach(item => {
+                      item.category.forEach(category => {
                         if (arrayCategory.indexOf(category) < 0) {
                           arrayCategory.push(category);
                         }
                       });
                     });
-                    return arrayCategory.map((category) => {
+                    return arrayCategory.map(category => {
                       return (
                         <OurServiceColumn
                           key={category}
