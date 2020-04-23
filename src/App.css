@@ -955,6 +955,7 @@ main {
     right: 20px;
     top: 0px;
   }
+
   p.text-capitalize.text-center {
     width: 100%;
   }
@@ -970,6 +971,7 @@ main {
     top: 52%;
   }
 }
+/**/
 @media screen and (max-width: 696px) {
   .sbook-now,
   .slearn-more {
