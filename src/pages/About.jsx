@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import logo from "../img/LOGO.jpg";
 import { ProductConsumer } from "../stateManagement/context";
 import AboutSLroofing from "../components/About/AboutSLroofing";
 import AboutBanner from "../components/About/AboutBanner";
+import Findmap from "../components/Map";
 export default class About extends Component {
   render() {
     return (
@@ -22,6 +22,7 @@ export default class About extends Component {
         </ProductConsumer>
         <AboutBanner />
         <AboutSLroofing />
+        <Findmap />
       </div>
     );
   }

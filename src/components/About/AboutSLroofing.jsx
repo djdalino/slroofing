@@ -1,4 +1,7 @@
 import React, { Component } from "react";
+import Owner from "../../img/slroofing-owners.png";
+import Covered from "../../img/covered.jpg";
+import Testimonial from "../../components/Testimonial/Testimonial";
 
 export default class AboutSLroofing extends Component {
   render() {
@@ -57,7 +60,36 @@ export default class AboutSLroofing extends Component {
               voluptas nulla pariatur
             </p>
           </div>
-          <div className="owner-image"></div>
+          <div className="owner-image">
+            <img src={Owner} alt="" />
+          </div>
+        </div>
+        <Testimonial />
+        <div className="got-you-covered">
+          <div className="left-cov">
+            <img src={Covered} alt="" />
+          </div>
+          <div className="about-description">
+            <h5>We've got you covered!</h5>
+            <h3>Roofing Contractors</h3>
+            <p>
+              {" "}
+              SL ROOFING &amp; RENOVATIONS helps our clients create ideas by
+              adding color and definition to make their home or business shine.
+              Making detailed decisions on design while coordinating color
+              schemes and combining creative concepts will define your home or
+              businesses unique style by showing off its beauty and charm while
+              incorporating your personality. We will help guide you by choosing
+              the right products for your projects overall durability,
+              longevity, and appearance saving you both time and money. There
+              are are many options to choose from these days to help create the
+              perfect combination for your home or businesses inner and outter
+              appearance.
+            </p>
+            <button className="btn-book text-uppercase mx-3 rad">
+              book an appointment
+            </button>
+          </div>
         </div>
       </div>
     );
