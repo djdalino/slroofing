@@ -211,6 +211,7 @@ class ProductProvider extends Component {
     });
   };
   render() {
+    console.log(services)
     return (
       <ProductContext.Provider
         value={{
