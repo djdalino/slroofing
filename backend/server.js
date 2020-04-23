@@ -19,14 +19,17 @@ app.listen(PORT, () => {
 
 // set up routes
 const post = require("./routes/postRoutes");
+const postCategory = require("./routes/postCategoryRoute");
+const userRoute = require("./routes/userRoutes");
 app.use("/posts", post);
-
+app.use("/postCategory", postCategory);
+app.use("/api/user", userRoute);
 // set up db connection
 const MONGODB_URI =
   "mongodb+srv://djdalino:TpW5Z6aYjCENviOt@cluster3-hngry.mongodb.net/test?retryWrites=true&w=majority";
 mongoose.connect(
   MONGODB_URI,
-  { useNewUrlParser: true, useUnifiedTopology: true },
+  { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true },
   (err) => {
     if (err) return console.error(err);
     console.log("connected to the database!");

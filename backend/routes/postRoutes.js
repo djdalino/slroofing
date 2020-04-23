@@ -39,11 +39,11 @@ router.get("/:id", async (req, res) => {
   res.json(posts);
 });
 router.post("/", upload.single("blogImage"), async (req, res) => {
-  const { title, article, createdAt } = req.body;
-  const url = req.protocol + "://" + req.get("host");
+  const { title, article, createdAt, category } = req.body;
 
   const newPost = new Post({
     title,
+    category,
     article,
     createdAt,
     blogImage: req.file.path,
