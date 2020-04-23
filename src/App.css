@@ -60,11 +60,7 @@ a.sbook-now {
 
 a.slearn-more:hover {
   text-decoration: none !important;
-<<<<<<< HEAD
   color: #ff0000 !important;
-=======
-  color: #ff0000;
->>>>>>> 39e76b2fa4bbc5fe8b90e148a001e729ae090e96
   transition: all 0.5s linear;
 }
 
@@ -569,7 +565,6 @@ h4.secondaryText {
   margin-top: 70px;
 }
 
-<<<<<<< HEAD
 /*------------LOGIN------------*/
 
 .login-container {
@@ -592,8 +587,6 @@ main {
 
 /*------------/LOGIN/-----------*/
 
-=======
->>>>>>> 39e76b2fa4bbc5fe8b90e148a001e729ae090e96
 @media screen and (max-width: 1680px) {
   .banner-container {
     transform: translate(25%);
@@ -765,11 +758,7 @@ main {
     display: block;
     margin: auto !important;
     width: 80%;
-<<<<<<< HEAD
     padding-bottom: 10px !important;
-=======
-    paddin-bottom: 10px !important;
->>>>>>> 39e76b2fa4bbc5fe8b90e148a001e729ae090e96
   }
   .col.footer-copy-right.text-light {
     margin: auto;

@@ -11,7 +11,7 @@ export default class OurServices extends React.Component {
             <div className="text-center d-none d-lg-block mb-5 services-mb">
               <h5 className="text-uppercase">what we can do</h5>
               <h1 className="text-uppercase">our services</h1>
-              {/* <div className="row">
+              <div className="row">
                 <ProductConsumer>
                   {(value) => {
                     const { services } = value;
@@ -34,7 +34,7 @@ export default class OurServices extends React.Component {
                     });
                   }}
                 </ProductConsumer>
-              </div> */}
+              </div>
             </div>
           </div>
 
