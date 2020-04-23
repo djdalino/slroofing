@@ -8,7 +8,7 @@ class Admin extends Component {
     } else {
       return (
         <ProductConsumer>
-          {(value) => {
+          {value => {
             const { onSubmit, email, password, handleInputChange } = value;
 
             return (
@@ -19,7 +19,7 @@ class Admin extends Component {
                   </h2>
                   <form noValidate onSubmit={onSubmit}>
                     <div className="form-group">
-                      <label for="exampleInputEmail1">Email address</label>
+                      <label htmlFor="exampleInputEmail1">Email address</label>
                       <input
                         type="email"
                         name="email"
@@ -34,7 +34,7 @@ class Admin extends Component {
                       </small>
                     </div>
                     <div className="form-group">
-                      <label for="exampleInputPassword1">Password</label>
+                      <label htmlFor="exampleInputPassword1">Password</label>
                       <input
                         type="password"
                         name="password"
@@ -50,7 +50,10 @@ class Admin extends Component {
                         className="form-check-input"
                         id="exampleCheck1"
                       />
-                      <label className="form-check-label" for="exampleCheck1">
+                      <label
+                        className="form-check-label"
+                        htmlFor="exampleCheck1"
+                      >
                         Check me out
                       </label>
                     </div>

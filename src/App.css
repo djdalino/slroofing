@@ -197,7 +197,7 @@ p {
 }
 
 .container-box {
-  width: 1680px;
+  max-width: 1680px;
   margin-right: auto;
   margin-left: auto;
   display: flex;
@@ -322,6 +322,10 @@ p {
   height: 629px;
   width: 100%;
   transform: translate(-25%);
+}
+
+.banner-container {
+  width: 82%;
 }
 
 .banner-container {
@@ -455,6 +459,14 @@ div#carouselExampleIndicators {
 .row {
   margin: 40px auto;
 }
+
+.banner-container {
+  width: 82% !important;
+}
+
+.footer-box-container {
+  width: 100%;
+}
 /* --------------------------------footer --------------------------------*/
 
 .footer-container {
@@ -468,7 +480,7 @@ div#carouselExampleIndicators {
 }
 
 .footer-box-container {
-  width: 1680px;
+  max-width: 1680px;
   margin-right: auto;
   margin-left: auto;
   display: flex;
@@ -550,12 +562,6 @@ h4.secondaryText {
   border-radius: 0 5px 5px 0;
 }
 
-.column.footer-box {
-  margin: auto;
-  display: block;
-  width: 245px !important;
-}
-
 .footer-copy-right {
   width: 450px;
   text-align: center;
@@ -563,6 +569,13 @@ h4.secondaryText {
   margin: auto;
   position: initial;
   margin-top: 70px;
+}
+
+.column.footer-box {
+  margin: auto;
+  display: block;
+  width: 245px !important;
+  margin: 0 50px;
 }
 
 /*------------LOGIN------------*/
@@ -587,7 +600,7 @@ main {
 
 /*------------/LOGIN/-----------*/
 
-@media screen and (max-width: 1680px) {
+@media screen and (max-width: 1400px) {
   .banner-container {
     transform: translate(25%);
   }
@@ -873,6 +886,11 @@ main {
   a.slearn-more:hover {
     color: #ffffff !important;
     background: #2978b0;
+  }
+
+  div#navbarSupportedContent {
+    float: right;
+    width: 60% !important;
   }
 }
 

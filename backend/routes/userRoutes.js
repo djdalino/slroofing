@@ -22,7 +22,7 @@ router.post("/register", async (req, res) => {
     first_name: req.body.first_name,
     last_name: req.body.last_name,
     email: req.body.email,
-    password: hashPassword,
+    password: hashPassword
   });
 
   try {
@@ -49,7 +49,7 @@ router.post("/login", async (req, res) => {
       _id: user._id,
       email: user.email,
       first_name: user.first_name,
-      last_name: user.last_name,
+      last_name: user.last_name
     };
 
     const token = jwt.sign(payload, process.env.TOKEN);
