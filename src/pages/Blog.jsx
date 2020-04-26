@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import Navbar from "../components/Navbar";
-import Footer from "../components/Footer/Footer";
 import BlogList from "../components/Blog/BlogList";
 import { ProductConsumer } from "../stateManagement/context";
 import Hero from "../components/Hero";
@@ -9,7 +8,7 @@ class Blog extends Component {
     return (
       <React.Fragment>
         <Navbar />
-        <Hero hero="blogHero">
+        <Hero hero="blogBan banner-tempt">
           <div className="blogBanner">
             <div style={{ marginTop: "7rem " }}>
               <h1 className="text-uppercase text-center">our blog</h1>

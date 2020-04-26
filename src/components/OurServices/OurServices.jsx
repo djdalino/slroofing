@@ -10,7 +10,9 @@ export default class OurServices extends React.Component {
           <div className="container mx-15">
             <div className="text-center d-lg-block mb-5 services-mb">
               <h5 className="text-uppercase">what we can do</h5>
-              <h1 className="text-uppercase">our services</h1>
+              <h2 className="text-center text-capitalize mainText">
+                our services
+              </h2>
               <div className="row">
                 <ProductConsumer>
                   {value => {
