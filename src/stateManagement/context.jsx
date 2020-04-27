@@ -12,6 +12,7 @@ class ProductProvider extends Component {
     categoryList: JSON.parse(localStorage.getItem("categoryList")) || [],
     activeCategory: "all",
     title: "",
+    titleMessage: "",
     article: "",
     selected: [],
     blogCategorySelect: "All",
@@ -83,6 +84,7 @@ class ProductProvider extends Component {
     e.preventDefault();
     const fd = new FormData();
     fd.append("title", this.state.title);
+    fd.append("titleText", this.state.titleMessage);
     fd.append("category", select);
     fd.append("article", this.state.article);
     fd.append("blogImage", this.state.blogImage);

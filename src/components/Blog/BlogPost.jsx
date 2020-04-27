@@ -9,6 +9,7 @@ class BlogPost extends Component {
           {(value) => {
             const {
               title,
+              titleMessage,
               article,
               fileSelectedHandler,
               articleFileSelectedHandler,
@@ -56,6 +57,17 @@ class BlogPost extends Component {
                       id="title"
                       placeholder="Title"
                       value={title}
+                      onChange={handleInputChange}
+                    />
+                  </div>
+                  <div className="form-group">
+                    <label htmlFor="titleMessage">Title Message:</label>
+                    <textarea
+                      name="titleMessage"
+                      className="form-control"
+                      id="titleMessage"
+                      placeholder="Title Message"
+                      value={titleMessage}
                       onChange={handleInputChange}
                     />
                   </div>

@@ -6,7 +6,13 @@ class BlogPostView extends Component {
     return (
       <ProductConsumer>
         {(value) => {
-          var { title, article, blogImage, articleImage } = value.blogPost;
+          var {
+            title,
+            titleText,
+            article,
+            blogImage,
+            articleImage,
+          } = value.blogPost;
           const { categoryList } = value;
 
           const blogReplace = blogImage.replace(/\\/g, "/");
@@ -50,6 +56,7 @@ class BlogPostView extends Component {
               </div>
               <div className="margin-top text-center">
                 <h1>Title: {title}</h1>
+                <p>Title Message: {titleText}</p>
                 <img
                   style={{
                     align: "center",

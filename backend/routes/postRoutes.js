@@ -43,8 +43,6 @@ router.get("/:id", async (req, res) => {
   res.json(posts);
 });
 router.post("/", multiUpload, async (req, res) => {
-  console.log(req.files.blogImage[0].path);
-  console.log(req.files.articleImage[0].path);
   const { title, titleText, article, createdAt, category } = req.body;
 
   const newPost = new Post({
