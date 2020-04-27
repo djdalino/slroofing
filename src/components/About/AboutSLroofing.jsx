@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Owner from "../../img/slroofing-owners.png";
 import Covered from "../../img/covered.jpg";
+import OwnerSecond from "../../img/owner-second.png";
 import Testimonial from "../../components/Testimonial/Testimonial";
 
 export default class AboutSLroofing extends Component {
@@ -67,6 +68,9 @@ export default class AboutSLroofing extends Component {
             </div>
             <div className="owner-image">
               <img src={Owner} alt="" />
+            </div>
+            <div className="owner-image-two">
+              <img src={OwnerSecond} alt="" />
             </div>
           </div>
         </div>
