@@ -25,10 +25,10 @@ class BlogPost extends Component {
               options = [...options, { value: select._id, label: select.name }];
             });
             return (
-              <div className="container mt-5">
+              <div className="container margin-top">
                 <form onSubmit={handleSubmitPost} encType="multipart/form-data">
                   <div className="form-group">
-                    <label htmlFor="blogImage">Choose feature Image:</label>
+                    <label htmlFor="blogImage">Choose featured Image:</label>
                     <input
                       type="file"
                       name="blogImage"

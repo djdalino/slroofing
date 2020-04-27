@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { ProductConsumer } from "../../stateManagement/context";
-
+import { Redirect } from "react-router-dom";
 class BlogPostView extends Component {
   render() {
     return (
@@ -18,6 +18,9 @@ class BlogPostView extends Component {
           const blogReplace = blogImage.replace(/\\/g, "/");
           const blogImg = `http://localhost:5000/${blogReplace}`;
           console.log(blogImg);
+          if (categoryList._id) {
+            return <Redirect to="/blog" />;
+          }
           return (
             <React.Fragment>
               <div

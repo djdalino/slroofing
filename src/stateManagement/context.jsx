@@ -75,13 +75,12 @@ class ProductProvider extends Component {
     console.log(e.target.value);
   };
 
-  handleSubmitPost = (e) => {
+  handleSubmitPost = async (e) => {
     const selected = this.state.selected;
     let select = [];
     for (let i = 0; i < selected.length; i++) {
       select = [...select, selected[i].value];
     }
-    e.preventDefault();
     const fd = new FormData();
     fd.append("title", this.state.title);
     fd.append("titleText", this.state.titleMessage);
@@ -89,12 +88,15 @@ class ProductProvider extends Component {
     fd.append("article", this.state.article);
     fd.append("blogImage", this.state.blogImage);
     fd.append("articleImage", this.state.articleImage);
-    axios
-      .post(`http://localhost:5000/posts/`, fd)
-      .then((res) => {
-        alert("data send successfully");
-      })
-      .catch((err) => console.log(err));
+    try {
+      const data = await axios.post(`http://localhost:5000/posts/`, fd);
+      if (data.status === 200) {
+        return data;
+      }
+    } catch (error) {
+      alert(error);
+    }
+    window.location.href = "/admin";
   };
 
   //CATEGORY

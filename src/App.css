@@ -195,6 +195,9 @@ p {
 .secondaryText {
   font-family: var(--secondaryText) !important;
 }
+.mt-15 {
+  margin-top: 15px !important;
+}
 
 .container-box {
   max-width: 1680px;
