@@ -1,5 +1,5 @@
 :root {
-  --mainBlue: #2978b0;
+  --mainBlue: #2a78ae;
   --mainDark: #000000;
   --secondDark: #222222;
   --mainWhite: #ffffff;
@@ -236,7 +236,7 @@ p.text-uppercase.mainText:hover {
 
 .navbar-logo {
   margin-right: 0 !important;
-  width: 150px;
+  width: 120px;
 }
 
 .nav-link {
@@ -252,14 +252,25 @@ p.text-uppercase.mainText:hover {
   position: fixed;
   top: 0;
   left: 0;
+  right: 0;
   width: 100%;
-  padding: 0.5rem 2rem;
+  padding: 0;
+  padding-bottom: 10px;
   background: var(--mainWhite);
   z-index: 100;
+  margin: auto !important;
 }
 .sl-nav-logo {
-  width: 150px;
+  width: 110px;
+  margin-top: 10px;
 }
+dl,
+ol,
+ul {
+  margin-top: 0;
+  margin-bottom: 0rem;
+}
+
 .sl-nav-header {
   display: flex;
   justify-content: space-between;
@@ -270,7 +281,11 @@ p.text-uppercase.mainText:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 94%;
+  margin: auto;
+  font-family: var(--mainText);
 }
+
 .sl-nav-burger {
   height: 40px;
   width: 40px;
@@ -352,7 +367,7 @@ p.text-uppercase.mainText:hover {
     background: var(--mainWhite);
     position: absolute;
     height: 90vh;
-    top: 95px;
+    top: 69px !important;
     right: 0px;
     display: flex;
     flex-direction: column;
@@ -441,7 +456,7 @@ nav .show-nav {
   align-items: center;
   justify-content: center;
   position: relative;
-  margin-top: 6rem;
+  margin-top: 4rem;
   z-index: -1;
 }
 .ourServicesHero {
@@ -484,7 +499,7 @@ header.banner-tempt {
   align-items: center;
   justify-content: center;
   position: relative;
-  margin-top: 6rem;
+  margin-top: 4rem;
 }
 
 .blogBanner {
@@ -685,6 +700,9 @@ div#carouselExampleIndicators {
 
 .footer-box-container {
   width: 100%;
+}
+.owner-image-two {
+  display: none;
 }
 /* --------------------------------footer --------------------------------*/
 
@@ -912,7 +930,7 @@ h3 {
 }
 
 .about-description {
-  width: 44%;
+  width: 47%;
   display: inline-block;
   padding: 50px 50px;
   margin-top: 10px;
@@ -942,11 +960,19 @@ header.banner-tempt {
   align-items: center;
   justify-content: center;
   position: relative;
-  margin-top: 5rem;
+  margin-top: 4rem;
 }
 
 .button-fixed {
   display: none;
+}
+
+nav.sl-navbar {
+  padding: 0;
+}
+span.contact {
+  color: var(--mainBlue);
+  margin-left: 13px;
 }
 
 /*------------/about us/-----------*/
@@ -1051,7 +1077,7 @@ header.banner-tempt {
     align-items: center;
     justify-content: center;
     position: relative;
-    margin-top: 6rem;
+    margin-top: 4rem !important;
   }
 
   .our-service-gallery div {
@@ -1090,7 +1116,7 @@ header.banner-tempt {
   }
 
   .defaultHero {
-    margin-top: 5rem !important;
+    margin-top: 4rem !important;
   }
 
   .box-container h1 {
@@ -1266,6 +1292,7 @@ header.banner-tempt {
 
   h1.text-uppercase.text-center {
     font-size: 40px;
+    padding: 30px 0px 20px 0;
   }
 
   h3.text-capitalize.text-center {
@@ -1273,6 +1300,7 @@ header.banner-tempt {
     font-size: 25px;
     width: 80%;
     margin: auto;
+    margin-top: 10px;
   }
   .left-cov {
     width: 100%;
@@ -1304,10 +1332,26 @@ header.banner-tempt {
     margin: auto;
     padding: 50px 0;
   }
-  .owner-description {
-    width: 100%;
-    display: block;
-    margin: auto;
+  #root > nav > div > ul > li:nth-child(6) {
+    display: none;
+  }
+  .my-15 {
+    margin: 50px auto !important;
+    width: 90% !important;
+  }
+  .about-description {
+    width: 90%;
+    padding: 50px 0;
+  }
+  h5,
+  h3 {
+    text-align: center;
+  }
+  .container-fluid.mb-5 {
+    padding: 0;
+  }
+  nav.sl-navbar {
+    padding: 10px;
   }
 }
 
@@ -1326,9 +1370,10 @@ header.banner-tempt {
     display: none;
   }
 
-  .hold-services:hover, .hold-services p:hover {
-    color: #2978b0!important;
-}
+  .hold-services:hover,
+  .hold-services p:hover {
+    color: #2978b0 !important;
+  }
 
   p.text-center.mt-3.ourServicesFont {
     position: absolute;
@@ -1373,11 +1418,89 @@ header.banner-tempt {
   p.text-capitalize.text-center {
     margin-top: 0px !important;
   }
+  /*the owner*/
+  .owner-description {
+    width: 100%;
+    display: block;
+    margin: auto;
+  }
+  .owner-image {
+    display: none;
+  }
+
+  .owner-image-two {
+    display: block;
+  }
+  .owner-image-two img {
+    width: 100%;
+    margin-top: 30px;
+  }
+  .owner-description h3 {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .sl-nav-links {
+    padding: 0;
+  }
+  .sl-nav-header {
+    margin-top: 8px;
+  }
+  .sl-nav-links {
+    background: #fffffff2;
+    position: absolute;
+    height: 90vh;
+    top: 95px;
+    right: 0px;
+    text-transform: uppercase;
+    display: block;
+    font-family: var(--mainText);
+    flex-direction: column;
+    justify-content: center;
+    transform: translate(100%);
+  }
+  #root > nav > div > ul > li:nth-child(6) {
+    display: none;
+  }
+  li.active {
+    text-align: center !important;
+  }
+  .sl-nav-links a {
+    display: block;
+    width: max-content;
+    text-decoration: none;
+    color: var(--mainBlack);
+    transition: all 0.3s ease;
+    font-size: 1rem;
+    font-weight: 600;
+    margin: auto;
+    text-align: center;
+    padding-top: 15px;
+  }
 }
 @media screen and (max-width: 1041px) and (min-width: 995px) {
   .sbook-now,
   .slearn-more {
     top: 54%;
+  }
+  #root > nav > div > ul > li:nth-child(6) {
+    display: none;
+  }
+  li.active {
+    text-align: center !important;
+  }
+  .sl-nav-links a {
+    display: block;
+    width: max-content;
+    text-decoration: none;
+    color: var(--mainBlack);
+    transition: all 0.3s ease;
+    font-size: 1rem;
+    font-weight: 600;
+    margin: auto;
+    text-align: center;
+    padding-top: 15px;
   }
 }
 @media screen and (max-width: 800px) {
@@ -1432,6 +1555,49 @@ header.banner-tempt {
     > div:nth-child(3)
     > h4.text-uppercase.mainText {
     margin-top: 60px;
+  }
+  .sl-nav-links {
+    width: 100%;
+    padding: 0;
+  }
+  .sl-nav-links {
+    background: #fffffff2;
+    position: absolute;
+    height: 90vh;
+    top: 95px !important;
+    right: 0px;
+    text-transform: uppercase;
+    display: block;
+    font-family: var(--mainText);
+    flex-direction: column;
+    justify-content: center;
+    transform: translate(100%);
+  }
+  #root > nav > div > ul > li:nth-child(6) {
+    display: none;
+  }
+  li.active {
+    text-align: center !important;
+  }
+  .sl-nav-links a {
+    display: block;
+    width: max-content;
+    text-decoration: none;
+    color: var(--mainBlack);
+    transition: all 0.3s ease;
+    font-size: 1rem;
+    font-weight: 600;
+    margin: auto;
+    text-align: center;
+    padding-top: 15px;
+  }
+  #root
+    > div:nth-child(2)
+    > div:nth-child(3)
+    > div.got-you-covered
+    > div.about-description
+    > button {
+    display: none;
   }
 }
 @media screen and (max-width: 650px) {
@@ -1497,5 +1663,11 @@ header.banner-tempt {
 
   .box-container {
     width: 100%;
+  }
+}
+
+@media screen and (min-height: 415px) {
+  nav > div > ul > li.active {
+    padding: 20px 0;
   }
 }
