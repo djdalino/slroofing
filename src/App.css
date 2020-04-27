@@ -1115,6 +1115,10 @@ header.banner-tempt {
     display: none;
   }
 
+  .hold-services:hover, .hold-services p:hover {
+    color: #2978b0!important;
+}
+
   p.text-center.mt-3.ourServicesFont {
     position: absolute;
     z-index: 10;
