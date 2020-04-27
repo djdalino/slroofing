@@ -1,92 +1,69 @@
 import React, { Component } from "react";
 import { ProductConsumer } from "../../stateManagement/context";
+
 class BlogPostView extends Component {
   render() {
     return (
       <ProductConsumer>
         {(value) => {
-          const { _id, title, article, blogImage } = value.blogPost;
+          var { title, article, blogImage, articleImage } = value.blogPost;
           const { categoryList } = value;
 
+          const blogReplace = blogImage.replace(/\\/g, "/");
+          const blogImg = `http://localhost:5000/${blogReplace}`;
+          console.log(blogImg);
           return (
             <React.Fragment>
               <div
                 style={{
-                  height: "auto",
+                  height: "300px",
                   width: "100%",
-                  border: "1px solid black",
                   marginTop: "6rem",
-                  background: "black",
+                  background: "#1279af99 ",
                 }}
               >
-                <h1 className="text-light text-center">Hello blog post</h1>
-                <div style={{ display: "flex" }}>
-                  <img
-                    style={{
-                      align: "center",
-                      height: "200px",
-                      width: "200px",
-                      margin: "auto",
-                    }}
-                    src={`http://localhost:5000/${blogImage}`}
-                    alt="img"
-                  />
-                </div>
-              </div>
-              <div className="margin-top text-center">
-                <h1>Hello blog post</h1>
-                <h3>{_id}</h3>
                 <h3>
                   {categoryList.map((item) => (
-                    <div key={item._id}>
+                    <div
+                      style={{
+                        position: "absolute",
+                        right: "10%",
+                        top: "300px",
+                        color: "white",
+                      }}
+                      key={item._id}
+                    >
                       <h1>{item.name}</h1>
                     </div>
                   ))}
                 </h3>
-                <h1>{title}</h1>
+                <div style={{ display: "flex", position: "relative" }}>
+                  <div
+                    style={{
+                      background: `url('${blogImg}') center/cover no-repeat`,
+                      width: "100%",
+                      height: "300px",
+                      zIndex: "-1",
+                    }}
+                  ></div>
+                </div>
+              </div>
+              <div className="margin-top text-center">
+                <h1>Title: {title}</h1>
+                <img
+                  style={{
+                    align: "center",
+                    height: "200px",
+                    width: "200px",
+                    margin: "auto",
+                  }}
+                  src={`http://localhost:5000/${articleImage}`}
+                  alt="img"
+                />
                 <p>{article}</p>
               </div>
             </React.Fragment>
           );
-          // console.log(value.blogPost);
-          // return value.blogPost.map((blog) => {
-          //   const { _id, category, title, article, blogImage } = blog;
-          //   console.log(value);
-          //   return (
-          //     <React.Fragment>
-          // <div
-          //   style={{
-          //     height: "auto",
-          //     width: "100%",
-          //     border: "1px solid black",
-          //     marginTop: "6rem",
-          //     background: "black",
-          //   }}
-          //       >
-          //         <h1 className="text-light text-center">Hello blog post</h1>
-          //         <div style={{ display: "flex" }}>
-          //           <img
-          //             style={{
-          //               align: "center",
-          //               height: "200px",
-          //               width: "200px",
-          //               margin: "auto",
-          //             }}
-          //             src={`http://localhost:5000/${blogImage}`}
-          //             alt="img"
-          //           />
-          //         </div>
-          //       </div>
-          //       <div className="margin-top text-center">
-          //         <h1>Hello blog post</h1>
-          //         {/* <h3>{_id}</h3>
-          //   <h3></h3>
-          //   <h1>{title}</h1>
-          //   <p>{article}</p> */}
-          //       </div>
-          //     </React.Fragment>
-          //   );
-          // });
         }}
       </ProductConsumer>
     );

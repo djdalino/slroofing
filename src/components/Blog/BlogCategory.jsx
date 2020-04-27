@@ -1,25 +1,39 @@
-import React, { useState } from "react";
-import MultiSelect from "react-multi-select-component";
+import React, { Component } from "react";
+import { ProductConsumer } from "../../stateManagement/context";
+class BlogCategory extends Component {
+  render() {
+    return (
+      <div className="container-fluid">
+        <ProductConsumer>
+          {(value) => {
+            const {
+              category,
+              handleBlogCategorySelected,
+              blogCategorySelect,
+            } = value;
+            console.log(blogCategorySelect);
+            return (
+              <select
+                className="mx-auto"
+                name="blogCategorySelect"
+                onChange={handleBlogCategorySelected}
+                value={blogCategorySelect}
+              >
+                <option value="All">All</option>
+                {category.map((item, i) => {
+                  return (
+                    <option key={i} value={item._id}>
+                      {item.name}
+                    </option>
+                  );
+                })}
+              </select>
+            );
+          }}
+        </ProductConsumer>
+      </div>
+    );
+  }
+}
 
-const Example = () => {
-  const options = [
-    { label: "Grapes 🍇", value: "grapes" },
-    { label: "Mango 🥭", value: "mango" },
-    { label: "Strawberry 🍓", value: "strawberry" },
-  ];
-
-  const [selected, setSelected] = useState([]);
-
-  return (
-    <div>
-      <MultiSelect
-        options={options}
-        value={selected}
-        onChange={setSelected}
-        labelledBy={"Select"}
-      />
-    </div>
-  );
-};
-
-export default Example;
+export default BlogCategory;

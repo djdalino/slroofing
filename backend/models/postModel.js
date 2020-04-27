@@ -6,10 +6,12 @@ const postSchema = new mongoose.Schema({
     {
       type: Schema.Types.ObjectId,
       ref: "PostCategory",
+      required: true,
     },
   ],
   article: { type: String, required: true },
   blogImage: { type: String, required: true },
+  articleImage: { type: String },
   createdAt: { type: Date, default: Date.now },
 });
 

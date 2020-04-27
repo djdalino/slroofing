@@ -8,13 +8,15 @@ class ProductProvider extends Component {
     posts: [],
     category: [],
     post: [],
-    blogPost: [],
-    categoryList: [],
+    blogPost: JSON.parse(localStorage.getItem("blogPost")) || [],
+    categoryList: JSON.parse(localStorage.getItem("categoryList")) || [],
     activeCategory: "all",
     title: "",
     article: "",
     selected: [],
+    blogCategorySelect: "All",
     blogImage: null,
+    articleImage: null,
     email: "",
     password: "",
   };
@@ -60,8 +62,16 @@ class ProductProvider extends Component {
   fileSelectedHandler = (e) => {
     this.setState({ blogImage: e.target.files[0] });
   };
+  articleFileSelectedHandler = (e) => {
+    this.setState({ articleImage: e.target.files[0] });
+  };
   handleInputChange = (e) => {
     this.setState({ [e.target.name]: e.target.value });
+    console.log(e);
+  };
+  handleBlogCategorySelected = (e) => {
+    this.setState({ blogCategorySelect: e.target.value });
+    console.log(e.target.value);
   };
 
   handleSubmitPost = (e) => {
@@ -70,20 +80,19 @@ class ProductProvider extends Component {
     for (let i = 0; i < selected.length; i++) {
       select = [...select, selected[i].value];
     }
-    console.log(select);
     e.preventDefault();
     const fd = new FormData();
     fd.append("title", this.state.title);
     fd.append("category", select);
     fd.append("article", this.state.article);
     fd.append("blogImage", this.state.blogImage);
-
+    fd.append("articleImage", this.state.articleImage);
     axios
       .post(`http://localhost:5000/posts/`, fd)
       .then((res) => {
-        console.log(res);
+        alert("data send successfully");
       })
-      .catch((err) => alert("Please select only 1 category"));
+      .catch((err) => console.log(err));
   };
 
   //CATEGORY
@@ -103,6 +112,9 @@ class ProductProvider extends Component {
   };
 
   //BLOG
+  blogPostFilter = (id) => {
+    const temptBlog = this.state.posts.map((item) => item._id).filter;
+  };
   getBlogitem = (id) => {
     const blog = this.state.posts.find((item) => item._id === id);
     return blog;
@@ -122,9 +134,17 @@ class ProductProvider extends Component {
       const result = this.state.category.find((item) => item._id === m);
       tempMatch = [...tempMatch, result];
     });
-    this.setState(() => {
-      return { categoryList: tempMatch };
-    });
+    this.setState(
+      () => {
+        return { categoryList: tempMatch };
+      },
+      () => {
+        localStorage.setItem(
+          "categoryList",
+          JSON.stringify(this.state.categoryList)
+        );
+      }
+    );
   };
   handleBlogView = (id) => {
     try {
@@ -132,9 +152,14 @@ class ProductProvider extends Component {
       const category = this.state.category.map((item) => item._id);
       const blogMap = blog.category;
       this.getMatch(blogMap, category);
-      this.setState(() => {
-        return { blogPost: blog };
-      });
+      this.setState(
+        () => {
+          return { blogPost: blog };
+        },
+        () => {
+          localStorage.setItem("blogPost", JSON.stringify(this.state.blogPost));
+        }
+      );
     } catch (error) {
       console.log(error);
     }
@@ -195,9 +220,11 @@ class ProductProvider extends Component {
           ...this.state,
           setSelected: this.setSelected,
           fileSelectedHandler: this.fileSelectedHandler,
+          articleFileSelectedHandler: this.articleFileSelectedHandler,
           handleInputChange: this.handleInputChange,
           handleSubmitPost: this.handleSubmitPost,
           handleChange: this.handleChange,
+          handleBlogCategorySelected: this.handleBlogCategorySelected,
           getDate: this.getDate,
           handleBlogView: this.handleBlogView,
           onSubmit: this.onSubmit,
