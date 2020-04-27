@@ -24,10 +24,14 @@ const fileFilter = (req, file, cb) => {
 const upload = multer({
   storage: storage,
   limits: {
-    fileSize: 1024 * 1024 * 5,
+    fileSize: 1024 * 1024 * 15,
   },
   fileFilter: fileFilter,
 });
+const multiUpload = upload.fields([
+  { name: "blogImage", maxCount: 1 },
+  { name: "articleImage", maxCount: 1 },
+]);
 
 router.get("/", async (req, res) => {
   const posts = await Post.find();
@@ -38,7 +42,9 @@ router.get("/:id", async (req, res) => {
   const posts = await Post.findById(req.params.id);
   res.json(posts);
 });
-router.post("/", upload.single("blogImage"), async (req, res) => {
+router.post("/", multiUpload, async (req, res) => {
+  console.log(req.files.blogImage[0].path);
+  console.log(req.files.articleImage[0].path);
   const { title, article, createdAt, category } = req.body;
 
   const newPost = new Post({
@@ -46,11 +52,12 @@ router.post("/", upload.single("blogImage"), async (req, res) => {
     category,
     article,
     createdAt,
-    blogImage: req.file.path,
+    blogImage: req.files.blogImage[0].path,
+    articleImage: req.files.articleImage[0].path,
   });
   try {
     const savedPost = await newPost.save();
-    res.json(savedPost);
+    console.log(savedPost);
   } catch (err) {
     res.status(400).send(err);
   }

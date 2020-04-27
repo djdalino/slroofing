@@ -11,6 +11,7 @@ class BlogPost extends Component {
               title,
               article,
               fileSelectedHandler,
+              articleFileSelectedHandler,
               handleInputChange,
               handleSubmitPost,
               category,
@@ -24,9 +25,9 @@ class BlogPost extends Component {
             });
             return (
               <div className="container mt-5">
-                <form onSubmit={handleSubmitPost}>
+                <form onSubmit={handleSubmitPost} encType="multipart/form-data">
                   <div className="form-group">
-                    <label htmlFor="blogImage">Pick Image:</label>
+                    <label htmlFor="blogImage">Choose feature Image:</label>
                     <input
                       type="file"
                       name="blogImage"
@@ -58,7 +59,18 @@ class BlogPost extends Component {
                       onChange={handleInputChange}
                     />
                   </div>
-
+                  <div className="form-group">
+                    <label htmlFor="articleImage">
+                      Choose Image for Article:
+                    </label>
+                    <input
+                      type="file"
+                      name="articleImage"
+                      className="form-control-file"
+                      id="articleImage"
+                      onChange={articleFileSelectedHandler}
+                    />
+                  </div>
                   <div className="form-group">
                     <label htmlFor="article">Article</label>
                     <textarea
