@@ -1364,9 +1364,9 @@ span.contact {
 }
 
 @media screen and (max-width: 1200px) {
-#root > nav > div > ul > li:nth-child(6) {
-  display: none;
-}
+  #root > nav > div > ul > li:nth-child(6) {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 1200px) {
