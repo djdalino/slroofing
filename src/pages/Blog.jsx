@@ -51,7 +51,6 @@ class Blog extends Component {
                     <Link
                       key={cat._id}
                       className="h-100 text-center mx-auto our-blog-img-gallery"
-                      // onClick={() => handleSinglePost(_id)}
                       to={`/blog/${cat._id}`}
                       onClick={() => handleBlogView(cat._id)}
                     >

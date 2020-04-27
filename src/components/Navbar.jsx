@@ -1,7 +1,5 @@
 import React from "react";
 import logo from "../img/slroofing-logo.png";
-import { FaAlignRight } from "react-icons/fa";
-import { FaAlignLeft } from "react-icons/fa";
 import { Link } from "react-router-dom";
 class Navbar extends React.Component {
   state = {
@@ -18,7 +16,9 @@ class Navbar extends React.Component {
           <div className="sl-nav-header">
             <Link to="/">
               <img className="sl-nav-logo" src={logo} alt="slroofing-logo" />
+              <span className="text-dark">424-SL-ROOFS</span>
             </Link>
+
             <div className="sl-nav-burger" onClick={() => this.handleToggle()}>
               <div className={this.state.isOpen ? "toggle line1" : "line1"} />
               <div className={this.state.isOpen ? "toggle line2" : "line2"} />

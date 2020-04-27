@@ -11,14 +11,7 @@ function BlogList({ post, value }) {
       onClick={() => handleBlogView(_id)}
     >
       <img src={`http://localhost:5000/${blogImage}`} alt="" />
-      <div
-        style={{
-          width: "100%",
-          padding: "20px",
-          textAlign: "left",
-          marginTop: "200px",
-        }}
-      >
+      <div className="our-blog-text">
         <h2>{title}</h2>
         <p>{getDate(createdAt)}</p>
       </div>
