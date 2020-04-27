@@ -367,7 +367,7 @@ ul {
     background: var(--mainWhite);
     position: absolute;
     height: 90vh;
-    top: 69px !important;
+    top: 93px !important;
     right: 0px;
     display: flex;
     flex-direction: column;
@@ -1332,9 +1332,7 @@ span.contact {
     margin: auto;
     padding: 50px 0;
   }
-  #root > nav > div > ul > li:nth-child(6) {
-    display: none;
-  }
+
   .my-15 {
     margin: 50px auto !important;
     width: 90% !important;
@@ -1353,6 +1351,12 @@ span.contact {
   nav.sl-navbar {
     padding: 10px;
   }
+}
+
+@media screen and (max-width: 1200px) {
+#root > nav > div > ul > li:nth-child(6) {
+  display: none;
+}
 }
 
 @media screen and (max-width: 1200px) {
