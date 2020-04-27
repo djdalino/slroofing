@@ -9,6 +9,7 @@ const postSchema = new mongoose.Schema({
       required: true,
     },
   ],
+  titleText: { type: String, required: true },
   article: { type: String, required: true },
   blogImage: { type: String, required: true },
   articleImage: { type: String },

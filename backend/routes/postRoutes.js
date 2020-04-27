@@ -45,10 +45,11 @@ router.get("/:id", async (req, res) => {
 router.post("/", multiUpload, async (req, res) => {
   console.log(req.files.blogImage[0].path);
   console.log(req.files.articleImage[0].path);
-  const { title, article, createdAt, category } = req.body;
+  const { title, titleText, article, createdAt, category } = req.body;
 
   const newPost = new Post({
     title,
+    titleText,
     category,
     article,
     createdAt,
