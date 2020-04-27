@@ -734,6 +734,10 @@ header.banner-tempt {
   margin-top: 5rem;
 }
 
+.button-fixed {
+  display: none;
+}
+
 /*------------/about us/-----------*/
 
 @media screen and (max-width: 1400px) {
@@ -753,7 +757,7 @@ header.banner-tempt {
     width: 100%;
     margin: auto;
     display: block !important;
-    position: absolute;
+    position: fixed;
   }
 
   span.navbar-toggler-icon {
@@ -1068,13 +1072,78 @@ header.banner-tempt {
   .about-description {
     width: 90%;
     display: block;
-    padding: 50px 0px;
+    /*padding: 50px 0px;*/
     margin-top: 10px;
+    margin: auto;
+  }
+  .the-owner {
+    width: 90%;
+    margin: auto;
+    color: #fff;
+    padding: 50px 0;
+  }
+  .who-we-are {
+    margin: auto;
+    width: 90%;
+    padding: 50px 0;
+    text-align: center;
+  }
+  .findLocation {
+    width: 90%;
+    margin: auto;
+    padding: 50px 0;
+  }
+  .owner-description {
+    width: 100%;
+    display: block;
     margin: auto;
   }
 }
 
 @media screen and (max-width: 1200px) {
+  .button-fixed {
+    position: fixed;
+    z-index: 1000;
+    bottom: 1px;
+    width: 100%;
+    padding: 15px;
+    background: #ffffffba;
+    display: block;
+  }
+
+  .hover-button {
+    display: none;
+  }
+
+  p.text-center.mt-3.ourServicesFont {
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    height: auto;
+    margin: auto !important;
+    color: #ffffff !important;
+    font-size: 1.2rem;
+    background: #0000002b;
+    padding: 11px;
+    text-transform: uppercase;
+    right: 0;
+    left: 0;
+    bottom: 41px;
+  }
+
+  a.slearn-more {
+    display: none;
+  }
+
+  #root > div.footer-container > div.button-fixed > button {
+    background: #2978b0;
+    border: none;
+    width: 90% !important;
+    display: block;
+    margin: auto;
+    padding: 10px;
+    font-size: 1rem !important;
+  }
   .box-container {
     width: 80%;
   }
@@ -1092,6 +1161,9 @@ header.banner-tempt {
 @media screen and (max-width: 800px) {
   .hover-button {
     height: 86% !important;
+  }
+  .button-container {
+    display: none;
   }
 
   .container-box.text-light {
