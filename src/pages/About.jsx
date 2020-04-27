@@ -6,7 +6,7 @@ import Findmap from "../components/Map";
 export default class About extends Component {
   render() {
     return (
-      <div className="my-15">
+      <div>
         <ProductConsumer>
           {value => {
             const { handleChangeColor, isDark } = value;
@@ -14,9 +14,7 @@ export default class About extends Component {
               <h1
                 className={isDark ? "dark-background" : "light-background"}
                 onClick={handleChangeColor}
-              >
-                About
-              </h1>
+              ></h1>
             );
           }}
         </ProductConsumer>

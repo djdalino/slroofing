@@ -50,6 +50,11 @@ function Footer() {
           </p>
         </div>
       </div>
+      <div className="button-fixed">
+        <button className="btn-book text-uppercase mx-3 rad">
+          book an appointment
+        </button>
+      </div>
     </div>
   );
 }

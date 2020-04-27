@@ -120,9 +120,9 @@ function Testimonial() {
       <h5 className="text-center text-uppercase main-blue mainText">
         client testimonial
       </h5>
-      <h1 className="text-center text-capitalize mainText">
+      <h2 className="text-center text-capitalize mainText">
         what our customers say about us
-      </h1>
+      </h2>
       <div
         id="carouselExampleIndicators"
         className="carousel slide"

@@ -455,6 +455,13 @@ nav .show-nav {
   position: relative;
   margin-top: 6rem;
 }
+.blogBan {
+  background: url("./img/our-blog-banner.jpg") center/cover no-repeat;
+}
+
+.aboutBan {
+  background: url("./img/covered.jpg") center/cover no-repeat;
+}
 .blogHero {
   height: 350px;
   width: 100%;
@@ -467,6 +474,19 @@ nav .show-nav {
   position: relative;
   margin-top: 6rem;
 }
+
+header.banner-tempt {
+  height: 350px;
+  width: 100%;
+  background-color: var(--mainDark) !important;
+  background-position-y: 47% !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-top: 6rem;
+}
+
 .blogBanner {
   width: 100%;
   height: 100%;
@@ -545,7 +565,7 @@ p {
 .box-container p {
   margin: 45px 0px !important;
   color: var(--mainWhite);
-  font-size: 1.7rem;
+  font-size: 1.3rem;
   line-height: 1.7rem;
   font-family: var(--secondaryText);
 }
@@ -773,7 +793,7 @@ h4.secondaryText {
 .column.footer-box {
   margin: auto;
   display: block;
-  width: 245px !important;
+  width: 280px !important;
   margin: 0 50px;
 }
 
@@ -797,7 +817,139 @@ main {
   height: 100vh;
 }
 
+#root > div:nth-child(2) > div:nth-child(2) > div.container.mx-15 > div > div {
+  display: none;
+}
+
+.carousel-inner.container-box {
+  margin-top: 0;
+}
+
 /*------------/LOGIN/-----------*/
+
+/*------------/about us/-----------*/
+
+.blogBanner {
+  background: #000000bd;
+}
+
+.who-we-are {
+  margin: auto;
+  width: 81%;
+  padding: 50px 0;
+  text-align: center;
+}
+h5 {
+  text-transform: uppercase;
+}
+
+h3 {
+  text-transform: uppercase;
+  font-family: var(--mainText);
+  margin-bottom: 15px;
+}
+
+.ownerCover {
+  background: #2978b0;
+}
+
+.who-we-are p {
+  text-align: justify;
+  margin-bottom: 0px;
+}
+
+.the-owner {
+  width: 81%;
+  margin: auto;
+  color: #fff;
+  padding: 50px 0;
+}
+
+.owner-description {
+  width: 69%;
+  display: inline-block;
+}
+
+.owner-image {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  width: 30%;
+  float: right;
+}
+
+.owner-image img {
+  width: 80%;
+  float: right;
+  top: -10px;
+  position: relative;
+}
+
+#root
+  > div:nth-child(2)
+  > div:nth-child(3)
+  > div.got-you-covered
+  > div.about-description
+  > button {
+  width: auto !important;
+  text-align: justify;
+  margin: 20px 0 !important;
+  padding: 15px 25px;
+}
+
+.got-you-covered {
+  background: #f2f2f2;
+}
+
+.left-cov {
+  width: 50%;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.left-cov img {
+  width: 99%;
+}
+
+.about-description {
+  width: 44%;
+  display: inline-block;
+  padding: 50px 50px;
+  margin-top: 10px;
+}
+
+#root > div:nth-child(2) > div:nth-child(3) > div.my-15 {
+  margin-bottom: 2.6rem !important;
+}
+
+h1 {
+  font-size: 3.5rem;
+  font-weight: 600;
+  font-family: var(--mainText);
+  padding: 7px 0;
+}
+
+h2.text-center.text-capitalize.mainText {
+  text-transform: uppercase !important;
+}
+
+header.banner-tempt {
+  height: 350px;
+  width: 100%;
+  background-color: var(--mainDark) !important;
+  background-position-y: 47% !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-top: 5rem;
+}
+
+.button-fixed {
+  display: none;
+}
+
+/*------------/about us/-----------*/
 
 @media screen and (max-width: 1400px) {
   .banner-container {
@@ -816,7 +968,7 @@ main {
     width: 100%;
     margin: auto;
     display: block !important;
-    position: absolute;
+    position: fixed;
   }
 
   span.navbar-toggler-icon {
@@ -1091,22 +1243,145 @@ main {
     float: right;
     width: 60% !important;
   }
+  #root
+    > div:nth-child(2)
+    > div:nth-child(2)
+    > div.container.mx-15
+    > div
+    > div {
+    display: none !important;
+  }
+  h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    font-family: var(--mainText);
+    padding: 2px 0;
+  }
+  .our-service-gallery {
+    margin: auto;
+    width: 100%;
+  }
+
+  /*--about us*/
+
+  h1.text-uppercase.text-center {
+    font-size: 40px;
+  }
+
+  h3.text-capitalize.text-center {
+    margin-top: 15px;
+    font-size: 25px;
+    width: 80%;
+    margin: auto;
+  }
+  .left-cov {
+    width: 100%;
+    display: block;
+    vertical-align: top;
+    margin: auto;
+  }
+  .about-description {
+    width: 90%;
+    display: block;
+    /*padding: 50px 0px;*/
+    margin-top: 10px;
+    margin: auto;
+  }
+  .the-owner {
+    width: 90%;
+    margin: auto;
+    color: #fff;
+    padding: 50px 0;
+  }
+  .who-we-are {
+    margin: auto;
+    width: 90%;
+    padding: 50px 0;
+    text-align: center;
+  }
+  .findLocation {
+    width: 90%;
+    margin: auto;
+    padding: 50px 0;
+  }
+  .owner-description {
+    width: 100%;
+    display: block;
+    margin: auto;
+  }
 }
 
 @media screen and (max-width: 1200px) {
+  .button-fixed {
+    position: fixed;
+    z-index: 1000;
+    bottom: 1px;
+    width: 100%;
+    padding: 15px 0;
+    background: #ffffffba;
+    display: block;
+  }
+
+  .hover-button {
+    display: none;
+  }
+
+  p.text-center.mt-3.ourServicesFont {
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    height: auto;
+    margin: auto !important;
+    color: #ffffff !important;
+    font-size: 1.2rem;
+    background: #0000002b;
+    padding: 11px;
+    text-transform: uppercase;
+    right: 0;
+    left: 0;
+    bottom: 41px;
+  }
+
+  a.slearn-more {
+    display: none;
+  }
+
+  #root > div.footer-container > div.button-fixed > button {
+    background: #2978b0;
+    border: none;
+    width: 90% !important;
+    display: block;
+    margin: auto;
+    float: none !important;
+    padding: 10px;
+    font-size: 1rem !important;
+    text-align: center;
+    position: relative;
+    left: 0;
+    margin-right: auto !important;
+    right: 0;
+    margin-left: auto !important;
+  }
   .box-container {
     width: 80%;
+  }
+
+  p.text-capitalize.text-center {
+    margin-top: 0px !important;
   }
 }
 @media screen and (max-width: 1041px) and (min-width: 995px) {
   .sbook-now,
   .slearn-more {
-    top: 72%;
+    top: 54%;
   }
 }
 @media screen and (max-width: 800px) {
   .hover-button {
     height: 86% !important;
+  }
+  .button-container {
+    display: none;
   }
 
   .container-box.text-light {
@@ -1124,6 +1399,7 @@ main {
     right: 20px;
     top: 0px;
   }
+
   p.text-capitalize.text-center {
     width: 100%;
   }
@@ -1131,11 +1407,40 @@ main {
   .slearn-more {
     top: 38%;
   }
+  .carousel-inner.container-box {
+    margin-top: 0;
+  }
+  .sbook-now,
+  .slearn-more {
+    top: 52%;
+  }
 }
+/**/
 @media screen and (max-width: 696px) {
   .sbook-now,
   .slearn-more {
     top: 54%;
+  }
+  #root
+    > div.footer-container
+    > div
+    > div.container-box.text-light
+    > div:nth-child(3)
+    > h4.text-uppercase.mainText {
+    margin-top: 60px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .sbook-now,
+  .slearn-more {
+    top: 50%;
+  }
+}
+
+@media screen and (max-width: 569px) and (min-width: 523px) {
+  .sbook-now,
+  .slearn-more {
+    top: 68%;
   }
 }
 
@@ -1178,5 +1483,15 @@ main {
   .sbook-now,
   .slearn-more {
     top: 48%;
+  }
+}
+@media screen and (max-width: 330px) {
+  .box-container h1 {
+    font-size: 2rem !important;
+    padding: 0 !important;
+  }
+
+  .box-container {
+    width: 100%;
   }
 }
