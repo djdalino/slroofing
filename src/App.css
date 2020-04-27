@@ -1106,10 +1106,10 @@ header.banner-tempt {
     z-index: 1000;
     bottom: 1px;
     width: 100%;
-    padding: 15px;
+    padding: 15px 0;
     background: #ffffffba;
     display: block;
-  }
+}
 
   .hover-button {
     display: none;
@@ -1141,9 +1141,16 @@ header.banner-tempt {
     width: 90% !important;
     display: block;
     margin: auto;
+    float: none!important;
     padding: 10px;
     font-size: 1rem !important;
-  }
+    text-align: center;
+    position: relative;
+    left: 0;
+    margin-right: auto!important;
+    right: 0;
+    margin-left: auto!important;
+}
   .box-container {
     width: 80%;
   }
