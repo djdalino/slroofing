@@ -3,7 +3,7 @@ import logo from "../img/slroofing-logo.png";
 import { Link } from "react-router-dom";
 class Navbar extends React.Component {
   state = {
-    isOpen: false,
+    isOpen: false
   };
 
   handleToggle = () => {
@@ -43,7 +43,7 @@ class Navbar extends React.Component {
               <Link to="/blog">Blog</Link>
             </li>
             <li className="active" onClick={() => this.handleToggle()}>
-              <Link>Contact Us</Link>
+              <Link to="/contact">Contact Us</Link>
             </li>
             <li className="active">
               <button className="btn-book text-uppercase mx-3 rad">

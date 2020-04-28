@@ -4,7 +4,8 @@ function Subscribe() {
   return (
     <div className="subscribe">
       <div className="subscribe-box ">
-        <h1 className="text-uppercase">subscribe</h1>
+        <h5>Get latest news about us</h5>
+        <h3>subscribe</h3>
         <p>
           Sign up to receive maintenance reminders and hear about our latest
           project
