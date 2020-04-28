@@ -12,8 +12,9 @@ class BlogPostView extends Component {
             article,
             blogImage,
             articleImage,
+            createdAt,
           } = value.blogPost;
-          const { categoryList } = value;
+          const { categoryList, getDate } = value;
 
           const blogReplace = blogImage.replace(/\\/g, "/");
           const blogImg = `http://localhost:5000/${blogReplace}`;
@@ -22,7 +23,7 @@ class BlogPostView extends Component {
             return <Redirect to="/blog" />;
           }
           return (
-            <React.Fragment>
+            <div className="blog-category-cointainer">
               <div
                 style={{
                   height: "300px",
@@ -57,22 +58,22 @@ class BlogPostView extends Component {
                   ></div>
                 </div>
               </div>
-              <div className="margin-top text-center">
-                <h1>Title: {title}</h1>
+              <div className="my-15">
+                <h4 className="main-blue">{getDate(createdAt)}</h4>
+                <h1>{title}</h1>
                 <p>Title Message: {titleText}</p>
-                <img
-                  style={{
-                    align: "center",
-                    height: "200px",
-                    width: "200px",
-                    margin: "auto",
-                  }}
-                  src={`http://localhost:5000/${articleImage}`}
-                  alt="img"
-                />
+                <div className="text-center">
+                  <img
+                    style={{ width: "100%", maxHeight: "700px" }}
+                    className="text-center"
+                    src={`http://localhost:5000/${articleImage}`}
+                    alt="img"
+                  />
+                </div>
+
                 <p>{article}</p>
               </div>
-            </React.Fragment>
+            </div>
           );
         }}
       </ProductConsumer>

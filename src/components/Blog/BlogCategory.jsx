@@ -4,17 +4,20 @@ class BlogCategory extends Component {
   render() {
     return (
       <div className="blog-category ">
-        <div className="d-flex align-items-center">
-          <h4 className="ml-auto ">Category: </h4>
-          <ProductConsumer>
-            {(value) => {
-              const {
-                category,
-                handleBlogCategorySelected,
-                blogCategorySelect,
-              } = value;
-              console.log(blogCategorySelect);
-              return (
+        <ProductConsumer>
+          {(value) => {
+            const {
+              posts,
+              category,
+              handleBlogCategorySelected,
+              blogCategorySelect,
+            } = value;
+            if (posts < 1) {
+              return null;
+            }
+            return (
+              <div className="d-flex align-items-center">
+                <h4 className="ml-auto ">Category: </h4>
                 <select
                   name="blogCategorySelect"
                   onChange={handleBlogCategorySelected}
@@ -29,10 +32,10 @@ class BlogCategory extends Component {
                     );
                   })}
                 </select>
-              );
-            }}
-          </ProductConsumer>
-        </div>
+              </div>
+            );
+          }}
+        </ProductConsumer>
       </div>
     );
   }
