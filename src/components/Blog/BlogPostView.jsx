@@ -23,7 +23,7 @@ class BlogPostView extends Component {
             return <Redirect to="/blog" />;
           }
           return (
-            <div className="blog-category-cointainer">
+            <React.Fragment>
               <div
                 style={{
                   height: "300px",
@@ -58,22 +58,28 @@ class BlogPostView extends Component {
                   ></div>
                 </div>
               </div>
-              <div className="my-15">
-                <h4 className="main-blue">{getDate(createdAt)}</h4>
-                <h1>{title}</h1>
-                <p>Title Message: {titleText}</p>
-                <div className="text-center">
-                  <img
-                    style={{ width: "100%", maxHeight: "700px" }}
-                    className="text-center"
-                    src={`http://localhost:5000/${articleImage}`}
-                    alt="img"
-                  />
-                </div>
+              <div className="blog-category-cointainer">
+                <div className="my-15">
+                  <h4 className="main-blue">{getDate(createdAt)}</h4>
+                  <h1>{title}</h1>
+                  <p>Title Message: {titleText}</p>
+                  <div className="text-center">
+                    <img
+                      style={{
+                        width: "100%",
+                        maxHeight: "700px",
+                        margin: "30px 0",
+                      }}
+                      className="text-center"
+                      src={`http://localhost:5000/${articleImage}`}
+                      alt="img"
+                    />
+                  </div>
 
-                <p>{article}</p>
+                  <p>{article}</p>
+                </div>
               </div>
-            </div>
+            </React.Fragment>
           );
         }}
       </ProductConsumer>

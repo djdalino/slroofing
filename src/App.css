@@ -200,7 +200,7 @@ p {
 }
 
 .container-box {
-  max-width: 1680px;
+  max-width: 85%;
   margin-right: auto;
   margin-left: auto;
   display: flex;
@@ -515,9 +515,8 @@ header.banner-tempt {
   background-color: rgba(0, 0, 0, 0.3);
 }
 .blog-category-cointainer {
-  max-width: 1700px;
+  max-width: 85%;
   margin: 0 auto;
-  padding: 0 20px;
 }
 .blog-category {
   margin: auto;
@@ -528,9 +527,8 @@ header.banner-tempt {
 }
 .our-blog-gallery {
   height: auto;
-  padding: 0 20px;
   margin: auto;
-  max-width: 1700px;
+  max-width: 85%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
   grid-column-gap: 20px;
@@ -572,12 +570,8 @@ p {
 }
 
 .banner-container {
-  width: 82%;
-}
-
-.banner-container {
   margin: auto;
-  width: 1500px;
+  width: 85%;
   position: absolute;
   z-index: 100;
 }
@@ -621,7 +615,7 @@ p {
 }
 .our-service-gallery {
   margin: auto;
-  width: 87%;
+  width: 85%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   grid-column-gap: 20px;
@@ -708,7 +702,7 @@ div#carouselExampleIndicators {
 }
 
 .banner-container {
-  width: 82% !important;
+  width: 85% !important;
 }
 
 .footer-box-container {
@@ -866,7 +860,7 @@ main {
 
 .who-we-are {
   margin: auto;
-  width: 81%;
+  width: 85%;
   padding: 50px 0;
   text-align: center;
 }
@@ -890,7 +884,7 @@ h3 {
 }
 
 .the-owner {
-  width: 81%;
+  width: 85%;
   margin: auto;
   color: #fff;
   padding: 50px 0;
@@ -986,6 +980,9 @@ nav.sl-navbar {
 span.contact {
   color: var(--mainBlue);
   margin-left: 13px;
+}
+.container-fluid {
+  padding: 0 !important;
 }
 
 /*------------/about us/-----------*/
@@ -1561,6 +1558,9 @@ span.contact {
 }
 /**/
 @media screen and (max-width: 696px) {
+  .blog-category-cointainer {
+    width: 90% !important;
+  }
   .sbook-now,
   .slearn-more {
     top: 54%;
@@ -1632,6 +1632,9 @@ span.contact {
 }
 
 @media screen and (max-width: 524px) {
+  .blog-category-cointainer {
+    width: 90% !important;
+  }
   .banner-container {
     transform: translate(37%);
   }
@@ -1657,12 +1660,18 @@ span.contact {
 }
 
 @media screen and (max-width: 476px) and (min-width: 393px) {
+  .blog-category-cointainer {
+    width: 90% !important;
+  }
   .hover-button {
     height: 82%;
   }
 }
 
 @media screen and (max-width: 392px) {
+  .blog-category-cointainer {
+    width: 90% !important;
+  }
   .our-blog-gallery {
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     grid-auto-rows: 280px;
@@ -1687,6 +1696,9 @@ span.contact {
   }
 }
 @media screen and (max-width: 330px) {
+  .blog-category-cointainer {
+    width: 90% !important;
+  }
   .box-container h1 {
     font-size: 2rem !important;
     padding: 0 !important;
