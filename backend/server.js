@@ -29,7 +29,8 @@ app.listen(PORT, () => {
 const MONGODB_URI =
   "mongodb+srv://djdalino:TpW5Z6aYjCENviOt@cluster3-hngry.mongodb.net/test?retryWrites=true&w=majority";
 mongoose.connect(
-  process.env.MONGODB_URI || MONGODB_URI,
+  process.env.MONGODB_URI ||
+    "mongodb+srv://djdalino:TpW5Z6aYjCENviOt@cluster3-hngry.mongodb.net/test?retryWrites=true&w=majority",
   { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true },
   (err) => {
     if (err) return console.error(err);
