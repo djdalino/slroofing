@@ -19,6 +19,12 @@ const userRoute = require("./routes/userRoutes");
 app.use("/posts", post);
 app.use("/postCategory", postCategory);
 app.use("/api/user", userRoute);
+
+// set up server
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => {
+  console.log(`server is runnning on port: ${PORT}`);
+});
 // set up db connection
 const MONGODB_URI =
   "mongodb+srv://djdalino:TpW5Z6aYjCENviOt@cluster3-hngry.mongodb.net/test?retryWrites=true&w=majority";
@@ -38,9 +44,3 @@ if (process.env.NODE_ENV === "production") {
     res.sendFile(path.join(__dirname, "build", "index.html"));
   });
 }
-
-// set up server
-const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => {
-  console.log(`server is runnning on port: ${PORT}`);
-});

@@ -26,6 +26,7 @@
   },
   "scripts": {
     "build": "react-scripts build",
+    "start": "nodemon backend/server.js",
     "server": "nodemon backend/server.js",
     "client": "react-scripts start",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
