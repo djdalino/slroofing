@@ -20,13 +20,19 @@ class ProductProvider extends Component {
     articleImage: null,
     email: "",
     password: "",
+    isBookNow: false,
   };
   componentDidMount() {
     this.setService();
     this.getPost();
     this.getCategory();
   }
+  // Modal book now
 
+  handleBookNowModal = () => {
+    this.setState({ isBookNow: !this.state.isBookNow });
+    console.log(__dirname);
+  };
   //LOGIN
   login = (user) => {
     return axios
@@ -116,9 +122,7 @@ class ProductProvider extends Component {
   };
 
   //BLOG
-  blogPostFilter = (id) => {
-    const temptBlog = this.state.posts.map((item) => item._id).filter;
-  };
+
   getBlogitem = (id) => {
     const blog = this.state.posts.find((item) => item._id === id);
     return blog;
@@ -222,6 +226,7 @@ class ProductProvider extends Component {
       <ProductContext.Provider
         value={{
           ...this.state,
+          handleBookNowModal: this.handleBookNowModal,
           setSelected: this.setSelected,
           fileSelectedHandler: this.fileSelectedHandler,
           articleFileSelectedHandler: this.articleFileSelectedHandler,

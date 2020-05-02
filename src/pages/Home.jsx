@@ -4,33 +4,35 @@ import Banner from "../components/Banner";
 import OurServices from "../components/OurServices/OurServices";
 import Subscribe from "../components/Subscribe";
 import Testimonial from "../components/Testimonial/Testimonial";
-
+import BookNowModal from "../components/Modal/BookNowModal";
 function Home() {
   return (
-    <div>
-      <Hero>
-        <div className="banner-container">
-          <div className="box-container">
-            <h1 className="text-uppercase">Done right!</h1>
-            <h1 className="text-uppercase">Watertight!</h1>
-            <p>
-              Innovative solutions and design for all your commercial and
-              residential roofing, renovation and contruction needs! roofing
-              companies, roofing contractors.
-            </p>
-            <div className="button-container">
-              <button className="btn btn-danger text-uppercase">
-                book an appointment
-              </button>
+    <React.Fragment>
+      <div>
+        <Hero>
+          <div className="banner-container">
+            <div className="box-container">
+              <h1 className="text-uppercase">Done right!</h1>
+              <h1 className="text-uppercase">Watertight!</h1>
+              <p>
+                Innovative solutions and design for all your commercial and
+                residential roofing, renovation and contruction needs! roofing
+                companies, roofing contractors.
+              </p>
+              <div className="button-container">
+                <button className="btn btn-danger text-uppercase">
+                  book an appointment
+                </button>
+              </div>
             </div>
           </div>
-        </div>
-        <Banner></Banner>
-      </Hero>
-      <OurServices />
-      <Subscribe />
-      <Testimonial />
-    </div>
+          <Banner></Banner>
+        </Hero>
+        <OurServices />
+        <Subscribe />
+        <Testimonial />
+      </div>
+    </React.Fragment>
   );
 }
 

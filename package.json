@@ -11,19 +11,25 @@
     "axios": "^0.19.2",
     "concurrently": "^5.1.0",
     "emotion": "^10.0.27",
+    "moment": "^2.24.0",
     "multer": "^1.4.2",
     "nodemon": "^2.0.3",
     "react": "^16.13.1",
+    "react-datepicker": "^2.14.1",
     "react-dom": "^16.13.1",
     "react-icons": "^3.10.0",
     "react-multi-select-component": "^2.0.4",
     "react-router-dom": "^5.1.2",
-    "react-scripts": "3.4.1"
+    "react-scripts": "3.4.1",
+    "react-select-us-states": "^0.1.2",
+    "react-time-picker": "^4.0.1"
   },
   "scripts": {
+    "build": "react-scripts build",
     "server": "nodemon backend/server.js",
     "client": "react-scripts start",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "npm install && npm run build"
   },
   "eslintConfig": {
     "extends": "react-app"
