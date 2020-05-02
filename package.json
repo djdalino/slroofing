@@ -26,7 +26,7 @@
   },
   "scripts": {
     "build": "react-scripts build",
-    "start": "node backend/server.js",
+    "start": "cd backend && npm install && node server.js",
     "server": "nodemon backend/server.js",
     "client": "react-scripts start",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
