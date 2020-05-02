@@ -47,6 +47,9 @@ class Navbar extends React.Component {
             <li className="active" onClick={() => this.handleToggle()}>
               <Link to="/contact">Contact Us</Link>
             </li>
+            <li className="active" onClick={() => this.handleToggle()}>
+              <Link to="/admin">Admin</Link>
+            </li>
             <ProductConsumer>
               {(value) => {
                 const { isBookNow, handleBookNowModal } = value;
