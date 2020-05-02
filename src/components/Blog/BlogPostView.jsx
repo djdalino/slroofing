@@ -5,14 +5,14 @@ class BlogPostView extends Component {
   render() {
     return (
       <ProductConsumer>
-        {value => {
+        {(value) => {
           var {
             title,
             titleText,
             article,
             blogImage,
             articleImage,
-            createdAt
+            createdAt,
           } = value.blogPost;
           const { categoryList, getDate } = value;
 
@@ -26,7 +26,7 @@ class BlogPostView extends Component {
             <React.Fragment>
               <div className="banner-attr">
                 <div className="blogCateg">
-                  {categoryList.map(item => (
+                  {categoryList.map((item) => (
                     <div className="blogCategStyle" key={item._id}>
                       <h1>{item.name}</h1>
                     </div>
@@ -38,7 +38,7 @@ class BlogPostView extends Component {
                       background: `url('${blogImg}') center/cover no-repeat`,
                       width: "100%",
                       height: "220px",
-                      zIndex: "-1"
+                      zIndex: "-1",
                     }}
                   ></div>
                 </div>
@@ -47,13 +47,13 @@ class BlogPostView extends Component {
                 <div className="my-15">
                   <h4 className="main-blue">{getDate(createdAt)}</h4>
                   <h1>{title}</h1>
-                  <p>Title Message: {titleText}</p>
+                  <p>{titleText}</p>
                   <div className="text-center">
                     <img
                       style={{
                         width: "100%",
                         maxHeight: "700px",
-                        margin: "30px 0"
+                        margin: "30px 0",
                       }}
                       className="text-center"
                       src={`http://localhost:5000/${articleImage}`}
