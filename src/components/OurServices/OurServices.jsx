@@ -11,7 +11,7 @@ export default class OurServices extends React.Component {
             <div className="text-center d-lg-block mb-5 services-mb">
               <h5 className="text-uppercase">what we can do</h5>
               <h2 className="text-center text-capitalize mainText">
-                our services
+                our featured services
               </h2>
               <div className="row">
                 <ProductConsumer>

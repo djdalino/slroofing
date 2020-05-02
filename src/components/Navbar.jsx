@@ -5,7 +5,7 @@ import { ProductConsumer } from "../stateManagement/context";
 import { Link } from "react-router-dom";
 class Navbar extends React.Component {
   state = {
-    isOpen: false,
+    isOpen: false
   };
 
   handleToggle = () => {

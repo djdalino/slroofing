@@ -20,33 +20,33 @@ class Blog extends Component {
           </div>
         </Hero>
         <div className="mt-5 blog-category-cointainer">
-          <h3 className="text-center text-uppercase main-blue">
+          <h5 className="text-center text-uppercase main-blue">
             tips and news
-          </h3>
-          <h1 className="text-center text-uppercase">our latest update</h1>
+          </h5>
+          <h3 className="text-center text-uppercase">our latest update</h3>
           <BlogCategory />
         </div>
 
         <div className="my-5 our-blog-gallery">
           <ProductConsumer>
-            {(value) => {
+            {value => {
               const {
                 posts,
                 blogCategorySelect,
                 handleBlogView,
-                getDate,
+                getDate
               } = value;
               if (blogCategorySelect === "All") {
                 if (posts.length === 0)
                   return <h1 className="text-center">No Record</h1>;
 
-                return posts.map((post) => {
+                return posts.map(post => {
                   return <BlogList key={post._id} post={post} value={value} />;
                 });
               }
               return posts
-                .filter((e) => e.category == blogCategorySelect)
-                .map((cat) => {
+                .filter(e => e.category == blogCategorySelect)
+                .map(cat => {
                   return (
                     <Link
                       key={cat._id}
@@ -58,14 +58,7 @@ class Blog extends Component {
                         src={`http://localhost:5000/${cat.blogImage}`}
                         alt=""
                       />
-                      <div
-                        style={{
-                          width: "100%",
-                          padding: "20px",
-                          textAlign: "left",
-                          marginTop: "200px",
-                        }}
-                      >
+                      <div className="our-blog-text">
                         <h2>{cat.title}</h2>
                         <p>{getDate(cat.createdAt)}</p>
                       </div>
