@@ -611,7 +611,7 @@ p {
 .box-container p {
   margin: 45px 0px !important;
   color: var(--mainWhite);
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   line-height: 1.7rem;
   font-family: var(--secondaryText);
 }
@@ -1007,7 +1007,6 @@ span.contact {
 
 .findLocation {
   width: 85%;
-  margin: 4rem auto;
 }
 
 h5,
@@ -1642,7 +1641,7 @@ p {
 .fl-module.fl-module-info-list.fl-node-5bad6f2334e50 {
   width: 85%;
   text-align: center;
-  margin-top: 50px !important;
+  margin: 50px !important;
   margin: auto;
 }
 /* 
@@ -1772,7 +1771,6 @@ i.ua-icon.ua-icon-envelope2::before {
   }
 
   .box-container {
-    width: 60%;
     margin: auto;
     display: block;
   }
@@ -1789,7 +1787,7 @@ i.ua-icon.ua-icon-envelope2::before {
 
   .box-container p {
     color: var(--mainWhite);
-    font-size: 1.2rem !important;
+    font-size: 1.4rem !important;
     margin: auto !important;
     line-height: 1.7rem;
     margin-top: 10px !important;
@@ -1870,9 +1868,8 @@ i.ua-icon.ua-icon-envelope2::before {
   }
 
   .box-container {
-    width: 60%;
-    margin: auto;
-    display: block;
+    width: 100%;
+    margin: 0;
     text-align: center;
   }
   .footer-container {
@@ -2091,7 +2088,7 @@ i.ua-icon.ua-icon-envelope2::before {
     padding: 0;
   }
   nav.sl-navbar {
-    padding: 10px;
+    padding: 0px;
   }
 
   .main-blue {
@@ -2106,6 +2103,42 @@ i.ua-icon.ua-icon-envelope2::before {
   }
   .blog-category-cointainer {
     width: 85%;
+  }
+  nav.sl-navbar {
+    background: #ffffffd4;
+  }
+  .sl-nav-logo {
+    width: 84px;
+    position: relative;
+    top: -2px;
+  }
+
+  #root > nav > div > ul > div > li > button {
+    font-size: 1.2rem;
+    padding: 0.3rem;
+    width: 12rem;
+    border-radius: 10px !important;
+    background: var(--mainRed);
+    color: var(--mainWhite);
+    font-family: var(--mainText);
+    border: 1px solid var(--mainRed);
+    margin: auto !important;
+    position: relative;
+    top: 0px;
+  }
+
+  .sl-nav-links {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    transition: all 0.5s linear;
+    list-style-type: none;
+    position: relative;
+    top: 0px;
+  }
+  .sl-nav-center {
+    height: 60px;
   }
 }
 
@@ -2136,8 +2169,8 @@ i.ua-icon.ua-icon-envelope2::before {
     z-index: 1000;
     bottom: 1px;
     width: 100%;
-    padding: 15px 0;
-    background: #ffffffba;
+    padding: 6px 0;
+    background: #ffffff45;
     display: block;
   }
 
@@ -2177,7 +2210,7 @@ i.ua-icon.ua-icon-envelope2::before {
     display: block;
     margin: auto;
     float: none !important;
-    padding: 10px;
+    padding: 5px;
     font-size: 1rem !important;
     text-align: center;
     position: relative;
@@ -2185,9 +2218,6 @@ i.ua-icon.ua-icon-envelope2::before {
     margin-right: auto !important;
     right: 0;
     margin-left: auto !important;
-  }
-  .box-container {
-    width: 80%;
   }
 
   p.text-capitalize.text-center {
@@ -2223,6 +2253,10 @@ i.ua-icon.ua-icon-envelope2::before {
     padding: 5px 28px;
     background: #ffffff33;
   }
+  .sl-nav-links {
+    top: 60px !important;
+    background: #ffffffd6 !important;
+  }
 }
 
 @media screen and (max-width: 1024px) {
@@ -2230,13 +2264,12 @@ i.ua-icon.ua-icon-envelope2::before {
     padding: 0;
   }
   .sl-nav-header {
-    margin-top: 8px;
+    margin-top: 0px;
   }
   .sl-nav-links {
     background: #fffffff2;
     position: absolute;
     height: 90vh;
-    top: 95px;
     right: 0px;
     text-transform: uppercase;
     display: block;
@@ -2262,6 +2295,10 @@ i.ua-icon.ua-icon-envelope2::before {
     margin: auto;
     text-align: center;
     padding-top: 15px;
+  }
+  .sl-nav-logo  {
+    width: 110px;
+    margin-top: 0px;
   }
 }
 @media screen and (max-width: 1041px) and (min-width: 995px) {
@@ -2351,7 +2388,7 @@ i.ua-icon.ua-icon-envelope2::before {
     width: 100%;
     padding: 0;
   }
-  .sl-nav-links {
+  /* .sl-nav-links {
     background: #fffffff2;
     position: absolute;
     height: 90vh;
@@ -2363,7 +2400,7 @@ i.ua-icon.ua-icon-envelope2::before {
     flex-direction: column;
     justify-content: center;
     transform: translate(100%);
-  }
+  } */
   #root > nav > div > ul > li:nth-child(6) {
     display: none;
   }
