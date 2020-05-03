@@ -804,15 +804,15 @@ h4.secondaryText {
 .footer-container .subscribe-container input[type="text"] {
   font-family: var(--mainText);
   width: 141px;
-  padding: 6px;
+  padding: 7px;
   margin-top: 0px !important;
-  height: 32px;
-  font-size: 10px;
   border: none;
+  font-size: 12px;
+  border-radius: 0!important;
 }
 
 .footer-container .subscribe-container button {
-  padding: 4px 15px;
+  padding: 7.3px 10px;
   margin-top: 2px;
   background: var(--mainRed);
   color: var(--mainWhite);
@@ -820,7 +820,6 @@ h4.secondaryText {
   left: 17px;
   font-size: 12px;
   border: none;
-  height: 33px;
   cursor: pointer !important;
   border-radius: 0 5px 5px 0;
 }
@@ -2105,10 +2104,10 @@ i.ua-icon.ua-icon-envelope2::before {
     width: 85%;
   }
   nav.sl-navbar {
-    background: #ffffffd4;
+    background: #ffffff;
   }
   .sl-nav-logo {
-    width: 84px;
+    width: 78px;
     position: relative;
     top: -2px;
   }
@@ -2169,8 +2168,8 @@ i.ua-icon.ua-icon-envelope2::before {
     z-index: 1000;
     bottom: 1px;
     width: 100%;
-    padding: 6px 0;
-    background: #ffffff45;
+    padding: 9px 0;
+    background: #ffffffb5;
     display: block;
   }
 
@@ -2210,7 +2209,7 @@ i.ua-icon.ua-icon-envelope2::before {
     display: block;
     margin: auto;
     float: none !important;
-    padding: 5px;
+    padding: 10px;
     font-size: 1rem !important;
     text-align: center;
     position: relative;
@@ -2255,7 +2254,7 @@ i.ua-icon.ua-icon-envelope2::before {
   }
   .sl-nav-links {
     top: 60px !important;
-    background: #ffffffd6 !important;
+    background: #ffffff !important;
   }
 }
 

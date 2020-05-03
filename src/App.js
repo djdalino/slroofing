@@ -27,3 +27,5 @@ function App() {
 }
 
 export default App;
+
+window.scrollTo(0, 1000);
