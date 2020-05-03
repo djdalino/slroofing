@@ -281,6 +281,7 @@ ul {
 .sl-nav-center {
   margin: auto;
   max-width: 1680px;
+  height: 80px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1066,7 +1067,7 @@ p {
   color: white;
   text-transform: uppercase;
   width: 250px;
-  top: 40%;
+  top: 26%;
   padding: 5px 28px;
   background: #ffffff33;
 }

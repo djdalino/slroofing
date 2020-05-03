@@ -1,0 +1,66 @@
+.book-now-modal {
+  z-index: 100;
+  background: rgba(126, 126, 126, 0.6);
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.book-now-modal-container {
+  background: white;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  right: 0;
+  bottom: 0;
+  max-width: 800px;
+  height: 500px;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+}
+.book-now-datetime {
+  width: 100%;
+  height: auto;
+  text-align-last: center;
+}
+.book-now-datetime div {
+  text-align: center;
+}
+
+.book-now-input {
+  width: 50%;
+  height: 100%;
+  border: 1px solid black;
+}
+.form-time-pick-container {
+  display: flex;
+  justify-content: center;
+}
+.form-time-pick-morning {
+  width: 100%;
+}
+.form-time-pick-afternoon {
+  width: 100%;
+}
+.form-time-pick-gird {
+  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(50px, 100px));
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  grid-auto-rows: 40px;
+}
+.form-time-pick-active {
+  background-color: var(--mainRed);
+}
+
+.book-now-form-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

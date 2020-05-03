@@ -19,14 +19,24 @@ class ProductProvider extends Component {
     blogImage: null,
     articleImage: null,
     email: "",
+<<<<<<< HEAD
     password: ""
+=======
+    password: "",
+    isBookNow: false,
+>>>>>>> 2a9f1bcb1268f528d58130f8b055dcef766cbaa7
   };
   componentDidMount() {
     this.setService();
     this.getPost();
     this.getCategory();
   }
+  // Modal book now
 
+  handleBookNowModal = () => {
+    this.setState({ isBookNow: !this.state.isBookNow });
+    console.log(__dirname);
+  };
   //LOGIN
   login = user => {
     return axios
@@ -116,11 +126,17 @@ class ProductProvider extends Component {
   };
 
   //BLOG
+<<<<<<< HEAD
   blogPostFilter = id => {
     const temptBlog = this.state.posts.map(item => item._id).filter;
   };
   getBlogitem = id => {
     const blog = this.state.posts.find(item => item._id === id);
+=======
+
+  getBlogitem = (id) => {
+    const blog = this.state.posts.find((item) => item._id === id);
+>>>>>>> 2a9f1bcb1268f528d58130f8b055dcef766cbaa7
     return blog;
   };
   getMatch = (blog, category) => {
@@ -222,6 +238,7 @@ class ProductProvider extends Component {
       <ProductContext.Provider
         value={{
           ...this.state,
+          handleBookNowModal: this.handleBookNowModal,
           setSelected: this.setSelected,
           fileSelectedHandler: this.fileSelectedHandler,
           articleFileSelectedHandler: this.articleFileSelectedHandler,

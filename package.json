@@ -13,21 +13,31 @@
     "concurrently": "^5.1.0",
     "cors": "^2.8.5",
     "emotion": "^10.0.27",
+<<<<<<< HEAD
     "express": "^4.17.1",
+=======
+    "moment": "^2.24.0",
+>>>>>>> 2a9f1bcb1268f528d58130f8b055dcef766cbaa7
     "multer": "^1.4.2",
     "nodemailer": "^6.4.6",
     "nodemon": "^2.0.3",
     "react": "^16.13.1",
+    "react-datepicker": "^2.14.1",
     "react-dom": "^16.13.1",
     "react-icons": "^3.10.0",
     "react-multi-select-component": "^2.0.4",
     "react-router-dom": "^5.1.2",
-    "react-scripts": "3.4.1"
+    "react-scripts": "3.4.1",
+    "react-select-us-states": "^0.1.2",
+    "react-time-picker": "^4.0.1"
   },
   "scripts": {
+    "build": "react-scripts build",
+    "start": "cd backend && npm install && node server.js",
     "server": "nodemon backend/server.js",
     "client": "react-scripts start",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "npm install && npm run build"
   },
   "eslintConfig": {
     "extends": "react-app"
