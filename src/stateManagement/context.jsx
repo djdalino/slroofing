@@ -19,12 +19,8 @@ class ProductProvider extends Component {
     blogImage: null,
     articleImage: null,
     email: "",
-<<<<<<< HEAD
-    password: ""
-=======
     password: "",
     isBookNow: false,
->>>>>>> 2a9f1bcb1268f528d58130f8b055dcef766cbaa7
   };
   componentDidMount() {
     this.setService();
@@ -37,54 +33,54 @@ class ProductProvider extends Component {
     this.setState({ isBookNow: !this.state.isBookNow });
   };
   //LOGIN
-  login = user => {
+  login = (user) => {
     return axios
       .post("/api/user/login", {
         email: user.email,
-        password: user.password
+        password: user.password,
       })
-      .then(res => {
+      .then((res) => {
         localStorage.setItem("usertoken", res.data);
         return res.data;
       })
-      .catch(err => console.log(err));
+      .catch((err) => console.log(err));
   };
-  onSubmit = e => {
+  onSubmit = (e) => {
     e.preventDefault();
     const User = {
       email: this.state.email,
-      password: this.state.password
+      password: this.state.password,
     };
 
     this.login(User)
-      .then(res => {
+      .then((res) => {
         if (res) {
           window.location.href = "/admin";
         }
       })
-      .catch(err => console.log(err));
+      .catch((err) => console.log(err));
   };
 
   //POST
-  setSelected = selected => {
+  setSelected = (selected) => {
     this.setState({ selected });
   };
-  fileSelectedHandler = e => {
+  fileSelectedHandler = (e) => {
     this.setState({ blogImage: e.target.files[0] });
   };
-  articleFileSelectedHandler = e => {
+  articleFileSelectedHandler = (e) => {
     this.setState({ articleImage: e.target.files[0] });
   };
-  handleInputChange = e => {
+  handleInputChange = (e) => {
     this.setState({ [e.target.name]: e.target.value });
     console.log(e);
   };
-  handleBlogCategorySelected = e => {
+  handleBlogCategorySelected = (e) => {
     this.setState({ blogCategorySelect: e.target.value });
     console.log(e.target.value);
   };
 
-  handleSubmitPost = async e => {
+  handleSubmitPost = async (e) => {
     const selected = this.state.selected;
     let select = [];
     for (let i = 0; i < selected.length; i++) {
@@ -115,7 +111,7 @@ class ProductProvider extends Component {
 
     let tempCategory = [];
 
-    res.data.forEach(item => {
+    res.data.forEach((item) => {
       const singleItem = { ...item };
       tempCategory = [...tempCategory, singleItem];
     });
@@ -125,17 +121,9 @@ class ProductProvider extends Component {
   };
 
   //BLOG
-<<<<<<< HEAD
-  blogPostFilter = id => {
-    const temptBlog = this.state.posts.map(item => item._id).filter;
-  };
-  getBlogitem = id => {
-    const blog = this.state.posts.find(item => item._id === id);
-=======
 
   getBlogitem = (id) => {
     const blog = this.state.posts.find((item) => item._id === id);
->>>>>>> 2a9f1bcb1268f528d58130f8b055dcef766cbaa7
     return blog;
   };
   getMatch = (blog, category) => {
@@ -149,8 +137,8 @@ class ProductProvider extends Component {
     }
 
     let tempMatch = [];
-    match.forEach(m => {
-      const result = this.state.category.find(item => item._id === m);
+    match.forEach((m) => {
+      const result = this.state.category.find((item) => item._id === m);
       tempMatch = [...tempMatch, result];
     });
     this.setState(
@@ -165,10 +153,10 @@ class ProductProvider extends Component {
       }
     );
   };
-  handleBlogView = id => {
+  handleBlogView = (id) => {
     try {
       const blog = this.getBlogitem(id);
-      const category = this.state.category.map(item => item._id);
+      const category = this.state.category.map((item) => item._id);
       const blogMap = blog.category;
       this.getMatch(blogMap, category);
       this.setState(
@@ -188,7 +176,7 @@ class ProductProvider extends Component {
     const res = await axios.get("/posts/");
     let tempPosts = [];
 
-    res.data.forEach(item => {
+    res.data.forEach((item) => {
       const singleItem = { ...item };
       tempPosts = [...tempPosts, singleItem];
     });
@@ -197,7 +185,7 @@ class ProductProvider extends Component {
     });
   };
 
-  getDate = dateString => {
+  getDate = (dateString) => {
     const month = [
       "January",
       "February",
@@ -210,7 +198,7 @@ class ProductProvider extends Component {
       "September",
       "October",
       "November",
-      "December"
+      "December",
     ];
     const date = new Date(dateString);
 
@@ -218,13 +206,13 @@ class ProductProvider extends Component {
   };
 
   // END BLOG
-  handleChange = category => {
+  handleChange = (category) => {
     this.setState({ activeCategory: category });
   };
 
   setService = () => {
     let tempServices = [];
-    servicesOffer.forEach(item => {
+    servicesOffer.forEach((item) => {
       const singleItem = { ...item };
       tempServices = [...tempServices, singleItem];
     });
@@ -247,7 +235,7 @@ class ProductProvider extends Component {
           handleBlogCategorySelected: this.handleBlogCategorySelected,
           getDate: this.getDate,
           handleBlogView: this.handleBlogView,
-          onSubmit: this.onSubmit
+          onSubmit: this.onSubmit,
         }}
       >
         {this.props.children}
