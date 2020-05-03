@@ -1,4 +1,6 @@
 import React from "react";
+import { ProductConsumer } from "../../stateManagement/context";
+import BookNowModal from "../Modal/BookNowModal";
 function Footer() {
   return (
     <div className="footer-container">
@@ -50,11 +52,22 @@ function Footer() {
           </p>
         </div>
       </div>
-      <div className="button-fixed">
-        <button className="btn-book text-uppercase mx-3 rad">
-          book an appointment
-        </button>
-      </div>
+      <ProductConsumer>
+        {(value) => {
+          const { isBookNow, handleBookNowModal } = value;
+          return (
+            <div className="button-fixed">
+              <button
+                className="btn-book text-uppercase mx-3 rad"
+                onClick={handleBookNowModal}
+              >
+                book an appointment
+              </button>
+              {isBookNow ? <BookNowModal /> : null}
+            </div>
+          );
+        }}
+      </ProductConsumer>
     </div>
   );
 }

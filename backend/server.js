@@ -1,5 +1,6 @@
 const express = require("express");
 const mongoose = require("mongoose");
+const nodemailer = require("nodemailer");
 const cors = require("cors");
 const path = require("path");
 require("dotenv").config();
@@ -11,7 +12,38 @@ app.use(cors());
 app.use(express.urlencoded({ extended: true }));
 app.use("/uploads", express.static("uploads"));
 app.use(express.json());
+//Contact Us
+app.post("/api/contactUs", (req, res) => {
+  const data = req.body;
 
+  const smtpTransport = nodemailer.createTransport({
+    service: "Gmail",
+    port: 465,
+    auth: {
+      user: "darrenjames.dalino@gmail.com",
+      pass: "Akosidj01",
+    },
+  });
+
+  const mailOptions = {
+    from: data.email,
+    to: "darrenajames.dalino@gmail.com",
+    subject: "contact us",
+    html: `<p>${data.name}</p>
+        <p>${data.email}</p>
+        <p>${data.phone}</p>
+        <p>${data.message}</p>`,
+  };
+
+  smtpTransport.sendMail(mailOptions, (err, response) => {
+    if (err) {
+      console.log(err);
+    } else {
+      response.send("success");
+    }
+    smtpTransport.close();
+  });
+});
 // set up routes
 const post = require("./routes/postRoutes");
 const postCategory = require("./routes/postCategoryRoute");

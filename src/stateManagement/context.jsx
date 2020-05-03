@@ -35,7 +35,7 @@ class ProductProvider extends Component {
   //LOGIN
   login = (user) => {
     return axios
-      .post("/api/user/login", {
+      .post("http://localhost:5000/api/user/login", {
         email: user.email,
         password: user.password,
       })
@@ -94,7 +94,7 @@ class ProductProvider extends Component {
     fd.append("blogImage", this.state.blogImage);
     fd.append("articleImage", this.state.articleImage);
     try {
-      const data = await axios.post(`/posts/`, fd);
+      const data = await axios.post(`http://localhost:5000/posts/`, fd);
       if (data.status === 200) {
         return data;
       }
@@ -107,7 +107,7 @@ class ProductProvider extends Component {
   //CATEGORY
 
   getCategory = async () => {
-    const res = await axios.get(`/postCategory/`);
+    const res = await axios.get(`http://localhost:5000/postCategory/`);
 
     let tempCategory = [];
 
@@ -173,7 +173,7 @@ class ProductProvider extends Component {
   };
 
   getPost = async () => {
-    const res = await axios.get("/posts/");
+    const res = await axios.get("http://localhost:5000/posts/");
     let tempPosts = [];
 
     res.data.forEach((item) => {
