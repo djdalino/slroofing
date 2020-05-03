@@ -38,7 +38,7 @@ export default class ContactBanner extends Component {
                     <div className="uabb-info-list-content uabb-info-list-top info-list-content-dynamic0">
                       <h3 class="uabb-info-list-title">Phone</h3>
                       <div class="uabb-info-list-description uabb-text-editor info-list-description-dynamic0">
-                        <p>(02) 4948 6164</p>
+                        <p>402-414-4000</p>
                       </div>
                     </div>
                   </div>
@@ -59,7 +59,7 @@ export default class ContactBanner extends Component {
                     <div className="uabb-info-list-content uabb-info-list-top info-list-content-dynamic1">
                       <h3 class="uabb-info-list-title">Email</h3>
                       <div class="uabb-info-list-description uabb-text-editor info-list-description-dynamic1">
-                        <p>quotes@australiawideroofing.com.au</p>
+                        <p>slroofingllcs@gmail.com</p>
                       </div>
                     </div>
                   </div>
@@ -80,7 +80,7 @@ export default class ContactBanner extends Component {
                     <div className="uabb-info-list-content uabb-info-list-top info-list-content-dynamic2">
                       <h3 className="uabb-info-list-title">Address</h3>
                       <div className="uabb-info-list-description uabb-text-editor info-list-description-dynamic2">
-                        <p>4/2 Statham St, Bennetts Green NSW 2290</p>
+                        <p>United State of America</p>
                       </div>
                     </div>
                   </div>

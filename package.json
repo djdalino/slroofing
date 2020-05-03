@@ -9,10 +9,17 @@
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
     "axios": "^0.19.2",
+    "body-parser": "^1.19.0",
     "concurrently": "^5.1.0",
+    "cors": "^2.8.5",
     "emotion": "^10.0.27",
+<<<<<<< HEAD
+    "express": "^4.17.1",
+=======
     "moment": "^2.24.0",
+>>>>>>> 2a9f1bcb1268f528d58130f8b055dcef766cbaa7
     "multer": "^1.4.2",
+    "nodemailer": "^6.4.6",
     "nodemon": "^2.0.3",
     "react": "^16.13.1",
     "react-datepicker": "^2.14.1",
