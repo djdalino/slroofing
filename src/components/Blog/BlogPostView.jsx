@@ -52,7 +52,7 @@ class BlogPostView extends Component {
                     <img
                       style={{
                         width: "100%",
-                        maxHeight: "700px",
+                        height: "auto",
                         margin: "30px 0",
                       }}
                       className="text-center"

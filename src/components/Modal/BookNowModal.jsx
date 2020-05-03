@@ -5,6 +5,8 @@ import FormDatePick from "./FormDatePick";
 import FormTimePick from "./FormTimePick";
 import FormInfo from "./FormInfo";
 import FormDetails from "./FormDetails";
+import FormSuccess from "./FormSuccess";
+import axios from "axios";
 class BookNowModal extends Component {
   state = {
     step: 1,
@@ -23,6 +25,31 @@ class BookNowModal extends Component {
     this.setState({ stateValue: newValue });
   };
 
+  handleSubmitBookNow = async (e) => {
+    const data = {
+      startDate: this.state.startDate,
+      pickTime: this.state.pickTime,
+      first_name: this.state.first_name,
+      last_name: this.state.last_name,
+      email: this.state.email,
+      phone: this.state.phone,
+      address: this.state.address,
+      city: this.state.city,
+      stateValue: this.state.stateValue,
+      postal_code: this.state.postal_code,
+    };
+    console.log(data);
+    try {
+      const res = await axios.post(`/api/booknow/`, data);
+
+      if (res.status === 200) {
+        console.log(res.status);
+        this.nextStep();
+      }
+    } catch (error) {
+      alert(error);
+    }
+  };
   getDate = (dateString) => {
     const month = [
       "January",
@@ -44,9 +71,7 @@ class BookNowModal extends Component {
   };
 
   setStartDate = (date) => {
-    const d = date.toLocaleString();
     this.setState({ startDate: date });
-    console.log(d);
   };
   nextStep = () => {
     this.setState({ step: this.state.step + 1 });
@@ -163,6 +188,28 @@ class BookNowModal extends Component {
                   handleInputChange={this.handleInputChange}
                   setNewValue={this.setNewValue}
                   getDate={this.getDate}
+                  handleSubmitBookNow={this.handleSubmitBookNow}
+                />
+              </div>
+            </div>
+          </div>
+        );
+      case 5:
+        return (
+          <div className="book-now-modal">
+            <div className="book-now-modal-container">
+              <div className="book-now-form-info">
+                <h1 className="text-center">Success</h1>
+                <FormSuccess
+                  values={values}
+                  setStartDate={this.setStartDate}
+                  nextStep={this.nextStep}
+                  prevStep={this.prevStep}
+                  handleChange={this.handleChange}
+                  handleInputChange={this.handleInputChange}
+                  setNewValue={this.setNewValue}
+                  getDate={this.getDate}
+                  handleSubmitBookNow={this.handleSubmitBookNow}
                 />
               </div>
             </div>

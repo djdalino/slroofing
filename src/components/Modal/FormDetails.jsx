@@ -16,7 +16,7 @@ class FormDetails extends Component {
     } = this.props.values;
 
     return (
-      <div>
+      <React.Fragment>
         <p>{`Pick Date: ${this.props.getDate(startDate)}`}</p>
         <p>{`Pick Time: ${pickTime}`}</p>
         <p>{`Full name: ${first_name} ${last_name}`}</p>
@@ -26,7 +26,12 @@ class FormDetails extends Component {
         <p>{`City: ${city}`}</p>
         <p>{`State: ${stateValue}`}</p>
         <p>{`Zip: ${postal_code}`}</p>
-      </div>
+        <input
+          type="submit"
+          value="submit"
+          onClick={this.props.handleSubmitBookNow}
+        />
+      </React.Fragment>
     );
   }
 }

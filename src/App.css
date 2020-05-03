@@ -368,6 +368,9 @@ ul {
 }
 
 @media screen and (max-width: 1024px) {
+  .btn-book {
+    display: none;
+  }
   .sl-nav-header {
     width: 100%;
   }
@@ -1080,7 +1083,7 @@ p {
 }
 
 .blog-category-cointainer {
-  width: 90%;
+  width: 85%;
 }
 
 .ContactBanner {
@@ -2033,7 +2036,7 @@ p {
     margin-bottom: 50px !important;
   }
   .blog-category-cointainer {
-    width: 100%;
+    width: 85%;
   }
 }
 

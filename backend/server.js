@@ -16,10 +16,11 @@ app.use(express.json());
 const post = require("./routes/postRoutes");
 const postCategory = require("./routes/postCategoryRoute");
 const userRoute = require("./routes/userRoutes");
+const bookNow = require("./routes/bookNowRoutes");
 app.use("/posts", post);
 app.use("/postCategory", postCategory);
 app.use("/api/user", userRoute);
-
+app.use("/api/booknow", bookNow);
 // set up server
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
@@ -29,8 +30,7 @@ app.listen(PORT, () => {
 const MONGODB_URI =
   "mongodb+srv://djdalino:TpW5Z6aYjCENviOt@cluster3-hngry.mongodb.net/test?retryWrites=true&w=majority";
 mongoose.connect(
-  process.env.MONGODB_URI ||
-    "mongodb+srv://djdalino:TpW5Z6aYjCENviOt@cluster3-hngry.mongodb.net/test?retryWrites=true&w=majority",
+  process.env.MONGODB_URI || MONGODB_URI,
   { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true },
   (err) => {
     if (err) return console.error(err);

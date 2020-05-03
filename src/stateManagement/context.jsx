@@ -31,12 +31,11 @@ class ProductProvider extends Component {
 
   handleBookNowModal = () => {
     this.setState({ isBookNow: !this.state.isBookNow });
-    console.log(__dirname);
   };
   //LOGIN
   login = (user) => {
     return axios
-      .post("http://localhost:5000/api/user/login", {
+      .post("/api/user/login", {
         email: user.email,
         password: user.password,
       })
@@ -95,7 +94,7 @@ class ProductProvider extends Component {
     fd.append("blogImage", this.state.blogImage);
     fd.append("articleImage", this.state.articleImage);
     try {
-      const data = await axios.post(`http://localhost:5000/posts/`, fd);
+      const data = await axios.post(`/posts/`, fd);
       if (data.status === 200) {
         return data;
       }
@@ -108,7 +107,7 @@ class ProductProvider extends Component {
   //CATEGORY
 
   getCategory = async () => {
-    const res = await axios.get(`http://localhost:5000/postCategory/`);
+    const res = await axios.get(`/postCategory/`);
 
     let tempCategory = [];
 
@@ -174,7 +173,7 @@ class ProductProvider extends Component {
   };
 
   getPost = async () => {
-    const res = await axios.get("http://localhost:5000/posts/");
+    const res = await axios.get("/posts/");
     let tempPosts = [];
 
     res.data.forEach((item) => {
