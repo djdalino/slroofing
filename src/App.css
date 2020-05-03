@@ -1224,7 +1224,7 @@ p {
   .uabb-icon-wrap
   .uabb-icon
   i:before {
-  color: #777777;
+  color: #2978b0;
   font-size: 30px;
   height: auto;
   width: auto;
@@ -1288,7 +1288,7 @@ p {
 }
 
 .ua-icon-phone-handset:before {
-  content: "\e9b2";
+  content: "\260E" !important;
 }
 
 .uabb-icon i:before {
@@ -1310,7 +1310,30 @@ p {
   .uabb-icon-wrap
   .uabb-icon
   i:before {
-  color: #777777;
+  color: #2978b0;
+  font-size: 30px;
+  height: auto;
+  width: auto;
+  background: #ffffff;
+  border-radius: 35px;
+  -moz-border-radius: 35px;
+  -webkit-border-radius: 35px;
+  line-height: 70px;
+  height: 70px;
+  width: 70px;
+  text-align: center;
+  border-style: solid;
+  box-sizing: border-box;
+  border-color: #39618e;
+  border-width: 1px;
+}
+
+.fl-node-5bad6f2334e50
+  .info-list-icon-dynamic0
+  .uabb-icon-wrap
+  .uabb-icon
+  i:before {
+  color: #2978b0;
   font-size: 30px;
   height: auto;
   width: auto;
@@ -1416,7 +1439,7 @@ p {
   .uabb-icon-wrap
   .uabb-icon
   i:before {
-  color: #777777;
+  color: #2978b0;
   font-size: 30px;
   height: auto;
   width: auto;
@@ -1497,7 +1520,7 @@ p {
   .uabb-icon-wrap
   .uabb-icon
   i:before {
-  color: #777777;
+  color: #2978b0;
   font-size: 30px;
   height: auto;
   width: auto;
@@ -1528,7 +1551,7 @@ p {
   .uabb-icon-wrap
   .uabb-icon
   i:before {
-  color: #777777;
+  color: #2978b0;
   font-size: 30px;
   height: auto;
   width: auto;
@@ -1578,7 +1601,7 @@ p {
   .uabb-icon-wrap
   .uabb-icon
   i:before {
-  color: #777777;
+  color: #2978b0;
   font-size: 30px;
   height: auto;
   width: auto;
@@ -1635,16 +1658,70 @@ p {
   text-align: center;
 }
 
-#root > div:nth-child(2) > div:nth-child(2) > div > div > div > ul > li.uabb-info-list-item.info-list-item-dynamic2 > div.uabb-info-list-connector.uabb-info-list-top {
+#root
+  > div:nth-child(2)
+  > div:nth-child(2)
+  > div
+  > div
+  > div
+  > ul
+  > li.uabb-info-list-item.info-list-item-dynamic2
+  > div.uabb-info-list-connector.uabb-info-list-top {
   display: none;
 }
 
+.uabb-info-list-content-wrapper.fl-clearfix.uabb-info-list-top h3 {
+  margin-top: 15px;
+  font-size: 20px;
+}
+
+.fl-node-5bad6f2334e50
+  .info-list-icon-dynamic0
+  .uabb-icon-wrap
+  .uabb-icon
+  i:before {
+  color: #2978b0;
+  font-size: 30px;
+  height: auto;
+  width: auto;
+  background: #ffffff;
+  border-radius: 35px;
+  -moz-border-radius: 35px;
+  -webkit-border-radius: 35px;
+  line-height: 70px;
+  height: 70px;
+  width: 70px;
+  text-align: center;
+  border-style: solid;
+  box-sizing: border-box;
+  border-color: #39618e;
+  border-width: 1px;
+}
+
+i.ua-icon.ua-icon-envelope2::before {
+  content: "\2709";
+  font-size: 41px !important;
+  font-weight: 900;
+}
+.ua-icon-map-marker:before {
+  content: "\272C" !important;
+  font-size: 37px !important;
+  font-weight: 700;
+}
+
+.findLocation {
+  background: #2222220f;
+  width: 100%;
+  padding: 50px !important;
+  margin-bottom: 0;
+}
 /*------------/about us/-----------*/
 
 @media screen and (max-width: 1400px) {
   .banner-container {
     transform: translate(25%);
   }
+
   .banner {
     transform: translate(0%) !important;
   }
@@ -1989,7 +2066,7 @@ p {
     text-align: center;
   }
   .findLocation {
-    width: 90%;
+    width: 100%;
     margin: auto;
     padding: 50px 0;
   }
@@ -2244,6 +2321,12 @@ p {
   .sbook-now,
   .slearn-more {
     top: 52%;
+  }
+  .uabb-info-list-connector.uabb-info-list-top {
+    display: none;
+  }
+  .uabb-info-list-content-wrapper.fl-clearfix.uabb-info-list-top {
+    padding-bottom: 30px;
   }
 }
 /**/

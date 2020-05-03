@@ -19,6 +19,7 @@ export default class Contact extends Component {
           }}
         </ProductConsumer>
         <ContactBan />
+
         <Findmap />
       </div>
     );
