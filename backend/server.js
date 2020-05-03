@@ -18,15 +18,14 @@ app.post("/api/contactUs", (req, res) => {
   const data = req.body;
 
   const smtpTransport = nodemailer.createTransport({
-    service: "Gmail",
+    service: "gmail",
     port: 465,
     auth: {
-      xoauth2: xoauth2.createXOAuth2Generator({
-        user: "darrenjames.dalino@gmail.com",
-        clientId: "",
-        clientSecret: "",
-        refreshToken: "",
-      }),
+      user: "darrenjames.dalino@gmail.com",
+      pass: "Akosidj01",
+    },
+    tls: {
+      rejectUnauthorized: false,
     },
   });
 

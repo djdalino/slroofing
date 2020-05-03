@@ -22,13 +22,7 @@ class ContactUsForm extends Component {
       inquiry: this.state.inquiry,
     };
     try {
-      const res = await axios.post(
-        "http://localhost:5000/api/contactUs",
-        data,
-        {
-          headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        }
-      );
+      const res = await axios.post("http://localhost:5000/api/contactUs", data);
       if (res.status === 200) {
         alert("success");
         this.setState({ name: "", email: "", phone: "", inquiry: "" });
