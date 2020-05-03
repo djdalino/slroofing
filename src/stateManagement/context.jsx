@@ -20,11 +20,7 @@ class ProductProvider extends Component {
     articleImage: null,
     email: "",
     password: "",
-<<<<<<< HEAD
-    isBookNow: false
-=======
     isBookNow: false,
->>>>>>> f761dc0fa8a3332d9b0221e73d8ff9cbcd0a225f
   };
   componentDidMount() {
     this.setService();
@@ -126,13 +122,8 @@ class ProductProvider extends Component {
 
   //BLOG
 
-<<<<<<< HEAD
-  getBlogitem = id => {
-    const blog = this.state.posts.find(item => item._id === id);
-=======
   getBlogitem = (id) => {
     const blog = this.state.posts.find((item) => item._id === id);
->>>>>>> f761dc0fa8a3332d9b0221e73d8ff9cbcd0a225f
     return blog;
   };
   getMatch = (blog, category) => {

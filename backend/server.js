@@ -1,6 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const nodemailer = require("nodemailer");
+const xoauth2 = require("xoauth2");
 const cors = require("cors");
 const path = require("path");
 require("dotenv").config();
@@ -20,8 +21,12 @@ app.post("/api/contactUs", (req, res) => {
     service: "Gmail",
     port: 465,
     auth: {
-      user: "darrenjames.dalino@gmail.com",
-      pass: "Akosidj01",
+      xoauth2: xoauth2.createXOAuth2Generator({
+        user: "darrenjames.dalino@gmail.com",
+        clientId: "",
+        clientSecret: "",
+        refreshToken: "",
+      }),
     },
   });
 
