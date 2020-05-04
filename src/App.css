@@ -1763,6 +1763,10 @@ h3.white,
 h5.white {
   color: #ffffff;
 }
+
+h3.white {
+  margin-bottom: 30px;
+}
 /*------------/about us/-----------*/
 
 @media screen and (max-width: 1400px) {
@@ -2190,6 +2194,13 @@ h5.white {
 @media screen and (max-width: 1200px) {
   #root > nav > div > ul > li:nth-child(6) {
     display: none;
+  }
+
+  .fl-module-content {
+    margin-bottom: 0 !important;
+  }
+  .fl-module.fl-module-info-list.fl-node-5bad6f2334e50 {
+    margin: 25px auto !important;
   }
 
   .sl-nav-logo {
