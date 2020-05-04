@@ -1,7 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const nodemailer = require("nodemailer");
-const xoauth2 = require("xoauth2");
+const mg = require("nodemailer-mailgun-transport");
 const cors = require("cors");
 const path = require("path");
 require("dotenv").config();
@@ -14,38 +14,67 @@ app.use(express.urlencoded({ extended: true }));
 app.use("/uploads", express.static("uploads"));
 app.use(express.json());
 //Contact Us
+
 app.post("/api/contactUs", (req, res) => {
   const data = req.body;
-
-  const smtpTransport = nodemailer.createTransport({
-    service: "gmail",
-    port: 465,
+  const auth = {
     auth: {
-      user: "darrenjames.dalino@gmail.com",
-      pass: "Akosidj01",
+      api_key: "c7d146ec9510c2f254238ba8d160a369-0afbfc6c-4aa79fb5",
+      domain: "sandboxd5fa3cbefeb84afc95cd6693afc5eb68.mailgun.org",
     },
-    tls: {
-      rejectUnauthorized: false,
-    },
-  });
-
-  const mailOptions = {
-    from: data.email,
-    to: "darrenajames.dalino@gmail.com",
-    subject: "contact us",
-    html: `<p>${data.name}</p>
-        <p>${data.email}</p>
-        <p>${data.phone}</p>
-        <p>${data.message}</p>`,
   };
 
-  smtpTransport.sendMail(mailOptions, (err, response) => {
+  const transporter = nodemailer.createTransport(mg(auth));
+
+  const mailOptions = {
+    from: `${data.name} <${data.email}>`,
+    to: "darrenjames.dalino@gmail.com",
+    subject: `<strong>SL Roofing Query</strong>`,
+    html: `<p>Name: ${data.name}</p>
+        <p>Email From: ${data.email}</p>
+        <p>Phone: ${data.phone}</p>
+        <p>${data.inquiry}</p>`,
+  };
+
+  transporter.sendMail(mailOptions, (err, response) => {
     if (err) {
       console.log(err);
     } else {
-      response.send("success");
+      console.log("success");
     }
-    smtpTransport.close();
+    transporter.close();
+  });
+});
+
+// Booking
+app.post("/api/booking", (req, res) => {
+  const data = req.body;
+  const auth = {
+    auth: {
+      api_key: "c7d146ec9510c2f254238ba8d160a369-0afbfc6c-4aa79fb5",
+      domain: "sandboxd5fa3cbefeb84afc95cd6693afc5eb68.mailgun.org",
+    },
+  };
+
+  const transporter = nodemailer.createTransport(mg(auth));
+
+  const mailOptions = {
+    from: `${data.name} <${data.email}>`,
+    to: "darrenjames.dalino@gmail.com",
+    subject: "SL Roofing Booking",
+    html: `<p>Name: ${data.name}</p>
+        <p>Email From: ${data.email}</p>
+        <p>Phone: ${data.phone}</p>
+        <p>${data.inquiry}</p>`,
+  };
+
+  transporter.sendMail(mailOptions, (err, response) => {
+    if (err) {
+      console.log(err);
+    } else {
+      console.log("success");
+    }
+    transporter.close();
   });
 });
 // set up routes

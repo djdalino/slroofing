@@ -13,6 +13,14 @@ class ContactUsForm extends Component {
       [e.target.name]: e.target.value,
     });
   };
+  reset = () => {
+    this.setState({
+      name: "",
+      email: "",
+      phone: "",
+      inquiry: "",
+    });
+  };
   handleSubmitContactUs = async (e) => {
     e.preventDefault();
     const data = {
@@ -21,11 +29,12 @@ class ContactUsForm extends Component {
       phone: this.state.phone,
       inquiry: this.state.inquiry,
     };
+
     try {
       const res = await axios.post("http://localhost:5000/api/contactUs", data);
-      if (res.status === 200) {
-        alert("success");
-        this.setState({ name: "", email: "", phone: "", inquiry: "" });
+
+      if (res.data) {
+        console.log("success");
       }
     } catch (error) {
       alert(error);
