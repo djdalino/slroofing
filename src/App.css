@@ -473,6 +473,7 @@ nav .show-nav {
   margin-top: 4rem;
   z-index: -1;
 }
+
 .ourServicesHero {
   height: 200px;
   width: 100%;
@@ -808,7 +809,7 @@ h4.secondaryText {
   margin-top: 0px !important;
   border: none;
   font-size: 12px;
-  border-radius: 0!important;
+  border-radius: 0 !important;
 }
 
 .footer-container .subscribe-container button {
@@ -1640,8 +1641,7 @@ p {
 .fl-module.fl-module-info-list.fl-node-5bad6f2334e50 {
   width: 85%;
   text-align: center;
-  margin: 50px !important;
-  margin: auto;
+  margin: 50px auto !important;
 }
 /* 
 #root
@@ -1716,6 +1716,52 @@ i.ua-icon.ua-icon-envelope2::before {
   width: 100%;
   padding: 50px !important;
   margin-bottom: 0;
+}
+
+.contact-wrapper {
+  background: url("./img/contact-cover.png") center/cover no-repeat !important;
+}
+
+.contact-wrapper .container-sm {
+  width: 60%;
+  padding: 50px;
+}
+
+input {
+  font-size: 14px !important;
+  font-family: var(--mainText);
+}
+
+textarea.form-control {
+  height: auto;
+  font-family: var(--mainText);
+  font-size: 15px;
+}
+
+#root
+  > div:nth-child(2)
+  > div:nth-child(2)
+  > div.contact-wrapper
+  > div
+  > form
+  > button {
+  font-size: 15px;
+  margin-top: 24px;
+  padding: 15px 25px !important;
+  border-radius: 6px;
+}
+
+.form-control-lg {
+  height: calc(1.5em + 1rem + 2px);
+  padding: 0.5rem 1rem;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  border-radius: 0;
+}
+
+h3.white,
+h5.white {
+  color: #ffffff;
 }
 /*------------/about us/-----------*/
 
@@ -2144,6 +2190,16 @@ i.ua-icon.ua-icon-envelope2::before {
 @media screen and (max-width: 1200px) {
   #root > nav > div > ul > li:nth-child(6) {
     display: none;
+  }
+
+  .sl-nav-logo {
+    width: 70px;
+    position: relative;
+    top: 0px;
+  }
+  .contact-wrapper .container-sm {
+    width: 90%;
+    padding: 50px 0;
   }
 
   p.text-center.w-50.mx-auto {

@@ -5,12 +5,12 @@ class ContactUsForm extends Component {
     name: "",
     email: "",
     phone: "",
-    inquiry: "",
+    inquiry: ""
   };
-  handleInputChange = (e) => {
+  handleInputChange = e => {
     console.log(e.target.value);
     this.setState({
-      [e.target.name]: e.target.value,
+      [e.target.name]: e.target.value
     });
   };
   reset = () => {
@@ -18,16 +18,16 @@ class ContactUsForm extends Component {
       name: "",
       email: "",
       phone: "",
-      inquiry: "",
+      inquiry: ""
     });
   };
-  handleSubmitContactUs = async (e) => {
+  handleSubmitContactUs = async e => {
     e.preventDefault();
     const data = {
       name: this.state.name,
       email: this.state.email,
       phone: this.state.phone,
-      inquiry: this.state.inquiry,
+      inquiry: this.state.inquiry
     };
 
     try {
@@ -42,56 +42,60 @@ class ContactUsForm extends Component {
   };
   render() {
     return (
-      <div className="container-sm">
-        <form onSubmit={this.handleSubmitContactUs}>
-          <div className="form-group">
-            <input
-              type="text"
-              name="name"
-              className="form-control form-control-lg"
-              id="inputAddress"
-              onChange={this.handleInputChange}
-              value={this.state.name}
-              placeholder="YOURNAME"
-            />
-          </div>
-          <div className="form-row">
-            <div className="form-group col-md-6">
+      <div className="contact-wrapper">
+        <div className="container-sm">
+          <h5 className="white">Send us a message directly</h5>
+          <h3 className="white">Let's talk</h3>
+          <form onSubmit={this.handleSubmitContactUs}>
+            <div className="form-group">
               <input
                 type="text"
-                name="phone"
+                name="name"
                 className="form-control form-control-lg"
-                id="inputEmail4"
+                id="inputAddress"
                 onChange={this.handleInputChange}
-                value={this.state.phone}
-                placeholder="PHONE NUMBER"
+                value={this.state.name}
+                placeholder="YOURNAME"
               />
             </div>
-            <div className="form-group col-md-6">
-              <input
-                type="email"
-                name="email"
-                className="form-control form-control-lg"
-                id="inputPassword4"
-                onChange={this.handleInputChange}
-                value={this.state.email}
-                placeholder="EMAIL"
-              />
+            <div className="form-row">
+              <div className="form-group col-md-6">
+                <input
+                  type="text"
+                  name="phone"
+                  className="form-control form-control-lg"
+                  id="inputEmail4"
+                  onChange={this.handleInputChange}
+                  value={this.state.phone}
+                  placeholder="PHONE NUMBER"
+                />
+              </div>
+              <div className="form-group col-md-6">
+                <input
+                  type="email"
+                  name="email"
+                  className="form-control form-control-lg"
+                  id="inputPassword4"
+                  onChange={this.handleInputChange}
+                  value={this.state.email}
+                  placeholder="EMAIL"
+                />
+              </div>
             </div>
-          </div>
-          <textarea
-            name="inquiry"
-            className="form-control form-control-lg"
-            id="inquiry"
-            rows="3"
-            onChange={this.handleInputChange}
-            value={this.state.inquiry}
-            placeholder="YOUR INQUIRY"
-          ></textarea>
-          <button type="submit" className="btn btn-danger">
-            SEND MESSAGE
-          </button>
-        </form>
+            <textarea
+              name="inquiry"
+              className="form-control form-control-lg"
+              id="inquiry"
+              rows="3"
+              onChange={this.handleInputChange}
+              value={this.state.inquiry}
+              placeholder="YOUR INQUIRY"
+            ></textarea>
+            <button type="submit" className="btn btn-danger">
+              SEND MESSAGE
+            </button>
+          </form>
+        </div>
       </div>
     );
   }
