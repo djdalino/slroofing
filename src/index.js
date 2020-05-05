@@ -2,14 +2,14 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
-import { BrowserRouter as Router } from "react-router-dom";
+import { BrowserRouter as Router, hashHistory } from "react-router-dom";
 import * as serviceWorker from "./serviceWorker";
 import { ProductProvider } from "./stateManagement/context";
 
 ReactDOM.render(
   <React.StrictMode>
     <ProductProvider>
-      <Router onUpdate={() => document.body.scrollTo(0, 0)}>
+      <Router history={hashHistory}>
         <App />
       </Router>
     </ProductProvider>
