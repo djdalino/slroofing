@@ -82,7 +82,7 @@ const post = require("./routes/postRoutes");
 const postCategory = require("./routes/postCategoryRoute");
 const userRoute = require("./routes/userRoutes");
 const bookNow = require("./routes/bookNowRoutes");
-app.get("/*", function (req, res) {
+app.get("*", function (req, res) {
   res.sendFile(path.join(__dirname, "build", "index.html"), function (err) {
     if (err) {
       res.status(500).send(err);
