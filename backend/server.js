@@ -82,9 +82,14 @@ const post = require("./routes/postRoutes");
 const postCategory = require("./routes/postCategoryRoute");
 const userRoute = require("./routes/userRoutes");
 const bookNow = require("./routes/bookNowRoutes");
-app.use(express.static(__dirname + "/"));
-app.get("*", function (request, response) {
-  response.sendFile(path.resolve(__dirname, "index.html"));
+app.get("*", function (req, res) {
+  // This wildcard method handles all requests
+
+  Router.run(routes, req.path, function (Handler, state) {
+    var element = React.createElement(Handler);
+    var html = React.renderToString(element);
+    res.render("main", { content: html });
+  });
 });
 app.use("/posts", post);
 app.use("/postCategory", postCategory);
