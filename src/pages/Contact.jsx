@@ -8,7 +8,7 @@ export default class Contact extends Component {
     return (
       <div>
         <ProductConsumer>
-          {value => {
+          {(value) => {
             const { handleChangeColor, isDark } = value;
             return (
               <h1

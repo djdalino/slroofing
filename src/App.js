@@ -8,20 +8,23 @@ import About from "./pages/About";
 import Admin from "./pages/Admin";
 import BlogPostView from "./components/Blog/BlogPostView";
 import Contact from "./pages/Contact";
+import ScrollIntoView from "./ScrollIntoView";
 import { Switch, Route } from "react-router-dom";
 function App() {
   return (
     <React.Fragment>
-      <Navbar />
-      <Switch>
-        <Route exact path="/" component={Home} />
-        <Route exact path="/blog" component={Blog} />
-        <Route path="/about" component={About} />s
-        <Route path="/blog/:id" component={BlogPostView} />
-        <Route path="/admin" component={Admin} />
-        <Route path="/contact" component={Contact} />
-      </Switch>
-      <Footer />
+      <ScrollIntoView>
+        <Navbar />
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/blog" component={Blog} />
+          <Route path="/about" component={About} />s
+          <Route path="/blog/:id" component={BlogPostView} />
+          <Route path="/admin" component={Admin} />
+          <Route path="/contact" component={Contact} />
+        </Switch>
+        <Footer />
+      </ScrollIntoView>
     </React.Fragment>
   );
 }

@@ -9,7 +9,7 @@ import { ProductProvider } from "./stateManagement/context";
 ReactDOM.render(
   <React.StrictMode>
     <ProductProvider>
-      <Router>
+      <Router onUpdate={() => document.body.scrollTo(0, 0)}>
         <App />
       </Router>
     </ProductProvider>
