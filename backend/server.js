@@ -82,8 +82,9 @@ const post = require("./routes/postRoutes");
 const postCategory = require("./routes/postCategoryRoute");
 const userRoute = require("./routes/userRoutes");
 const bookNow = require("./routes/bookNowRoutes");
-app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "index.html"));
+app.use(express.static(__dirname + "/"));
+app.get("*", function (request, response) {
+  response.sendFile(path.resolve(__dirname, "index.html"));
 });
 app.use("/posts", post);
 app.use("/postCategory", postCategory);
