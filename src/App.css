@@ -14,7 +14,7 @@
   position: absolute;
   width: 100%;
   top: 0%;
-  height: 82%;
+  height: 86%;
   background: #2978b0db;
   cursor: pointer;
   transition: all 0.5s ease-in-out;
@@ -1712,7 +1712,7 @@ i.ua-icon.ua-icon-envelope2::before {
 }
 
 .findLocation {
-  background: #2222220f;
+  background: #ffffff;
   width: 100%;
   padding: 50px !important;
   margin-bottom: 0;
