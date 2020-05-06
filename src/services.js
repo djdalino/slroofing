@@ -1,5 +1,3 @@
-import Slate from "./roofing/GAF Timberline HD SLATE-model.jpg";
-
 export const slservices = [
   {
     id: 1,
@@ -16,7 +14,7 @@ export const slservices = [
   {
     id: 3,
     title: "Slate Roofing",
-    img: Slate,
+    img: "Slate Roofing",
     category: ["Roofing"],
   },
   {
@@ -206,13 +204,13 @@ export const slservices = [
     category: ["Others"],
   },
   {
-    id: 34,
+    id: 35,
     title: "Dutch Doors",
     img: "Dutch Doors",
     category: ["Others"],
   },
   {
-    id: 35,
+    id: 36,
     title: "Roller Doors",
     img: "Roller Doors",
     category: ["Others"],

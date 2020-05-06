@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 class Services extends Component {
   render() {
-    const { title, img, category } = this.props.service;
+    const { id, title, img, category } = this.props.service;
     const { activeCategoryServices } = this.props.value;
     if (
       category.indexOf(activeCategoryServices) < 0 &&
@@ -21,7 +21,12 @@ class Services extends Component {
           </Link>
         </div>
         <img src={img} alt={title} className="mx-auto" />
-        <p className="text-center mt-3 ourServicesFont">{title}</p>
+        <p
+          className="text-center mt-3 ourServicesFont"
+          onClick={() => console.log(id)}
+        >
+          {title}
+        </p>
       </div>
     );
   }
