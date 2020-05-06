@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import Blog from "./pages/Blog";
 import Footer from "./components/Footer/Footer";
 import About from "./pages/About";
+import Services from "./pages/Services";
 import Admin from "./pages/Admin";
 import BlogPostView from "./components/Blog/BlogPostView";
 import Contact from "./pages/Contact";
@@ -20,6 +21,7 @@ function App() {
           <Route exact path="/blog" component={Blog} />
           <Route path="/about" component={About} />s
           <Route path="/blog/:id" component={BlogPostView} />
+          <Route path="/services" component={Services} />
           <Route path="/admin" component={Admin} />
           <Route path="/contact" component={Contact} />
         </Switch>

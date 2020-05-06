@@ -39,7 +39,7 @@ class Navbar extends React.Component {
               <Link to="/about">About</Link>
             </li>
             <li className="active" onClick={() => this.handleToggle()}>
-              <Link to="/">Services</Link>
+              <Link to="/services">Services</Link>
             </li>
             <li className="active" onClick={() => this.handleToggle()}>
               <Link to="/blog">Blog</Link>

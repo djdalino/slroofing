@@ -15,17 +15,17 @@ export default class OurServices extends React.Component {
               </h2>
               <div className="row">
                 <ProductConsumer>
-                  {value => {
+                  {(value) => {
                     const { services } = value;
                     const arrayCategory = ["all"];
-                    services.forEach(item => {
-                      item.category.forEach(category => {
+                    services.forEach((item) => {
+                      item.category.forEach((category) => {
                         if (arrayCategory.indexOf(category) < 0) {
                           arrayCategory.push(category);
                         }
                       });
                     });
-                    return arrayCategory.map(category => {
+                    return arrayCategory.map((category) => {
                       return (
                         <OurServiceColumn
                           key={category}
