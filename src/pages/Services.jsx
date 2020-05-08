@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Hero from "../components/Hero";
 import ServicesOffer from "../components/Services/servicesOffer";
+import Testimonial from "../components/Testimonial/Testimonial";
 class Services extends Component {
   render() {
     return (
@@ -16,6 +17,7 @@ class Services extends Component {
           </div>
         </Hero>
         <ServicesOffer />
+        <Testimonial />
       </div>
     );
   }

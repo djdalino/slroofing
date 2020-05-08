@@ -56,7 +56,6 @@ class RoofingCarousel extends Component {
             <div>{this.getImageCarousel()}</div>
             <div
               style={{
-                border: "1px solid black",
                 width: "150px",
                 height: "768px",
                 overflow: "auto",
