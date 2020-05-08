@@ -7,6 +7,7 @@ import FormInfo from "./FormInfo";
 import FormDetails from "./FormDetails";
 import FormSuccess from "./FormSuccess";
 import axios from "axios";
+import { ProductConsumer } from "../../stateManagement/context";
 class BookNowModal extends Component {
   state = {
     step: 1,
@@ -120,6 +121,23 @@ class BookNowModal extends Component {
         return (
           <div className="book-now-modal">
             <div className="book-now-modal-container">
+              <ProductConsumer>
+                {(value) => {
+                  const { handleBookNowModal } = value;
+                  return (
+                    <button
+                      type="button"
+                      class="close"
+                      data-dismiss="modal"
+                      aria-label="Close"
+                      onClick={handleBookNowModal}
+                    >
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  );
+                }}
+              </ProductConsumer>
+
               <div className="book-now-datetime">
                 <h1 className="text-center">Pick Date</h1>
                 <FormDatePick
@@ -139,6 +157,23 @@ class BookNowModal extends Component {
         return (
           <div className="book-now-modal">
             <div className="book-now-modal-container">
+              <ProductConsumer>
+                {(value) => {
+                  const { handleBookNowModal } = value;
+                  return (
+                    <button
+                      type="button"
+                      class="close"
+                      data-dismiss="modal"
+                      aria-label="Close"
+                      onClick={handleBookNowModal}
+                    >
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  );
+                }}
+              </ProductConsumer>
+
               <div className="book-now-datetime">
                 <h1 className="text-center">Pick Time</h1>
                 <FormTimePick
@@ -157,6 +192,23 @@ class BookNowModal extends Component {
         return (
           <div className="book-now-modal">
             <div className="book-now-modal-container">
+              <ProductConsumer>
+                {(value) => {
+                  const { handleBookNowModal } = value;
+                  return (
+                    <button
+                      type="button"
+                      class="close"
+                      data-dismiss="modal"
+                      aria-label="Close"
+                      onClick={handleBookNowModal}
+                    >
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  );
+                }}
+              </ProductConsumer>
+
               <div className="book-now-form-info">
                 <h1 className="text-center">Your Information</h1>
                 <FormInfo
@@ -177,6 +229,23 @@ class BookNowModal extends Component {
         return (
           <div className="book-now-modal">
             <div className="book-now-modal-container">
+              <ProductConsumer>
+                {(value) => {
+                  const { handleBookNowModal } = value;
+                  return (
+                    <button
+                      type="button"
+                      class="close"
+                      data-dismiss="modal"
+                      aria-label="Close"
+                      onClick={handleBookNowModal}
+                    >
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  );
+                }}
+              </ProductConsumer>
+
               <div className="book-now-form-info">
                 <h1 className="text-center">Your Information</h1>
                 <FormDetails

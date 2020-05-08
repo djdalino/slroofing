@@ -1,0 +1,6 @@
+.roofingImg {
+  height: auto;
+  margin: 10px 3px;
+  display: "flex";
+  flex-direction: "column";
+}
