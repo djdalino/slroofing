@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { ProductConsumer } from "../../stateManagement/context";
 import { Redirect } from "react-router-dom";
+import Navbar from "../Navbar";
+import Footer from "../Footer/Footer";
 class BlogPostView extends Component {
   render() {
     return (
@@ -24,6 +26,7 @@ class BlogPostView extends Component {
           }
           return (
             <React.Fragment>
+              <Navbar />
               <div className="banner-attr">
                 <div className="blogCateg">
                   {categoryList.map((item) => (
@@ -64,6 +67,7 @@ class BlogPostView extends Component {
                   <p>{article}</p>
                 </div>
               </div>
+              <Footer />
             </React.Fragment>
           );
         }}

@@ -1,9 +1,7 @@
 import React from "react";
 import "./App.css";
-import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import Blog from "./pages/Blog";
-import Footer from "./components/Footer/Footer";
 import About from "./pages/About";
 import Services from "./pages/Services";
 import Admin from "./pages/Admin";
