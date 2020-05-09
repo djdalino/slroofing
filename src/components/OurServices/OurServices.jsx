@@ -13,7 +13,7 @@ export default class OurServices extends React.Component {
               <h2 className="text-center text-capitalize mainText">
                 our featured services
               </h2>
-              <div className="row">
+              {/* <div className="row">
                 <ProductConsumer>
                   {(value) => {
                     const { services } = value;
@@ -36,7 +36,7 @@ export default class OurServices extends React.Component {
                     });
                   }}
                 </ProductConsumer>
-              </div>
+              </div> */}
             </div>
           </div>
 

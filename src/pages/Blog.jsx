@@ -4,11 +4,15 @@ import BlogCategory from "../components/Blog/BlogCategory";
 import { ProductConsumer } from "../stateManagement/context";
 import Hero from "../components/Hero";
 import Subscribe from "../components/Subscribe";
+import OurServices from "../components/OurServices/OurServices";
 import { Link } from "react-router-dom";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer/Footer";
 class Blog extends Component {
   render() {
     return (
       <React.Fragment>
+        <Navbar />
         <Hero hero="blogHero">
           <div className="blogBanner">
             <div style={{ marginTop: "7rem " }}>
@@ -29,24 +33,24 @@ class Blog extends Component {
 
         <div className="my-5 our-blog-gallery">
           <ProductConsumer>
-            {value => {
+            {(value) => {
               const {
                 posts,
                 blogCategorySelect,
                 handleBlogView,
-                getDate
+                getDate,
               } = value;
               if (blogCategorySelect === "All") {
                 if (posts.length === 0)
                   return <h1 className="text-center">No Record</h1>;
 
-                return posts.map(post => {
+                return posts.map((post) => {
                   return <BlogList key={post._id} post={post} value={value} />;
                 });
               }
               return posts
-                .filter(e => e.category == blogCategorySelect)
-                .map(cat => {
+                .filter((e) => e.category == blogCategorySelect)
+                .map((cat) => {
                   return (
                     <Link
                       key={cat._id}
@@ -69,6 +73,8 @@ class Blog extends Component {
           </ProductConsumer>
         </div>
         <Subscribe />
+        <OurServices />
+        <Footer />
       </React.Fragment>
     );
   }

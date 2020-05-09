@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { ProductConsumer } from "../../stateManagement/context";
 import ServicesOfferColumn from "./ServicesOfferColumn";
 import ServicesList from "./ServicesList";
+import RoofingCarousel from "./Carousel/RoofingCarousel";
 class servicesOffer extends Component {
   render() {
     return (
@@ -38,6 +39,7 @@ class servicesOffer extends Component {
           </div>
         </div>
         <ServicesList />
+        <RoofingCarousel />
       </div>
     );
   }
