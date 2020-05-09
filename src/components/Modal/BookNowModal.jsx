@@ -20,13 +20,13 @@ class BookNowModal extends Component {
     address: "",
     city: "",
     stateValue: "",
-    postal_code: "",
+    postal_code: ""
   };
-  setNewValue = (newValue) => {
+  setNewValue = newValue => {
     this.setState({ stateValue: newValue });
   };
 
-  handleSubmitBookNow = async (e) => {
+  handleSubmitBookNow = async e => {
     const data = {
       startDate: this.state.startDate,
       pickTime: this.state.pickTime,
@@ -37,7 +37,7 @@ class BookNowModal extends Component {
       address: this.state.address,
       city: this.state.city,
       stateValue: this.state.stateValue,
-      postal_code: this.state.postal_code,
+      postal_code: this.state.postal_code
     };
     console.log(data);
     try {
@@ -51,7 +51,7 @@ class BookNowModal extends Component {
       alert(error);
     }
   };
-  getDate = (dateString) => {
+  getDate = dateString => {
     const month = [
       "January",
       "February",
@@ -64,14 +64,14 @@ class BookNowModal extends Component {
       "September",
       "October",
       "November",
-      "December",
+      "December"
     ];
     const date = new Date(dateString);
 
     return `${month[date.getMonth()]} ${date.getDate()}, ${date.getFullYear()}`;
   };
 
-  setStartDate = (date) => {
+  setStartDate = date => {
     this.setState({ startDate: date });
   };
   nextStep = () => {
@@ -80,12 +80,12 @@ class BookNowModal extends Component {
   prevStep = () => {
     this.setState({ step: this.state.step - 1 });
   };
-  handleChange = (event) => {
+  handleChange = event => {
     this.setState({
-      [event.target.name]: event.target.value,
+      [event.target.name]: event.target.value
     });
   };
-  handleInputChange = (e) => {
+  handleInputChange = e => {
     this.setState({ pickTime: e.target.value });
     console.log(e.target.value);
   };
@@ -101,7 +101,7 @@ class BookNowModal extends Component {
       address,
       city,
       stateValue,
-      postal_code,
+      postal_code
     } = this.state;
     const values = {
       startDate,
@@ -113,7 +113,7 @@ class BookNowModal extends Component {
       address,
       city,
       stateValue,
-      postal_code,
+      postal_code
     };
     console.log(this.state);
     switch (step) {
@@ -139,7 +139,7 @@ class BookNowModal extends Component {
               </ProductConsumer>
 
               <div className="book-now-datetime">
-                <h1 className="text-center">Pick Date</h1>
+                <h1 className="pick">Pick Date</h1>
                 <FormDatePick
                   values={values}
                   setStartDate={this.setStartDate}
@@ -175,7 +175,7 @@ class BookNowModal extends Component {
               </ProductConsumer>
 
               <div className="book-now-datetime">
-                <h1 className="text-center">Pick Time</h1>
+                <h1 className="pick">Pick Time</h1>
                 <FormTimePick
                   values={values}
                   nextStep={this.nextStep}
@@ -210,7 +210,7 @@ class BookNowModal extends Component {
               </ProductConsumer>
 
               <div className="book-now-form-info">
-                <h1 className="text-center">Your Information</h1>
+                <h1 className="pick">Your Information</h1>
                 <FormInfo
                   values={values}
                   setStartDate={this.setStartDate}
@@ -247,7 +247,7 @@ class BookNowModal extends Component {
               </ProductConsumer>
 
               <div className="book-now-form-info">
-                <h1 className="text-center">Your Information</h1>
+                <h1 className="pick">Your Information</h1>
                 <FormDetails
                   values={values}
                   setStartDate={this.setStartDate}
@@ -268,7 +268,7 @@ class BookNowModal extends Component {
           <div className="book-now-modal">
             <div className="book-now-modal-container">
               <div className="book-now-form-info">
-                <h1 className="text-center">Success</h1>
+                <h1 className="suc">Success</h1>
                 <FormSuccess
                   values={values}
                   setStartDate={this.setStartDate}

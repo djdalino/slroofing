@@ -2320,8 +2320,8 @@ h3.white {
     background: #ffffff33;
   }
   .sl-nav-links {
-    top: 60px !important;
     background: #ffffff !important;
+    top: 0px !important;
   }
 }
 
@@ -2343,6 +2343,7 @@ h3.white {
     flex-direction: column;
     justify-content: center;
     transform: translate(100%);
+    top: 60px !important;
   }
   #root > nav > div > ul > li:nth-child(6) {
     display: none;
