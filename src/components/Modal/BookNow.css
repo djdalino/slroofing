@@ -64,3 +64,10 @@
   flex-direction: column;
   align-items: center;
 }
+
+h1.pick {
+  text-transform: uppercase;
+  color: #222222;
+  font-size: 1.5rem;
+  text-align: ;
+}
