@@ -15,17 +15,15 @@ function App() {
   return (
     <React.Fragment>
       <ScrollIntoView>
-        <Navbar />
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/blog" component={Blog} />
-          <Route path="/about" component={About} />s
+          <Route path="/about" component={About} />
           <Route path="/blog/:id" component={BlogPostView} />
           <Route path="/services" component={Services} />
           <Route path="/admin" component={Admin} />
           <Route path="/contact" component={Contact} />
         </Switch>
-        <Footer />
       </ScrollIntoView>
     </React.Fragment>
   );

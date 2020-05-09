@@ -2,10 +2,13 @@ import React, { Component } from "react";
 import Hero from "../components/Hero";
 import ServicesOffer from "../components/Services/servicesOffer";
 import Testimonial from "../components/Testimonial/Testimonial";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer/Footer";
 class Services extends Component {
   render() {
     return (
       <div>
+        <Navbar />
         <Hero hero="blogHero">
           <div className="blogBanner">
             <div style={{ marginTop: "7rem " }}>
@@ -18,6 +21,7 @@ class Services extends Component {
         </Hero>
         <ServicesOffer />
         <Testimonial />
+        <Footer />
       </div>
     );
   }

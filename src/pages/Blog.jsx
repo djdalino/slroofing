@@ -6,10 +6,13 @@ import Hero from "../components/Hero";
 import Subscribe from "../components/Subscribe";
 import OurServices from "../components/OurServices/OurServices";
 import { Link } from "react-router-dom";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer/Footer";
 class Blog extends Component {
   render() {
     return (
       <React.Fragment>
+        <Navbar />
         <Hero hero="blogHero">
           <div className="blogBanner">
             <div style={{ marginTop: "7rem " }}>
@@ -71,6 +74,7 @@ class Blog extends Component {
         </div>
         <Subscribe />
         <OurServices />
+        <Footer />
       </React.Fragment>
     );
   }

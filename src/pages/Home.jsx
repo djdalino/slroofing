@@ -4,10 +4,13 @@ import Banner from "../components/Banner";
 import OurServices from "../components/OurServices/OurServices";
 import Subscribe from "../components/Subscribe";
 import Testimonial from "../components/Testimonial/Testimonial";
-import BookNowModal from "../components/Modal/BookNowModal";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer/Footer";
+
 function Home() {
   return (
     <React.Fragment>
+      <Navbar />
       <div>
         <Hero>
           <div className="banner-container">
@@ -32,6 +35,7 @@ function Home() {
         <Subscribe />
         <Testimonial />
       </div>
+      <Footer />
     </React.Fragment>
   );
 }
