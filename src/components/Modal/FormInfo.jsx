@@ -58,13 +58,13 @@ class FormInfo extends Component {
             <input
               type="text"
               name="address"
-              className="form-control"
+              className="form-control d-column"
               id="address"
               onChange={this.props.handleChange}
               placeholder="1234 Main St"
             />
           </div>
-          <div className="form-row">
+          <div className="form-row d-column">
             <div className="form-group col-md-6">
               <label htmlFor="city">City</label>
               <input

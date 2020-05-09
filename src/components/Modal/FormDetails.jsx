@@ -17,15 +17,17 @@ class FormDetails extends Component {
 
     return (
       <React.Fragment>
-        <p>{`Pick Date: ${this.props.getDate(startDate)}`}</p>
-        <p>{`Pick Time: ${pickTime}`}</p>
-        <p>{`Full name: ${first_name} ${last_name}`}</p>
-        <p>{`Email: ${email}`}</p>
-        <p>{`Phone: ${phone}`}</p>
-        <p>{`Adresss: ${address}`}</p>
-        <p>{`City: ${city}`}</p>
-        <p>{`State: ${stateValue}`}</p>
-        <p>{`Zip: ${postal_code}`}</p>
+        <p className="text-center">{`Pick Date: ${this.props.getDate(
+          startDate
+        )}`}</p>
+        <p className="text-center">{`Pick Time: ${pickTime}`}</p>
+        <p className="text-center">{`Full name: ${first_name} ${last_name}`}</p>
+        <p className="text-center">{`Email: ${email}`}</p>
+        <p className="text-center">{`Phone: ${phone}`}</p>
+        <p className="text-center">{`Adresss: ${address}`}</p>
+        <p className="text-center">{`City: ${city}`}</p>
+        <p className="text-center">{`State: ${stateValue}`}</p>
+        <p className="text-center"> {`Zip: ${postal_code}`}</p>
         <input
           type="submit"
           value="submit"
