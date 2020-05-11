@@ -19,7 +19,7 @@ class BlogPostView extends Component {
           const { categoryList, getDate } = value;
 
           const blogReplace = blogImage.replace(/\\/g, "/");
-          const blogImg = `http://localhost:5000/${blogReplace}`;
+          const blogImg = `/${blogReplace}`;
           console.log(blogImg);
           if (categoryList._id) {
             return <Redirect to="/blog" />;
@@ -59,7 +59,7 @@ class BlogPostView extends Component {
                         margin: "30px 0",
                       }}
                       className="text-center"
-                      src={`http://localhost:5000/${articleImage}`}
+                      src={`/${articleImage}`}
                       alt="img"
                     />
                   </div>
