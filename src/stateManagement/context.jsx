@@ -8,6 +8,7 @@ class ProductProvider extends Component {
     services: [],
     servicesOffer: [],
     activeCategoryServices: "all",
+    serviceOfferView: [],
     posts: [],
     category: [],
     post: [],
@@ -98,7 +99,7 @@ class ProductProvider extends Component {
     fd.append("blogImage", this.state.blogImage);
     fd.append("articleImage", this.state.articleImage);
     try {
-      const data = await axios.post(`/posts/`, fd);
+      const data = await axios.post(`http://localhost:5000/posts/`, fd);
       if (data.status === 200) {
         return data;
       }
@@ -228,6 +229,12 @@ class ProductProvider extends Component {
   handleServicesOfferChange = (item) => {
     this.setState({ activeCategoryServices: item });
   };
+  handleSingleServiceOffer = (id) => {
+    const service = this.state.servicesOffer.find(
+      (service) => service.id === id
+    );
+    this.setState({ serviceOfferView: service });
+  };
   setServicesOffer = () => {
     let tempServices = [];
     slservices.forEach((item) => {
@@ -255,6 +262,7 @@ class ProductProvider extends Component {
           handleBlogView: this.handleBlogView,
           onSubmit: this.onSubmit,
           handleServicesOfferChange: this.handleServicesOfferChange,
+          handleSingleServiceOffer: this.handleSingleServiceOffer,
         }}
       >
         {this.props.children}

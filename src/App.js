@@ -6,6 +6,7 @@ import About from "./pages/About";
 import Services from "./pages/Services";
 import Admin from "./pages/Admin";
 import BlogPostView from "./components/Blog/BlogPostView";
+import ServiceSingleView from "./components/Services/ServicesSingleView";
 import Contact from "./pages/Contact";
 import ScrollIntoView from "./ScrollIntoView";
 import { Switch, Route } from "react-router-dom";
@@ -18,6 +19,7 @@ function App() {
           <Route exact path="/blog" component={Blog} />
           <Route path="/about" component={About} />
           <Route path="/blog/:id" component={BlogPostView} />
+          <Route path="/service-offer/:id" component={ServiceSingleView} />
           <Route path="/services" component={Services} />
           <Route path="/admin" component={Admin} />
           <Route path="/contact" component={Contact} />

@@ -3,7 +3,10 @@ import { Link } from "react-router-dom";
 class Services extends Component {
   render() {
     const { id, title, img, category } = this.props.service;
-    const { activeCategoryServices } = this.props.value;
+    const {
+      activeCategoryServices,
+      handleSingleServiceOffer,
+    } = this.props.value;
     if (
       category.indexOf(activeCategoryServices) < 0 &&
       activeCategoryServices !== "all"
@@ -21,12 +24,14 @@ class Services extends Component {
           </Link>
         </div>
         <img src={img} alt={title} className="mx-auto" />
-        <p
+
+        <Link
+          to={`/service-offer/${id}`}
           className="text-center mt-3 ourServicesFont"
-          onClick={() => console.log(id)}
+          onClick={() => handleSingleServiceOffer(id)}
         >
           {title}
-        </p>
+        </Link>
       </div>
     );
   }
