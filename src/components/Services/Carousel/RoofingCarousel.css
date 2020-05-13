@@ -20,7 +20,7 @@
 }
 
 .second-image img {
-  height: 768;
+  height: 768px;
   width: 100%;
 }
 
@@ -48,8 +48,11 @@
 
   .default-image img,
   .second-image,
-  .second-image img {
-    width: 100%;
+  .second-image img,
+  .default-image,
+  .default-image img {
+    width: 100% !important;
+    height: auto !important;
   }
   .roofingImg img {
     width: 60px;
