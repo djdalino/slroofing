@@ -9,39 +9,22 @@ export default class AboutSLroofing extends Component {
     return (
       <div>
         <div className="who-we-are">
-          <h5 className="text-uppercase">About Services</h5>
+          <h5 className="text-uppercase">AFFORDABLE - TRUSTED - QUALITY</h5>
           <h2 className="text-center text-capitalize mainText">
-            SL ROOFING RENOVATION
+            Welcome to SL ROOFING
           </h2>
           <br />
           <p>
-            Midwest‘s Roofing, Renovation and Construction contracting company
+            A Midwest Roofing, Restoration and Construction contracting company
             since 2008. Established in Sioux City, Iowa with nearly two decades
-            of all construction experience under our belt being your one stop
-            construction shop.We service Iowa (IA) Minnesota (MN) Nebraska (NE)
-            South Dakota (SD) Missouri (MO) Kansas KS) and surrounding areas.
+            of all construction experience under our belt being a one stop
+            construction shop. SL ROOFING specializes in residential and
+            commercial roofing, restoration and construction services. We are
+            dedicated at providing exceptional customer service with affordable
+            and trusted quality at the most competitive prices in the industry.
             <br /> <br />
-            As a premier company specializing in residential and commercial
-            roofing, construction and renovation services, we are dedicated at
-            providing exceptional customer service with affordable and trusted
-            quality at the most competitive prices in the industry. roofing
-            contractors roofing companies. SL ROOFING &amp; RENOVATIONS helps
-            our clients create ideas by adding color and definition to make
-            their home or business shine. Making detailed decisions on design
-            while coordinating color schemes and combining creative concepts
-            will define your home or businesses unique style by showing off its
-            beauty and charm while incorporating your personality. We will help
-            guide you by choosing the right products for your projects overall
-            durability, longevity, and appearance saving you both time and
-            money. There are are many options to choose from these days to help
-            create the perfect combination for your home or businesses inner and
-            outter appearance.
-            <br /> <br />
-            SL ROOFING & RENOVATIONS will save you both time and money by
-            combining our use of roofing and construction knowledge, the highest
-            quality materials and installation techniques along with our
-            dedication to delivering exceptional service. Trust your next
-            projects success with SL ROOFING &amp; RENOVATIONS.
+            We service Iowa (IA) Minnesota (MN) Nebraska (NE) South Dakota (SD)
+            Missouri (MO) Kansas KS) and surrounding areas.
           </p>
         </div>
         <div className="ownerCover">

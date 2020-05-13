@@ -18,9 +18,10 @@ function Home() {
               <h1 className="text-uppercase">Done right!</h1>
               <h1 className="text-uppercase">Watertight!</h1>
               <p>
-                Innovative solutions and design for all your commercial and
-                residential roofing, renovation and contruction needs! roofing
-                companies, roofing contractors.
+                <strong>COMMERCIAL - RESIDENTIAL ROOFING</strong>
+                <br /> <br />
+                Innovative solutions and design for all your roofing,
+                restoration and construction needs!
               </p>
               <div className="button-container">
                 <button className="btn btn-danger text-uppercase">
