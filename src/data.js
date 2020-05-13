@@ -1,6 +1,6 @@
 import Roofing from "./img/thumbnail-1.png";
-import Gutters from "./img/thumbnail-2.png";
-import Siding from "./img/thumbnail-7.png";
+import Siding from "./img/thumbnail-2.png";
+import Gutters from "./img/thumbnail-3.png";
 
 export const servicesOffer = [
   {

@@ -4,3 +4,66 @@
   display: "flex";
   flex-direction: "column";
 }
+.default-image {
+  max-height: 768px;
+  width: 924px;
+}
+
+.default-image img {
+  height: 768px;
+  width: 100%;
+}
+
+.second-image {
+  max-height: 768px;
+  width: 924px;
+}
+
+.second-image img {
+  height: 768;
+  width: 100%;
+}
+
+.vizual-wrapper {
+  display: flex;
+}
+
+.roofing-list {
+  width: 150px;
+  height: 768px;
+  overflow: auto;
+  border: 2px solid #9e9b9b;
+}
+
+@media screen and (max-width: 1200px) {
+  .vizual-wrapper {
+    display: block;
+  }
+  .roofing-list {
+    width: 100% !important;
+    display: flex;
+    overflow: auto;
+    border: 2px solid #9e9b9b;
+  }
+
+  .default-image img,
+  .second-image,
+  .second-image img {
+    width: 100%;
+  }
+  .roofingImg img {
+    width: 60px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .vizual-wrapper {
+    display: block;
+  }
+
+  .roofing-list {
+    width: 100%;
+    height: auto;
+    overflow: auto;
+  }
+}
