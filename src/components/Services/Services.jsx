@@ -23,11 +23,17 @@ class Services extends Component {
             Learn more &nbsp;>>
           </Link>
         </div>
-        <img src={img} alt={title} className="mx-auto" />
+        <img
+          src={img}
+          alt={title}
+          height="200px"
+          width="200px"
+          className="mx-auto"
+        />
 
         <Link
           to={`/service-offer/${id}`}
-          className="text-center mt-3 ourServicesFont"
+          className="text-center mt-3 services-font"
           onClick={() => handleSingleServiceOffer(id)}
         >
           {title}

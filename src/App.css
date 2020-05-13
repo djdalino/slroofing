@@ -118,6 +118,9 @@ body {
   color: var(--mainDark) !important;
   text-decoration: none !important;
 }
+.services-font {
+  font-family: var(--mainText) !important;
+}
 
 .services-mb {
   margin-bottom: 40px !important;

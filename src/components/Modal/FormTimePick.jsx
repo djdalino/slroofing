@@ -207,8 +207,8 @@ class FormTimePick extends Component {
             </div>
           </div>
         </div>
-        <button onClick={() => this.props.nextStep()}>Continue</button>
         <button onClick={() => this.props.prevStep()}>back</button>
+        <button onClick={() => this.props.nextStep()}>Continue</button>
       </div>
     );
   }
