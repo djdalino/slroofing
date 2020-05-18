@@ -1,10 +1,10 @@
 import React, { Component } from "react";
-import BlogPost from "../components/Blog/BlogPost";
+import AdminDashBoard from "../components/Admin/AdminDashboard";
 import { ProductConsumer } from "../stateManagement/context";
 class Admin extends Component {
   render() {
     if (localStorage.usertoken) {
-      return <BlogPost />;
+      return <AdminDashBoard />;
     } else {
       return (
         <ProductConsumer>

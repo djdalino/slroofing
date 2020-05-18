@@ -6,7 +6,7 @@ class RoofingCarousel extends Component {
   state = {
     step: 1,
     roofing: [],
-    carouselImage: []
+    carouselImage: [],
   };
   componentDidMount() {
     this.setRoofingDetails();
@@ -14,7 +14,7 @@ class RoofingCarousel extends Component {
   setRoofingDetails = () => {
     let tempData = [];
 
-    roofingDetails.forEach(data => {
+    roofingDetails.forEach((data) => {
       const singleData = { ...data };
       tempData = [...tempData, singleData];
     });
@@ -23,8 +23,8 @@ class RoofingCarousel extends Component {
       return { roofing: tempData };
     });
   };
-  handleRoofingGetId = id => {
-    const item = this.state.roofing.find(data => data.id === id);
+  handleRoofingGetId = (id) => {
+    const item = this.state.roofing.find((data) => data.id === id);
     this.setState({ carouselImage: item });
   };
 
@@ -43,6 +43,21 @@ class RoofingCarousel extends Component {
       );
     }
   };
+  getCarouselName = () => {
+    if (this.state.carouselImage.length === 0) {
+      return (
+        <div>
+          <p>Dark Wood</p>
+        </div>
+      );
+    } else {
+      return (
+        <div>
+          <p>{this.state.carouselImage.name}</p>
+        </div>
+      );
+    }
+  };
   render() {
     return (
       <React.Fragment>
@@ -50,24 +65,29 @@ class RoofingCarousel extends Component {
           <div className="vizual-wrapper">
             <div className="default-cover">{this.getImageCarousel()}</div>
             <div className="roofing-list">
-              {this.state.roofing.map(item => {
+              {this.state.roofing.map((item) => {
                 return (
-                  <div
-                    className="roofingImg"
-                    key={item.id}
-                    onClick={() => this.handleRoofingGetId(item.id)}
-                  >
-                    <img
-                      className="singleImg"
-                      src={item.color}
-                      height="50"
-                      width="100%"
-                      alt=""
-                    />
-                  </div>
+                  <React.Fragment>
+                    <div
+                      className="roofingImg"
+                      key={item.id}
+                      onClick={() => this.handleRoofingGetId(item.id)}
+                    >
+                      <img
+                        className="singleImg"
+                        src={item.color}
+                        height="50"
+                        width="100%"
+                        alt=""
+                      />
+                    </div>
+                  </React.Fragment>
                 );
               })}
             </div>
+          </div>
+          <div>
+            <h1 className="text-center">{this.getCarouselName()}</h1>
           </div>
         </div>
       </React.Fragment>

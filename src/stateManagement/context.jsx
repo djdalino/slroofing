@@ -25,6 +25,7 @@ class ProductProvider extends Component {
     email: "",
     password: "",
     isBookNow: false,
+    adminPage: 1,
   };
   componentDidMount() {
     this.setService();
@@ -32,6 +33,11 @@ class ProductProvider extends Component {
     this.getPost();
     this.getCategory();
   }
+  //Admin
+  handleAdminPage = (page) => {
+    this.setState({ adminPage: page });
+    console.log(page);
+  };
   // Modal book now
 
   handleBookNowModal = () => {
@@ -263,6 +269,7 @@ class ProductProvider extends Component {
           onSubmit: this.onSubmit,
           handleServicesOfferChange: this.handleServicesOfferChange,
           handleSingleServiceOffer: this.handleSingleServiceOffer,
+          handleAdminPage: this.handleAdminPage,
         }}
       >
         {this.props.children}

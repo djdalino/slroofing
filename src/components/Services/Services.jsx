@@ -14,12 +14,20 @@ class Services extends Component {
       return null;
     }
     return (
-      <div className="hold-services">
-        <div className="hover-button">
+      <Link
+        className="hold-services"
+        to={`/service-offer/${id}`}
+        onClick={() => handleSingleServiceOffer(id)}
+      >
+        <div className="hover-button-services">
           <Link className="sbook-now width-book" to="/">
             Book now
           </Link>
-          <Link className="slearn-more" to="/">
+          <Link
+            className="slearn-more"
+            to={`/service-offer/${id}`}
+            onClick={() => handleSingleServiceOffer(id)}
+          >
             Learn more &nbsp;>>
           </Link>
         </div>
@@ -31,14 +39,8 @@ class Services extends Component {
           className="mx-auto"
         />
 
-        <Link
-          to={`/service-offer/${id}`}
-          className="text-center mt-3 services-font"
-          onClick={() => handleSingleServiceOffer(id)}
-        >
-          {title}
-        </Link>
-      </div>
+        <p className="text-center mt-3 ourServicesFont  ">{title}</p>
+      </Link>
     );
   }
 }
