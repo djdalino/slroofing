@@ -8,7 +8,7 @@ class Admin extends Component {
     } else {
       return (
         <ProductConsumer>
-          {value => {
+          {(value) => {
             const { onSubmit, email, password, handleInputChange } = value;
 
             return (
@@ -57,9 +57,14 @@ class Admin extends Component {
                         Check me out
                       </label>
                     </div>
-                    <button type="submit" className="btn btn-primary">
-                      Submit
-                    </button>
+                    <div className="form-group text-center mt-3">
+                      <button
+                        type="submit"
+                        className="btn btn-primary text-center"
+                      >
+                        Submit
+                      </button>
+                    </div>
                   </form>
                 </div>
               </main>
