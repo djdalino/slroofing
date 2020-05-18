@@ -1810,6 +1810,25 @@ h3.white {
     transform: translate(25%);
   }
 
+  button.close {
+    padding: 0;
+    background-color: transparent;
+    border: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    position: absolute;
+    appearance: none;
+    top: 15px;
+    right: 18px;
+}
+
+.book-now-datetime button {
+  margin-top: 27px;
+  padding: 10px;
+  font-family: var(--mainText);
+  text-transform: uppercase;
+}
+
   .banner {
     transform: translate(0%) !important;
   }
@@ -2415,6 +2434,20 @@ h3.white {
     margin-top: 0px;
   }
 }
+
+.book-now-modal-container {
+  background: white;
+  position: fixed;
+  top: 5%;
+  margin: auto;
+  padding: 41px;
+  bottom: 0;
+  left: 0;
+  width: 85%;
+  max-width: 863px;
+  height: 500px;
+  right: 0;
+}
 @media screen and (max-width: 1041px) and (min-width: 995px) {
   .sbook-now,
   .slearn-more {
@@ -2438,6 +2471,37 @@ h3.white {
     text-align: center;
     padding-top: 15px;
   }
+  .form-time-pick-gird {
+    font-size: 14px;
+}
+.form-time-pick-gird {
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(50px, 100px));
+    /* grid-column-gap: 20px; */
+    /* grid-row-gap: 20px; */
+    grid-auto-rows: 35px;
+}
+.form-time-pick-gird {
+  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(50px, 100px));
+  grid-row-gap: 12px;
+  grid-auto-rows: 35px;
+}
+
+button.close {
+  padding: 0;
+  background-color: transparent;
+  border: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  position: absolute;
+  appearance: none;
+  top: 15px;
+  right: 18px;
+}
+
 }
 @media screen and (max-width: 800px) {
   .hover-button {
