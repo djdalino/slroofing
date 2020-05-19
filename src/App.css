@@ -1696,7 +1696,6 @@ p {
 
 .findLocation p {
   margin: auto;
-  text-align: center;
 }
 
 #root
@@ -1751,10 +1750,10 @@ i.ua-icon.ua-icon-envelope2::before {
 }
 
 .findLocation {
-  background: #ffffff;
-  width: 100%;
-  padding: 50px !important;
-  margin-bottom: 0;
+  width: 90%;
+  margin: auto;
+  padding: 50px 0 !important;
+  text-align: justify !important;
 }
 
 .contact-wrapper {
@@ -2198,7 +2197,6 @@ h3.white {
     text-align: center;
   }
   .findLocation {
-    width: 100%;
     margin: auto;
     padding: 50px 0;
   }
@@ -2579,6 +2577,10 @@ h3.white {
   }
   .uabb-info-list-content-wrapper.fl-clearfix.uabb-info-list-top {
     padding-bottom: 30px;
+  }
+
+  .container-box.text-light .column.footer-box:nth-child(3) {
+    margin-top: 50px !important;
   }
 }
 /**/

@@ -30,7 +30,7 @@
 
 .roofing-list {
   width: 150px;
-  height: 768px;
+  height: auto;
   overflow: auto;
   border: 2px solid #9e9b9b;
 }
@@ -51,6 +51,7 @@
     display: flex;
     overflow: auto;
     border: 2px solid #9e9b9b;
+    margin: 30px 0px;
   }
 
   .default-image img,
