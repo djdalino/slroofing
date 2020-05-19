@@ -35,6 +35,13 @@
   border: 2px solid #9e9b9b;
 }
 
+.container.vizual p {
+  font-family: var(--mainText) !important;
+  font-size: 25px;
+  color: #222222;
+  padding-top: 5px;
+}
+
 @media screen and (max-width: 1200px) {
   .vizual-wrapper {
     display: block;
@@ -56,6 +63,16 @@
   }
   .roofingImg img {
     width: 60px;
+  }
+  .container.vizual {
+    max-width: 100% !important;
+    background: #2978b021;
+    padding: 50px 0;
+  }
+  .vizual-wrapper {
+    display: block;
+    width: 90%;
+    margin: auto;
   }
 }
 

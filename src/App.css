@@ -722,12 +722,14 @@ div#carouselExampleIndicators {
   font-size: 16px !important;
   border: none;
 }
+
 .subscribe-container button {
-  padding: 10px 10px;
+  padding: 7px 8px;
   margin-top: 2px;
   background: var(--mainRed);
   color: var(--mainWhite);
   font-family: var(--mainText) !important;
+  font-size: 15.4px;
   left: 17px;
   margin-top: 20px;
   border: none;
@@ -2298,10 +2300,12 @@ h3.white {
   }
 
   .sl-nav-logo {
-    width: 70px;
+    width: 81px;
     position: relative;
     top: 0px;
+    margin: auto;
   }
+
   .contact-wrapper .container-sm {
     width: 90%;
     padding: 50px 0;
@@ -2351,20 +2355,20 @@ h3.white {
     margin: auto !important;
     color: #ffffff !important;
     font-size: 1.2rem;
-    background: #0000002b;
+    background: #3e85b673;
     padding: 11px;
     text-transform: uppercase;
     right: 0;
     left: 0;
     bottom: 41px;
-  }
+}
 
   a.slearn-more {
     display: none;
   }
 
   #root > div.footer-container > div.button-fixed > button {
-    background: #2978b0;
+    background: #ff0000;
     border: none;
     width: 90% !important;
     display: block;
@@ -2416,6 +2420,13 @@ h3.white {
   .sl-nav-links {
     background: #ffffff !important;
     top: 0px !important;
+  }
+  .footer-container button.btn-book.text-uppercase.mx-3.rad {
+    display: block;
+    width: 90% !important;
+  }
+  ul.sl-nav-links.sl-show-nav button.btn-book.text-uppercase.mx-3.rad {
+    display: none;
   }
 }
 
