@@ -8,7 +8,6 @@ class FormInfo extends Component {
         <form>
           <div className="form-row">
             <div className="form-group col-md-6">
-              <label htmlFor="first_name">First Name</label>
               <input
                 type="text"
                 name="first_name"
@@ -19,7 +18,6 @@ class FormInfo extends Component {
               />
             </div>
             <div className="form-group col-md-6">
-              <label htmlFor="last_name">Last Name</label>
               <input
                 type="text"
                 name="last_name"
@@ -32,66 +30,64 @@ class FormInfo extends Component {
           </div>
           <div className="form-row">
             <div className="form-group col-md-6">
-              <label htmlFor="email">Email address</label>
               <input
                 type="email"
                 className="form-control"
                 name="email"
                 id="email"
                 onChange={this.props.handleChange}
-                placeholder="name@example.com"
+                placeholder="Email Address"
               />
             </div>
             <div className="form-group col-md-6">
-              <label htmlFor="phone">Phone Number</label>
               <input
                 type="text"
                 className="form-control"
                 name="phone"
                 id="phone"
                 onChange={this.props.handleChange}
+                placeholder="Phone Number"
               />
             </div>
           </div>
           <div className="form-group">
-            <label htmlFor="address">Address</label>
             <input
               type="text"
               name="address"
               className="form-control d-column"
               id="address"
               onChange={this.props.handleChange}
-              placeholder="1234 Main St"
+              placeholder="Address"
             />
           </div>
           <div className="form-row d-column">
             <div className="form-group col-md-6">
-              <label htmlFor="city">City</label>
               <input
                 type="text"
                 name="city"
                 className="form-control"
                 id="city"
                 onChange={this.props.handleChange}
+                placeholder="City"
               />
             </div>
             <div className="form-group col-md-4">
-              <label htmlFor="stateValue">State</label>
               <SelectUSState
                 id="stateValue"
                 name="stateValue"
                 className="form-control"
                 onChange={setNewValue}
+                placeholder="State"
               />
             </div>
             <div className="form-group col-md-2">
-              <label htmlFor="postal_code">Zip</label>
               <input
                 type="text"
                 name="postal_code"
                 className="form-control"
                 id="postal_code"
                 onChange={this.props.handleChange}
+                placeholder="Zip"
               />
             </div>
           </div>
