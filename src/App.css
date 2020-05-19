@@ -1836,11 +1836,23 @@ h3.white {
   line-height: 1.5;
   border-radius: 3px !important;
 }
+.serviceContent {
+  color: #222222;
+}
+
 /*------------/about us/-----------*/
 
 @media screen and (max-width: 1400px) {
   .banner-container {
     transform: translate(25%);
+  }
+
+  .who-we-are .row {
+    margin: 0;
+  }
+
+  img.serviceImage {
+    width: 100%;
   }
 
   button.close {
@@ -2043,7 +2055,7 @@ h3.white {
     width: 75% !important;
   }
   .subscribe-box {
-    padding: 35px !important;
+    padding: 50px 0 !important;
   }
   .subscribe-container input[type="text"] {
     font-family: var(--mainText);
@@ -2195,6 +2207,7 @@ h3.white {
     width: 90%;
     padding: 50px 0;
     text-align: center;
+    padding-bottom: 0px;
   }
   .findLocation {
     margin: auto;
@@ -2202,7 +2215,7 @@ h3.white {
   }
 
   .my-15 {
-    margin: 30px auto !important;
+    margin: 50px auto !important;
     width: 90% !important;
   }
   .about-description {

@@ -52,7 +52,7 @@ class RoofingCarousel extends Component {
       );
     } else {
       return (
-        <div>
+        <div className="singleService">
           <p>{this.state.carouselImage.name}</p>
         </div>
       );
@@ -62,7 +62,12 @@ class RoofingCarousel extends Component {
     return (
       <React.Fragment>
         <div className="container vizual">
+          <h5 class="text-uppercase">How it looks like?</h5>
+          <h2 class="text-center text-capitalize mainText">
+            Vizualize the product
+          </h2>
           <div className="vizual-wrapper">
+            <br />
             <div className="default-cover">{this.getImageCarousel()}</div>
             <div className="roofing-list">
               {this.state.roofing.map(item => {

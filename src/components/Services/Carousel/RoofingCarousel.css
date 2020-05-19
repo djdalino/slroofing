@@ -10,7 +10,7 @@
 }
 
 .default-image img {
-  height: 768px;
+  height: 792px;
   width: 100%;
 }
 
@@ -20,17 +20,20 @@
 }
 
 .second-image img {
-  height: 768px;
+  height: 792px;
   width: 100%;
 }
-
 .vizual-wrapper {
   display: flex;
 }
 
+.container.vizual h2 {
+  margin-bottom: 30px;
+}
+
 .roofing-list {
   width: 150px;
-  height: auto;
+  height: 792px;
   overflow: auto;
   border: 2px solid #9e9b9b;
 }
@@ -40,6 +43,15 @@
   font-size: 25px;
   color: #222222;
   padding-top: 5px;
+}
+
+.row {
+  margin: 40px auto;
+  margin-bottom: 0;
+}
+
+.who-we-are {
+  padding-bottom: 0;
 }
 
 @media screen and (max-width: 1200px) {
