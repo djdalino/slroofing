@@ -668,7 +668,7 @@ p {
   margin: auto;
   width: 85%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
   grid-column-gap: 20px;
   grid-row-gap: 20px;
 }
@@ -2270,6 +2270,14 @@ h3.white {
   }
   .sl-nav-center {
     height: 60px;
+  }
+
+  #root
+    > div.footer-container
+    > div.footer-box-container
+    > div.container-box.text-light
+    > div:nth-child(3) {
+    margin-top: 50px;
   }
 }
 
