@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { ProductConsumer } from "../../stateManagement/context";
 import ServicesOfferColumn from "./ServicesOfferColumn";
 import ServicesList from "./ServicesList";
-import RoofingCarousel from "./Carousel/RoofingCarousel";
+import RoofingCarousel from "./ServicesRoofingCarouse";
 class servicesOffer extends Component {
   render() {
     return (
@@ -15,17 +15,17 @@ class servicesOffer extends Component {
           <br />
           <div className="row">
             <ProductConsumer>
-              {value => {
+              {(value) => {
                 const { servicesOffer } = value;
                 const arrayCategory = ["all"];
-                servicesOffer.forEach(item => {
-                  item.category.forEach(category => {
+                servicesOffer.forEach((item) => {
+                  item.category.forEach((category) => {
                     if (arrayCategory.indexOf(category) < 0) {
                       arrayCategory.push(category);
                     }
                   });
                 });
-                return arrayCategory.map(category => {
+                return arrayCategory.map((category) => {
                   return (
                     <ServicesOfferColumn
                       key={category}

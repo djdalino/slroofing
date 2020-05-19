@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import RoofingCarousel from "./Carousel/RoofingCarousel";
 class Services extends Component {
   render() {
     const { id, title, img, category } = this.props.service;
