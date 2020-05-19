@@ -18,6 +18,7 @@
   max-width: 800px;
   height: 500px;
   transform: translate(-50%, -50%);
+  display: flex;
   justify-content: center;
   justify-items: center;
   align-items: center;
@@ -26,8 +27,6 @@
   width: 100%;
   height: auto;
   text-align-last: center;
-  display: flex;
-  flex-direction: column;
 }
 .book-now-datetime div {
   text-align: center;
@@ -66,30 +65,137 @@
   align-items: center;
 }
 
-@media screen and (max-width: 360px) {
-  .book-now-modal-container {
-    width: 90%;
-    height: 500px;
-  }
-  .form-time-pick-gird {
-    grid-row-gap: 5px !important;
-    grid-auto-rows: auto !important;
-  }
-  .form-row {
-    flex-wrap: inherit;
-    margin: 0;
-  }
-  .book-now-form-info {
-    display: block;
-  }
-  .footer-container input[type="text"] {
-    width: 150px;
-    margin: 0 !important;
-  }
-  .d-column {
-    flex-direction: column !important;
-  }
-  .form-group {
-    margin: 0;
-  }
+h1.pick {
+  text-transform: uppercase;
+  color: #222222;
+  font-size: 1.5rem;
+  text-align: ;
+}
+
+.book-now-datetime button {
+  margin-top: 27px;
+  padding: 10px;
+  font-family: var(--mainText);
+  text-transform: uppercase;
+}
+
+.book-now-form-info input {
+  display: inline-block;
+  margin-bottom: 0 !important;
+  font-size: 14px !important;
+}
+
+.book-now-modal-container {
+  background: white;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  right: 0;
+  bottom: 0;
+  max-width: 800px;
+  height: 500px;
+  transform: translate(-50%, -50%);
+  justify-content: center;
+  justify-items: center;
+  padding: 30px 20px;
+  width: 90% !important;
+  align-items: center;
+}
+
+.form-row {
+  width: 100%;
+  margin: auto;
+}
+
+.form-row .form-group.col-md-6 {
+  width: 48%;
+  padding: 0;
+}
+
+.footer-container input[type="text"] {
+  width: 100%;
+  margin: 0 !important;
+}
+
+.form-group.col-md-6:nth-child(2) {
+  left: 10px;
+}
+
+.form-group.col-md-4 select#stateValue {
+  font-size: 14px;
+  color: #6c757c;
+}
+
+.form-group.col-md-4 {
+  width: 50%;
+  padding: 0;
+  left: 6px;
+  font-family: var(--mainText);
+  color: #9c9999 !important;
+}
+
+.form-group.col-md-2 {
+  padding-left: 0;
+  width: 50%;
+}
+
+.book-now-modal-container {
+  background: white;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  right: 0;
+  bottom: 0;
+  max-width: 800px;
+  height: 65%;
+  transform: translate(-50%, -50%);
+  justify-content: center;
+  justify-items: center;
+  padding: 30px 20px;
+  width: 90% !important;
+  align-items: center;
+}
+
+.form-group.col-md-2 {
+  padding-left: 0;
+  width: 48%;
+  display: block;
+}
+
+.book-now-form-info button {
+  position: relative;
+  text-align: center;
+  margin: auto;
+  padding: 8px 15px;
+  font-size: 14px;
+  font-family: var(--mainText);
+  text-transform: uppercase;
+  border-radius: 4px;
+  /* margin: auto; */
+  text-align: center;
+  background: #2978b0;
+  color: #ffffff;
+  border-color: transparent;
+  margin-left: 35px;
+  left: 32%;
+  transform: translateX(-91%);
+}
+
+input[type="submit"] {
+  background: #ff0000;
+  margin-top: 15px;
+  font-size: 14px;
+  text-transform: uppercase;
+  padding: 10px 15px;
+  color: #ffffff;
+  border-color: transparent;
+}
+
+.book-now-modal-container > .book-now-datetime > div > button {
+  display: block;
+  background: #2978b0;
+  margin-top: 10px;
+  font-size: 14px;
+  border-radius: 4px;
+  color: #fff;
 }

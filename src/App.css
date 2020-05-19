@@ -1856,13 +1856,6 @@ h3.white {
     right: 18px;
   }
 
-  .book-now-datetime button {
-    margin-top: 27px;
-    padding: 10px;
-    font-family: var(--mainText);
-    text-transform: uppercase;
-  }
-
   .banner {
     transform: translate(0%) !important;
   }
@@ -2481,19 +2474,6 @@ h3.white {
   }
 }
 
-.book-now-modal-container {
-  background: white;
-  position: fixed;
-  top: 5%;
-  margin: auto;
-  padding: 41px;
-  bottom: 0;
-  left: 0;
-  width: 85%;
-  max-width: 863px;
-  height: 500px;
-  right: 0;
-}
 @media screen and (max-width: 1041px) and (min-width: 995px) {
   .sbook-now,
   .slearn-more {
