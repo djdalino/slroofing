@@ -19,7 +19,7 @@ app.post("/api/contactUs", (req, res) => {
   const data = req.body;
   const auth = {
     auth: {
-      api_key: "c7d146ec9510c2f254238ba8d160a369-0afbfc6c-4aa79fb5",
+      api_key: "key-170bedf45e54a3abcd725b0e2d0b9d4f",
       domain: "sandboxd5fa3cbefeb84afc95cd6693afc5eb68.mailgun.org",
     },
   };
@@ -51,7 +51,7 @@ app.post("/api/booking", (req, res) => {
   const data = req.body;
   const auth = {
     auth: {
-      api_key: "c7d146ec9510c2f254238ba8d160a369-0afbfc6c-4aa79fb5",
+      api_key: "key-170bedf45e54a3abcd725b0e2d0b9d4f",
       domain: "sandboxd5fa3cbefeb84afc95cd6693afc5eb68.mailgun.org",
     },
   };
@@ -82,10 +82,12 @@ const post = require("./routes/postRoutes");
 const postCategory = require("./routes/postCategoryRoute");
 const userRoute = require("./routes/userRoutes");
 const bookNow = require("./routes/bookNowRoutes");
+const subscribe = require("./routes/subscribeRoutes");
 app.use("/posts", post);
 app.use("/postCategory", postCategory);
 app.use("/api/user", userRoute);
 app.use("/api/booknow", bookNow);
+app.use("/api/subscribe", subscribe);
 // set up server
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {

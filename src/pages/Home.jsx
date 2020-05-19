@@ -6,7 +6,8 @@ import Subscribe from "../components/Subscribe";
 import Testimonial from "../components/Testimonial/Testimonial";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer/Footer";
-
+import { ProductConsumer } from "../stateManagement/context";
+import BookNowModal from "../components/Modal/BookNowModal";
 function Home() {
   return (
     <React.Fragment>
@@ -23,10 +24,24 @@ function Home() {
                 Innovative solutions and design for all your roofing,
                 restoration and construction needs!
               </p>
-              <div className="button-container">
-                <button className="btn btn-danger text-uppercase">
-                  book an appointment
-                </button>
+              <div className="button-container book-an-appointment">
+                <ProductConsumer>
+                  {(value) => {
+                    const { isBookNow, handleBookNowModal } = value;
+                    return (
+                      <React.Fragment>
+                        <button
+                          className="book-an-appointment btn btn-danger text-uppercase"
+                          onClick={handleBookNowModal}
+                        >
+                          book an appointment
+                        </button>
+
+                        {isBookNow ? <BookNowModal /> : null}
+                      </React.Fragment>
+                    );
+                  }}
+                </ProductConsumer>
               </div>
             </div>
           </div>

@@ -17,11 +17,9 @@ class Sidebar extends Component {
                 <React.Fragment>
                   <p onClick={() => handleAdminPage(1)}>Blog Post</p>
                   <p onClick={() => handleAdminPage(2)}>Blog Post View</p>
-                  <p onClick={() => handleAdminPage(3)}>
-                    List of Subcribers on progress
-                  </p>
-                  <p onClick={() => handleAdminPage(4)}>Bookings on progress</p>
-                  <p onClick={() => handleAdminPage(5)}>Contacts on progress</p>
+                  <p onClick={() => handleAdminPage(3)}>List of Subcribers</p>
+                  <p onClick={() => handleAdminPage(4)}>Bookings</p>
+                  <p onClick={() => handleAdminPage(5)}>Contacts</p>
                 </React.Fragment>
               );
             }}

@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import { ProductConsumer } from "../../stateManagement/context";
+import BookNowModal from "../Modal/BookNowModal";
 class Service extends Component {
   render() {
     const { title, img, category } = this.props.service;
@@ -10,10 +12,24 @@ class Service extends Component {
     return (
       <div className="hold-services">
         <div className="hover-button">
-          <Link className="sbook-now width-book" to="/">
-            Book now
-          </Link>
-          <Link className="slearn-more" to="/">
+          <ProductConsumer>
+            {(value) => {
+              const { isBookNow, handleBookNowModal } = value;
+              return (
+                <React.Fragment>
+                  <a
+                    className="sbook-now width-book"
+                    onClick={handleBookNowModal}
+                  >
+                    book now
+                  </a>
+
+                  {isBookNow ? <BookNowModal /> : null}
+                </React.Fragment>
+              );
+            }}
+          </ProductConsumer>
+          <Link className="slearn-more" to="/services">
             Learn more &nbsp;>>
           </Link>
         </div>

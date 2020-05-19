@@ -1,11 +1,14 @@
-import AsphaltShingle from "./components/Services/SLroofingServicesImages/Asphalt Shingles.jpg";
-import RubberRoofing from "./components/Services/SLroofingServicesImages/Rubber Roofing.jpg";
-import SlateRoofing from "./components/Services/SLroofingServicesImages/Slate Roofing.jpg";
-import WoodShake from "./components/Services/SLroofingServicesImages/WoodShake Roofing.jpg";
-import MetalRoofing from "./components/Services/SLroofingServicesImages/Metal Roofing.jpg";
-import VinylSiding from "./components/Services/SLroofingServicesImages/Vinyl Siding.jpg";
+import RubberFlatRoofing from "./components/Services/SLroofingServicesImages/Flat Roofing.jpeg";
+import AsphaltShingle from "./components/Services/SLroofingServicesImages/Asphalt Shingles.jpeg";
+import SlateRoofing from "./components/Services/SLroofingServicesImages/Slate Roofing.png";
+import ClayTileRoofing from "./components/Services/SLroofingServicesImages/Clay Tile Roofing.jpeg";
+import WoodShake from "./components/Services/SLroofingServicesImages/WoodShake Roofing.jpeg";
+import MetalRoofing from "./components/Services/SLroofingServicesImages/Metal Roofing.jpeg";
+import VinylSiding from "./components/Services/SLroofingServicesImages/Vinyl Siding.jpeg";
 import StuccoSiding from "./components/Services/SLroofingServicesImages/Stucco Siding.jpg";
-import StoneSiding from "./components/Services/SLroofingServicesImages/Stone Siding.jpg";
+import MetalSiding from "./components/Services/SLroofingServicesImages/Metal Siding.jpeg";
+import StoneSiding from "./components/Services/SLroofingServicesImages/Stone Siding.jpeg";
+import EngineerWoodSiding from "./components/Services/SLroofingServicesImages/Engineer Wood Siding.jpeg";
 import AluminumGutters from "./components/Services/SLroofingServicesImages/Aluminum Gutters.jpg";
 import AwningWindow from "./components/Services/SLroofingServicesImages/Awning Window.jpg";
 import SlidingDoor from "./components/Services/SLroofingServicesImages/Sliding Door.jpg";
@@ -21,7 +24,7 @@ export const slservices = [
   {
     id: 2,
     title: "Clay (Spanish) Tile Roofing",
-    img: WoodShake,
+    img: ClayTileRoofing,
     category: ["Roofing"],
     details:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
@@ -37,7 +40,7 @@ export const slservices = [
   {
     id: 4,
     title: "EPDM - TPO Rubber Roofing",
-    img: RubberRoofing,
+    img: RubberFlatRoofing,
     category: ["Roofing"],
     details:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
@@ -77,7 +80,7 @@ export const slservices = [
   {
     id: 9,
     title: "Metal Siding",
-    img: VinylSiding,
+    img: MetalSiding,
     category: ["Siding"],
     details:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
@@ -101,7 +104,7 @@ export const slservices = [
   {
     id: 12,
     title: "Brick Siding",
-    img: StoneSiding,
+    img: MetalSiding,
     category: ["Siding"],
     details:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
@@ -109,7 +112,7 @@ export const slservices = [
   {
     id: 13,
     title: "Engineered Wood - LP Smart Siding",
-    img: StoneSiding,
+    img: EngineerWoodSiding,
     category: ["Siding"],
     details:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",

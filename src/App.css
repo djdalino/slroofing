@@ -600,6 +600,10 @@ p {
   z-index: 100;
 }
 
+.book-an-appointment {
+  cursor: pointer;
+}
+
 .box-container {
   width: 30rem;
 }
@@ -2361,7 +2365,7 @@ h3.white {
     right: 0;
     left: 0;
     bottom: 41px;
-}
+  }
 
   a.slearn-more {
     display: none;
