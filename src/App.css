@@ -722,12 +722,14 @@ div#carouselExampleIndicators {
   font-size: 16px !important;
   border: none;
 }
+
 .subscribe-container button {
-  padding: 10px 10px;
+  padding: 7px 8px;
   margin-top: 2px;
   background: var(--mainRed);
   color: var(--mainWhite);
   font-family: var(--mainText) !important;
+  font-size: 15.4px;
   left: 17px;
   margin-top: 20px;
   border: none;
