@@ -150,30 +150,6 @@ class BookNowModal extends Component {
                   getDate={this.getDate}
                 />
               </div>
-            </div>
-          </div>
-        );
-      case 2:
-        return (
-          <div className="book-now-modal">
-            <div className="book-now-modal-container">
-              <ProductConsumer>
-                {(value) => {
-                  const { handleBookNowModal } = value;
-                  return (
-                    <button
-                      type="button"
-                      className="close"
-                      data-dismiss="modal"
-                      aria-label="Close"
-                      onClick={handleBookNowModal}
-                    >
-                      <span aria-hidden="true">&times;</span>
-                    </button>
-                  );
-                }}
-              </ProductConsumer>
-
               <div className="book-now-datetime">
                 <h1 className="pick">Pick Time</h1>
                 <FormTimePick
@@ -188,7 +164,7 @@ class BookNowModal extends Component {
             </div>
           </div>
         );
-      case 3:
+      case 2:
         return (
           <div className="book-now-modal">
             <div className="book-now-modal-container">
@@ -225,7 +201,7 @@ class BookNowModal extends Component {
             </div>
           </div>
         );
-      case 4:
+      case 3:
         return (
           <div className="book-now-modal">
             <div className="book-now-modal-container">
@@ -263,7 +239,7 @@ class BookNowModal extends Component {
             </div>
           </div>
         );
-      case 5:
+      case 4:
         return (
           <div className="book-now-modal">
             <div className="book-now-modal-container">
