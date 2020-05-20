@@ -19,8 +19,7 @@ class BlogPostView extends Component {
           const { categoryList, getDate } = value;
 
           const blogReplace = blogImage.replace(/\\/g, "/");
-          const articleImageReplace = articleImage.replace(/\\/g, "/");
-          const blogImg = window.location.origin + `/${blogReplace}`;
+          const blogImg = `/${blogReplace}`;
           console.log(blogImg);
           if (categoryList._id) {
             return <Redirect to="/blog" />;
@@ -60,7 +59,7 @@ class BlogPostView extends Component {
                         margin: "30px 0",
                       }}
                       className="text-center"
-                      src={`/${articleImageReplace}`}
+                      src={`/${articleImage}`}
                       alt="img"
                     />
                   </div>
