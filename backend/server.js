@@ -13,14 +13,15 @@ app.use(cors());
 app.use(express.urlencoded({ extended: true }));
 app.use("/uploads", express.static("uploads"));
 app.use(express.json());
+
 //Contact Us
 
 app.post("/api/contactUs", (req, res) => {
   const data = req.body;
   const auth = {
     auth: {
-      api_key: "key-170bedf45e54a3abcd725b0e2d0b9d4f",
-      domain: "sandboxd5fa3cbefeb84afc95cd6693afc5eb68.mailgun.org",
+      api_key: process.env.API_KEY,
+      domain: process.env.DOMAIN,
     },
   };
 
@@ -51,8 +52,8 @@ app.post("/api/booking", (req, res) => {
   const data = req.body;
   const auth = {
     auth: {
-      api_key: "key-170bedf45e54a3abcd725b0e2d0b9d4f",
-      domain: "sandboxd5fa3cbefeb84afc95cd6693afc5eb68.mailgun.org",
+      api_key: process.env.API_KEY,
+      domain: process.env.DOMAIN,
     },
   };
 
