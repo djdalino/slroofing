@@ -5,7 +5,7 @@ class ServicesList extends Component {
   render() {
     return (
       <div className="container-fluid mb-5 my-15">
-        <div className="our-service-gallery">
+        <div className="service-gallery">
           <ProductConsumer>
             {(value) => {
               return value.servicesOffer.map((service) => {
