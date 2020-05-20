@@ -668,7 +668,7 @@ p {
   margin: auto;
   width: 85%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
   grid-column-gap: 20px;
   grid-row-gap: 20px;
 }
@@ -1696,7 +1696,6 @@ p {
 
 .findLocation p {
   margin: auto;
-  text-align: center;
 }
 
 #root
@@ -1751,10 +1750,10 @@ i.ua-icon.ua-icon-envelope2::before {
 }
 
 .findLocation {
-  background: #ffffff;
-  width: 100%;
-  padding: 50px !important;
-  margin-bottom: 0;
+  width: 90%;
+  margin: auto;
+  padding: 50px 0 !important;
+  text-align: justify !important;
 }
 
 .contact-wrapper {
@@ -1837,11 +1836,23 @@ h3.white {
   line-height: 1.5;
   border-radius: 3px !important;
 }
+.serviceContent {
+  color: #222222;
+}
+
 /*------------/about us/-----------*/
 
 @media screen and (max-width: 1400px) {
   .banner-container {
     transform: translate(25%);
+  }
+
+  .who-we-are .row {
+    margin: 0;
+  }
+
+  img.serviceImage {
+    width: 100%;
   }
 
   button.close {
@@ -2044,7 +2055,7 @@ h3.white {
     width: 75% !important;
   }
   .subscribe-box {
-    padding: 35px !important;
+    padding: 50px 0 !important;
   }
   .subscribe-container input[type="text"] {
     font-family: var(--mainText);
@@ -2196,15 +2207,15 @@ h3.white {
     width: 90%;
     padding: 50px 0;
     text-align: center;
+    padding-bottom: 0px;
   }
   .findLocation {
-    width: 100%;
     margin: auto;
     padding: 50px 0;
   }
 
   .my-15 {
-    margin: 30px auto !important;
+    margin: 50px auto !important;
     width: 90% !important;
   }
   .about-description {
@@ -2270,6 +2281,14 @@ h3.white {
   }
   .sl-nav-center {
     height: 60px;
+  }
+
+  #root
+    > div.footer-container
+    > div.footer-box-container
+    > div.container-box.text-light
+    > div:nth-child(3) {
+    margin-top: 50px;
   }
 }
 
@@ -2571,6 +2590,10 @@ h3.white {
   }
   .uabb-info-list-content-wrapper.fl-clearfix.uabb-info-list-top {
     padding-bottom: 30px;
+  }
+
+  .container-box.text-light .column.footer-box:nth-child(3) {
+    margin-top: 50px !important;
   }
 }
 /**/
