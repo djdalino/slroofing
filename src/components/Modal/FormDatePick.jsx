@@ -22,7 +22,6 @@ class FormDatePick extends Component {
           strictParsing
           inline
         />
-        <button onClick={() => this.props.nextStep()}>Continue</button>
       </div>
     );
   }

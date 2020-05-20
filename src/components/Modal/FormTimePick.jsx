@@ -6,6 +6,7 @@ class FormTimePick extends Component {
     return (
       <div>
         <div className="form-time-pick-container">
+          <p className="pick">Time:</p>
           <select class="form-control" onChange={this.props.handleInputChange}>
             <option value="8:00 AM">8:00 AM</option>
             <option value="8:30 AM">8:30 AM</option>
@@ -227,6 +228,12 @@ class FormTimePick extends Component {
             </div>
           </div> */}
         </div>
+        <button
+          style={{ margin: "auto" }}
+          onClick={() => this.props.nextStep()}
+        >
+          Continue
+        </button>
       </div>
     );
   }

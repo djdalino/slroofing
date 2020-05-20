@@ -7,7 +7,17 @@
   width: 100%;
   height: 100%;
 }
-
+#root
+  > div.footer-container
+  > div.button-fixed
+  > div
+  > div
+  > div:nth-child(3)
+  > div
+  > div
+  > select {
+  width: 50%;
+}
 .book-now-modal-container {
   background: white;
   position: fixed;
@@ -19,6 +29,7 @@
   height: 500px;
   transform: translate(-50%, -50%);
   display: flex;
+  flex-direction: column !important;
   justify-content: center;
   justify-items: center;
   align-items: center;
@@ -69,14 +80,7 @@ h1.pick {
   text-transform: uppercase;
   color: #222222;
   font-size: 1.5rem;
-  text-align: center;
-}
-
-.book-now-datetime button {
-  margin-top: 27px;
-  padding: 10px;
-  font-family: var(--mainText);
-  text-transform: uppercase;
+  text-align: ;
 }
 
 .book-now-form-info input {
@@ -198,4 +202,119 @@ input[type="submit"] {
   font-size: 14px;
   border-radius: 4px;
   color: #fff;
+}
+
+#root
+  > div.footer-container
+  > div.button-fixed
+  > div
+  > div
+  > div:nth-child(3)
+  > div
+  > div
+  > select {
+  width: 154px;
+  margin: 15px;
+}
+
+.react-datepicker {
+  width: 85%;
+}
+
+.react-datepicker__month-container {
+  width: 100%;
+}
+#root
+  > div
+  > div.footer-container
+  > div.button-fixed
+  > div
+  > div
+  > div:nth-child(3)
+  > div
+  > button {
+  margin-top: 27px;
+  padding: 10px;
+  font-family: var(--mainText);
+  text-transform: uppercase;
+}
+
+select.form-control {
+  width: 120px;
+  position: relative;
+  left: 10px;
+}
+
+.form-time-pick-container {
+  width: 42%;
+  margin-top: 12px;
+  left: 0;
+  float: left;
+}
+
+.form-time-pick-container p {
+  font-size: 18px;
+  font-family: "Fjalla One", sans-serif !important;
+  text-transform: uppercase;
+  top: 8px;
+  color: #222222;
+  position: relative;
+}
+
+.book-now-datetime {
+  width: 100%;
+}
+
+div.button-fixed > div > div > div:nth-child(3) > div {
+  width: 85%;
+  margin: auto;
+  text-align: justify !important;
+}
+
+.form-time-pick-container {
+  text-align: justify !important;
+  float: left;
+  width: 159px;
+}
+
+#root
+  > div
+  > div.footer-container
+  > div.button-fixed
+  > div
+  > div
+  > div:nth-child(3)
+  > div
+  > button {
+  margin-top: 27px;
+  padding: 10px;
+  font-family: var(--mainText);
+  text-transform: uppercase;
+  float: right;
+  top: 8px;
+  position: relative;
+}
+
+.book-now-modal-container {
+  background: white;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  right: 0;
+  bottom: 0;
+  max-width: 800px;
+  height: 460px;
+  transform: translate(-50%, -50%);
+  justify-content: center;
+  justify-items: center;
+  padding: 30px 20px;
+  width: 90% !important;
+  align-items: center;
+}
+
+.book-now-form-info {
+  display: flex;
+  width: 80%;
+  flex-direction: column;
+  align-items: start;
 }

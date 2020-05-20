@@ -1840,6 +1840,17 @@ h3.white {
   color: #222222;
 }
 
+div.button-fixed > div > div > div:nth-child(2) > div > button {
+  margin-top: 27px;
+  padding: 10px;
+  font-family: var(--mainText);
+  text-transform: uppercase;
+}
+
+.who-we-are {
+  padding: 50px 0 !important;
+}
+
 /*------------/about us/-----------*/
 
 @media screen and (max-width: 1400px) {
