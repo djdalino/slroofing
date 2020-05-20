@@ -19,6 +19,7 @@ class BlogPostView extends Component {
           const { categoryList, getDate } = value;
 
           const blogReplace = blogImage.replace(/\\/g, "/");
+          const articleImageReplace = articleImage.replace(/\\/g, "/");
           const blogImg = window.location.origin + `/${blogReplace}`;
           console.log(blogImg);
           if (categoryList._id) {
@@ -59,7 +60,7 @@ class BlogPostView extends Component {
                         margin: "30px 0",
                       }}
                       className="text-center"
-                      src={`/${articleImage}`}
+                      src={`/${articleImageReplace}`}
                       alt="img"
                     />
                   </div>
