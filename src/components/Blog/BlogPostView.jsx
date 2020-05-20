@@ -19,7 +19,7 @@ class BlogPostView extends Component {
           const { categoryList, getDate } = value;
 
           const blogReplace = blogImage.replace(/\\/g, "/");
-          const blogImg = `/${blogReplace}`;
+          const blogImg = window.location.origin + `/${blogReplace}`;
           console.log(blogImg);
           if (categoryList._id) {
             return <Redirect to="/blog" />;
