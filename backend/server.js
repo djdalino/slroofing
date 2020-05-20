@@ -13,6 +13,7 @@ app.use(cors());
 app.use(express.urlencoded({ extended: true }));
 app.use("/public/uploads", express.static("public/uploads"));
 app.use(express.json());
+app.use("/uploads", express.static(__dirname + "../build/uploads"));
 
 //Contact Us
 
