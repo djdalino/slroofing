@@ -1,7 +1,6 @@
 {
   "name": "slroofing",
   "version": "0.1.0",
-  "homepage": "./",
   "private": true,
   "dependencies": {
     "@emotion/core": "^10.0.28",
