@@ -11,6 +11,7 @@ class Navbar extends React.Component {
   handleToggle = () => {
     this.setState({ isOpen: !this.state.isOpen });
   };
+
   render() {
     return (
       <nav className="sl-navbar">
@@ -20,13 +21,14 @@ class Navbar extends React.Component {
               <img className="sl-nav-logo" src={logo} alt="slroofing-logo" />
               <span className="contact">402-414-4000</span>
             </Link>
-
+            {/* Burger */}
             <div className="sl-nav-burger" onClick={() => this.handleToggle()}>
               <div className={this.state.isOpen ? "toggle line1" : "line1"} />
               <div className={this.state.isOpen ? "toggle line2" : "line2"} />
               <div className={this.state.isOpen ? "toggle line3" : "line3"} />
             </div>
           </div>
+
           <ul
             className={
               this.state.isOpen ? "sl-nav-links sl-show-nav" : "sl-nav-links"

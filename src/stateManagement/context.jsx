@@ -43,6 +43,7 @@ class ProductProvider extends Component {
   handleBookNowModal = () => {
     this.setState({ isBookNow: !this.state.isBookNow });
   };
+
   //LOGIN
   login = (user) => {
     return axios
