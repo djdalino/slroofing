@@ -8,7 +8,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer/Footer";
 import { ProductConsumer } from "../stateManagement/context";
 import BookNowModal from "../components/Modal/BookNowModal";
-function Home() {
+const Home = () => {
   return (
     <React.Fragment>
       <Navbar />
@@ -54,6 +54,6 @@ function Home() {
       <Footer />
     </React.Fragment>
   );
-}
+};
 
 export default Home;

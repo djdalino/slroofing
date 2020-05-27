@@ -11,16 +11,17 @@ require("dotenv").config();
 const app = express();
 app.use(cors());
 app.use(express.urlencoded({ extended: true }));
-app.use("/uploads", express.static("uploads"));
+app.use("/public/uploads", express.static("public/uploads"));
 app.use(express.json());
+
 //Contact Us
 
 app.post("/api/contactUs", (req, res) => {
   const data = req.body;
   const auth = {
     auth: {
-      api_key: "key-170bedf45e54a3abcd725b0e2d0b9d4f",
-      domain: "sandboxd5fa3cbefeb84afc95cd6693afc5eb68.mailgun.org",
+      api_key: process.env.API_KEY,
+      domain: process.env.DOMAIN,
     },
   };
 
@@ -51,8 +52,8 @@ app.post("/api/booking", (req, res) => {
   const data = req.body;
   const auth = {
     auth: {
-      api_key: "key-170bedf45e54a3abcd725b0e2d0b9d4f",
-      domain: "sandboxd5fa3cbefeb84afc95cd6693afc5eb68.mailgun.org",
+      api_key: process.env.API_KEY,
+      domain: process.env.DOMAIN,
     },
   };
 
@@ -94,10 +95,10 @@ app.listen(PORT, () => {
   console.log(`server is runnning on port: ${PORT}`);
 });
 // set up db connection
-const MONGODB_URI =
+const MONGODB_URL =
   "mongodb+srv://djdalino:TpW5Z6aYjCENviOt@cluster3-hngry.mongodb.net/test?retryWrites=true&w=majority";
 mongoose.connect(
-  process.env.MONGODB_URI || MONGODB_URI,
+  MONGODB_URL || process.env.MONGODB_URL,
   { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true },
   (err) => {
     if (err) return console.error(err);
@@ -107,7 +108,6 @@ mongoose.connect(
 
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("../build"));
-
   app.get("*", (req, res) => {
     res.sendFile(path.join(__dirname + "/../build/index.html"));
   });

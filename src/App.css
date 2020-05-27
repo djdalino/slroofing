@@ -664,6 +664,14 @@ p {
   font-size: 1.2rem;
   font-family: var(--mainText);
 }
+.service-gallery {
+  margin: auto;
+  width: 85%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+}
 .our-service-gallery {
   margin: auto;
   width: 85%;

@@ -3,10 +3,10 @@ const Post = require("../models/postModel");
 const multer = require("multer");
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
-    cb(null, "./uploads/");
+    cb(null, "./public/uploads");
   },
   filename: function (req, file, cb) {
-    cb(null, Math.random().toString(36).substr(2, 9) + file.originalname);
+    cb(null, file.originalname + "-" + Math.random().toString(36).substr(2, 9));
   },
 });
 
@@ -56,7 +56,7 @@ router.post("/", multiUpload, async (req, res) => {
   });
   try {
     const savedPost = await newPost.save();
-    console.log(savedPost);
+    res.json(savedPost);
   } catch (err) {
     res.status(400).send(err);
   }

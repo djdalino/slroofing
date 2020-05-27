@@ -20,7 +20,7 @@ class BlogPostView extends Component {
 
           const blogReplace = blogImage.replace(/\\/g, "/");
           const blogImg = `/${blogReplace}`;
-
+          console.log(blogImg);
           if (categoryList._id) {
             return <Redirect to="/blog" />;
           }
