@@ -2,13 +2,16 @@ import React, { Component } from "react";
 import { ProductConsumer } from "../../stateManagement/context";
 import Navbar from "../Navbar";
 import Footer from "../Footer/Footer";
+import Testimonial from "../Testimonial/Testimonial";
+import Subscriber from "../Subscribe";
+import OurServices from "../OurServices/OurServices";
 import RoofingCarousel from "./ServicesRoofingCarouse";
 class ServicesSingleView extends Component {
   render() {
     return (
       <div>
         <ProductConsumer>
-          {value => {
+          {(value) => {
             const { title, details, img, category } = value.serviceOfferView;
 
             return (
@@ -26,7 +29,7 @@ class ServicesSingleView extends Component {
                         background: `url('${img}') center/cover no-repeat`,
                         width: "100%",
                         height: "220px",
-                        zIndex: "-1"
+                        zIndex: "-1",
                       }}
                     ></div>
                   </div>
@@ -36,7 +39,7 @@ class ServicesSingleView extends Component {
                   style={{
                     width: "85%",
                     margin: "50px auto",
-                    textAlign: "justify"
+                    textAlign: "justify",
                   }}
                 >
                   <h1>{title}</h1>
@@ -45,6 +48,9 @@ class ServicesSingleView extends Component {
                   <img className="serviceImage" src={img} alt={title} />
                 </div>
                 <RoofingCarousel />
+                <Testimonial />
+                <Subscriber />
+                <OurServices />
                 <Footer />
               </React.Fragment>
             );

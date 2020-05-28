@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 class Services extends Component {
   render() {
-    const { id, title, img, category } = this.props.service;
+    const { id, title, img } = this.props.service;
     const { handleSingleServiceOffer } = this.props.value;
 
     return (

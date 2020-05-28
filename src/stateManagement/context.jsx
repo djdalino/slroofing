@@ -11,7 +11,8 @@ class ProductProvider extends Component {
     services: [],
     servicesOffer: [],
     activeCategoryServices: "all",
-    serviceOfferView: [],
+    serviceOfferView:
+      JSON.parse(localStorage.getItem("serviceOfferView")) || [],
     posts: [],
     category: [],
     post: [],
@@ -34,7 +35,7 @@ class ProductProvider extends Component {
     pageSize: 5,
     //End Pagination
     //SL Services
-    getSlServices: [],
+    getSlServices: JSON.parse(localStorage.getItem("getSlServices")) || [],
     slservicesCategory: [],
     slSelectedCategory: null,
     //End SL Services
@@ -55,9 +56,17 @@ class ProductProvider extends Component {
     //   const singleItem = { ...item };
     //   tempServices = [...tempServices, singleItem];
     // });
-    this.setState(() => {
-      return { getSlServices: getSlServices(), slservicesCategory: category };
-    });
+    this.setState(
+      () => {
+        return { getSlServices: getSlServices(), slservicesCategory: category };
+      },
+      () => {
+        localStorage.setItem(
+          "getSlServices",
+          JSON.stringify(this.state.getSlServices)
+        );
+      }
+    );
   };
   handleSlCategorySelect = (category) => {
     this.setState({ slSelectedCategory: category, currentPage: 1 });
@@ -269,11 +278,24 @@ class ProductProvider extends Component {
   handleServicesOfferChange = (item) => {
     this.setState({ activeCategoryServices: item });
   };
+
   handleSingleServiceOffer = (id) => {
+    window.scrollTo(0, 0);
     const service = this.state.servicesOffer.find(
       (service) => service.id === id
     );
-    this.setState({ serviceOfferView: service });
+
+    this.setState(
+      () => {
+        return { serviceOfferView: service };
+      },
+      () => {
+        localStorage.setItem(
+          "serviceOfferView",
+          JSON.stringify(this.state.serviceOfferView)
+        );
+      }
+    );
   };
   setServicesOffer = () => {
     let tempServices = [];
@@ -290,7 +312,7 @@ class ProductProvider extends Component {
     const filtered =
       slSelectedCategory && slSelectedCategory._id
         ? getSlServices.filter((g) => g.category._id === slSelectedCategory._id)
-        : this.state.servicesOffer;
+        : getSlServices;
     const servicesOffers = paginate(
       filtered,
       this.state.currentPage,

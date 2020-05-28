@@ -1,6 +1,4 @@
 import React, { Component } from "react";
-import { ProductConsumer } from "../../stateManagement/context";
-import ServicesOfferColumn from "./ServicesOfferColumn";
 import ListGroup from "./ListGroup";
 import ServicesList from "./ServicesList";
 import RoofingCarousel from "./ServicesRoofingCarouse";

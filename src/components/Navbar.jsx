@@ -3,7 +3,6 @@ import logo from "../img/slroofing-logo.png";
 import BookNowModal from "./Modal/BookNowModal";
 import { ProductConsumer } from "../stateManagement/context";
 import { Link } from "react-router-dom";
-import ScrollIntoView from "../ScrollIntoView";
 class Navbar extends React.Component {
   state = {
     isOpen: false,
