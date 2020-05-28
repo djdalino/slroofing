@@ -31,7 +31,7 @@ class ProductProvider extends Component {
     adminPage: 1,
     //Pagination
     currentPage: 1,
-    pageSize: 10,
+    pageSize: 5,
     //End Pagination
     //SL Services
     getSlServices: [],
