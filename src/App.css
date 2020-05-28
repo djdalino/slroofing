@@ -1867,9 +1867,12 @@ div.button-fixed > div > div > div:nth-child(2) > div > button {
   }
 
   .who-we-are .row {
-    margin: 0;
+    margin: auto;
   }
 
+  ul.row {
+    padding: 0;
+  }
   img.serviceImage {
     width: 100%;
   }
@@ -2617,6 +2620,14 @@ div.button-fixed > div > div > div:nth-child(2) > div > button {
 }
 /**/
 @media screen and (max-width: 696px) {
+
+  .list-group-item {
+    position: relative;
+    display: block;
+    padding: 10px 5px;
+    background-color: #fff;
+    border: 1px solid rgba(0,0,0,.125);
+}
   .sbook-now,
   .slearn-more {
     top: 54%;
