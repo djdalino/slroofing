@@ -666,9 +666,9 @@ p {
 }
 .service-gallery {
   margin: auto;
-  width: 85%;
+  width: 95%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(247px, 1fr));
   grid-column-gap: 20px;
   grid-row-gap: 20px;
 }
@@ -1857,6 +1857,30 @@ div.button-fixed > div > div > div:nth-child(2) > div > button {
 
 .who-we-are {
   padding: 50px 0 !important;
+  padding-bottom: 0 !important;
+}
+ul.pagination {
+  width: 280px;
+  margin: auto;
+}
+
+#root > div > div:nth-child(3) > div.who-we-are > .row {
+  margin: 0 !important;
+}
+
+ul.row {
+  margin-top: 0;
+}
+
+.page-item.active .page-link {
+  z-index: 3;
+  color: #fff;
+  background-color: #2978b0 !important;
+  border-color: #2978b0 !important;
+}
+.who-we-are p {
+  text-align: justify;
+  margin-bottom: 50px !important;
 }
 
 /*------------/about us/-----------*/
@@ -1875,6 +1899,7 @@ div.button-fixed > div > div > div:nth-child(2) > div > button {
   }
   img.serviceImage {
     width: 100%;
+    margin-top: 30px;
   }
 
   button.close {
@@ -2620,14 +2645,13 @@ div.button-fixed > div > div > div:nth-child(2) > div > button {
 }
 /**/
 @media screen and (max-width: 696px) {
-
   .list-group-item {
     position: relative;
     display: block;
     padding: 10px 5px;
     background-color: #fff;
-    border: 1px solid rgba(0,0,0,.125);
-}
+    border: 1px solid rgba(0, 0, 0, 0.125);
+  }
   .sbook-now,
   .slearn-more {
     top: 54%;
@@ -2780,5 +2804,15 @@ div.button-fixed > div > div > div:nth-child(2) > div > button {
 @media screen and (min-height: 415px) {
   nav > div > ul > li.active {
     padding: 20px 0;
+  }
+}
+@media screen and (max-width: 320px) {
+  .service-gallery {
+    margin: auto;
+    width: 100%;
+    display: grid;
+    grid-template-columns: none !important;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
   }
 }
