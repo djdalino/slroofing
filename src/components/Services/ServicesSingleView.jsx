@@ -48,7 +48,6 @@ class ServicesSingleView extends Component {
                   <img className="serviceImage" src={img} alt={title} />
                 </div>
                 <RoofingCarousel />
-                <Testimonial />
                 <Subscriber />
                 <OurServices />
                 <Footer />
