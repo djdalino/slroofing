@@ -7,9 +7,10 @@ class ServicesRoofingCarouse extends Component {
       <div>
         <ProductConsumer>
           {(value) => {
-            const { activeCategoryServices } = value;
+            const { getSlServices } = value;
+            const slmap = getSlServices.find((s) => s);
 
-            if (activeCategoryServices === "Roofing") {
+            if (slmap.category.name === "Roofing") {
               return <RoofingCarousel />;
             }
           }}
