@@ -161,7 +161,7 @@ const getslservices = [
     id: 19,
     title: "Casement Windows",
     img: AluminumGutters,
-    category: { _id: "4", name: "Doors and Windows" },
+    category: { _id: "4", name: "Others" },
     details:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
   },
@@ -169,7 +169,7 @@ const getslservices = [
     id: 20,
     title: "Slider Windows",
     img: AwningWindow,
-    category: { _id: "4", name: "Doors and Windows" },
+    category: { _id: "4", name: "Others" },
     details:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
   },
@@ -177,7 +177,7 @@ const getslservices = [
     id: 21,
     title: "Double Hung Windows",
     img: AwningWindow,
-    category: { _id: "4", name: "Doors and Windows" },
+    category: { _id: "4", name: "Others" },
     details:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
   },
@@ -185,7 +185,7 @@ const getslservices = [
     id: 22,
     title: "Awning Windows",
     img: AwningWindow,
-    category: { _id: "4", name: "Doors and Windows" },
+    category: { _id: "4", name: "Others" },
     details:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
   },
@@ -193,7 +193,7 @@ const getslservices = [
     id: 23,
     title: "Skylight Windows",
     img: AwningWindow,
-    category: { _id: "4", name: "Doors and Windows" },
+    category: { _id: "4", name: "Others" },
     details:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
   },
@@ -201,7 +201,7 @@ const getslservices = [
     id: 24,
     title: "Egress Windows",
     img: AwningWindow,
-    category: { _id: "4", name: "Doors and Windows" },
+    category: { _id: "4", name: "Others" },
     details:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
   },
@@ -209,7 +209,7 @@ const getslservices = [
     id: 25,
     title: "Picture Windows",
     img: AwningWindow,
-    category: { _id: "4", name: "Doors and Windows" },
+    category: { _id: "4", name: "Others" },
     details:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
   },
@@ -217,7 +217,7 @@ const getslservices = [
     id: 26,
     title: "Garden Windows",
     img: AwningWindow,
-    category: { _id: "4", name: "Doors and Windows" },
+    category: { _id: "4", name: "Others" },
     details:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
   },
@@ -225,7 +225,7 @@ const getslservices = [
     id: 27,
     title: "Bow Windows",
     img: AwningWindow,
-    category: { _id: "4", name: "Doors and Windows" },
+    category: { _id: "4", name: "Others" },
     details:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
   },
@@ -233,7 +233,7 @@ const getslservices = [
     id: 28,
     title: "Bay Windows",
     img: AwningWindow,
-    category: { _id: "4", name: "Doors and Windows" },
+    category: { _id: "4", name: "Others" },
     details:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
   },
@@ -241,7 +241,7 @@ const getslservices = [
     id: 29,
     title: "Sliding Doors",
     img: SlidingDoor,
-    category: { _id: "4", name: "Doors and Windows" },
+    category: { _id: "4", name: "Others" },
     details:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
   },
@@ -249,7 +249,7 @@ const getslservices = [
     id: 30,
     title: "French Doors",
     img: SlidingDoor,
-    category: { _id: "4", name: "Doors and Windows" },
+    category: { _id: "4", name: "Others" },
     details:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
   },
@@ -257,7 +257,7 @@ const getslservices = [
     id: 31,
     title: "Bi-fold Doors",
     img: SlidingDoor,
-    category: { _id: "4", name: "Doors and Windows" },
+    category: { _id: "4", name: "Others" },
     details:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
   },
@@ -265,7 +265,7 @@ const getslservices = [
     id: 32,
     title: "Pocket Doors",
     img: SlidingDoor,
-    category: { _id: "4", name: "Doors and Windows" },
+    category: { _id: "4", name: "Others" },
     details:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
   },
@@ -273,7 +273,7 @@ const getslservices = [
     id: 33,
     title: "Hinged Doors",
     img: SlidingDoor,
-    category: { _id: "4", name: "Doors and Windows" },
+    category: { _id: "4", name: "Others" },
     details:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
   },
@@ -281,7 +281,7 @@ const getslservices = [
     id: 34,
     title: "Battened and Ledged Doors",
     img: SlidingDoor,
-    category: { _id: "4", name: "Doors and Windows" },
+    category: { _id: "4", name: "Others" },
     details:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
   },
@@ -289,7 +289,7 @@ const getslservices = [
     id: 35,
     title: "Dutch Doors",
     img: SlidingDoor,
-    category: { _id: "4", name: "Doors and Windows" },
+    category: { _id: "4", name: "Others" },
     details:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
   },
@@ -297,7 +297,7 @@ const getslservices = [
     id: 36,
     title: "Roller Doors",
     img: SlidingDoor,
-    category: { _id: "4", name: "Doors and Windows" },
+    category: { _id: "4", name: "Others" },
     details:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
   },

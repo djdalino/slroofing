@@ -8,23 +8,21 @@ import Admin from "./pages/Admin";
 import BlogPostView from "./components/Blog/BlogPostView";
 import ServiceSingleView from "./components/Services/ServicesSingleView";
 import Contact from "./pages/Contact";
-import ScrollIntoView from "./ScrollIntoView";
+// import ScrollIntoView from "./ScrollIntoView";
 import { Switch, Route } from "react-router-dom";
 function App() {
   return (
     <React.Fragment>
-      <ScrollIntoView>
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route exact path="/blog" component={Blog} />
-          <Route path="/about" component={About} />
-          <Route path="/blog/:id" component={BlogPostView} />
-          <Route path="/service-offer/:id" component={ServiceSingleView} />
-          <Route path="/services" component={Services} />
-          <Route path="/admin" component={Admin} />
-          <Route path="/contact" component={Contact} />
-        </Switch>
-      </ScrollIntoView>
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route exact path="/blog" component={Blog} />
+        <Route path="/about" component={About} />
+        <Route path="/blog/:id" component={BlogPostView} />
+        <Route path="/service-offer/:id" component={ServiceSingleView} />
+        <Route path="/services" component={Services} />
+        <Route path="/admin" component={Admin} />
+        <Route path="/contact" component={Contact} />
+      </Switch>
     </React.Fragment>
   );
 }
