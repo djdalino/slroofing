@@ -8,7 +8,7 @@ class ServicesList extends Component {
         <div className="service-gallery">
           <ProductConsumer>
             {(value) => {
-              return value.servicesOffer.map((service) => {
+              return value.servicesOffers.map((service) => {
                 return (
                   <Services key={service.id} service={service} value={value} />
                 );
