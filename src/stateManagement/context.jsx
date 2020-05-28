@@ -2,6 +2,9 @@ import React, { Component } from "react";
 import axios from "axios";
 import { servicesOffer } from "../data";
 import { slservices } from "../services";
+import { paginate } from "../components/Utilities/paginate";
+import { getSlServices } from "../components/Utilities/services";
+import { getSlCategory } from "../components/Utilities/serviceCategory";
 const ProductContext = React.createContext();
 class ProductProvider extends Component {
   state = {
@@ -26,17 +29,47 @@ class ProductProvider extends Component {
     password: "",
     isBookNow: false,
     adminPage: 1,
+    //Pagination
+    currentPage: 1,
+    pageSize: 10,
+    //End Pagination
+    //SL Services
+    getSlServices: [],
+    slservicesCategory: [],
+    slSelectedCategory: null,
+    //End SL Services
   };
   componentDidMount() {
     this.setService();
     this.setServicesOffer();
     this.getPost();
     this.getCategory();
+    this.setSlServices();
   }
+  //SL services
+  setSlServices = () => {
+    const category = [{ _id: "", name: "All" }, ...getSlCategory()];
+    // this.setState({ slservicesCategory: category });
+    // let tempServices = [];
+    // getslservices.forEach((item) => {
+    //   const singleItem = { ...item };
+    //   tempServices = [...tempServices, singleItem];
+    // });
+    this.setState(() => {
+      return { getSlServices: getSlServices(), slservicesCategory: category };
+    });
+  };
+  handleSlCategorySelect = (category) => {
+    this.setState({ slSelectedCategory: category, currentPage: 1 });
+  };
+
+  //Pagination
+  handlePageChange = (page) => {
+    this.setState({ currentPage: page });
+  };
   //Admin
   handleAdminPage = (page) => {
     this.setState({ adminPage: page });
-    console.log(page);
   };
   // Modal book now
 
@@ -253,10 +286,22 @@ class ProductProvider extends Component {
     });
   };
   render() {
+    const { slSelectedCategory, getSlServices } = this.state;
+    const filtered =
+      slSelectedCategory && slSelectedCategory._id
+        ? getSlServices.filter((g) => g.category._id === slSelectedCategory._id)
+        : this.state.servicesOffer;
+    const servicesOffers = paginate(
+      filtered,
+      this.state.currentPage,
+      this.state.pageSize
+    );
     return (
       <ProductContext.Provider
         value={{
           ...this.state,
+          servicesOffers: servicesOffers,
+          itemsCount: filtered.length,
           handleBookNowModal: this.handleBookNowModal,
           setSelected: this.setSelected,
           fileSelectedHandler: this.fileSelectedHandler,
@@ -271,6 +316,8 @@ class ProductProvider extends Component {
           handleServicesOfferChange: this.handleServicesOfferChange,
           handleSingleServiceOffer: this.handleSingleServiceOffer,
           handleAdminPage: this.handleAdminPage,
+          handleSlCategorySelect: this.handleSlCategorySelect,
+          handlePageChange: this.handlePageChange,
         }}
       >
         {this.props.children}

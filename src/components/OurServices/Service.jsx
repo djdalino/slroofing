@@ -17,12 +17,12 @@ class Service extends Component {
               const { isBookNow, handleBookNowModal } = value;
               return (
                 <React.Fragment>
-                  <a
+                  <Link
                     className="sbook-now width-book"
                     onClick={handleBookNowModal}
                   >
                     book now
-                  </a>
+                  </Link>
 
                   {isBookNow ? <BookNowModal /> : null}
                 </React.Fragment>

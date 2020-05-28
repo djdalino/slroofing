@@ -1,8 +1,10 @@
 import React, { Component } from "react";
 import { ProductConsumer } from "../../stateManagement/context";
 import ServicesOfferColumn from "./ServicesOfferColumn";
+import ListGroup from "./ListGroup";
 import ServicesList from "./ServicesList";
 import RoofingCarousel from "./ServicesRoofingCarouse";
+import ServicesPagination from "./ServicesPagination";
 class servicesOffer extends Component {
   render() {
     return (
@@ -14,11 +16,12 @@ class servicesOffer extends Component {
           </h2>
           <br />
           <div className="row">
-            <ProductConsumer>
+            <ListGroup />
+            {/* <ProductConsumer>
               {(value) => {
-                const { servicesOffer } = value;
+                const { servicesOffers } = value;
                 const arrayCategory = ["all"];
-                servicesOffer.forEach((item) => {
+                servicesOffers.forEach((item) => {
                   item.category.forEach((category) => {
                     if (arrayCategory.indexOf(category) < 0) {
                       arrayCategory.push(category);
@@ -35,10 +38,11 @@ class servicesOffer extends Component {
                   );
                 });
               }}
-            </ProductConsumer>
+            </ProductConsumer> */}
           </div>
         </div>
         <ServicesList />
+        <ServicesPagination />
         <RoofingCarousel />
       </div>
     );

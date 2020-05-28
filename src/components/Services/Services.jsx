@@ -3,16 +3,8 @@ import { Link } from "react-router-dom";
 class Services extends Component {
   render() {
     const { id, title, img, category } = this.props.service;
-    const {
-      activeCategoryServices,
-      handleSingleServiceOffer,
-    } = this.props.value;
-    if (
-      category.indexOf(activeCategoryServices) < 0 &&
-      activeCategoryServices !== "all"
-    ) {
-      return null;
-    }
+    const { handleSingleServiceOffer } = this.props.value;
+
     return (
       <Link
         className="hold-services"
