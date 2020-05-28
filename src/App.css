@@ -1883,6 +1883,11 @@ ul.row {
   margin-bottom: 50px !important;
 }
 
+li.list-group-item {
+  border: none;
+  padding-left: 8px;
+}
+
 /*------------/about us/-----------*/
 
 @media screen and (max-width: 1400px) {
