@@ -12,9 +12,11 @@ export default class Map extends Component {
               {" "}
               We will help guide you by choosing the right products for your
               projects overall durability, longevity, and appearance saving you
-              both time and money. We service Iowa (IA) Minnesota (MN) Nebraska
-              (NE) South Dakota (SD) Missouri (MO) Kansas KS) and surrounding
-              areas.
+              both time and money.
+              <br />
+              <br />
+              We service Iowa (IA) Minnesota (MN) Nebraska (NE) South Dakota
+              (SD) Missouri (MO) Kansas KS) and surrounding areas.
             </center>
           </p>
         </div>
