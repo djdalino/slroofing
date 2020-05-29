@@ -11,13 +11,14 @@ class Service extends Component {
     }
     return (
       <div className="hold-services">
-        <div className="hover-button">
+        <Link to="/services" className="hover-button">
           <ProductConsumer>
             {(value) => {
               const { isBookNow, handleBookNowModal } = value;
               return (
                 <React.Fragment>
                   <Link
+                    to="/services"
                     className="sbook-now width-book"
                     onClick={handleBookNowModal}
                   >
@@ -32,7 +33,7 @@ class Service extends Component {
           <Link className="slearn-more" to="/services">
             Learn more &nbsp;>>
           </Link>
-        </div>
+        </Link>
         <img src={img} alt={title} className="mx-auto" />
         <p className="text-center mt-3 ourServicesFont">{title}</p>
       </div>
