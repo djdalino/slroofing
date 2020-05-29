@@ -31,7 +31,7 @@ class Services extends Component {
           className="mx-auto"
         />
 
-        <p className="text-center mt-3 ourServicesFont  ">{title}</p>
+        <p className="text-center mt-3 ourServicesFont">{title}</p>
       </Link>
     );
   }

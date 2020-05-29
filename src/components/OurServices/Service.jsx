@@ -5,13 +5,19 @@ import BookNowModal from "../Modal/BookNowModal";
 class Service extends Component {
   render() {
     const { title, img, category } = this.props.service;
-    const { activeCategory } = this.props.value;
-    if (category.indexOf(activeCategory) < 0 && activeCategory !== "all") {
-      return null;
-    }
+    const { handleSlCategorySelect } = this.props.value;
+    console.log(category);
     return (
-      <div className="hold-services">
-        <Link to="/services" className="hover-button">
+      <Link
+        to="/services"
+        onClick={() => handleSlCategorySelect(category)}
+        className="hold-services"
+      >
+        <Link
+          to="/services"
+          onClick={() => handleSlCategorySelect(category)}
+          className="hover-button"
+        >
           <ProductConsumer>
             {(value) => {
               const { isBookNow, handleBookNowModal } = value;
@@ -30,13 +36,11 @@ class Service extends Component {
               );
             }}
           </ProductConsumer>
-          <Link className="slearn-more" to="/services">
-            Learn more &nbsp;>>
-          </Link>
+          <Link className="slearn-more">Learn more &nbsp;>></Link>
         </Link>
         <img src={img} alt={title} className="mx-auto" />
         <p className="text-center mt-3 ourServicesFont">{title}</p>
-      </div>
+      </Link>
     );
   }
 }

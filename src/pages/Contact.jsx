@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import { ProductConsumer } from "../stateManagement/context";
 import ContactBan from "../components/contact/ContactBanner";
 import Findmap from "../components/Map";

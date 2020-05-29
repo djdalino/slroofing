@@ -7,18 +7,18 @@ export const servicesOffer = [
     id: 1,
     title: "Roofing",
     img: Roofing,
-    category: ["Roofing"]
+    category: { _id: "1", name: "Roofing" },
   },
   {
     id: 2,
     title: "Siding",
     img: Siding,
-    category: ["Siding"]
+    category: { _id: "2", name: "Sliding" },
   },
   {
     id: 3,
     title: "Gutters",
     img: Gutters,
-    category: ["Gutters"]
-  }
+    category: { _id: "3", name: "Gutter" },
+  },
 ];

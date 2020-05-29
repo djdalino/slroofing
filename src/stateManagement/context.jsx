@@ -37,7 +37,7 @@ class ProductProvider extends Component {
     //SL Services
     getSlServices: JSON.parse(localStorage.getItem("getSlServices")) || [],
     slservicesCategory: [],
-    slSelectedCategory: [],
+    slSelectedCategory: null,
     //End SL Services
   };
   componentDidMount() {

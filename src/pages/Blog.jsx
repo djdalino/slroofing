@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import BlogList from "../components/Blog/BlogList";
 import BlogCategory from "../components/Blog/BlogCategory";
 import { ProductConsumer } from "../stateManagement/context";

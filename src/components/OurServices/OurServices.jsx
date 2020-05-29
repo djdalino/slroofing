@@ -1,7 +1,5 @@
 import React from "react";
-import OurServiceColumn from "./OurServiceColumn";
 import OurServiceList from "./OurServiceList";
-import { ProductConsumer } from "../../stateManagement/context";
 export default class OurServices extends React.Component {
   render() {
     return (
