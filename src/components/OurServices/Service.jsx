@@ -6,7 +6,6 @@ class Service extends Component {
   render() {
     const { title, img, category } = this.props.service;
     const { handleSlCategorySelect } = this.props.value;
-    console.log(category);
     return (
       <Link
         to="/services"
@@ -24,7 +23,6 @@ class Service extends Component {
               return (
                 <React.Fragment>
                   <Link
-                    to="/services"
                     className="sbook-now width-book"
                     onClick={handleBookNowModal}
                   >
