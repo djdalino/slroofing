@@ -650,7 +650,7 @@ p {
 .hover-button-services {
   opacity: 0;
   width: 100%;
-  height: 82%;
+  height: 76%;
   position: absolute;
   top: 0%;
   cursor: pointer;
@@ -766,6 +766,10 @@ div#carouselExampleIndicators {
 }
 .owner-image-two {
   display: none;
+}
+
+#inputPassword4 {
+  width: 98%;
 }
 /* --------------------------------footer --------------------------------*/
 
@@ -1045,8 +1049,8 @@ nav.sl-navbar {
   padding: 0;
 }
 span.contact {
-  color: var(--mainBlue);
-  margin-left: 13px;
+  margin-left: 8px;
+  color: #000000;
 }
 .container-fluid {
   padding: 0 !important;
@@ -1886,6 +1890,9 @@ ul.row {
 li.list-group-item {
   border: none;
   padding-left: 8px;
+}
+#root > div > div:nth-child(3) > nav {
+  margin-bottom: 50px;
 }
 
 /*------------/about us/-----------*/
