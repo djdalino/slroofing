@@ -22,9 +22,6 @@ export default class AboutSLroofing extends Component {
             commercial roofing, restoration and construction services. We are
             dedicated at providing exceptional customer service with affordable
             and trusted quality at the most competitive prices in the industry.
-            <br /> <br />
-            We service Iowa (IA) Minnesota (MN) Nebraska (NE) South Dakota (SD)
-            Missouri (MO) Kansas KS) and surrounding areas.
           </p>
         </div>
         <div className="ownerCover">

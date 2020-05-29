@@ -1895,11 +1895,29 @@ li.list-group-item {
   margin-bottom: 50px;
 }
 
+.center-map {
+  width: 100%;
+  text-align: center;
+  margin: auto;
+  padding-bottom: 50px;
+}
+
 /*------------/about us/-----------*/
 
 @media screen and (max-width: 1400px) {
   .banner-container {
     transform: translate(25%);
+  }
+
+  .center-map {
+    width: 100%;
+    text-align: center;
+    margin: auto;
+    padding-bottom: 50px;
+  }
+
+  .center-map img {
+    width: 100%;
   }
 
   .who-we-are .row {
