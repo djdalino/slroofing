@@ -10,7 +10,7 @@ class FormDatePick extends Component {
     const { startDate } = this.props.values;
     console.log(this.props.getDate(startDate));
     return (
-      <div>
+      <React.Fragment>
         <DatePicker
           selected={startDate}
           minDate={new Date()}
@@ -22,7 +22,7 @@ class FormDatePick extends Component {
           strictParsing
           inline
         />
-      </div>
+      </React.Fragment>
     );
   }
 }

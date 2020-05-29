@@ -4,7 +4,7 @@ class FormInfo extends Component {
   render() {
     const { setNewValue } = this.props;
     return (
-      <div>
+      <React.Fragment>
         <form>
           <div className="form-row">
             <div className="form-group col-md-6">
@@ -94,7 +94,7 @@ class FormInfo extends Component {
         </form>
         <button onClick={() => this.props.prevStep()}>Back</button>
         <button onClick={() => this.props.nextStep()}>Continue</button>
-      </div>
+      </React.Fragment>
     );
   }
 }
