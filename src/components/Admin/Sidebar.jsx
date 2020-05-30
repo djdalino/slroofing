@@ -3,11 +3,26 @@ import { ProductConsumer } from "../../stateManagement/context";
 import { Link } from "react-router-dom";
 import "./admin.css";
 class Sidebar extends Component {
+  state = {
+    isOpen: false,
+  };
+  handleToggle = () => {
+    window.scrollTo(0, 0);
+    this.setState({ isOpen: !this.state.isOpen });
+  };
   render() {
     return (
       <div className="admin-sidebar">
         <div className="admin-sidebar-container">
           <div className="admin-profile">
+            <div
+              className="sl-admin-burger"
+              onClick={() => this.handleToggle()}
+            >
+              <div className={this.state.isOpen ? "toggle line1" : "line1"} />
+              <div className={this.state.isOpen ? "toggle line2" : "line2"} />
+              <div className={this.state.isOpen ? "toggle line3" : "line3"} />
+            </div>
             <h3>Admin Dash Board</h3>
           </div>
           <ProductConsumer>
@@ -15,7 +30,11 @@ class Sidebar extends Component {
               const { handleAdminPage } = value;
               return (
                 <React.Fragment>
-                  <ul className="admin-sidebar-menu">
+                  <ul
+                    className={`admin-sidebar-menu ${
+                      this.state.isOpen ? " show" : null
+                    }`}
+                  >
                     <li>
                       <p onClick={() => handleAdminPage(1)}>Blog Post</p>
                     </li>
