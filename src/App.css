@@ -2375,6 +2375,9 @@ a:hover {
     > div:nth-child(3) {
     margin-top: 50px;
   }
+  .hover-button-services {
+    display: none!important;
+}
 }
 
 #root
