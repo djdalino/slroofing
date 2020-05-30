@@ -185,32 +185,20 @@ h1.pick {
 .form-info-buttons button {
   margin: 0 5px;
 }
-#root
-  > div.footer-container
-  > div.button-fixed
-  > div
-  > div
-  > div:nth-child(3)
-  > button {
-  background: var(--mainBlue);
-  border-radius: 4px;
-  color: #ffffff;
-  padding: 10px;
-  font-family: var(--mainText);
-}
+
 #root > div.footer-container > div.button-fixed > div > div > div:nth-child(3) {
   margin-top: 3px;
   display: flex;
   flex-direction: column;
 }
-#root
-  > div.footer-container
-  > div.button-fixed
-  > div
-  > div
-  > div:nth-child(3)
-  > button {
-  margin: 3px auto;
+.form-time-pick-button {
+  background: var(--mainBlue);
+  margin: 5px auto;
+  border-radius: 4px;
+  color: #ffffff;
+  padding: 10px;
+  font-family: var(--mainText);
+  display: block;
 }
 input[type="submit"] {
   background: #ff0000;
@@ -343,15 +331,4 @@ div.button-fixed > div > div > div:nth-child(3) > div {
   width: 80%;
   flex-direction: column;
   align-items: center;
-}
-
-#root
-  > div.footer-container
-  > div.button-fixed
-  > div
-  > div
-  > div:nth-child(3)
-  > button {
-  margin: 3px auto;
-  margin-top: 8px;
 }

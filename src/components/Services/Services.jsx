@@ -12,9 +12,7 @@ class Services extends Component {
         onClick={() => handleSingleServiceOffer(id)}
       >
         <div className="hover-button-services">
-          <Link className="sbook-now width-book" to="/">
-            Book now
-          </Link>
+          <Link className="sbook-now width-book">Book now</Link>
           <Link
             className="slearn-more"
             to={`/service-offer/${id}`}
@@ -23,14 +21,15 @@ class Services extends Component {
             Learn more &nbsp;>>
           </Link>
         </div>
-        <img
-          src={img}
-          alt={title}
-          height="200px"
-          width="100%"
-          className="mx-auto"
-        />
-
+        <Link to={`/service-offer/${id}`}>
+          <img
+            src={img}
+            alt={title}
+            height="200px"
+            width="100%"
+            className="mx-auto"
+          />
+        </Link>
         <p className="text-center mt-3 ourServicesFont">{title}</p>
       </Link>
     );
