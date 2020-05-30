@@ -177,7 +177,39 @@ h1.pick {
   color: #ffffff;
   border-color: transparent;
 }
-
+.form-info-buttons {
+  margin: auto;
+}
+.form-info-buttons button {
+  margin: 0 5px;
+}
+#root
+  > div.footer-container
+  > div.button-fixed
+  > div
+  > div
+  > div:nth-child(3)
+  > button {
+  background: var(--mainBlue);
+  border-radius: 4px;
+  color: #ffffff;
+  padding: 10px;
+  font-family: var(--mainText);
+}
+#root > div.footer-container > div.button-fixed > div > div > div:nth-child(3) {
+  margin-top: 3px;
+  display: flex;
+  flex-direction: column;
+}
+#root
+  > div.footer-container
+  > div.button-fixed
+  > div
+  > div
+  > div:nth-child(3)
+  > button {
+  margin: 3px auto;
+}
 input[type="submit"] {
   background: #ff0000;
   margin-top: 15px;

@@ -92,7 +92,7 @@ class FormInfo extends Component {
             </div>
           </div>
         </form>
-        <div style={{ margin: "auto" }}>
+        <div className="form-info-buttons">
           <button onClick={() => this.props.prevStep()}>Back</button>
           <button onClick={() => this.props.nextStep()}>Continue</button>
         </div>

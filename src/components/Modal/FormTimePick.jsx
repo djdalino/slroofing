@@ -27,12 +27,7 @@ class FormTimePick extends Component {
             <option value="04:30 PM">04:30 PM</option>
           </select>
         </div>
-        <button
-          style={{ margin: "auto" }}
-          onClick={() => this.props.nextStep()}
-        >
-          Continue
-        </button>
+        <button onClick={() => this.props.nextStep()}>Continue</button>
       </React.Fragment>
     );
   }

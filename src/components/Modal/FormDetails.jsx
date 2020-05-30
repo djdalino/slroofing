@@ -28,12 +28,14 @@ class FormDetails extends Component {
         <p className="text-center">{`City: ${city}`}</p>
         <p className="text-center">{`State: ${stateValue}`}</p>
         <p className="text-center"> {`Zip: ${postal_code}`}</p>
-        <button onClick={() => this.props.prevStep()}>Back</button>
-        <input
-          type="submit"
-          value="submit"
-          onClick={this.props.handleSubmitBookNow}
-        />
+        <div className="form-info-buttons">
+          <button onClick={() => this.props.prevStep()}>Back</button>
+          <input
+            type="submit"
+            value="submit"
+            onClick={this.props.handleSubmitBookNow}
+          />
+        </div>
       </React.Fragment>
     );
   }
