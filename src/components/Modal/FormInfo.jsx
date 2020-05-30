@@ -92,8 +92,10 @@ class FormInfo extends Component {
             </div>
           </div>
         </form>
-        <button onClick={() => this.props.prevStep()}>Back</button>
-        <button onClick={() => this.props.nextStep()}>Continue</button>
+        <div style={{ margin: "auto" }}>
+          <button onClick={() => this.props.prevStep()}>Back</button>
+          <button onClick={() => this.props.nextStep()}>Continue</button>
+        </div>
       </React.Fragment>
     );
   }

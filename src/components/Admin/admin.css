@@ -16,11 +16,10 @@
   justify-content: space-between;
 }
 .admin-logout {
-  color: white;
   margin: auto;
 }
 .admin-logout a {
-  color: white;
+  color: black;
 }
 .admin-container {
   display: flex;
@@ -38,4 +37,21 @@
   grid-row-gap: 20px;
   grid-auto-rows: 350px;
   margin-top: 30px !important;
+}
+@media screen and (max-width: 768px) {
+  .admin-container {
+    display: block;
+  }
+  .admin-sidebar {
+    width: 100% !important;
+    height: 100px;
+  }
+  .admin-sidebar-container {
+    width: 100%;
+  }
+  .admin-sidebar-menu {
+    display: flex;
+    flex-direction: column;
+    color: black;
+  }
 }

@@ -261,23 +261,6 @@ class BookNowModal extends Component {
       default:
         return null;
     }
-    // return (
-    //   <div className="book-now-modal">
-    //     <div className="book-now-modal-container">
-    //       <div className="book-now-datetime">
-    //         <DatePicker
-    //           selected={this.state.startDate}
-    //           minDate={new Date()}
-    //           maxDate={addDays(new Date(), 30)}
-    //           timeIntervals={30}
-    //           excludeDates={[new Date(), subDays(new Date(), 0)]}
-    //           onChange={this.setStartDate}
-    //           inline
-    //         />
-    //         <button> continue</button>
-    //       </div>
-    //     </div>
-    //   </div>
   }
 }
 

@@ -9,8 +9,6 @@ class AdminBLogPost extends Component {
       <ProductConsumer>
         {(value) => {
           const { adminPage } = value;
-
-          console.log(adminPage);
           switch (adminPage) {
             case 1:
               return <BlogPost />;

@@ -15,23 +15,37 @@ class Sidebar extends Component {
               const { handleAdminPage } = value;
               return (
                 <React.Fragment>
-                  <p onClick={() => handleAdminPage(1)}>Blog Post</p>
-                  <p onClick={() => handleAdminPage(2)}>Blog Post View</p>
-                  <p onClick={() => handleAdminPage(3)}>List of Subcribers</p>
-                  <p onClick={() => handleAdminPage(4)}>Bookings</p>
-                  <p onClick={() => handleAdminPage(5)}>Contacts</p>
+                  <ul className="admin-sidebar-menu">
+                    <li>
+                      <p onClick={() => handleAdminPage(1)}>Blog Post</p>
+                    </li>
+                    <li>
+                      <p onClick={() => handleAdminPage(2)}>Blog Post View</p>
+                    </li>
+                    <li>
+                      <p onClick={() => handleAdminPage(3)}>
+                        List of Subcribers
+                      </p>
+                    </li>
+                    <li>
+                      <p onClick={() => handleAdminPage(4)}>Bookings</p>
+                    </li>
+                    <li>
+                      <p onClick={() => handleAdminPage(5)}>Contacts</p>
+                    </li>
+                    <li>
+                      <Link
+                        to="/admin"
+                        onClick={() => localStorage.removeItem("usertoken")}
+                      >
+                        Log out
+                      </Link>
+                    </li>
+                  </ul>
                 </React.Fragment>
               );
             }}
           </ProductConsumer>
-        </div>
-        <div className="admin-logout">
-          <Link
-            to="/admin"
-            onClick={() => localStorage.removeItem("usertoken")}
-          >
-            Log out
-          </Link>
         </div>
       </div>
     );
