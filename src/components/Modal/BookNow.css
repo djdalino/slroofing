@@ -78,9 +78,11 @@
 
 h1.pick {
   text-transform: uppercase;
-  color: #222222;
-  font-size: 1.5rem;
-  text-align: ;
+  color: #222;
+  font-size: 1rem;
+  margin: auto;
+  text-align: center;
+  margin-bottom: 10px;
 }
 
 .book-now-form-info input {
@@ -341,4 +343,15 @@ div.button-fixed > div > div > div:nth-child(3) > div {
   width: 80%;
   flex-direction: column;
   align-items: center;
+}
+
+#root
+  > div.footer-container
+  > div.button-fixed
+  > div
+  > div
+  > div:nth-child(3)
+  > button {
+  margin: 3px auto;
+  margin-top: 8px;
 }
