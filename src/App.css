@@ -769,7 +769,7 @@ div#carouselExampleIndicators {
 }
 
 #inputPassword4 {
-  width: 98%;
+  width: 100%;
 }
 /* --------------------------------footer --------------------------------*/
 
@@ -1900,6 +1900,14 @@ li.list-group-item {
   text-align: center;
   margin: auto;
   padding-bottom: 50px;
+}
+
+.center-map img {
+  width: 1000px;
+}
+
+a:hover {
+  text-decoration: none !important;
 }
 
 /*------------/about us/-----------*/
