@@ -148,7 +148,7 @@ class ProductProvider extends Component {
     fd.append("blogImage", this.state.blogImage);
     fd.append("articleImage", this.state.articleImage);
     try {
-      const data = await axios.post(`http://localhost:5000/posts/`, fd);
+      const data = await axios.post(`/posts/`, fd);
       if (data.status === 200) {
         return data;
       }
