@@ -28,6 +28,38 @@
   border-radius: 5px;
   cursor: pointer;
 }
+.sl-admin-links {
+  text-align: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  transition: all 0.5s linear;
+  list-style-type: none;
+}
+
+#root > div > div.admin-sidebar > div > ul {
+  padding: 0px;
+}
+.sl-admin-links li {
+  text-align: center;
+}
+.sl-admin-links p {
+  display: block;
+  width: max-content;
+  text-decoration: none;
+  color: var(--mainBlack);
+  transition: all 0.3s ease;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.sl-show-admin {
+  transform: translate(0) !important;
+  transition: all 0.5s ease;
+}
 .admin-logout {
   margin: auto;
 }
@@ -50,6 +82,24 @@
   grid-row-gap: 20px;
   grid-auto-rows: 350px;
   margin-top: 30px !important;
+}
+
+@media screen and (max-width: 1024px) {
+  .sl-admin-links {
+    background: #fffffff2;
+    position: absolute;
+    height: 90vh;
+    right: 0px;
+    text-transform: uppercase;
+    display: block;
+    font-family: var(--mainText);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translate(100%);
+    top: 60px !important;
+    z-index: 100;
+  }
 }
 @media screen and (max-width: 768px) {
   .admin-container {

@@ -31,28 +31,30 @@ class Sidebar extends Component {
               return (
                 <React.Fragment>
                   <ul
-                    className={`admin-sidebar-menu ${
-                      this.state.isOpen ? " show" : null
-                    }`}
+                    className={
+                      this.state.isOpen
+                        ? "sl-admin-links sl-show-admin"
+                        : "sl-admin-links"
+                    }
                   >
-                    <li>
+                    <li onClick={() => this.handleToggle()}>
                       <p onClick={() => handleAdminPage(1)}>Blog Post</p>
                     </li>
-                    <li>
+                    <li onClick={() => this.handleToggle()}>
                       <p onClick={() => handleAdminPage(2)}>Blog Post View</p>
                     </li>
-                    <li>
+                    <li onClick={() => this.handleToggle()}>
                       <p onClick={() => handleAdminPage(3)}>
                         List of Subcribers
                       </p>
                     </li>
-                    <li>
+                    <li onClick={() => this.handleToggle()}>
                       <p onClick={() => handleAdminPage(4)}>Bookings</p>
                     </li>
-                    <li>
+                    <li onClick={() => this.handleToggle()}>
                       <p onClick={() => handleAdminPage(5)}>Contacts</p>
                     </li>
-                    <li>
+                    <li onClick={() => this.handleToggle()}>
                       <Link
                         to="/admin"
                         onClick={() => localStorage.removeItem("usertoken")}

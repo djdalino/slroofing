@@ -1,6 +1,5 @@
 {
   "name": "slroofing",
-  "homepage": "https://slroofing.us",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
