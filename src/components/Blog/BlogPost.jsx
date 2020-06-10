@@ -6,7 +6,7 @@ class BlogPost extends Component {
     return (
       <React.Fragment>
         <ProductConsumer>
-          {(value) => {
+          {value => {
             const {
               title,
               titleMessage,
@@ -17,16 +17,17 @@ class BlogPost extends Component {
               handleSubmitPost,
               category,
               selected,
-              setSelected,
+              setSelected
             } = value;
             let options = [];
-            category.forEach((item) => {
+            category.forEach(item => {
               const select = { ...item };
               options = [...options, { value: select._id, label: select.name }];
             });
             return (
               <div className="container margin-top">
                 <form onSubmit={handleSubmitPost} encType="multipart/form-data">
+                  <h1 className="text-center">Add new blog post</h1>
                   <div className="form-group">
                     <label htmlFor="blogImage">Choose featured Image:</label>
                     <input

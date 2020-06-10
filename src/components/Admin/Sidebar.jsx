@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import "./admin.css";
 class Sidebar extends Component {
   state = {
-    isOpen: false,
+    isOpen: false
   };
   handleToggle = () => {
     window.scrollTo(0, 0);
@@ -23,10 +23,10 @@ class Sidebar extends Component {
               <div className={this.state.isOpen ? "toggle line2" : "line2"} />
               <div className={this.state.isOpen ? "toggle line3" : "line3"} />
             </div>
-            <h3>Admin Dash Board</h3>
+            <h3>SL ROOFING DASHBOARD</h3>
           </div>
           <ProductConsumer>
-            {(value) => {
+            {value => {
               const { handleAdminPage } = value;
               return (
                 <React.Fragment>

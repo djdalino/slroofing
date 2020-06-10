@@ -6,9 +6,9 @@ class AdminViewBlogPost extends Component {
     return (
       <div className="admin-view-blog-post">
         <ProductConsumer>
-          {(value) => {
+          {value => {
             const { posts } = value;
-            return posts.map((post) => {
+            return posts.map(post => {
               return <BlogList key={post._id} post={post} value={value} />;
             });
           }}

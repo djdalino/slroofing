@@ -7,7 +7,7 @@ class AdminBLogPost extends Component {
   render() {
     return (
       <ProductConsumer>
-        {(value) => {
+        {value => {
           const { adminPage } = value;
           switch (adminPage) {
             case 1:
