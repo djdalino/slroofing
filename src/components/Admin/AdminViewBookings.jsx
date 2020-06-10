@@ -1,14 +1,15 @@
 import React, { Component } from "react";
 import axios from "axios";
-class AdminViewSubscribers extends Component {
+class AdminViewBookings extends Component {
   state = {
     data: [],
   };
   componentDidMount() {
-    this.handleGetSubscribers();
+    this.handleGetBookings();
   }
-  handleGetSubscribers = async () => {
-    const res = await axios.get("/api/subscribe");
+
+  handleGetBookings = async () => {
+    const res = await axios.get("/api/booknow");
 
     let tempData = [];
 
@@ -40,12 +41,11 @@ class AdminViewSubscribers extends Component {
 
     return `${month[date.getMonth()]} ${date.getDate()}, ${date.getFullYear()}`;
   };
-
   render() {
     return (
       <React.Fragment>
         <div className="admin-subs">
-          <h1 className="text-center">List of Subsribers</h1>
+          <h1 className="text-center">List of Bookings</h1>
 
           {this.state.data.map((item) => {
             return (
@@ -59,7 +59,13 @@ class AdminViewSubscribers extends Component {
                 key={item._id}
               >
                 <h4 className="text-center" style={{ width: "100%" }}>
+                  {item.first_name} {item.last_name}
+                </h4>
+                <h4 className="text-center" style={{ width: "100%" }}>
                   {item.email}
+                </h4>
+                <h4 className="text-center" style={{ width: "100%" }}>
+                  {item.phone}
                 </h4>
                 <h4 className="text-center" style={{ width: "100%" }}>
                   {this.getDate(item.createdAt)}
@@ -73,4 +79,4 @@ class AdminViewSubscribers extends Component {
   }
 }
 
-export default AdminViewSubscribers;
+export default AdminViewBookings;

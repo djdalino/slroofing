@@ -23,6 +23,7 @@
 
 .admin-profile {
   display: flex;
+  width: 100%;
 }
 .sl-admin-burger {
   height: 30px;
@@ -102,11 +103,7 @@
 }
 
 .admin-profile h3 {
-  padding-left: 10px;
-}
-
-.admin-profile h3 {
-  padding-left: 10px;
+  padding-left: 35px;
   font-size: 23px;
   margin-bottom: 0;
 }
