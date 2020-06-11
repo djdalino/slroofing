@@ -215,7 +215,7 @@ span.gray {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    transform: translate(100%);
+    transform: translate(-100%);
     top: 64px !important;
     z-index: 100;
     padding-left: 0 !important;
