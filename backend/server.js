@@ -11,7 +11,6 @@ require("dotenv").config();
 const app = express();
 app.use(cors());
 app.use(express.urlencoded({ extended: true }));
-app.use("/uploads", express.static("uploads"));
 app.use(express.json());
 
 // Booking
@@ -80,4 +79,7 @@ if (process.env.NODE_ENV === "production") {
   app.get("*", (req, res) => {
     res.sendFile(path.join(__dirname + "/../build/index.html"));
   });
+  app.use("/build/uploads", express.static("/build/uploads"));
+} else {
+  app.use("/uploads", express.static("uploads"));
 }

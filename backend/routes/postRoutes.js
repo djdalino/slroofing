@@ -1,14 +1,32 @@
 const router = require("express").Router();
 const Post = require("../models/postModel");
 const multer = require("multer");
-const storage = multer.diskStorage({
-  destination: function (req, file, cb) {
-    cb(null, "./uploads");
-  },
-  filename: function (req, file, cb) {
-    cb(null, Math.random().toString(36).substr(2, 9) + "-" + file.originalname);
-  },
-});
+require("dotenv").config();
+if (process.env.NODE_ENV === "production") {
+  var storage = multer.diskStorage({
+    destination: function (req, file, cb) {
+      cb(null, "./build/uploads");
+    },
+    filename: function (req, file, cb) {
+      cb(
+        null,
+        Math.random().toString(36).substr(2, 9) + "-" + file.originalname
+      );
+    },
+  });
+} else {
+  var storage = multer.diskStorage({
+    destination: function (req, file, cb) {
+      cb(null, "./uploads");
+    },
+    filename: function (req, file, cb) {
+      cb(
+        null,
+        Math.random().toString(36).substr(2, 9) + "-" + file.originalname
+      );
+    },
+  });
+}
 
 const fileFilter = (req, file, cb) => {
   if (
