@@ -11,7 +11,7 @@ require("dotenv").config();
 const app = express();
 app.use(cors());
 app.use(express.urlencoded({ extended: true }));
-app.use("/public/uploads", express.static("public/uploads"));
+app.use("/uploads", express.static("uploads"));
 app.use(express.json());
 
 // Booking
