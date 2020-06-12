@@ -188,7 +188,6 @@ h1.pick {
 
 #root > div.footer-container > div.button-fixed > div > div > div:nth-child(3) {
   margin-top: 3px;
-  display: flex;
   flex-direction: column;
 }
 .form-time-pick-button {
@@ -331,4 +330,12 @@ div.button-fixed > div > div > div:nth-child(3) > div {
   width: 80%;
   flex-direction: column;
   align-items: center;
+}
+
+div.button-fixed > div > div > div:nth-child(3) > div {
+  width: 36%;
+  margin: auto;
+  text-align: justify !important;
+  position: relative;
+  top: 7px;
 }

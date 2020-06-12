@@ -2727,6 +2727,14 @@ button.form-time-pick-button {
   .container-box.text-light .column.footer-box:nth-child(3) {
     margin-top: 50px !important;
   }
+  div.button-fixed > div > div > div:nth-child(3) > div {
+    width: 36%;
+    margin: auto;
+    text-align: justify !important;
+    position: relative;
+    top: 7px;
+    left: 28px;
+  }
 }
 /**/
 @media screen and (max-width: 696px) {
@@ -2812,31 +2820,30 @@ button.form-time-pick-button {
     width: 29%;
     margin: auto;
     text-align: justify !important;
+  }
+
+  button.form-time-pick-button {
+    float: right;
+    right: 22px;
+    position: relative;
+  }
+  div.button-fixed > div > div > div:nth-child(3) > div {
+    width: 29%;
+    margin: auto;
+    text-align: justify !important;
+    position: relative;
+    top: 11px;
+  }
+
+  .book-now-modal-container {
+    height: 71%;
+  }
 }
 
-button.form-time-pick-button {
-  float: right;
-  right: 22px;
-  position: relative;
-}
-div.button-fixed > div > div > div:nth-child(3) > div {
-  width: 29%;
-  margin: auto;
-  text-align: justify !important;
-  position: relative;
-  top: 11px;
-}
-
-.book-now-modal-container {
-  height: 71%;
-}
-}
-
-@media screen and (max-height: 400px){
-
-div.button-fixed > div > div > div:nth-child(2) > div > button {
-  margin-top: 0;
-}
+@media screen and (max-height: 400px) {
+  div.button-fixed > div > div > div:nth-child(2) > div > button {
+    margin-top: 0;
+  }
 }
 
 @media screen and (max-width: 569px) and (min-width: 523px) {
@@ -2875,7 +2882,7 @@ div.button-fixed > div > div > div:nth-child(2) > div > button {
   }
   button.close {
     top: 2px;
-}
+  }
 }
 
 @media screen and (max-width: 476px) and (min-width: 393px) {
