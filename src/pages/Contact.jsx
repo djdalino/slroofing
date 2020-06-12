@@ -12,10 +12,12 @@ const Contact = () => {
         {(value) => {
           const { handleChangeColor, isDark } = value;
           return (
-            <h1
-              className={isDark ? "dark-background" : "light-background"}
-              onClick={handleChangeColor}
-            ></h1>
+            <React.Fragment>
+              <h1
+                className={isDark ? "dark-background" : "light-background"}
+                onClick={handleChangeColor}
+              ></h1>
+            </React.Fragment>
           );
         }}
       </ProductConsumer>

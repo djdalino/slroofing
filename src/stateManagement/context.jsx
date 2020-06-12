@@ -94,7 +94,7 @@ class ProductProvider extends Component {
   };
 
   handleGetBookings = async () => {
-    const res = await axios.get("/api/booknow");
+    const res = await axios.get("http://localhost:5000/api/booknow");
 
     let tempData = [];
 
@@ -259,7 +259,7 @@ class ProductProvider extends Component {
   };
 
   getPost = async () => {
-    const res = await axios.get("/http://localhost:5000/posts/");
+    const res = await axios.get("http://localhost:5000/posts/");
     let tempPosts = [];
 
     res.data.forEach((item) => {
