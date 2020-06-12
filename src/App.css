@@ -1962,6 +1962,11 @@ select.form-control {
   position: relative;
   left: 10px;
 }
+
+button.text-uppercase.bg:hover {
+  background: #2978b0;
+  color: #ffffff;
+}
 /*------------/about us/-----------*/
 
 @media screen and (max-width: 1400px) {
@@ -2400,7 +2405,6 @@ select.form-control {
     background: var(--mainRed);
     color: var(--mainWhite);
     font-family: var(--mainText);
-    border: 1px solid var(--mainRed);
     margin: auto !important;
     position: relative;
     top: 0px;
@@ -2918,9 +2922,8 @@ button.form-time-pick-button {
   .form-info-buttons {
     margin: auto;
     position: absolute;
-    bottom: 45px;
-    right: 37px;
-    position: absolute;
+    bottom: 35px!important;
+    right: 42px!important;
 }
 }
 
