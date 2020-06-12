@@ -99,8 +99,8 @@ button.btn.btn-danger.text-uppercase:hover {
   color: var(--mainBlue);
 }
 
-button:hover {
-  background: var(--mainBlue) !important;
+button.react-datepicker__navigation:hover {
+  color: var(--mainBlue) !important;
 }
 
 body {
@@ -1948,9 +1948,20 @@ button.form-time-pick-button {
 
 .form-time-pick-container {
   position: relative;
-  left: 55px;
 }
 
+.form-time-pick-container {
+  text-align: justify !important;
+  float: left;
+  width: 159px;
+  left: 54px;
+}
+
+select.form-control {
+  width: 108px;
+  position: relative;
+  left: 10px;
+}
 /*------------/about us/-----------*/
 
 @media screen and (max-width: 1400px) {
@@ -2678,6 +2689,14 @@ button.form-time-pick-button {
     top: 15px;
     right: 18px;
   }
+
+  div.button-fixed > div > div > div:nth-child(3) > div {
+    width: 36%;
+    text-align: justify !important;
+    position: relative;
+    top: 7px;
+    left: 0;
+}
 }
 @media screen and (max-width: 800px) {
   .hover-button {
@@ -2727,14 +2746,14 @@ button.form-time-pick-button {
   .container-box.text-light .column.footer-box:nth-child(3) {
     margin-top: 50px !important;
   }
+
   div.button-fixed > div > div > div:nth-child(3) > div {
-    width: 36%;
-    margin: auto;
+    width: 25%;
     text-align: justify !important;
     position: relative;
     top: 7px;
-    left: 28px;
-  }
+    left: 58px;
+}
 }
 /**/
 @media screen and (max-width: 696px) {
@@ -2817,7 +2836,7 @@ button.form-time-pick-button {
   }
 
   div.button-fixed > div > div > div:nth-child(3) > div {
-    width: 29%;
+    width: 27%!important;
     margin: auto;
     text-align: justify !important;
   }
@@ -2838,6 +2857,19 @@ button.form-time-pick-button {
   .book-now-modal-container {
     height: 71%;
   }
+
+  div.button-fixed > div > div > div:nth-child(2) > div > button {
+    margin-top: 0px;
+    padding: 10px;
+    font-family: var(--mainText);
+    text-transform: uppercase;
+}
+
+button.form-time-pick-button {
+  float: right;
+  right: 37px;
+  position: relative;
+}
 }
 
 @media screen and (max-height: 400px) {
@@ -2883,6 +2915,13 @@ button.form-time-pick-button {
   button.close {
     top: 2px;
   }
+  .form-info-buttons {
+    margin: auto;
+    position: absolute;
+    bottom: 45px;
+    right: 37px;
+    position: absolute;
+}
 }
 
 @media screen and (max-width: 476px) and (min-width: 393px) {
@@ -2931,6 +2970,17 @@ button.form-time-pick-button {
     padding: 20px 0;
   }
 }
+
+@media screen and (max-width: 415px) {
+
+  button.form-time-pick-button {
+    float: right;
+    right: 23px!important;
+    position: relative;
+}
+
+}
+
 @media screen and (max-width: 320px) {
   .service-gallery {
     margin: auto;

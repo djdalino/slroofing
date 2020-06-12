@@ -21,7 +21,7 @@
 .book-now-modal-container {
   background: white;
   position: fixed;
-  top: 50%;
+  top: 43%;
   left: 50%;
   right: 0;
   bottom: 0;
@@ -73,7 +73,6 @@
 .book-now-form-info {
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 
 h1.pick {
@@ -329,7 +328,6 @@ div.button-fixed > div > div > div:nth-child(3) > div {
   display: flex;
   width: 80%;
   flex-direction: column;
-  align-items: center;
 }
 
 div.button-fixed > div > div > div:nth-child(3) > div {
@@ -338,4 +336,25 @@ div.button-fixed > div > div > div:nth-child(3) > div {
   text-align: justify !important;
   position: relative;
   top: 7px;
+}
+
+.form-info-buttons {
+  margin: auto;
+  position: absolute;
+  bottom: 55px;
+  right: 60px;
+}
+
+.form-time-pick-container {
+  text-align: justify !important;
+  float: left;
+  width: 159px;
+  position: absolute;
+  left: 9%;
+}
+
+.book-now-form-info > * {
+  text-align: justify !important;
+  margin-left: 0;
+  align-items: self-end;
 }
