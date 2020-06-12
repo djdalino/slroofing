@@ -2727,6 +2727,14 @@ button.form-time-pick-button {
   .container-box.text-light .column.footer-box:nth-child(3) {
     margin-top: 50px !important;
   }
+  div.button-fixed > div > div > div:nth-child(3) > div {
+    width: 36%;
+    margin: auto;
+    text-align: justify !important;
+    position: relative;
+    top: 7px;
+    left: 28px;
+  }
 }
 /**/
 @media screen and (max-width: 696px) {
