@@ -7,22 +7,15 @@ class Service extends Component {
     const { title, img, category } = this.props.service;
     const { handleSlCategorySelect } = this.props.value;
     return (
-      <Link
-        to="/services"
-        onClick={() => handleSlCategorySelect(category)}
-        className="hold-services"
-      >
-        <Link
-          to="/services"
-          onClick={() => handleSlCategorySelect(category)}
-          className="hover-button"
-        >
+      <Link to="#" className="hold-services">
+        <Link to="#" className="hover-button">
           <ProductConsumer>
             {(value) => {
               const { isBookNow, handleBookNowModal } = value;
               return (
                 <React.Fragment>
                   <Link
+                    to="#"
                     className="sbook-now width-book"
                     onClick={handleBookNowModal}
                   >
@@ -34,7 +27,13 @@ class Service extends Component {
               );
             }}
           </ProductConsumer>
-          <Link className="slearn-more">Learn more &nbsp;>></Link>
+          <Link
+            to="/services"
+            onClick={() => handleSlCategorySelect(category)}
+            className="slearn-more"
+          >
+            Learn more &nbsp;
+          </Link>
         </Link>
         <img src={img} alt={title} className="mx-auto" />
         <p className="text-center mt-3 ourServicesFont">{title}</p>

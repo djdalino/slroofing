@@ -14,7 +14,7 @@
   position: absolute;
   width: 100%;
   top: 0%;
-  height: 86%;
+  height: 89%;
   background: #2978b0db;
   cursor: pointer;
   transition: all 0.5s ease-in-out;
@@ -2812,31 +2812,30 @@ button.form-time-pick-button {
     width: 29%;
     margin: auto;
     text-align: justify !important;
+  }
+
+  button.form-time-pick-button {
+    float: right;
+    right: 22px;
+    position: relative;
+  }
+  div.button-fixed > div > div > div:nth-child(3) > div {
+    width: 29%;
+    margin: auto;
+    text-align: justify !important;
+    position: relative;
+    top: 11px;
+  }
+
+  .book-now-modal-container {
+    height: 71%;
+  }
 }
 
-button.form-time-pick-button {
-  float: right;
-  right: 22px;
-  position: relative;
-}
-div.button-fixed > div > div > div:nth-child(3) > div {
-  width: 29%;
-  margin: auto;
-  text-align: justify !important;
-  position: relative;
-  top: 11px;
-}
-
-.book-now-modal-container {
-  height: 71%;
-}
-}
-
-@media screen and (max-height: 400px){
-
-div.button-fixed > div > div > div:nth-child(2) > div > button {
-  margin-top: 0;
-}
+@media screen and (max-height: 400px) {
+  div.button-fixed > div > div > div:nth-child(2) > div > button {
+    margin-top: 0;
+  }
 }
 
 @media screen and (max-width: 569px) and (min-width: 523px) {
@@ -2875,7 +2874,7 @@ div.button-fixed > div > div > div:nth-child(2) > div > button {
   }
   button.close {
     top: 2px;
-}
+  }
 }
 
 @media screen and (max-width: 476px) and (min-width: 393px) {

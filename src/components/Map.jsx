@@ -21,7 +21,7 @@ export default class Map extends Component {
           </p>
         </div>
         <div className="center-map">
-          <img src={MapIMG} />
+          <img src={MapIMG} alt={MapIMG} />
         </div>
       </div>
     );
