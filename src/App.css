@@ -721,6 +721,8 @@ h1.text-center.text-capitalize.mainText {
 .subscribe-box p {
   font-weight: var(--secondaryText);
   padding: 0px 0;
+  width: 90%;
+  margin: auto;
 }
 
 div#carouselExampleIndicators {
@@ -852,9 +854,9 @@ h4.secondaryText {
   font-size: 12px;
   border-radius: 0 !important;
 }
-
 .footer-container .subscribe-container button {
   padding: 10px 10px;
+  padding-bottom: 11px;
   margin-top: 2px;
   background: var(--mainRed);
   color: var(--mainWhite);
@@ -1910,6 +1912,45 @@ a:hover {
   text-decoration: none !important;
 }
 
+#root > div:nth-child(2) > div.subscribe > div > form > button {
+  padding: 11px;
+}
+#root > div:nth-child(2) > div.subscribe > div > form > button:hover {
+  color: #ffffff;
+  background-color: #cb0303 !important;
+}
+
+button.close:hover {
+  color: #2978b0 !important;
+  background: transparent !important;
+}
+button.close {
+  float: right;
+  position: absolute;
+  right: 20px;
+  top: 9px;
+  font-size: 37px;
+}
+
+button.form-time-pick-button {
+  float: right;
+}
+
+.book-now-datetime {
+  width: 90%;
+}
+
+button.form-time-pick-button {
+  float: right;
+  right: 55px;
+  position: relative;
+}
+
+.form-time-pick-container {
+  position: relative;
+  left: 55px;
+}
+
 /*------------/about us/-----------*/
 
 @media screen and (max-width: 1400px) {
@@ -2376,8 +2417,11 @@ a:hover {
     margin-top: 50px;
   }
   .hover-button-services {
-    display: none!important;
-}
+    display: none !important;
+  }
+  #root > div:nth-child(2) > div.subscribe > div > form > button {
+    padding: 7px;
+  }
 }
 
 #root
@@ -2763,6 +2807,36 @@ a:hover {
     width: 90% !important;
     height: 255px;
   }
+
+  div.button-fixed > div > div > div:nth-child(3) > div {
+    width: 29%;
+    margin: auto;
+    text-align: justify !important;
+}
+
+button.form-time-pick-button {
+  float: right;
+  right: 22px;
+  position: relative;
+}
+div.button-fixed > div > div > div:nth-child(3) > div {
+  width: 29%;
+  margin: auto;
+  text-align: justify !important;
+  position: relative;
+  top: 11px;
+}
+
+.book-now-modal-container {
+  height: 71%;
+}
+}
+
+@media screen and (max-height: 400px){
+
+div.button-fixed > div > div > div:nth-child(2) > div > button {
+  margin-top: 0;
+}
 }
 
 @media screen and (max-width: 569px) and (min-width: 523px) {
@@ -2799,6 +2873,9 @@ a:hover {
   .our-blog-text {
     margin-top: 150px;
   }
+  button.close {
+    top: 2px;
+}
 }
 
 @media screen and (max-width: 476px) and (min-width: 393px) {

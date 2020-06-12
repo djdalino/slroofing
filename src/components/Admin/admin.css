@@ -206,21 +206,26 @@ span.gray {
   height: 100%;
 }
 
+.dropdown-heading {
+  position: relative;
+}
+
 @media screen and (max-width: 800px) {
   .sl-admin-links {
-    background: #ffffff;
+    background: #2977b0;
     position: absolute;
-    height: 90vh;
-    right: 0px;
+    height: 100vh;
+    left: 0px;
     text-transform: uppercase;
     display: block;
     font-family: var(--mainText);
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    transform: translate(100%);
+    transform: translate(-100%);
     top: 64px !important;
     z-index: 100;
+    color: #ffffff !important;
     padding-left: 0 !important;
     padding-top: 25px !important;
   }
@@ -290,7 +295,7 @@ span.gray {
     width: max-content;
     text-decoration: none;
     transition: all 0.3s ease;
-    color: #222222;
+    color: #ffffff;
     font-size: 1rem;
     font-weight: 600;
     font-family: var(--mainText) !important;
@@ -299,10 +304,15 @@ span.gray {
     text-align: center !important;
     margin: auto;
     padding: 0 !important;
+    text-align: center !important;
   }
-  .line1,
-  .line2,
-  .line3 {
+
+  .sl-admin-links li {
+    text-align: center !important;
+  }
+  .sl-admin-burger .line1,
+  .sl-admin-burger .line2,
+  .sl-admin-burger .line3 {
     background-color: #ffffff !important;
     width: 30px;
     height: 3px;
@@ -356,7 +366,7 @@ span.gray {
     text-align: justify;
     text-transform: capitalize;
     text-align: center;
-    color: #222222 !important;
+    color: #ffffff !important;
   }
 
   .admin-subs h4:nth-child(2) {
@@ -389,5 +399,14 @@ span.gray {
   .admin-blogpost div {
     z-index: 2;
     overflow: hidden;
+  }
+  .sl-admin-links {
+    width: 35%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .admin-container::before {
+    background-position-x: -448px;
   }
 }
