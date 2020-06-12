@@ -54,7 +54,7 @@ class Admin extends Component {
                         className="form-check-label"
                         htmlFor="exampleCheck1"
                       >
-                        Check me out
+                        Remember me
                       </label>
                     </div>
                     <div className="form-group text-center mt-3">

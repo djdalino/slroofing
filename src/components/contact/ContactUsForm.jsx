@@ -5,12 +5,13 @@ class ContactUsForm extends Component {
     name: "",
     email: "",
     phone: "",
-    inquiry: ""
+    inquiry: "",
+    msg: [],
   };
-  handleInputChange = e => {
+  handleInputChange = (e) => {
     console.log(e.target.value);
     this.setState({
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
   reset = () => {
@@ -18,23 +19,25 @@ class ContactUsForm extends Component {
       name: "",
       email: "",
       phone: "",
-      inquiry: ""
+      inquiry: "",
     });
   };
-  handleSubmitContactUs = async e => {
+  handleSubmitContactUs = async (e) => {
     e.preventDefault();
     const data = {
       name: this.state.name,
       email: this.state.email,
       phone: this.state.phone,
-      inquiry: this.state.inquiry
+      inquiry: this.state.inquiry,
     };
 
     try {
-      const res = await axios.post("http://localhost:5000/api/contactUs", data);
+      const res = await axios.post("/api/contactUs  ", data);
 
       if (res.data) {
-        console.log("success");
+        this.setState(() => {
+          return { msg: "Successful" };
+        });
       }
     } catch (error) {
       alert(error);
@@ -44,6 +47,7 @@ class ContactUsForm extends Component {
     return (
       <div className="contact-wrapper">
         <div className="container-sm">
+          {this.state.msg}
           <h5 className="white">Send us a message directly</h5>
           <h3 className="white">Let's talk</h3>
           <form onSubmit={this.handleSubmitContactUs}>

@@ -3,12 +3,17 @@ const Post = require("../models/postModel");
 const multer = require("multer");
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
-    cb(null, "./public/uploads");
+    if (process.env.NODE_ENV === "production") {
+      cb(null, "./build/uploads");
+    } else {
+      cb(null, "./uploads");
+    }
   },
   filename: function (req, file, cb) {
-    cb(null, file.originalname + "-" + Math.random().toString(36).substr(2, 9));
+    cb(null, Math.random().toString(36).substr(2, 9) + "-" + file.originalname);
   },
 });
+require("dotenv").config();
 
 const fileFilter = (req, file, cb) => {
   if (

@@ -39,6 +39,12 @@ class ProductProvider extends Component {
     slservicesCategory: [],
     slSelectedCategory: null
     //End SL Services
+
+    //BookNow
+    bookNowData: [],
+    bookNowFullDetail: [],
+    bookNowModal: false,
+    //End of BookNow
   };
   componentDidMount() {
     this.setService();
@@ -46,6 +52,7 @@ class ProductProvider extends Component {
     this.getPost();
     this.getCategory();
     this.setSlServices();
+    this.handleGetBookings();
   }
   //SL services
   setSlServices = () => {
@@ -84,6 +91,31 @@ class ProductProvider extends Component {
 
   handleBookNowModal = () => {
     this.setState({ isBookNow: !this.state.isBookNow });
+  };
+
+  handleGetBookings = async () => {
+    const res = await axios.get("/api/booknow");
+
+    let tempData = [];
+
+    res.data.forEach((item) => {
+      const singleItem = { ...item };
+      tempData = [...tempData, singleItem];
+    });
+    this.setState(() => {
+      return { bookNowData: tempData };
+    });
+  };
+  getFullDetail = (id) => {
+    const data = this.state.bookNowData.find((item) => item._id === id);
+    this.setState({
+      bookNowFullDetail: data,
+      bookNowModal: !this.state.bookNowModal,
+    });
+  };
+
+  handleCloseModalBookNow = () => {
+    this.setState({ bookNowModal: !this.state.bookNowModal });
   };
 
   //LOGIN
@@ -337,7 +369,13 @@ class ProductProvider extends Component {
           handleSingleServiceOffer: this.handleSingleServiceOffer,
           handleAdminPage: this.handleAdminPage,
           handleSlCategorySelect: this.handleSlCategorySelect,
+<<<<<<< HEAD
           handlePageChange: this.handlePageChange
+=======
+          handlePageChange: this.handlePageChange,
+          getFullDetail: this.getFullDetail,
+          handleCloseModalBookNow: this.handleCloseModalBookNow,
+>>>>>>> 687dd4d2a25b519247a1c996b41522885773f04c
         }}
       >
         {this.props.children}

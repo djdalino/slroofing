@@ -11,9 +11,9 @@ require("dotenv").config();
 const app = express();
 app.use(cors());
 app.use(express.urlencoded({ extended: true }));
-app.use("/public/uploads", express.static("public/uploads"));
 app.use(express.json());
 
+<<<<<<< HEAD
 //Contact Us
 
 app.post("/api/contactUs", (req, res) => {
@@ -47,6 +47,8 @@ app.post("/api/contactUs", (req, res) => {
   });
 });
 
+=======
+>>>>>>> 687dd4d2a25b519247a1c996b41522885773f04c
 // Booking
 app.post("/api/booking", (req, res) => {
   const data = req.body;
@@ -84,11 +86,13 @@ const postCategory = require("./routes/postCategoryRoute");
 const userRoute = require("./routes/userRoutes");
 const bookNow = require("./routes/bookNowRoutes");
 const subscribe = require("./routes/subscribeRoutes");
+const contactUs = require("./routes/contactUsRoutes");
 app.use("/posts", post);
 app.use("/postCategory", postCategory);
 app.use("/api/user", userRoute);
 app.use("/api/booknow", bookNow);
 app.use("/api/subscribe", subscribe);
+app.use("/api/contactUs", contactUs);
 // set up server
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
@@ -111,4 +115,7 @@ if (process.env.NODE_ENV === "production") {
   app.get("*", (req, res) => {
     res.sendFile(path.join(__dirname + "/../build/index.html"));
   });
+  app.use("/build/uploads", express.static("build/uploads"));
+} else {
+  app.use("/uploads", express.static("uploads"));
 }

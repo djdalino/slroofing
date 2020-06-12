@@ -3,11 +3,13 @@ import BlogPost from "../Blog/BlogPost";
 import AdminViewBlogPost from "./AdminViewBlogPost";
 import AdminViewSubscribers from "./AdminViewSubscribers";
 import { ProductConsumer } from "../../stateManagement/context";
+import AdminViewBookings from "./AdminViewBookings";
+import AdminViewContacts from "./AdminViewContacts";
 class AdminBLogPost extends Component {
   render() {
     return (
       <ProductConsumer>
-        {value => {
+        {(value) => {
           const { adminPage } = value;
           switch (adminPage) {
             case 1:
@@ -17,9 +19,9 @@ class AdminBLogPost extends Component {
             case 3:
               return <AdminViewSubscribers />;
             case 4:
-              return <h1>Bookings On Process</h1>;
+              return <AdminViewBookings />;
             case 5:
-              return <h1> Contacts On Process</h1>;
+              return <AdminViewContacts />;
           }
         }}
       </ProductConsumer>

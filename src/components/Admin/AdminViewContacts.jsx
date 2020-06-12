@@ -1,14 +1,16 @@
 import React, { Component } from "react";
 import axios from "axios";
-class AdminViewSubscribers extends Component {
+class AdminViewContacts extends Component {
   state = {
     data: [],
   };
+
   componentDidMount() {
-    this.handleGetSubscribers();
+    this.handleGetContact();
   }
-  handleGetSubscribers = async () => {
-    const res = await axios.get("/api/subscribe");
+
+  handleGetContact = async () => {
+    const res = await axios.get("/api/contactUs");
 
     let tempData = [];
 
@@ -40,12 +42,14 @@ class AdminViewSubscribers extends Component {
 
     return `${month[date.getMonth()]} ${date.getDate()}, ${date.getFullYear()}`;
   };
-
   render() {
+    if (this.state.data.length === 0) {
+      return <h1>No data</h1>;
+    }
     return (
       <React.Fragment>
         <div className="admin-subs">
-          <h1 className="text-center">List of Subsribers</h1>
+          <h1 className="text-center">List of Contacts</h1>
 
           {this.state.data.map((item) => {
             return (
@@ -59,7 +63,13 @@ class AdminViewSubscribers extends Component {
                 key={item._id}
               >
                 <h4 className="text-center" style={{ width: "100%" }}>
+                  {item.name}
+                </h4>
+                <h4 className="text-center" style={{ width: "100%" }}>
                   {item.email}
+                </h4>
+                <h4 className="text-center" style={{ width: "100%" }}>
+                  {item.phone}
                 </h4>
                 <h4 className="text-center" style={{ width: "100%" }}>
                   {this.getDate(item.createdAt)}
@@ -73,4 +83,4 @@ class AdminViewSubscribers extends Component {
   }
 }
 
-export default AdminViewSubscribers;
+export default AdminViewContacts;
