@@ -207,6 +207,71 @@ span.gray {
   position: relative;
 }
 
+#root > div > div.admin-blogpost > div.admin-subs > div > h4 > p:hover {
+  background: #2978b0;
+  color: #ffffff;
+}
+
+.admin-blogpost div {
+  margin: 0 !important;
+  text-align: justify !important;
+  justify-items: start !important;
+  align-items: start;
+}
+
+.book-now-modal-container {
+  background: white;
+  position: fixed;
+  height: 300px !important;
+  padding: 30px 20px;
+  padding: 60px;
+  padding-bottom: 0;
+  padding-top: 0;
+  top: 30%;
+}
+
+#root > div > div.admin-blogpost > div.admin-subs > div > h4 > p {
+  padding: 10px 0px;
+  width: 98px;
+  text-align: center;
+  position: relative;
+  top: -12px;
+  font-size: 13px;
+  text-transform: lowercase;
+  border: 2px solid #2978b0 !important;
+  border-radius: 4px;
+  background: #ffffff;
+  color: #2978b0;
+  font-family: var(--mainText) !important;
+}
+
+.admin-subs h4 {
+  position: relative;
+  top: 15px;
+}
+
+.book-now-modal-container {
+  max-width: 330px !important;
+}
+
+@media screen and (max-width: 1190px) {
+  .admin-blogpost h4:nth-child(3) {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .admin-blogpost h4:nth-child(2) {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 535px) {
+  .admin-blogpost h4:nth-child(4) {
+    display: none;
+  }
+}
+
 @media screen and (max-width: 800px) {
   .sl-admin-links {
     background: #2977b0;
@@ -405,5 +470,20 @@ span.gray {
 @media screen and (max-width: 600px) {
   .admin-container::before {
     background-position-x: -448px;
+  }
+
+  #root > div > div.admin-blogpost > div.admin-subs > div > h4 > p {
+    float: right;
+  }
+
+  .admin-blogpost h1 {
+    text-align: justify !important;
+    font-size: 24px;
+    text-transform: uppercase;
+    margin-bottom: 0px;
+    text-align: justify !important;
+  }
+  .admin-subs {
+    width: 80% !important;
   }
 }
