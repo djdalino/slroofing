@@ -13,7 +13,6 @@ app.use(cors());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-<<<<<<< HEAD
 //Contact Us
 
 app.post("/api/contactUs", (req, res) => {
@@ -47,8 +46,6 @@ app.post("/api/contactUs", (req, res) => {
   });
 });
 
-=======
->>>>>>> 687dd4d2a25b519247a1c996b41522885773f04c
 // Booking
 app.post("/api/booking", (req, res) => {
   const data = req.body;
