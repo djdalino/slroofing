@@ -94,7 +94,7 @@ class ProductProvider extends Component {
   };
 
   handleGetBookings = async () => {
-    const res = await axios.get("http://localhost:5000/api/booknow");
+    const res = await axios.get("/api/booknow");
 
     let tempData = [];
 
@@ -121,7 +121,7 @@ class ProductProvider extends Component {
   //LOGIN
   login = (user) => {
     return axios
-      .post("http://localhost:5000/api/user/login/", {
+      .post("api/user/login/", {
         email: user.email,
         password: user.password,
       })
@@ -193,7 +193,7 @@ class ProductProvider extends Component {
   //CATEGORY
 
   getCategory = async () => {
-    const res = await axios.get(`http://localhost:5000/postCategory/`);
+    const res = await axios.get(`/postCategory/`);
 
     let tempCategory = [];
 
@@ -259,7 +259,7 @@ class ProductProvider extends Component {
   };
 
   getPost = async () => {
-    const res = await axios.get("http://localhost:5000/posts/");
+    const res = await axios.get("/posts/");
     let tempPosts = [];
 
     res.data.forEach((item) => {
