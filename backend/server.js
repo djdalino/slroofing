@@ -91,7 +91,7 @@ app.use("/api/booknow", bookNow);
 app.use("/api/subscribe", subscribe);
 app.use("/api/contactUs", contactUs);
 // set up server
-const PORT = process.env.PORT || 5000;
+const PORT = 5000;
 app.listen(PORT, () => {
   console.log(`server is runnning on port: ${PORT}`);
 });
@@ -112,7 +112,7 @@ if (process.env.NODE_ENV === "production") {
   app.get("*", (req, res) => {
     res.sendFile(path.join(__dirname + "/../build/index.html"));
   });
-  app.use("/build/uploads", express.static("build/uploads"));
+  app.use("/uploads", express.static("uploads"));
 } else {
   app.use("/uploads", express.static("uploads"));
 }
