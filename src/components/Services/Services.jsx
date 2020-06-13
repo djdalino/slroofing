@@ -18,7 +18,7 @@ class Services extends Component {
             to={`/service-offer/${id}`}
             onClick={() => handleSingleServiceOffer(id)}
           >
-            Learn more &nbsp;>>
+            Learn more &nbsp;
           </Link>
         </div>
         <Link to={`/service-offer/${id}`}>

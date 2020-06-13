@@ -602,6 +602,7 @@ p {
 
 .book-an-appointment {
   cursor: pointer;
+  z-index: 1000;
 }
 
 .box-container {
@@ -650,7 +651,7 @@ p {
 .hover-button-services {
   opacity: 0;
   width: 100%;
-  height: 76%;
+  height: 82%;
   position: absolute;
   top: 0%;
   cursor: pointer;
@@ -2700,7 +2701,7 @@ button.text-uppercase.bg:hover {
     position: relative;
     top: 7px;
     left: 0;
-}
+  }
 }
 @media screen and (max-width: 800px) {
   .hover-button {
@@ -2757,7 +2758,7 @@ button.text-uppercase.bg:hover {
     position: relative;
     top: 7px;
     left: 58px;
-}
+  }
 }
 /**/
 @media screen and (max-width: 696px) {
@@ -2840,7 +2841,7 @@ button.text-uppercase.bg:hover {
   }
 
   div.button-fixed > div > div > div:nth-child(3) > div {
-    width: 27%!important;
+    width: 27% !important;
     margin: auto;
     text-align: justify !important;
   }
@@ -2867,13 +2868,13 @@ button.text-uppercase.bg:hover {
     padding: 10px;
     font-family: var(--mainText);
     text-transform: uppercase;
-}
+  }
 
-button.form-time-pick-button {
-  float: right;
-  right: 37px;
-  position: relative;
-}
+  button.form-time-pick-button {
+    float: right;
+    right: 37px;
+    position: relative;
+  }
 }
 
 @media screen and (max-height: 400px) {
@@ -2922,9 +2923,9 @@ button.form-time-pick-button {
   .form-info-buttons {
     margin: auto;
     position: absolute;
-    bottom: 35px!important;
-    right: 42px!important;
-}
+    bottom: 35px !important;
+    right: 42px !important;
+  }
 }
 
 @media screen and (max-width: 476px) and (min-width: 393px) {
@@ -2975,13 +2976,11 @@ button.form-time-pick-button {
 }
 
 @media screen and (max-width: 415px) {
-
   button.form-time-pick-button {
     float: right;
-    right: 23px!important;
+    right: 23px !important;
     position: relative;
-}
-
+  }
 }
 
 @media screen and (max-width: 320px) {

@@ -13,7 +13,6 @@ app.use(cors());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-<<<<<<< HEAD
 //Contact Us
 
 app.post("/api/contactUs", (req, res) => {
@@ -21,8 +20,8 @@ app.post("/api/contactUs", (req, res) => {
   const auth = {
     auth: {
       api_key: process.env.API_KEY,
-      domain: process.env.DOMAIN
-    }
+      domain: process.env.DOMAIN,
+    },
   };
 
   const transporter = nodemailer.createTransport(mg(auth));
@@ -34,7 +33,7 @@ app.post("/api/contactUs", (req, res) => {
     html: `<p>Name: ${data.name}</p>
         <p>Email From: ${data.email}</p>
         <p>Phone: ${data.phone}</p>
-        <p>${data.inquiry}</p>`
+        <p>${data.inquiry}</p>`,
   };
 
   transporter.sendMail(mailOptions, (err, response) => {
@@ -47,16 +46,14 @@ app.post("/api/contactUs", (req, res) => {
   });
 });
 
-=======
->>>>>>> 687dd4d2a25b519247a1c996b41522885773f04c
 // Booking
 app.post("/api/booking", (req, res) => {
   const data = req.body;
   const auth = {
     auth: {
       api_key: process.env.API_KEY,
-      domain: process.env.DOMAIN
-    }
+      domain: process.env.DOMAIN,
+    },
   };
 
   const transporter = nodemailer.createTransport(mg(auth));
@@ -68,7 +65,7 @@ app.post("/api/booking", (req, res) => {
     html: `<p>Name: ${data.name}</p>
         <p>Email From: ${data.email}</p>
         <p>Phone: ${data.phone}</p>
-        <p>${data.inquiry}</p>`
+        <p>${data.inquiry}</p>`,
   };
 
   transporter.sendMail(mailOptions, (err, response) => {
@@ -104,7 +101,7 @@ const MONGODB_URL =
 mongoose.connect(
   MONGODB_URL || process.env.MONGODB_URL,
   { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true },
-  err => {
+  (err) => {
     if (err) return console.error(err);
     console.log("connected to the database!");
   }

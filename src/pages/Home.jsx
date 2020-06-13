@@ -8,6 +8,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer/Footer";
 import { ProductConsumer } from "../stateManagement/context";
 import BookNowModal from "../components/Modal/BookNowModal";
+import { Link } from "react-router-dom";
 const Home = () => {
   return (
     <React.Fragment>
@@ -30,12 +31,13 @@ const Home = () => {
                     const { isBookNow, handleBookNowModal } = value;
                     return (
                       <React.Fragment>
-                        <button
+                        <Link
+                          to="#"
                           className="book-an-appointment btn btn-danger text-uppercase"
                           onClick={handleBookNowModal}
                         >
                           book an appointment
-                        </button>
+                        </Link>
 
                         {isBookNow ? <BookNowModal /> : null}
                       </React.Fragment>
