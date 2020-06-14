@@ -11,13 +11,17 @@ class ProductProvider extends Component {
     services: [],
     servicesOffer: [],
     activeCategoryServices: "all",
-    serviceOfferView:
-      JSON.parse(localStorage.getItem("serviceOfferView")) || [],
+    serviceOfferView: [],
+    // JSON.parse(localStorage.getItem("serviceOfferView")) ||
     posts: [],
     category: [],
     post: [],
-    blogPost: JSON.parse(localStorage.getItem("blogPost")) || [],
-    categoryList: JSON.parse(localStorage.getItem("categoryList")) || [],
+    blogPost: [],
+    // JSON.parse(localStorage.getItem("blogPost")) ||
+
+    categoryList: [],
+    // JSON.parse(localStorage.getItem("categoryList")) ||
+
     activeCategory: "all",
     title: "",
     titleMessage: "",
@@ -35,7 +39,9 @@ class ProductProvider extends Component {
     pageSize: 5,
     //End Pagination
     //SL Services
-    getSlServices: JSON.parse(localStorage.getItem("getSlServices")) || [],
+    getSlServices: [],
+    //  JSON.parse(localStorage.getItem("getSlServices")) ||
+
     slservicesCategory: [],
     slSelectedCategory: null,
     //End SL Services
@@ -66,13 +72,13 @@ class ProductProvider extends Component {
     this.setState(
       () => {
         return { getSlServices: getSlServices(), slservicesCategory: category };
-      },
-      () => {
-        localStorage.setItem(
-          "getSlServices",
-          JSON.stringify(this.state.getSlServices)
-        );
       }
+      // () => {
+      //   localStorage.setItem(
+      //     "getSlServices",
+      //     JSON.stringify(this.state.getSlServices)
+      //   );
+      // }
     );
   };
   handleSlCategorySelect = (category) => {
@@ -230,13 +236,13 @@ class ProductProvider extends Component {
     this.setState(
       () => {
         return { categoryList: tempMatch };
-      },
-      () => {
-        localStorage.setItem(
-          "categoryList",
-          JSON.stringify(this.state.categoryList)
-        );
       }
+      // () => {
+      //   localStorage.setItem(
+      //     "categoryList",
+      //     JSON.stringify(this.state.categoryList)
+      //   );
+      // }
     );
   };
   handleBlogView = (id) => {
@@ -248,10 +254,10 @@ class ProductProvider extends Component {
       this.setState(
         () => {
           return { blogPost: blog };
-        },
-        () => {
-          localStorage.setItem("blogPost", JSON.stringify(this.state.blogPost));
         }
+        // () => {
+        //   localStorage.setItem("blogPost", JSON.stringify(this.state.blogPost));
+        // }
       );
     } catch (error) {
       console.log(error);
@@ -320,13 +326,13 @@ class ProductProvider extends Component {
     this.setState(
       () => {
         return { serviceOfferView: service };
-      },
-      () => {
-        localStorage.setItem(
-          "serviceOfferView",
-          JSON.stringify(this.state.serviceOfferView)
-        );
       }
+      // () => {
+      //   localStorage.setItem(
+      //     "serviceOfferView",
+      //     JSON.stringify(this.state.serviceOfferView)
+      //   );
+      // }
     );
   };
   setServicesOffer = () => {
