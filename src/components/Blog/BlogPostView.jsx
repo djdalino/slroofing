@@ -7,20 +7,23 @@ class BlogPostView extends Component {
   render() {
     return (
       <ProductConsumer>
-        {value => {
+        {(value) => {
           var {
             title,
             titleText,
             article,
             blogImage,
             articleImage,
-            createdAt
+            createdAt,
           } = value.blogPost;
           const { categoryList, getDate } = value;
 
           const blogReplace = blogImage.replace(/\\/g, "/");
           const blogImg = `/${blogReplace}`;
+          const articleReplace = articleImage.replace(/\\/g, "/");
+          const articleImg = `/${articleReplace}`;
           console.log(blogImg);
+          console.log(articleImg);
           if (categoryList._id) {
             return <Redirect to="/blog" />;
           }
@@ -29,7 +32,7 @@ class BlogPostView extends Component {
               <Navbar />
               <div className="banner-attr">
                 <div className="blogCateg">
-                  {categoryList.map(item => (
+                  {categoryList.map((item) => (
                     <div className="blogCategStyle" key={item._id}>
                       <h1>{item.name}</h1>
                     </div>
@@ -41,7 +44,7 @@ class BlogPostView extends Component {
                       background: `url('${blogImg}') center/cover no-repeat`,
                       width: "100%",
                       height: "220px",
-                      zIndex: "-1"
+                      zIndex: "-1",
                     }}
                   ></div>
                 </div>
@@ -56,10 +59,10 @@ class BlogPostView extends Component {
                       style={{
                         width: "100%",
                         height: "auto",
-                        margin: "30px 0"
+                        margin: "30px 0",
                       }}
                       className="text-center"
-                      src={`/${articleImage}`}
+                      src={`${articleImg}`}
                       alt="img"
                     />
                   </div>

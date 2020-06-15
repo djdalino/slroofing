@@ -33,7 +33,7 @@
   "scripts": {
     "build": "react-scripts build",
     "start": "cd backend && npm install && node server.js",
-    "server": "nodemon backend/server.js",
+    "server": "node backend/server.js",
     "client": "react-scripts start",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "heroku-postbuild": "npm install && npm run build"

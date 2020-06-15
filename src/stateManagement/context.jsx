@@ -13,6 +13,7 @@ class ProductProvider extends Component {
     activeCategoryServices: "all",
     serviceOfferView: [],
     // JSON.parse(localStorage.getItem("serviceOfferView")) ||
+
     posts: [],
     category: [],
     post: [],
@@ -40,7 +41,7 @@ class ProductProvider extends Component {
     //End Pagination
     //SL Services
     getSlServices: [],
-    //  JSON.parse(localStorage.getItem("getSlServices")) ||
+    // JSON.parse(localStorage.getItem("getSlServices")) ||
 
     slservicesCategory: [],
     slSelectedCategory: null,

@@ -12,7 +12,7 @@ const postSchema = new mongoose.Schema({
   titleText: { type: String, required: true },
   article: { type: String, required: true },
   blogImage: { type: String, required: true },
-  articleImage: { type: String },
+  articleImage: { type: String, required: true },
   createdAt: { type: Date, default: Date.now },
 });
 
