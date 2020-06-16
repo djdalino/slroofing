@@ -222,7 +222,6 @@ span.gray {
 .book-now-modal-container {
   background: white;
   position: fixed;
-  height: 300px !important;
   padding: 30px 20px;
   padding: 60px;
   padding-bottom: 0;
