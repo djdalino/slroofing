@@ -250,24 +250,48 @@ span.gray {
   top: 15px;
 }
 
-.book-now-modal-container {
+.admin-blogpost .book-now-modal-container {
   max-width: 330px !important;
 }
 
+.booking-list > div > h4:nth-child(5) > p:hover {
+  background: #2978b0;
+  color: #ffffff;
+  border: 2px solid #2978b0;
+}
+.booking-list > div > h4:nth-child(5) > p {
+  background: #ffffff;
+  text-align: center;
+  padding: 7px;
+  border-radius: 4px;
+  color: #2978b0;
+  position: relative;
+  font-family: var(--mainText) !important;
+  top: -7px;
+  border: 2px solid;
+  cursor: pointer;
+}
+
+.admin-profile h3 {
+  padding-left: 11px;
+  font-size: 23px;
+  margin-bottom: 34px;
+}
+
 @media screen and (max-width: 1190px) {
-  .admin-blogpost h4:nth-child(3) {
+  .booking-list h4:nth-child(3) {
     display: none;
   }
 }
 
 @media screen and (max-width: 980px) {
-  .admin-blogpost h4:nth-child(2) {
+  .booking-list h4:nth-child(2) {
     display: none;
   }
 }
 
 @media screen and (max-width: 535px) {
-  .admin-blogpost h4:nth-child(4) {
+  .booking-list h4:nth-child(4) {
     display: none;
   }
 }
@@ -464,6 +488,16 @@ span.gray {
   }
   .sl-admin-links {
     width: 35%;
+  }
+
+  .booking-list > div {
+    height: 56px;
+  }
+  .list-of-subs > div {
+    height: 40px;
+  }
+  .list-of-contacts > div {
+    height: 40px;
   }
 }
 
