@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import axios from "axios";
 class AdminViewContacts extends Component {
   state = {
-    data: [],
+    data: []
   };
 
   componentDidMount() {
@@ -14,7 +14,7 @@ class AdminViewContacts extends Component {
 
     let tempData = [];
 
-    res.data.forEach((item) => {
+    res.data.forEach(item => {
       const singleItem = { ...item };
       tempData = [...tempData, singleItem];
     });
@@ -23,7 +23,7 @@ class AdminViewContacts extends Component {
     });
   };
 
-  getDate = (dateString) => {
+  getDate = dateString => {
     const month = [
       "January",
       "February",
@@ -36,7 +36,7 @@ class AdminViewContacts extends Component {
       "September",
       "October",
       "November",
-      "December",
+      "December"
     ];
     const date = new Date(dateString);
 
@@ -49,34 +49,36 @@ class AdminViewContacts extends Component {
     return (
       <React.Fragment>
         <div className="admin-subs">
-          <h1 className="text-center">List of Contacts</h1>
+          <div className="list-of-contacts">
+            <h1 className="text-center">List of Contacts</h1>
 
-          {this.state.data.map((item) => {
-            return (
-              <div
-                style={{
-                  display: "flex",
-                  maxWidth: "768px",
-                  margin: "auto",
-                  justifyContent: "center",
-                }}
-                key={item._id}
-              >
-                <h4 className="text-center" style={{ width: "100%" }}>
-                  {item.name}
-                </h4>
-                <h4 className="text-center" style={{ width: "100%" }}>
-                  {item.email}
-                </h4>
-                <h4 className="text-center" style={{ width: "100%" }}>
-                  {item.phone}
-                </h4>
-                <h4 className="text-center" style={{ width: "100%" }}>
-                  {this.getDate(item.createdAt)}
-                </h4>
-              </div>
-            );
-          })}
+            {this.state.data.map(item => {
+              return (
+                <div
+                  style={{
+                    display: "flex",
+                    maxWidth: "768px",
+                    margin: "auto",
+                    justifyContent: "center"
+                  }}
+                  key={item._id}
+                >
+                  <h4 className="text-center" style={{ width: "100%" }}>
+                    {item.name}
+                  </h4>
+                  <h4 className="text-center" style={{ width: "100%" }}>
+                    {item.email}
+                  </h4>
+                  <h4 className="text-center" style={{ width: "100%" }}>
+                    {item.phone}
+                  </h4>
+                  <h4 className="text-center" style={{ width: "100%" }}>
+                    {this.getDate(item.createdAt)}
+                  </h4>
+                </div>
+              );
+            })}
+          </div>
         </div>
       </React.Fragment>
     );

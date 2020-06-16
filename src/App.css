@@ -14,7 +14,7 @@
   position: absolute;
   width: 100%;
   top: 0%;
-  height: 89%;
+  height: 86%;
   background: #2978b0db;
   cursor: pointer;
   transition: all 0.5s ease-in-out;
@@ -1968,7 +1968,21 @@ button.text-uppercase.bg:hover {
   background: #2978b0;
   color: #ffffff;
 }
-/*------------/about us/-----------*/
+
+#root
+  > div
+  > div:nth-child(4)
+  > div.got-you-covered
+  > div.about-description
+  > button {
+  width: auto !important;
+  margin-top: 28px !important;
+  padding: 10px;
+}
+
+form.subscribe-container button {
+  padding: 11px;
+}
 
 @media screen and (max-width: 1400px) {
   .banner-container {
@@ -2437,17 +2451,9 @@ button.text-uppercase.bg:hover {
   #root > div:nth-child(2) > div.subscribe > div > form > button {
     padding: 7px;
   }
-}
-
-#root
-  > div
-  > div:nth-child(4)
-  > div.got-you-covered
-  > div.about-description
-  > button {
-  width: auto !important;
-  margin-top: 28px !important;
-  padding: 10px;
+  form.subscribe-container button {
+    padding: 7px !important;
+  }
 }
 
 @media screen and (max-width: 1200px) {
@@ -2590,6 +2596,19 @@ button.text-uppercase.bg:hover {
   }
   ul.sl-nav-links.sl-show-nav button.btn-book.text-uppercase.mx-3.rad {
     display: none;
+  }
+
+  .box-container .button-container.book-an-appointment {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1400px) and (min-width: 1200px) {
+  .box-container .button-container.book-an-appointment {
+    padding: 8px 15px !important;
+    width: 30%;
+    margin: auto;
+    margin-top: 30px;
   }
 }
 

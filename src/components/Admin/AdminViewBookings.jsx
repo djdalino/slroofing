@@ -6,43 +6,46 @@ class AdminViewBookings extends Component {
     return (
       <React.Fragment>
         <div className="admin-subs">
-          <h1 className="text-center">List of Bookings</h1>
-          <ProductConsumer>
-            {(value) => {
-              const { bookNowData, getFullDetail, getDate } = value;
+          <div className="booking-list">
+            <h1 className="text-center">List of Bookings</h1>
+            <ProductConsumer>
+              {value => {
+                const { bookNowData, getFullDetail, getDate } = value;
 
-              return bookNowData.map((item) => {
-                return (
-                  <div
-                    style={{
-                      display: "flex",
-                      maxWidth: "768px",
-                      margin: "auto",
-                      justifyContent: "center",
-                    }}
-                    key={item._id}
-                  >
-                    <h4 className="text-center" style={{ width: "100%" }}>
-                      {item.first_name} {item.last_name}
-                    </h4>
-                    <h4 className="text-center" style={{ width: "100%" }}>
-                      {item.email}
-                    </h4>
-                    <h4 className="text-center" style={{ width: "100%" }}>
-                      {item.phone}
-                    </h4>
-                    <h4 className="text-center" style={{ width: "100%" }}>
-                      {getDate(item.createdAt)}
-                    </h4>
-                    <h4 className="text-center" style={{ width: "100%" }}>
-                      <p onClick={() => getFullDetail(item._id)}>View Detail</p>
-                    </h4>
-                  </div>
-                );
-              });
-            }}
-          </ProductConsumer>
-          {/* {this.state.data.map((item) => {
+                return bookNowData.map(item => {
+                  return (
+                    <div
+                      style={{
+                        display: "flex",
+                        maxWidth: "768px",
+                        margin: "auto",
+                        justifyContent: "center"
+                      }}
+                      key={item._id}
+                    >
+                      <h4 className="text-center" style={{ width: "100%" }}>
+                        {item.first_name} {item.last_name}
+                      </h4>
+                      <h4 className="text-center" style={{ width: "100%" }}>
+                        {item.email}
+                      </h4>
+                      <h4 className="text-center" style={{ width: "100%" }}>
+                        {item.phone}
+                      </h4>
+                      <h4 className="text-center" style={{ width: "100%" }}>
+                        {getDate(item.createdAt)}
+                      </h4>
+                      <h4 className="text-center" style={{ width: "100%" }}>
+                        <p onClick={() => getFullDetail(item._id)}>
+                          View Detail
+                        </p>
+                      </h4>
+                    </div>
+                  );
+                });
+              }}
+            </ProductConsumer>
+            {/* {this.state.data.map((item) => {
             return (
               <div
                 style={{
@@ -73,6 +76,7 @@ class AdminViewBookings extends Component {
               </div>
             );
           })} */}
+          </div>
         </div>
         <AdminBookNowModal />
       </React.Fragment>
