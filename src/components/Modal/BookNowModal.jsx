@@ -41,7 +41,7 @@ class BookNowModal extends Component {
     };
     console.log(data);
     try {
-      const res = await axios.post(`http://localhost:5000/api/booknow/`, data);
+      const res = await axios.post(`sl/api/booknow/`, data);
 
       if (res.status === 200) {
         this.nextStep();

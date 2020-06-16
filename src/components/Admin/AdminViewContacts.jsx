@@ -10,7 +10,7 @@ class AdminViewContacts extends Component {
   }
 
   handleGetContact = async () => {
-    const res = await axios.get("/api/contactUs");
+    const res = await axios.get("sl/api/contactUs");
 
     let tempData = [];
 

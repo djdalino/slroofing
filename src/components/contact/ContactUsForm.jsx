@@ -32,7 +32,7 @@ class ContactUsForm extends Component {
     };
 
     try {
-      const res = await axios.post("/api/contactUs  ", data);
+      const res = await axios.post("sl/api/contactUs  ", data);
 
       if (res.data) {
         this.setState(() => {

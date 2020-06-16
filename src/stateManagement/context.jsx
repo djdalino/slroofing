@@ -96,7 +96,7 @@ class ProductProvider extends Component {
   };
 
   handleGetBookings = async () => {
-    const res = await axios.get("/api/booknow", {
+    const res = await axios.get("sl/api/booknow", {
       headers: {
         Accept: "application/json",
         "Content-Type": "application/json",
@@ -129,7 +129,7 @@ class ProductProvider extends Component {
   login = (user) => {
     return axios
       .post(
-        "api/user/login/",
+        "sl/api/user/login/",
         {
           email: user.email,
           password: user.password,
@@ -196,7 +196,7 @@ class ProductProvider extends Component {
     fd.append("blogImage", this.state.blogImage);
     fd.append("articleImage", this.state.articleImage);
     try {
-      const res = await axios.post(`/posts/`, fd, {
+      const res = await axios.post(`/sl/api/posts/`, fd, {
         headers: {
           Accept: "application/json",
           "Content-type": "application/json",
@@ -214,7 +214,7 @@ class ProductProvider extends Component {
   //CATEGORY
 
   getCategory = async () => {
-    const res = await axios.get(`/postCategory/`, {
+    const res = await axios.get(`/sl/api/postCategory/`, {
       headers: {
         Accept: "application/json",
         "Content-Type": "application/json",
@@ -285,7 +285,7 @@ class ProductProvider extends Component {
   };
 
   getPost = async () => {
-    const res = await axios.get("/posts/", {
+    const res = await axios.get("/sl/api/posts/", {
       headers: {
         Accept: "application/json",
         "Content-Type": "application/json",

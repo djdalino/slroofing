@@ -2328,7 +2328,6 @@ button.text-uppercase.bg:hover {
   }
   .left-cov {
     width: 100%;
-    display: block;
     vertical-align: top;
     margin: auto;
   }
