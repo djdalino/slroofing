@@ -5,24 +5,20 @@ import { slservices } from "../services";
 import { paginate } from "../components/Utilities/paginate";
 import { getSlServices } from "../components/Utilities/services";
 import { getSlCategory } from "../components/Utilities/serviceCategory";
+
 const ProductContext = React.createContext();
 class ProductProvider extends Component {
   state = {
     services: [],
     servicesOffer: [],
     activeCategoryServices: "all",
-    serviceOfferView: [],
-    // JSON.parse(localStorage.getItem("serviceOfferView")) ||
-
+    serviceOfferView:
+      JSON.parse(localStorage.getItem("serviceOfferView")) || [],
     posts: [],
     category: [],
     post: [],
-    blogPost: [],
-    // JSON.parse(localStorage.getItem("blogPost")) ||
-
-    categoryList: [],
-    // JSON.parse(localStorage.getItem("categoryList")) ||
-
+    blogPost: JSON.parse(localStorage.getItem("blogPost")) || [],
+    categoryList: JSON.parse(localStorage.getItem("categoryList")) || [],
     activeCategory: "all",
     title: "",
     titleMessage: "",
@@ -40,8 +36,7 @@ class ProductProvider extends Component {
     pageSize: 5,
     //End Pagination
     //SL Services
-    getSlServices: [],
-    // JSON.parse(localStorage.getItem("getSlServices")) ||
+    getSlServices: JSON.parse(localStorage.getItem("getSlServices")) || [],
 
     slservicesCategory: [],
     slSelectedCategory: null,
@@ -73,13 +68,13 @@ class ProductProvider extends Component {
     this.setState(
       () => {
         return { getSlServices: getSlServices(), slservicesCategory: category };
+      },
+      () => {
+        localStorage.setItem(
+          "getSlServices",
+          JSON.stringify(this.state.getSlServices)
+        );
       }
-      // () => {
-      //   localStorage.setItem(
-      //     "getSlServices",
-      //     JSON.stringify(this.state.getSlServices)
-      //   );
-      // }
     );
   };
   handleSlCategorySelect = (category) => {
@@ -101,7 +96,12 @@ class ProductProvider extends Component {
   };
 
   handleGetBookings = async () => {
-    const res = await axios.get("/api/booknow");
+    const res = await axios.get("/api/booknow", {
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+    });
 
     let tempData = [];
 
@@ -128,10 +128,19 @@ class ProductProvider extends Component {
   //LOGIN
   login = (user) => {
     return axios
-      .post("api/user/login/", {
-        email: user.email,
-        password: user.password,
-      })
+      .post(
+        "api/user/login/",
+        {
+          email: user.email,
+          password: user.password,
+        },
+        {
+          headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+          },
+        }
+      )
       .then((res) => {
         localStorage.setItem("usertoken", res.data);
         return res.data;
@@ -187,9 +196,14 @@ class ProductProvider extends Component {
     fd.append("blogImage", this.state.blogImage);
     fd.append("articleImage", this.state.articleImage);
     try {
-      const data = await axios.post(`http://localhost:5000/posts/`, fd);
-      if (data.status === 200) {
-        return data;
+      const res = await axios.post(`/posts/`, fd, {
+        headers: {
+          Accept: "application/json",
+          "Content-type": "application/json",
+        },
+      });
+      if (res.status === 200) {
+        res.json();
       }
     } catch (error) {
       alert(error);
@@ -200,7 +214,12 @@ class ProductProvider extends Component {
   //CATEGORY
 
   getCategory = async () => {
-    const res = await axios.get(`/postCategory/`);
+    const res = await axios.get(`/postCategory/`, {
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+    });
 
     let tempCategory = [];
 
@@ -237,13 +256,13 @@ class ProductProvider extends Component {
     this.setState(
       () => {
         return { categoryList: tempMatch };
+      },
+      () => {
+        localStorage.setItem(
+          "categoryList",
+          JSON.stringify(this.state.categoryList)
+        );
       }
-      // () => {
-      //   localStorage.setItem(
-      //     "categoryList",
-      //     JSON.stringify(this.state.categoryList)
-      //   );
-      // }
     );
   };
   handleBlogView = (id) => {
@@ -255,10 +274,10 @@ class ProductProvider extends Component {
       this.setState(
         () => {
           return { blogPost: blog };
+        },
+        () => {
+          localStorage.setItem("blogPost", JSON.stringify(this.state.blogPost));
         }
-        // () => {
-        //   localStorage.setItem("blogPost", JSON.stringify(this.state.blogPost));
-        // }
       );
     } catch (error) {
       console.log(error);
@@ -266,7 +285,12 @@ class ProductProvider extends Component {
   };
 
   getPost = async () => {
-    const res = await axios.get("/posts/");
+    const res = await axios.get("/posts/", {
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+    });
     let tempPosts = [];
 
     res.data.forEach((item) => {
@@ -327,13 +351,13 @@ class ProductProvider extends Component {
     this.setState(
       () => {
         return { serviceOfferView: service };
+      },
+      () => {
+        localStorage.setItem(
+          "serviceOfferView",
+          JSON.stringify(this.state.serviceOfferView)
+        );
       }
-      // () => {
-      //   localStorage.setItem(
-      //     "serviceOfferView",
-      //     JSON.stringify(this.state.serviceOfferView)
-      //   );
-      // }
     );
   };
   setServicesOffer = () => {

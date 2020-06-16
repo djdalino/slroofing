@@ -3,7 +3,7 @@ const Contact = require("../models/contactUsModel");
 const nodemailer = require("nodemailer");
 router.get("/", async (req, res) => {
   const contact = await Contact.find();
-  res.send(contact);
+  res.json(contact);
 });
 router.post("/", async (req, res) => {
   const data = req.body;

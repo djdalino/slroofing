@@ -35,7 +35,7 @@ const multiUpload = upload.fields([
 
 router.get("/", async (req, res) => {
   const posts = await Post.find();
-  res.send(posts);
+  res.json(posts);
 });
 
 router.get("/:id", async (req, res) => {
