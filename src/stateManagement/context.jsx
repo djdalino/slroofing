@@ -103,14 +103,14 @@ class ProductProvider extends Component {
       },
     });
 
-    let tempData = [];
+    // let tempData = [];
 
-    res.data.forEach((item) => {
-      const singleItem = { ...item };
-      tempData = [...tempData, singleItem];
-    });
+    // res.data.forEach((item) => {
+    //   const singleItem = { ...item };
+    //   tempData = [...tempData, singleItem];
+    // });
     this.setState(() => {
-      return { bookNowData: tempData };
+      return { bookNowData: res.data };
     });
   };
   getFullDetail = (id) => {

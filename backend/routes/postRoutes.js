@@ -23,9 +23,7 @@ const fileFilter = (req, file, cb) => {
 };
 const upload = multer({
   storage: storage,
-  limits: {
-    fileSize: 1024 * 1024 * 15,
-  },
+
   fileFilter: fileFilter,
 });
 const multiUpload = upload.fields([
@@ -44,7 +42,6 @@ router.get("/:id", async (req, res) => {
 });
 router.post("/", multiUpload, async (req, res) => {
   const { title, titleText, article, createdAt, category } = req.body;
-
   const newPost = new Post({
     title,
     titleText,
