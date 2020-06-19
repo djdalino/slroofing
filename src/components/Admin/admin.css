@@ -483,7 +483,6 @@ span.gray {
 
   .admin-blogpost div {
     z-index: 2;
-    overflow: hidden;
   }
   .sl-admin-links {
     width: 35%;
