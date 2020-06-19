@@ -175,14 +175,13 @@ class ProductProvider extends Component {
   };
   handleInputChange = (e) => {
     this.setState({ [e.target.name]: e.target.value });
-    console.log(e);
   };
   handleBlogCategorySelected = (e) => {
     this.setState({ blogCategorySelect: e.target.value });
-    console.log(e.target.value);
   };
 
   handleSubmitPost = async (e) => {
+    e.preventDefault();
     const selected = this.state.selected;
     let select = [];
     for (let i = 0; i < selected.length; i++) {
@@ -196,14 +195,25 @@ class ProductProvider extends Component {
     fd.append("blogImage", this.state.blogImage);
     fd.append("articleImage", this.state.articleImage);
     try {
-      const res = await axios.post(`/sl/api/posts/`, fd, {
-        headers: {
-          Accept: "application/json",
-          "Content-type": "application/json",
+      const res = await axios.post(
+        `/sl/api/posts/`,
+        fd,
+        {
+          onUploadProgress: (progressEvent) => {
+            console.log(
+              "upload progress",
+              (progressEvent / progressEvent.total) * 100 + "%"
+            );
+          },
         },
-      });
+        {
+          headers: {
+            "Content-Type": "multipart/form-data",
+          },
+        }
+      );
       if (res.status === 200) {
-        res.json();
+        console.log(res);
       }
     } catch (error) {
       alert(error);

@@ -39,7 +39,6 @@ class BookNowModal extends Component {
       stateValue: this.state.stateValue,
       postal_code: this.state.postal_code,
     };
-    console.log(data);
     try {
       const res = await axios.post(`sl/api/booknow/`, data);
 
