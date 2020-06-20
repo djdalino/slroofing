@@ -9,6 +9,7 @@ require("dotenv").config();
 // set up express
 
 const app = express();
+app.use("/uploads", express.static("uploads"));
 app.use(cors());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -84,12 +85,12 @@ const userRoute = require("./routes/userRoutes");
 const bookNow = require("./routes/bookNowRoutes");
 const subscribe = require("./routes/subscribeRoutes");
 const contactUs = require("./routes/contactUsRoutes");
-app.use("/posts", post);
-app.use("/postCategory", postCategory);
-app.use("/api/user", userRoute);
-app.use("/api/booknow", bookNow);
-app.use("/api/subscribe", subscribe);
-app.use("/api/contactUs", contactUs);
+app.use("/sl/api/posts", post);
+app.use("/sl/api/postCategory", postCategory);
+app.use("/sl/api/user", userRoute);
+app.use("/sl/api/booknow", bookNow);
+app.use("/sl/api/subscribe", subscribe);
+app.use("/sl/api/contactUs", contactUs);
 // set up server
 const PORT = 5000;
 app.listen(PORT, () => {
@@ -107,12 +108,14 @@ mongoose.connect(
   }
 );
 
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static("../build"));
-  app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname + "/../build/index.html"));
-  });
-  app.use("/uploads", express.static("uploads"));
-} else {
-  app.use("/uploads", express.static("uploads"));
-}
+// if (process.env.NODE_ENV === "production") {
+const root = require("path").join(__dirname, "../build");
+
+app.use(express.static(root));
+app.get("*", (req, res) => {
+  res.sendFile("index.html", { root });
+});
+
+// } else {
+//   app.use("/uploads", express.static("uploads"));
+// }

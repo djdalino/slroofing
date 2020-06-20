@@ -6,7 +6,7 @@ class BlogPost extends Component {
     return (
       <React.Fragment>
         <ProductConsumer>
-          {value => {
+          {(value) => {
             const {
               title,
               titleMessage,
@@ -17,10 +17,10 @@ class BlogPost extends Component {
               handleSubmitPost,
               category,
               selected,
-              setSelected
+              setSelected,
             } = value;
             let options = [];
-            category.forEach(item => {
+            category.forEach((item) => {
               const select = { ...item };
               options = [...options, { value: select._id, label: select.name }];
             });
@@ -35,6 +35,7 @@ class BlogPost extends Component {
                       name="blogImage"
                       className="form-control-file"
                       id="blogImage"
+                      accept="image/*"
                       onChange={fileSelectedHandler}
                     />
                   </div>
@@ -81,6 +82,7 @@ class BlogPost extends Component {
                       name="articleImage"
                       className="form-control-file"
                       id="articleImage"
+                      accept="image/*"
                       onChange={articleFileSelectedHandler}
                     />
                   </div>

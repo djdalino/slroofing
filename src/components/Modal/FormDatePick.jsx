@@ -8,7 +8,6 @@ import subDays from "date-fns/subDays";
 class FormDatePick extends Component {
   render() {
     const { startDate } = this.props.values;
-    console.log(this.props.getDate(startDate));
     return (
       <React.Fragment>
         <DatePicker

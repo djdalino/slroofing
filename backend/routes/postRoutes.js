@@ -28,7 +28,7 @@ const upload = multer({
   },
   fileFilter: fileFilter,
 });
-const multiUpload = upload.fields([
+var multiUpload = upload.fields([
   { name: "blogImage", maxCount: 1 },
   { name: "articleImage", maxCount: 1 },
 ]);

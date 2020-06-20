@@ -8,7 +8,7 @@ class AdminViewSubscribers extends Component {
     this.handleGetSubscribers();
   }
   handleGetSubscribers = async () => {
-    const res = await axios.get("/api/subscribe");
+    const res = await axios.get("sl/api/subscribe");
 
     let tempData = [];
 

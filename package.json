@@ -1,6 +1,5 @@
 {
   "name": "slroofing",
-  "homepage": "https://slroofing.us",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -34,7 +33,7 @@
   "scripts": {
     "build": "react-scripts build",
     "start": "cd backend && npm install && node server.js",
-    "server": "node backend/server.js",
+    "server": "nodemon backend/server.js",
     "client": "react-scripts start",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "heroku-postbuild": "npm install && npm run build"

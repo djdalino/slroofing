@@ -47,6 +47,12 @@ class ProductProvider extends Component {
     bookNowFullDetail: [],
     bookNowModal: false,
     //End of BookNow
+
+    //ContactModal
+    contactData: [],
+    contactFullDetail: [],
+    contactModal: false,
+    //End of ContactModal
   };
   componentDidMount() {
     this.setService();
@@ -55,6 +61,7 @@ class ProductProvider extends Component {
     this.getCategory();
     this.setSlServices();
     this.handleGetBookings();
+    this.handleGetContact();
   }
   //SL services
   setSlServices = () => {
@@ -89,19 +96,10 @@ class ProductProvider extends Component {
   handleAdminPage = (page) => {
     this.setState({ adminPage: page });
   };
-  // Modal book now
 
-  handleBookNowModal = () => {
-    this.setState({ isBookNow: !this.state.isBookNow });
-  };
-
-  handleGetBookings = async () => {
-    const res = await axios.get("/api/booknow", {
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
-      },
-    });
+  //Modal Contact
+  handleGetContact = async () => {
+    const res = await axios.get("sl/api/contactUs");
 
     let tempData = [];
 
@@ -110,7 +108,42 @@ class ProductProvider extends Component {
       tempData = [...tempData, singleItem];
     });
     this.setState(() => {
-      return { bookNowData: tempData };
+      return { contactData: tempData };
+    });
+  };
+  handleGetContactFullDetail = (id) => {
+    const data = this.state.contactData.find((item) => item._id === id);
+    this.setState({
+      contactFullDetail: data,
+      contactModal: !this.state.bookNowModal,
+    });
+  };
+  handleCloseModalContactModal = () => {
+    this.setState({ contactModal: !this.state.contactModal });
+  };
+  // End of Modal Contact
+  // Modal book now
+
+  handleBookNowModal = () => {
+    this.setState({ isBookNow: !this.state.isBookNow });
+  };
+
+  handleGetBookings = async () => {
+    const res = await axios.get("sl/api/booknow", {
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+    });
+
+    // let tempData = [];
+
+    // res.data.forEach((item) => {
+    //   const singleItem = { ...item };
+    //   tempData = [...tempData, singleItem];
+    // });
+    this.setState(() => {
+      return { bookNowData: res.data };
     });
   };
   getFullDetail = (id) => {
@@ -129,7 +162,7 @@ class ProductProvider extends Component {
   login = (user) => {
     return axios
       .post(
-        "api/user/login/",
+        "sl/api/user/login/",
         {
           email: user.email,
           password: user.password,
@@ -175,14 +208,13 @@ class ProductProvider extends Component {
   };
   handleInputChange = (e) => {
     this.setState({ [e.target.name]: e.target.value });
-    console.log(e);
   };
   handleBlogCategorySelected = (e) => {
     this.setState({ blogCategorySelect: e.target.value });
-    console.log(e.target.value);
   };
 
   handleSubmitPost = async (e) => {
+    e.preventDefault();
     const selected = this.state.selected;
     let select = [];
     for (let i = 0; i < selected.length; i++) {
@@ -196,14 +228,25 @@ class ProductProvider extends Component {
     fd.append("blogImage", this.state.blogImage);
     fd.append("articleImage", this.state.articleImage);
     try {
-      const res = await axios.post(`/posts/`, fd, {
-        headers: {
-          Accept: "application/json",
-          "Content-type": "application/json",
+      const res = await axios.post(
+        `/sl/api/posts/`,
+        fd,
+        {
+          onUploadProgress: (progressEvent) => {
+            console.log(
+              "upload progress",
+              (progressEvent / progressEvent.total) * 100 + "%"
+            );
+          },
         },
-      });
+        {
+          headers: {
+            "Content-Type": "multipart/form-data",
+          },
+        }
+      );
       if (res.status === 200) {
-        res.json();
+        console.log(res);
       }
     } catch (error) {
       alert(error);
@@ -214,7 +257,7 @@ class ProductProvider extends Component {
   //CATEGORY
 
   getCategory = async () => {
-    const res = await axios.get(`/postCategory/`, {
+    const res = await axios.get(`/sl/api/postCategory/`, {
       headers: {
         Accept: "application/json",
         "Content-Type": "application/json",
@@ -285,7 +328,7 @@ class ProductProvider extends Component {
   };
 
   getPost = async () => {
-    const res = await axios.get("/posts/", {
+    const res = await axios.get("/sl/api/posts/", {
       headers: {
         Accept: "application/json",
         "Content-Type": "application/json",
@@ -405,6 +448,8 @@ class ProductProvider extends Component {
           handlePageChange: this.handlePageChange,
           getFullDetail: this.getFullDetail,
           handleCloseModalBookNow: this.handleCloseModalBookNow,
+          handleGetContactFullDetail: this.handleGetContactFullDetail,
+          handleCloseModalContactModal: this.handleCloseModalContactModal,
         }}
       >
         {this.props.children}

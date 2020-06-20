@@ -9,7 +9,6 @@ class ContactUsForm extends Component {
     msg: [],
   };
   handleInputChange = (e) => {
-    console.log(e.target.value);
     this.setState({
       [e.target.name]: e.target.value,
     });
@@ -32,7 +31,7 @@ class ContactUsForm extends Component {
     };
 
     try {
-      const res = await axios.post("/api/contactUs  ", data);
+      const res = await axios.post("sl/api/contactUs  ", data);
 
       if (res.data) {
         this.setState(() => {

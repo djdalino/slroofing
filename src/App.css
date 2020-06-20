@@ -2342,7 +2342,6 @@ form.subscribe-container button {
   }
   .left-cov {
     width: 100%;
-    display: block;
     vertical-align: top;
     margin: auto;
   }
