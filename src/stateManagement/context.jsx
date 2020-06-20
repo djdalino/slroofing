@@ -47,6 +47,12 @@ class ProductProvider extends Component {
     bookNowFullDetail: [],
     bookNowModal: false,
     //End of BookNow
+
+    //ContactModal
+    contactData: [],
+    contactFullDetail: [],
+    contactModal: false,
+    //End of ContactModal
   };
   componentDidMount() {
     this.setService();
@@ -55,6 +61,7 @@ class ProductProvider extends Component {
     this.getCategory();
     this.setSlServices();
     this.handleGetBookings();
+    this.handleGetContact();
   }
   //SL services
   setSlServices = () => {
@@ -89,6 +96,32 @@ class ProductProvider extends Component {
   handleAdminPage = (page) => {
     this.setState({ adminPage: page });
   };
+
+  //Modal Contact
+  handleGetContact = async () => {
+    const res = await axios.get("sl/api/contactUs");
+
+    let tempData = [];
+
+    res.data.forEach((item) => {
+      const singleItem = { ...item };
+      tempData = [...tempData, singleItem];
+    });
+    this.setState(() => {
+      return { contactData: tempData };
+    });
+  };
+  handleGetContactFullDetail = (id) => {
+    const data = this.state.contactData.find((item) => item._id === id);
+    this.setState({
+      contactFullDetail: data,
+      contactModal: !this.state.bookNowModal,
+    });
+  };
+  handleCloseModalContactModal = () => {
+    this.setState({ contactModal: !this.state.contactModal });
+  };
+  // End of Modal Contact
   // Modal book now
 
   handleBookNowModal = () => {
@@ -415,6 +448,8 @@ class ProductProvider extends Component {
           handlePageChange: this.handlePageChange,
           getFullDetail: this.getFullDetail,
           handleCloseModalBookNow: this.handleCloseModalBookNow,
+          handleGetContactFullDetail: this.handleGetContactFullDetail,
+          handleCloseModalContactModal: this.handleCloseModalContactModal,
         }}
       >
         {this.props.children}

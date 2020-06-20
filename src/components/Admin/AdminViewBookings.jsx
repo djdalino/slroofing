@@ -9,17 +9,17 @@ class AdminViewBookings extends Component {
           <div className="booking-list">
             <h1 className="text-center">List of Bookings</h1>
             <ProductConsumer>
-              {value => {
+              {(value) => {
                 const { bookNowData, getFullDetail, getDate } = value;
 
-                return bookNowData.map(item => {
+                return bookNowData.map((item) => {
                   return (
                     <div
                       style={{
                         display: "flex",
                         maxWidth: "768px",
                         margin: "auto",
-                        justifyContent: "center"
+                        justifyContent: "center",
                       }}
                       key={item._id}
                     >
@@ -45,37 +45,6 @@ class AdminViewBookings extends Component {
                 });
               }}
             </ProductConsumer>
-            {/* {this.state.data.map((item) => {
-            return (
-              <div
-                style={{
-                  display: "flex",
-                  maxWidth: "768px",
-                  margin: "auto",
-                  justifyContent: "center",
-                }}
-                key={item._id}
-              >
-                <h4 className="text-center" style={{ width: "100%" }}>
-                  {item.first_name} {item.last_name}
-                </h4>
-                <h4 className="text-center" style={{ width: "100%" }}>
-                  {item.email}
-                </h4>
-                <h4 className="text-center" style={{ width: "100%" }}>
-                  {item.phone}
-                </h4>
-                <h4 className="text-center" style={{ width: "100%" }}>
-                  {this.getDate(item.createdAt)}
-                </h4>
-                <h4 className="text-center" style={{ width: "100%" }}>
-                  <p onClick={() => this.getFullDetail(item._id)}>
-                    View Detail
-                  </p>
-                </h4>
-              </div>
-            );
-          })} */}
           </div>
         </div>
         <AdminBookNowModal />
