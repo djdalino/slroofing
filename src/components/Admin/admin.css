@@ -276,6 +276,19 @@ span.gray {
   font-size: 23px;
   margin-bottom: 34px;
 }
+.admin-blogpost .book-now-modal {
+  z-index: 2;
+  overflow: hidden;
+}
+
+.admin-blogpost .book-now-modal-container {
+  max-width: 330px !important;
+  top: 0;
+  bottom: 0;
+  transform: none;
+  left: 0;
+  right: 0;
+}
 
 @media screen and (max-width: 1190px) {
   .booking-list h4:nth-child(3) {
