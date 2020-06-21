@@ -38,15 +38,31 @@ const AdminBookNowModal = () => {
                 >
                   <span aria-hidden="true">&times;</span>
                 </button>
-                <h1>{`${first_name} ${last_name}`}</h1>
-                <p>{email}</p>
-                <p>{phone}</p>
-                <p>{address}</p>
-                <p>{city}</p>
-                <p>{stateValue}</p>
-                <p>{postal_code}</p>
-                <p>{pickTime}</p>
-                <p>{getDate(startDate)}</p>
+                <h1>Client Information</h1>
+                <div className="bookNow-modal-label">
+                  <p>Name:</p> <p>{`${first_name} ${last_name}`}</p>
+                </div>
+
+                <div className="bookNow-modal-label">
+                  <p>Email:</p> <p>{email}</p>
+                </div>
+
+                <div className="bookNow-modal-label">
+                  <p>Phone:</p>
+                  <p>{phone}</p>
+                </div>
+
+                <div className="bookNow-modal-label">
+                  <p>Address:</p> <p>{`${address} ${city} ${stateValue} `}</p>
+                </div>
+                <div className="bookNow-modal-label">
+                  <p>Postal Code:</p>
+                  <p>{postal_code}</p>
+                </div>
+                <div className="bookNow-modal-label">
+                  <p>Availability:</p>
+                  <p>{`${pickTime} ${getDate(startDate)}`}</p>
+                </div>
               </div>
             </div>
           );

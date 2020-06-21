@@ -1,4 +1,5 @@
 import React from "react";
+import "./adminContactModal.css";
 import { ProductConsumer } from "../../../stateManagement/context";
 const AdminContactModal = () => {
   return (
@@ -26,11 +27,27 @@ const AdminContactModal = () => {
                 >
                   <span aria-hidden="true">&times;</span>
                 </button>
-                <h1>{name}</h1>
-                <p>{email}</p>
-                <p>{phone}</p>
-                <p>{inquiry}</p>
-                <p>{getDate(createdAt)}</p>
+                <h1>Client Information</h1>
+                <div className="contact-modal-label">
+                  <p>Name:</p> <p>{name}</p>
+                </div>
+
+                <div className="contact-modal-label">
+                  <p>Email:</p> <p>{email}</p>
+                </div>
+
+                <div className="contact-modal-label">
+                  <p>Phone:</p>
+                  <p>{phone}</p>
+                </div>
+
+                <div className="contact-modal-label">
+                  <p>Message:</p> <p>{inquiry}</p>
+                </div>
+
+                <div className="contact-modal-label">
+                  <p>Date:</p> <p>{getDate(createdAt)}</p>
+                </div>
               </div>
             </div>
           );

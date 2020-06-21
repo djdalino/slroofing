@@ -108,14 +108,14 @@ mongoose.connect(
   }
 );
 
-// if (process.env.NODE_ENV === "production") {
-const root = require("path").join(__dirname, "../build");
+if (process.env.NODE_ENV === "production") {
+  const root = require("path").join(__dirname, "../build");
 
-app.use(express.static(root));
-app.get("*", (req, res) => {
-  res.sendFile("index.html", { root });
-});
-
+  app.use(express.static(root));
+  app.get("*", (req, res) => {
+    res.sendFile("index.html", { root });
+  });
+}
 // } else {
 //   app.use("/uploads", express.static("uploads"));
 // }
