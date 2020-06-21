@@ -101,6 +101,10 @@
   grid-auto-rows: 350px;
   margin-top: 30px !important;
 }
+.admin-blog-text-color {
+  color: black !important;
+  position: relative;
+}
 
 .admin-profile h3 {
   padding-left: 35px;

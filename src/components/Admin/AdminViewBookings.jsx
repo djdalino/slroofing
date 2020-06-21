@@ -13,6 +13,9 @@ class AdminViewBookings extends Component {
                 const { bookNowData, getFullDetail, getDate } = value;
 
                 return bookNowData.map((item) => {
+                  if (item.length === 0) {
+                    return <h2>No bookings at this moment...</h2>;
+                  }
                   return (
                     <div
                       style={{

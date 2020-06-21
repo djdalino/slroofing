@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import axios from "axios";
 class AdminViewSubscribers extends Component {
   state = {
-    data: []
+    data: [],
   };
   componentDidMount() {
     this.handleGetSubscribers();
@@ -12,7 +12,7 @@ class AdminViewSubscribers extends Component {
 
     let tempData = [];
 
-    res.data.forEach(item => {
+    res.data.forEach((item) => {
       const singleItem = { ...item };
       tempData = [...tempData, singleItem];
     });
@@ -21,7 +21,7 @@ class AdminViewSubscribers extends Component {
     });
   };
 
-  getDate = dateString => {
+  getDate = (dateString) => {
     const month = [
       "January",
       "February",
@@ -34,7 +34,7 @@ class AdminViewSubscribers extends Component {
       "September",
       "October",
       "November",
-      "December"
+      "December",
     ];
     const date = new Date(dateString);
 
@@ -48,14 +48,17 @@ class AdminViewSubscribers extends Component {
           <div className="list-of-subs">
             <h1 className="text-center">List of Subsribers</h1>
 
-            {this.state.data.map(item => {
+            {this.state.data.map((item) => {
+              if (item.length === 0) {
+                return <h2>No Subscribers at this moment...</h2>;
+              }
               return (
                 <div
                   style={{
                     display: "flex",
                     maxWidth: "768px",
                     margin: "auto",
-                    justifyContent: "center"
+                    justifyContent: "center",
                   }}
                   key={item._id}
                 >
