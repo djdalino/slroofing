@@ -47,30 +47,33 @@ class AdminViewSubscribers extends Component {
         <div className="admin-subs">
           <div className="list-of-subs">
             <h1 className="text-center">List of Subsribers</h1>
-
-            {this.state.data.map((item) => {
-              if (item.length === 0) {
-                return <h2>No Subscribers at this moment...</h2>;
-              }
-              return (
-                <div
-                  style={{
-                    display: "flex",
-                    maxWidth: "768px",
-                    margin: "auto",
-                    justifyContent: "center",
-                  }}
-                  key={item._id}
-                >
-                  <h4 className="text-center" style={{ width: "100%" }}>
-                    {item.email}
-                  </h4>
-                  <h4 className="text-center" style={{ width: "100%" }}>
-                    {this.getDate(item.createdAt)}
-                  </h4>
-                </div>
-              );
-            })}
+            {this.state.data.length === 0 ? (
+              <h2>No Subscribers at this moment...</h2>
+            ) : (
+              this.state.data.map((item) => {
+                if (item.length === 0) {
+                  return;
+                }
+                return (
+                  <div
+                    style={{
+                      display: "flex",
+                      maxWidth: "768px",
+                      margin: "auto",
+                      justifyContent: "center",
+                    }}
+                    key={item._id}
+                  >
+                    <h4 className="text-center" style={{ width: "100%" }}>
+                      {item.email}
+                    </h4>
+                    <h4 className="text-center" style={{ width: "100%" }}>
+                      {this.getDate(item.createdAt)}
+                    </h4>
+                  </div>
+                );
+              })
+            )}
           </div>
         </div>
       </React.Fragment>

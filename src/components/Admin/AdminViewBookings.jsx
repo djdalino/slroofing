@@ -11,11 +11,10 @@ class AdminViewBookings extends Component {
             <ProductConsumer>
               {(value) => {
                 const { bookNowData, getFullDetail, getDate } = value;
-
+                if (bookNowData.length === 0) {
+                  return <h2>No bookings at this moment...</h2>;
+                }
                 return bookNowData.map((item) => {
-                  if (item.length === 0) {
-                    return <h2>No bookings at this moment...</h2>;
-                  }
                   return (
                     <div
                       style={{

@@ -15,10 +15,10 @@ class AdminViewContacts extends Component {
                   handleGetContactFullDetail,
                   getDate,
                 } = value;
+                if (contactData.length === 0) {
+                  return <h2>No contact at this moment...</h2>;
+                }
                 return contactData.map((item) => {
-                  if (item.length === 0) {
-                    return <h2>No contact at this moment...</h2>;
-                  }
                   return (
                     <div
                       style={{
