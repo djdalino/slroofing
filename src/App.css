@@ -118,7 +118,7 @@ body {
   color: var(--mainDark) !important;
   text-decoration: none !important;
 }
-zzz .services-mb {
+.services-mb {
   margin-bottom: 40px !important;
 }
 
@@ -2615,7 +2615,11 @@ form.subscribe-container button {
 @media screen and (max-width: 1024px) {
   .login-container {
     left: 50%;
+    padding: 30px 15px;
+    height: 378px !important;
+    padding: 23px !important;
   }
+
   .sl-nav-links {
     padding: 0;
   }
@@ -2656,6 +2660,11 @@ form.subscribe-container button {
   .sl-nav-logo  {
     width: 110px;
     margin-top: 0px;
+  }
+  .login-container {
+    left: 50%;
+    height: 90%;
+    padding-top: 30px;
   }
 }
 
@@ -2893,11 +2902,38 @@ form.subscribe-container button {
     right: 37px;
     position: relative;
   }
+  .login-container {
+    max-width: 95%;
+  }
 }
 
 @media screen and (max-height: 400px) {
   div.button-fixed > div > div > div:nth-child(2) > div > button {
     margin-top: 0;
+  }
+  #root > main > div > form > div.form-group.text-center.mt-3 > button {
+    width: 104px;
+    padding: 6px 0px !important;
+    position: relative;
+    top: -18px;
+    right: 0;
+    margin-top: 0;
+  }
+  .form-group.text-center.mt-3 {
+    height: 49px;
+    margin: 0;
+  }
+  .login-container {
+    width: 85%;
+    height: 290px !important;
+    padding: 15px !important;
+  }
+  .form-group {
+    margin-bottom: 0;
+    margin-top: 4px;
+  }
+  .login-container h2 {
+    font-size: 1.5rem !important;
   }
 }
 
@@ -2910,7 +2946,6 @@ form.subscribe-container button {
 
 @media screen and (max-width: 524px) {
   .login-container {
-    width: 85%;
     padding: 70px 15px;
   }
   .banner-container {
@@ -2943,6 +2978,9 @@ form.subscribe-container button {
     position: absolute;
     bottom: 35px !important;
     right: 42px !important;
+  }
+  .sl-admin-links {
+    width: 48% !important;
   }
 }
 

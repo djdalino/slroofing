@@ -271,6 +271,24 @@ span.gray {
   cursor: pointer;
 }
 
+.list-of-contacts > div > h4:nth-child(5) > p:hover {
+  background: #2978b0;
+  color: #ffffff;
+  border: 2px solid #2978b0;
+}
+.list-of-contacts > div > h4:nth-child(5) > p {
+  background: #ffffff;
+  text-align: center;
+  padding: 7px;
+  border-radius: 4px;
+  color: #2978b0;
+  position: relative;
+  font-family: var(--mainText) !important;
+  top: -7px;
+  border: 2px solid;
+  cursor: pointer;
+}
+
 .admin-profile h3 {
   padding-left: 11px;
   font-size: 23px;
@@ -288,10 +306,14 @@ span.gray {
   transform: none;
   left: 0;
   right: 0;
+  margin: auto !important;
 }
 
 @media screen and (max-width: 1190px) {
   .booking-list h4:nth-child(3) {
+    display: none;
+  }
+  .list-of-contacts > div > h4:nth-child(3) {
     display: none;
   }
 }
@@ -300,10 +322,17 @@ span.gray {
   .booking-list h4:nth-child(2) {
     display: none;
   }
+  .list-of-contacts > div > h4:nth-child(2) {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 535px) {
   .booking-list h4:nth-child(4) {
+    display: none;
+  }
+
+  .list-of-contacts > div > h4:nth-child(4) {
     display: none;
   }
 }
