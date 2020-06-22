@@ -2007,13 +2007,6 @@ a.book-an-appointment.btn.btn-danger.text-uppercase:hover {
   border-color: #ffffff !important;
 }
 
-<<<<<<< HEAD
-=======
-nav.sl-navbar {
-  z-index: 999;
-}
-
->>>>>>> ddf7a89b6205c9ae643b1fbb10589affd6df0cc6
 @media screen and (max-width: 1400px) {
   .banner-container {
     transform: translate(25%);
