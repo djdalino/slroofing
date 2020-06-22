@@ -21,12 +21,25 @@ class BookNowModal extends Component {
     city: "",
     stateValue: "",
     postal_code: "",
+    modalMsg: [],
   };
   setNewValue = (newValue) => {
     this.setState({ stateValue: newValue });
   };
 
   handleSubmitBookNow = async (e) => {
+    const {
+      startDate,
+      pickTime,
+      first_name,
+      last_name,
+      email,
+      phone,
+      address,
+      city,
+      stateValue,
+      postal_code,
+    } = this.state;
     const data = {
       startDate: this.state.startDate,
       pickTime: this.state.pickTime,
@@ -40,13 +53,31 @@ class BookNowModal extends Component {
       postal_code: this.state.postal_code,
     };
     try {
-      const res = await axios.post(`sl/api/booknow/`, data);
+      if (
+        startDate === "" &&
+        pickTime === "" &&
+        first_name === "" &&
+        last_name === "" &&
+        email === "" &&
+        phone === "" &&
+        address === "" &&
+        city === "" &&
+        stateValue === "" &&
+        postal_code === ""
+      ) {
+        console.log("please fill up the form");
+        alert("Please Fill up the Form");
+        this.prevStep();
+      } else {
+        const res = await axios.post(`sl/api/booknow/`, data);
 
-      if (res.status === 200) {
-        this.nextStep();
+        if (res.status === 200) {
+          this.nextStep();
+        }
       }
     } catch (error) {
-      alert(error);
+      alert("Please Fill up the Form");
+      this.prevStep();
     }
   };
   getDate = (dateString) => {

@@ -5,27 +5,30 @@ class AdminViewBlogPost extends Component {
   render() {
     return (
       <div className="admin-subs">
-        <ProductConsumer>
-          {value => {
-            const { posts } = value;
-            if (posts.length === 0) {
+        <h1 className="admin-blog-text-color">Blog Post View</h1>
+        <div className="admin-view-blog-post">
+          <ProductConsumer>
+            {(value) => {
+              const { posts } = value;
+              if (posts.length === 0) {
+                return (
+                  <div>
+                    <h2 className="admin-blog-text-color">No Blog Posted</h2>
+                  </div>
+                );
+              }
               return (
-                <div>
-                  <h1 className="admin-blog-text-color">Blog Post View</h1>
-                  <h2 className="admin-blog-text-color">No Blog Posted</h2>
-                </div>
+                <React.Fragment>
+                  {posts.map((post) => {
+                    return (
+                      <BlogList key={post._id} post={post} value={value} />
+                    );
+                  })}
+                </React.Fragment>
               );
-            }
-            return (
-              <div>
-                <h1 className="admin-blog-text-color">Blog Post View</h1>
-                {posts.map(post => {
-                  return <BlogList key={post._id} post={post} value={value} />;
-                })}
-              </div>
-            );
-          }}
-        </ProductConsumer>
+            }}
+          </ProductConsumer>
+        </div>
       </div>
     );
   }

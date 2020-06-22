@@ -546,11 +546,12 @@ header {
   width: 250px !important;
 }
 .our-blog-gallery {
+  justify-content: center;
   height: auto;
   margin: auto;
   max-width: 85%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 400px));
   grid-column-gap: 20px;
   grid-row-gap: 20px;
   grid-auto-rows: 350px;
@@ -558,13 +559,17 @@ header {
 }
 
 .our-blog-text {
+  color: var(--mainWhite) !important;
   width: 100%;
   padding: 20px;
   text-align: left;
   position: absolute;
   bottom: 0;
 }
-
+.our-blog-text-title {
+  color: var(--mainWhite) !important;
+  font-size: 18px !important;
+}
 .our-blog-img-gallery {
   width: 100%;
   position: relative;

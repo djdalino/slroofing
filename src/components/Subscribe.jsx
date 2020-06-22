@@ -9,14 +9,17 @@ class Subscribe extends Component {
   handleSubsribe = (e) => {
     this.setState({ [e.target.name]: e.target.value });
   };
-  handleSendSubscribe = async () => {
+  handleSendSubscribe = async (e) => {
+    e.preventDefault();
     const data = {
       email: this.state.email,
     };
     try {
       const res = await axios.post("sl/api/subscribe/", data);
-      if (res) {
+      if (res.status === 200) {
+        console.log("Thank you for subscribing");
         alert("Thank you for subscribing");
+        this.setState({ email: "" });
       }
     } catch (error) {
       alert(error);

@@ -33,10 +33,10 @@ class ContactUsForm extends Component {
     try {
       const res = await axios.post("sl/api/contactUs  ", data);
 
-      if (res.data) {
-        this.setState(() => {
-          return { msg: "Successful" };
-        });
+      if (res.status === 200) {
+        console.log("Submitted Successfully!");
+        alert("Submitted Successfully!");
+        this.reset();
       }
     } catch (error) {
       alert(error);

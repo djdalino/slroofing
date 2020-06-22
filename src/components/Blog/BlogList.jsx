@@ -12,7 +12,7 @@ function BlogList({ post, value }) {
     >
       <img src={`/${blogImage}`} alt="" />
       <div className="our-blog-text">
-        <h2>{title}</h2>
+        <h2 className="our-blog-text-title">{title}</h2>
         <p>{getDate(createdAt)}</p>
       </div>
     </Link>
