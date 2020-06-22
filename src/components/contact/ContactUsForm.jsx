@@ -31,7 +31,7 @@ class ContactUsForm extends Component {
     };
 
     try {
-      const res = await axios.post("sl/api/contactUs  ", data);
+      const res = await axios.post("sl/api/contactUs", data);
 
       if (res.status === 200) {
         console.log("Submitted Successfully!");
