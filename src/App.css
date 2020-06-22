@@ -1975,9 +1975,6 @@ button.form-time-pick-button {
   width: 159px;
   left: 54px;
 }
-.form-time-pick-container p {
-  margin: 0 !important;
-}
 
 select.form-control {
   width: 108px;
@@ -2010,6 +2007,13 @@ a.book-an-appointment.btn.btn-danger.text-uppercase:hover {
   border-color: #ffffff !important;
 }
 
+<<<<<<< HEAD
+=======
+nav.sl-navbar {
+  z-index: 999;
+}
+
+>>>>>>> ddf7a89b6205c9ae643b1fbb10589affd6df0cc6
 @media screen and (max-width: 1400px) {
   .banner-container {
     transform: translate(25%);
@@ -2931,9 +2935,21 @@ a.book-an-appointment.btn.btn-danger.text-uppercase:hover {
   .login-container {
     max-width: 95%;
   }
+
+  .form-info-buttons {
+    margin: auto;
+    position: absolute;
+    bottom: 14px;
+    right: 30px;
+  }
+  button.form-time-pick-button {
+    float: right;
+    right: 41px;
+    position: relative;
+  }
 }
 
-@media screen and (max-height: 400px) {
+@media screen and (max-height: 390px) {
   div.button-fixed > div > div > div:nth-child(2) > div > button {
     margin-top: 0;
   }
@@ -2960,6 +2976,13 @@ a.book-an-appointment.btn.btn-danger.text-uppercase:hover {
   }
   .login-container h2 {
     font-size: 1.5rem !important;
+  }
+  .book-now-modal-container {
+    height: 360px !important;
+  }
+  button.close {
+    top: -3px;
+    right: 5px;
   }
 }
 
