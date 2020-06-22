@@ -329,14 +329,9 @@ ul {
 .toggle.line2 {
   display: none;
 }
-.admin-profile .toggle.line3 {
+.toggle.line3 {
   transform: rotate(45deg) translate(-5px, -6px);
 }
-
-.toggle.line3 {
-  transform: rotate(45deg) translate(-8px, -8px);
-}
-
 .sl-nav-links {
   width: 50%;
   display: flex;
@@ -475,10 +470,7 @@ nav .show-nav {
   justify-content: center;
   position: relative;
   margin-top: 4rem;
-<<<<<<< HEAD
-=======
   z-index: 0;
->>>>>>> 83a0232456ab7393bbaeba1e8e32a3c1c74243a8
 }
 
 .ourServicesHero {
@@ -2016,10 +2008,6 @@ form.subscribe-container button {
 a.book-an-appointment.btn.btn-danger.text-uppercase:hover {
   background-color: #ffffff !important;
   border-color: #ffffff !important;
-}
-
-nav.sl-navbar {
-  z-index: 99999;
 }
 
 @media screen and (max-width: 1400px) {

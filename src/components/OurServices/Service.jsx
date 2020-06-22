@@ -7,7 +7,11 @@ class Service extends Component {
     const { title, img, category } = this.props.service;
     const { handleSlCategorySelect } = this.props.value;
     return (
-      <Link to="#" className="hold-services">
+      <Link
+        to="/services"
+        className="hold-services"
+        onClick={() => handleSlCategorySelect(category)}
+      >
         <Link to="#" className="hover-button">
           <ProductConsumer>
             {(value) => {
