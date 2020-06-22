@@ -475,10 +475,7 @@ nav .show-nav {
   justify-content: center;
   position: relative;
   margin-top: 4rem;
-<<<<<<< HEAD
-=======
   z-index: 0;
->>>>>>> 83a0232456ab7393bbaeba1e8e32a3c1c74243a8
 }
 
 .ourServicesHero {
@@ -1983,9 +1980,6 @@ button.form-time-pick-button {
   width: 159px;
   left: 54px;
 }
-.form-time-pick-container p {
-  margin: 0 !important;
-}
 
 select.form-control {
   width: 108px;
@@ -2019,7 +2013,7 @@ a.book-an-appointment.btn.btn-danger.text-uppercase:hover {
 }
 
 nav.sl-navbar {
-  z-index: 99999;
+  z-index: 999;
 }
 
 @media screen and (max-width: 1400px) {
@@ -2943,9 +2937,21 @@ nav.sl-navbar {
   .login-container {
     max-width: 95%;
   }
+
+  .form-info-buttons {
+    margin: auto;
+    position: absolute;
+    bottom: 14px;
+    right: 30px;
+  }
+  button.form-time-pick-button {
+    float: right;
+    right: 41px;
+    position: relative;
+  }
 }
 
-@media screen and (max-height: 400px) {
+@media screen and (max-height: 390px) {
   div.button-fixed > div > div > div:nth-child(2) > div > button {
     margin-top: 0;
   }
@@ -2972,6 +2978,13 @@ nav.sl-navbar {
   }
   .login-container h2 {
     font-size: 1.5rem !important;
+  }
+  .book-now-modal-container {
+    height: 360px !important;
+  }
+  button.close {
+    top: -3px;
+    right: 5px;
   }
 }
 
