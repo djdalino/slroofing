@@ -470,7 +470,6 @@ nav .show-nav {
   justify-content: center;
   position: relative;
   margin-top: 4rem;
-  z-index: -1;
 }
 
 .ourServicesHero {
@@ -1498,7 +1497,7 @@ p.text-center.mt-3.ourServicesFont {
 @media screen and (max-width: 767px) {
   #inputPassword4 {
     width: 102%;
-}
+  }
 }
 
 .fl-node-5bad6f2334e50
@@ -1974,6 +1973,9 @@ button.form-time-pick-button {
   float: left;
   width: 159px;
   left: 54px;
+}
+.form-time-pick-container p {
+  margin: 0 !important;
 }
 
 select.form-control {
