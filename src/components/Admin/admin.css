@@ -358,6 +358,10 @@ span.gray {
   position: relative;
 }
 
+#root > div > div.admin-sidebar > div > ul > li:nth-child(6) > a {
+  color: #ffffff;
+}
+
 @media screen and (max-width: 1190px) {
   .booking-list h4:nth-child(3) {
     display: none;
