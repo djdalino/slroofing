@@ -470,6 +470,10 @@ nav .show-nav {
   justify-content: center;
   position: relative;
   margin-top: 4rem;
+<<<<<<< HEAD
+=======
+  z-index: 0;
+>>>>>>> 83a0232456ab7393bbaeba1e8e32a3c1c74243a8
 }
 
 .ourServicesHero {
@@ -2002,6 +2006,11 @@ button.text-uppercase.bg:hover {
 
 form.subscribe-container button {
   padding: 11px;
+}
+
+a.book-an-appointment.btn.btn-danger.text-uppercase:hover {
+  background-color: #ffffff !important;
+  border-color: #ffffff !important;
 }
 
 @media screen and (max-width: 1400px) {
