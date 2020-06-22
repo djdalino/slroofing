@@ -475,7 +475,10 @@ nav .show-nav {
   justify-content: center;
   position: relative;
   margin-top: 4rem;
+<<<<<<< HEAD
+=======
   z-index: 0;
+>>>>>>> 83a0232456ab7393bbaeba1e8e32a3c1c74243a8
 }
 
 .ourServicesHero {
@@ -1979,6 +1982,9 @@ button.form-time-pick-button {
   float: left;
   width: 159px;
   left: 54px;
+}
+.form-time-pick-container p {
+  margin: 0 !important;
 }
 
 select.form-control {
