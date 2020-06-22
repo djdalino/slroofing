@@ -313,7 +313,7 @@ span.gray {
   margin: auto !important;
 }
 
-.admin-view-blog-post h2 {
+.admin-subs h2 {
   font-weight: 600;
   font-size: 15px;
   font-family: var(--mainText);
@@ -321,23 +321,9 @@ span.gray {
   margin-top: 20px !important;
 }
 
-.admin-blogpost h1 {
+.admin-subs h1 {
   text-align: justify !important;
-  font-size: 30px !important;
-  text-transform: uppercase;
-}
-
-.list-of-subs h2 {
-  font-weight: 600;
-  font-size: 15px;
-  font-family: var(--mainText);
-  color: #222222;
-  margin-top: 20px !important;
-}
-
-.list-of-subs h1 {
-  text-align: justify !important;
-  font-size: 30px !important;
+  font-size: 24px !important;
   text-transform: uppercase;
 }
 

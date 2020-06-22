@@ -4,9 +4,9 @@ import { ProductConsumer } from "../../stateManagement/context";
 class AdminViewBlogPost extends Component {
   render() {
     return (
-      <div className="admin-view-blog-post">
+      <div className="admin-subs">
         <ProductConsumer>
-          {(value) => {
+          {value => {
             const { posts } = value;
             if (posts.length === 0) {
               return (
@@ -19,7 +19,7 @@ class AdminViewBlogPost extends Component {
             return (
               <div>
                 <h1 className="admin-blog-text-color">Blog Post View</h1>
-                {posts.map((post) => {
+                {posts.map(post => {
                   return <BlogList key={post._id} post={post} value={value} />;
                 })}
               </div>
