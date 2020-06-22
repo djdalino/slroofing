@@ -313,6 +313,51 @@ span.gray {
   margin: auto !important;
 }
 
+.admin-view-blog-post h2 {
+  font-weight: 600;
+  font-size: 15px;
+  font-family: var(--mainText);
+  color: #222222;
+  margin-top: 20px !important;
+}
+
+.admin-blogpost h1 {
+  text-align: justify !important;
+  font-size: 30px !important;
+  text-transform: uppercase;
+}
+
+.list-of-subs h2 {
+  font-weight: 600;
+  font-size: 15px;
+  font-family: var(--mainText);
+  color: #222222;
+  margin-top: 20px !important;
+}
+
+.list-of-subs h1 {
+  text-align: justify !important;
+  font-size: 30px !important;
+  text-transform: uppercase;
+}
+
+.admin-blogpost .book-now-modal {
+  z-index: 99999;
+  overflow: visible;
+}
+.admin-blogpost .book-now-modal-container {
+  max-width: 380px !important;
+  top: 5%;
+  bottom: 0;
+  transform: none;
+  left: 0;
+  right: 0;
+  height: auto;
+  margin: auto !important;
+  z-index: 999999999;
+  position: relative;
+}
+
 @media screen and (max-width: 1190px) {
   .booking-list h4:nth-child(3) {
     display: none;

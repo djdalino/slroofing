@@ -651,12 +651,13 @@ p {
 .hover-button-services {
   opacity: 0;
   width: 100%;
-  height: 82%;
+  height: 75%;
   position: absolute;
   top: 0%;
   cursor: pointer;
   transition: all 0.5s ease-in-out;
 }
+
 .hover-button-services:hover {
   opacity: 1 !important;
   background: #2978b0db !important;
@@ -1469,18 +1470,35 @@ p {
   z-index: 1;
   border-width: 0 0 0 1px;
 }
+
+p.text-center.mt-3.ourServicesFont {
+  color: #222222;
+}
+
+.container.vizual > div:nth-child(4) > h1 > div > p {
+  margin-top: 15px;
+}
+
+#inputPassword4 {
+  width: 97%;
+}
+
 @media screen and (min-width: 768px) {
   .fl-node-5bad6f2334e50 .uabb-info-list-wrapper.uabb-info-list-top li {
     width: 33.333%;
     display: inline-block;
   }
-}
-@media screen and (min-width: 768px) {
   .fl-node-5bad6f2334e50 .uabb-info-list-wrapper .uabb-info-list-item {
     padding-right: 5px;
     padding-left: 5px;
     padding-bottom: 0;
   }
+}
+
+@media screen and (max-width: 767px) {
+  #inputPassword4 {
+    width: 102%;
+}
 }
 
 .fl-node-5bad6f2334e50
