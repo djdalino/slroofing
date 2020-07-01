@@ -140,11 +140,13 @@ span.gray {
 }
 .admin-bgg {
   content: "";
-  background: #ffffffe8;
+  background: hsla(0, 0%, 100%, 0.8);
   height: 100%;
   width: 100%;
   position: fixed;
   padding: 50px;
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(5px);
 }
 
 .admin-blogpost h1 {
@@ -338,10 +340,14 @@ span.gray {
   transform: none;
   left: 0;
   right: 0;
+  border-radius: 10px;
   height: auto;
   margin: auto !important;
   z-index: 999999999;
   position: relative;
+  background: #ffffffe6;
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px);
 }
 
 #root > div > div.admin-sidebar > div > ul > li:nth-child(6) > a {
@@ -410,7 +416,9 @@ span.gray {
     display: block;
     z-index: 9;
     padding: 15px;
-    background-color: #2978b0;
+    background-color: rgba(42, 120, 174, 0.75);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    backdrop-filter: saturate(180%) blur(20px);
   }
   .admin-sidebar-container {
     width: 100%;
