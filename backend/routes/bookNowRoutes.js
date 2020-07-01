@@ -2,7 +2,7 @@ const router = require("express").Router();
 const BookNow = require("../models/bookNowModel");
 
 router.get("/", async (req, res) => {
-  const bookNow = await BookNow.find();
+  const bookNow = await BookNow.find().sort({ createdAt: -1 });
   res.json(bookNow);
 });
 router.get("/:id", async (req, res) => {

@@ -2,7 +2,7 @@ const router = require("express").Router();
 const Contact = require("../models/contactUsModel");
 const nodemailer = require("nodemailer");
 router.get("/", async (req, res) => {
-  const contact = await Contact.find();
+  const contact = await Contact.find().sort({ createdAt: -1 });
   res.json(contact);
 });
 router.post("/", async (req, res) => {

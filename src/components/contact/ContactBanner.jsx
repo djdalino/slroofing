@@ -11,7 +11,7 @@ export default class ContactBanner extends Component {
               <h1 className="text-uppercase text-center">Contact Us</h1>
               <h3 className="text-capitalize text-center">
                 {" "}
-                Let us know how can we help you.{" "}
+                Let us know how we can help.{" "}
               </h3>
             </div>
           </div>

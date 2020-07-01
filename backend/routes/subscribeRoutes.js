@@ -2,7 +2,7 @@ const router = require("express").Router();
 const Subcribe = require("../models/subscribeModel");
 
 router.get("/", async (req, res) => {
-  const subscribe = await Subcribe.find();
+  const subscribe = await Subcribe.find().sort({ createdAt: -1 });
   res.json(subscribe);
 });
 router.get("/:id", async (req, res) => {
