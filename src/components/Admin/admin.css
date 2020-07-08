@@ -416,9 +416,7 @@ span.gray {
     display: block;
     z-index: 9;
     padding: 15px;
-    background-color: rgba(42, 120, 174, 0.75);
-    -webkit-backdrop-filter: saturate(180%) blur(20px);
-    backdrop-filter: saturate(180%) blur(20px);
+    background-color: rgba(42, 120, 174);
   }
   .admin-sidebar-container {
     width: 100%;
