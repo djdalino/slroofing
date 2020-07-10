@@ -4,6 +4,7 @@ const nodemailer = require("nodemailer");
 const mg = require("nodemailer-mailgun-transport");
 const cors = require("cors");
 const path = require("path");
+const db = require("./config/keys").mongoURI;
 require("dotenv").config();
 
 // set up express
@@ -35,7 +36,7 @@ app.listen(PORT, () => {
 // set up db connection
 
 mongoose.connect(
-  process.env.MONGODB_URL,
+  db || process.env.MONGODB_URL,
   { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true },
   (err) => {
     if (err) return console.error(err);
