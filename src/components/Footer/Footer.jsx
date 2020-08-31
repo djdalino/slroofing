@@ -4,17 +4,16 @@ import BookNowModal from "../Modal/BookNowModal";
 import axios from "axios";
 class Footer extends Component {
   state = {
-    email: "",
+    email: ""
   };
-  componentDidMount() {}
 
-  handleSubsribe = (e) => {
+  handleSubsribe = e => {
     this.setState({ [e.target.name]: e.target.value });
   };
-  handleSendSubscribe = async (e) => {
+  handleSendSubscribe = async e => {
     e.preventDefault();
     const data = {
-      email: this.state.email,
+      email: this.state.email
     };
     try {
       const res = await axios.post("sl/api/subscribe/", data);
@@ -37,10 +36,12 @@ class Footer extends Component {
                 sl roofing & renovations
               </h4>
               <h4 className="secondaryText">
-                contact: 424-sl-roofs 424-757-6637
+                Contact: 424-sl-roofs 424-757-6637
               </h4>
               <h4 className="secondaryText">712-898-0221</h4>
-              <h4 className="secondaryText">email: slroofs@yahoo.com</h4>
+              <h4 className="secondaryText ">
+                Email: SLROOFINGCOMPANY@gmail.com
+              </h4>
             </div>
             <div className="column footer-box">
               <h4 className="mainText text-uppercase ">
@@ -71,8 +72,21 @@ class Footer extends Component {
               <h4 className="text-capitalize secondaryText">follow us on:</h4>
               <div>
                 <i className="fab fa-linkedin-in mx-2" />
-                <i className="fab fa-facebook-f mx-2" />
-                <i className="fab fa-instagram mx-2"></i>
+                <a href="https://facebook.com/SLROOFS" target="_blank">
+                  <i
+                    className="fab fa-facebook-f mx-2"
+                    style={{ color: "#fff" }}
+                  />
+                </a>
+                <a
+                  href="https://instagram.com/sl.roofing?igshid=lk6jko47lvw1"
+                  target="_blank"
+                >
+                  <i
+                    className="fab fa-instagram mx-2"
+                    style={{ color: "#fff" }}
+                  />
+                </a>
               </div>
             </div>
           </div>
@@ -83,7 +97,7 @@ class Footer extends Component {
           </div>
         </div>
         <ProductConsumer>
-          {(value) => {
+          {value => {
             const { isBookNow, handleBookNowModal } = value;
             return (
               <div className="button-fixed">

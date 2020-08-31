@@ -34,7 +34,6 @@ app.listen(PORT, () => {
   console.log(`server is runnning on port: ${PORT}`);
 });
 // set up db connection
-
 mongoose.connect(
   db || process.env.MONGODB_URL,
   { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true },

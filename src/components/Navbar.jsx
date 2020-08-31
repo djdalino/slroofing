@@ -1,11 +1,11 @@
 import React from "react";
-import logo from "../img/slroofing-logo.png";
+import logo from "../img/slroofinglogo.png";
 import BookNowModal from "./Modal/BookNowModal";
 import { ProductConsumer } from "../stateManagement/context";
 import { Link } from "react-router-dom";
 class Navbar extends React.Component {
   state = {
-    isOpen: false,
+    isOpen: false
   };
 
   handleToggle = () => {
@@ -20,7 +20,7 @@ class Navbar extends React.Component {
           <div className="sl-nav-header">
             <Link to="/">
               <img className="sl-nav-logo" src={logo} alt="slroofing-logo" />
-              <span className="contact">402-414-4000</span>
+              <span className="contact">712-898-0221</span>
             </Link>
             {/* Burger */}
             <div className="sl-nav-burger" onClick={() => this.handleToggle()}>
@@ -51,7 +51,7 @@ class Navbar extends React.Component {
               <Link to="/contact">Contact Us</Link>
             </li>
             <ProductConsumer>
-              {(value) => {
+              {value => {
                 const { isBookNow, handleBookNowModal } = value;
                 return (
                   <div>
