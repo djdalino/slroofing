@@ -10,7 +10,7 @@ class ServicesSingleView extends Component {
     return (
       <div>
         <ProductConsumer>
-          {(value) => {
+          {value => {
             const { title, details, img, category } = value.serviceOfferView;
 
             return (
@@ -28,7 +28,7 @@ class ServicesSingleView extends Component {
                         background: `url('${img}') center/cover no-repeat`,
                         width: "100%",
                         height: "220px",
-                        zIndex: "-1",
+                        zIndex: "-1"
                       }}
                     ></div>
                   </div>
@@ -38,13 +38,19 @@ class ServicesSingleView extends Component {
                   style={{
                     width: "85%",
                     margin: "50px auto",
-                    textAlign: "justify",
+                    textAlign: "justify"
                   }}
                 >
                   <h1>{title}</h1>
                   <p>{details}</p>
-
-                  <img className="serviceImage" src={img} alt={title} />
+                  <div className="w-100">
+                    <img
+                      className="serviceImage"
+                      src={img}
+                      width="100%"
+                      alt={title}
+                    />
+                  </div>
                 </div>
                 <RoofingCarousel />
                 <Subscriber />

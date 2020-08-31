@@ -1904,7 +1904,7 @@ ul.row {
 
 .page-item.active .page-link {
   z-index: 3;
-  color: #fff;
+  color: #fff !important;
   background-color: #2978b0 !important;
   border-color: #2978b0 !important;
 }

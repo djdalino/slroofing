@@ -38,20 +38,19 @@ app.listen(PORT, () => {
 mongoose.connect(
   db || process.env.MONGODB_URL,
   { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true },
-  (err) => {
+  err => {
     if (err) return console.error(err);
     console.log("connected to the database!");
   }
 );
 
-// if (process.env.NODE_ENV === "production") {
-const root = require("path").join(__dirname, "../build");
+if (process.env.NODE_ENV === "production") {
+  const root = require("path").join(__dirname, "../build");
 
-app.use(express.static(root));
-app.get("*", (req, res) => {
-  res.sendFile("index.html", { root });
-});
-
-// } else {
-//   app.use("/uploads", express.static("uploads"));
-// }
+  app.use(express.static(root));
+  app.get("*", (req, res) => {
+    res.sendFile("index.html", { root });
+  });
+} else {
+  app.use("/uploads", express.static("uploads"));
+}

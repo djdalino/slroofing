@@ -51,7 +51,7 @@ class ProductProvider extends Component {
     //ContactModal
     contactData: [],
     contactFullDetail: [],
-    contactModal: false,
+    contactModal: false
     //End of ContactModal
   };
   componentDidMount() {
@@ -84,16 +84,16 @@ class ProductProvider extends Component {
       }
     );
   };
-  handleSlCategorySelect = (category) => {
+  handleSlCategorySelect = category => {
     this.setState({ slSelectedCategory: category, currentPage: 1 });
   };
 
   //Pagination
-  handlePageChange = (page) => {
+  handlePageChange = page => {
     this.setState({ currentPage: page });
   };
   //Admin
-  handleAdminPage = (page) => {
+  handleAdminPage = page => {
     this.setState({ adminPage: page });
   };
 
@@ -103,7 +103,7 @@ class ProductProvider extends Component {
 
     let tempData = [];
 
-    res.data.forEach((item) => {
+    res.data.forEach(item => {
       const singleItem = { ...item };
       tempData = [...tempData, singleItem];
     });
@@ -111,11 +111,11 @@ class ProductProvider extends Component {
       return { contactData: tempData };
     });
   };
-  handleGetContactFullDetail = (id) => {
-    const data = this.state.contactData.find((item) => item._id === id);
+  handleGetContactFullDetail = id => {
+    const data = this.state.contactData.find(item => item._id === id);
     this.setState({
       contactFullDetail: data,
-      contactModal: !this.state.bookNowModal,
+      contactModal: !this.state.bookNowModal
     });
   };
   handleCloseModalContactModal = () => {
@@ -132,8 +132,8 @@ class ProductProvider extends Component {
     const res = await axios.get("sl/api/booknow", {
       headers: {
         Accept: "application/json",
-        "Content-Type": "application/json",
-      },
+        "Content-Type": "application/json"
+      }
     });
 
     // let tempData = [];
@@ -146,11 +146,11 @@ class ProductProvider extends Component {
       return { bookNowData: res.data };
     });
   };
-  getFullDetail = (id) => {
-    const data = this.state.bookNowData.find((item) => item._id === id);
+  getFullDetail = id => {
+    const data = this.state.bookNowData.find(item => item._id === id);
     this.setState({
       bookNowFullDetail: data,
-      bookNowModal: !this.state.bookNowModal,
+      bookNowModal: !this.state.bookNowModal
     });
   };
 
@@ -159,61 +159,61 @@ class ProductProvider extends Component {
   };
 
   //LOGIN
-  login = (user) => {
+  login = user => {
     return axios
       .post(
         "sl/api/user/login/",
         {
           email: user.email,
-          password: user.password,
+          password: user.password
         },
         {
           headers: {
             Accept: "application/json",
-            "Content-Type": "application/json",
-          },
+            "Content-Type": "application/json"
+          }
         }
       )
-      .then((res) => {
+      .then(res => {
         localStorage.setItem("usertoken", res.data);
         return res.data;
       })
-      .catch((err) => console.log(err));
+      .catch(err => console.log(err));
   };
-  onSubmit = (e) => {
+  onSubmit = e => {
     e.preventDefault();
     const User = {
       email: this.state.email,
-      password: this.state.password,
+      password: this.state.password
     };
 
     this.login(User)
-      .then((res) => {
+      .then(res => {
         if (res) {
           window.location.href = "/admin";
         }
       })
-      .catch((err) => console.log(err));
+      .catch(err => console.log(err));
   };
 
   //POST
-  setSelected = (selected) => {
+  setSelected = selected => {
     this.setState({ selected });
   };
-  fileSelectedHandler = (e) => {
+  fileSelectedHandler = e => {
     this.setState({ blogImage: e.target.files[0] });
   };
-  articleFileSelectedHandler = (e) => {
+  articleFileSelectedHandler = e => {
     this.setState({ articleImage: e.target.files[0] });
   };
-  handleInputChange = (e) => {
+  handleInputChange = e => {
     this.setState({ [e.target.name]: e.target.value });
   };
-  handleBlogCategorySelected = (e) => {
+  handleBlogCategorySelected = e => {
     this.setState({ blogCategorySelect: e.target.value });
   };
 
-  handleSubmitPost = async (e) => {
+  handleSubmitPost = async e => {
     e.preventDefault();
     const selected = this.state.selected;
     let select = [];
@@ -232,17 +232,17 @@ class ProductProvider extends Component {
         `/sl/api/posts/`,
         fd,
         {
-          onUploadProgress: (progressEvent) => {
+          onUploadProgress: progressEvent => {
             console.log(
               "upload progress",
               (progressEvent / progressEvent.total) * 100 + "%"
             );
-          },
+          }
         },
         {
           headers: {
-            "Content-Type": "multipart/form-data",
-          },
+            "Content-Type": "multipart/form-data"
+          }
         }
       );
       if (res.status === 200) {
@@ -260,13 +260,13 @@ class ProductProvider extends Component {
     const res = await axios.get(`/sl/api/postCategory/`, {
       headers: {
         Accept: "application/json",
-        "Content-Type": "application/json",
-      },
+        "Content-Type": "application/json"
+      }
     });
 
     let tempCategory = [];
 
-    res.data.forEach((item) => {
+    res.data.forEach(item => {
       const singleItem = { ...item };
       tempCategory = [...tempCategory, singleItem];
     });
@@ -277,8 +277,8 @@ class ProductProvider extends Component {
 
   //BLOG
 
-  getBlogitem = (id) => {
-    const blog = this.state.posts.find((item) => item._id === id);
+  getBlogitem = id => {
+    const blog = this.state.posts.find(item => item._id === id);
     return blog;
   };
   getMatch = (blog, category) => {
@@ -292,8 +292,8 @@ class ProductProvider extends Component {
     }
 
     let tempMatch = [];
-    match.forEach((m) => {
-      const result = this.state.category.find((item) => item._id === m);
+    match.forEach(m => {
+      const result = this.state.category.find(item => item._id === m);
       tempMatch = [...tempMatch, result];
     });
     this.setState(
@@ -308,10 +308,10 @@ class ProductProvider extends Component {
       }
     );
   };
-  handleBlogView = (id) => {
+  handleBlogView = id => {
     try {
       const blog = this.getBlogitem(id);
-      const category = this.state.category.map((item) => item._id);
+      const category = this.state.category.map(item => item._id);
       const blogMap = blog.category;
       this.getMatch(blogMap, category);
       this.setState(
@@ -331,12 +331,12 @@ class ProductProvider extends Component {
     const res = await axios.get("/sl/api/posts/", {
       headers: {
         Accept: "application/json",
-        "Content-Type": "application/json",
-      },
+        "Content-Type": "application/json"
+      }
     });
     let tempPosts = [];
 
-    res.data.forEach((item) => {
+    res.data.forEach(item => {
       const singleItem = { ...item };
       tempPosts = [...tempPosts, singleItem];
     });
@@ -345,7 +345,7 @@ class ProductProvider extends Component {
     });
   };
 
-  getDate = (dateString) => {
+  getDate = dateString => {
     const month = [
       "January",
       "February",
@@ -358,7 +358,7 @@ class ProductProvider extends Component {
       "September",
       "October",
       "November",
-      "December",
+      "December"
     ];
     const date = new Date(dateString);
 
@@ -366,13 +366,13 @@ class ProductProvider extends Component {
   };
 
   // END BLOG
-  handleChange = (category) => {
+  handleChange = category => {
     this.setState({ activeCategory: category });
   };
 
   setService = () => {
     let tempServices = [];
-    servicesOffer.forEach((item) => {
+    servicesOffer.forEach(item => {
       const singleItem = { ...item };
       tempServices = [...tempServices, singleItem];
     });
@@ -381,15 +381,13 @@ class ProductProvider extends Component {
     });
   };
 
-  handleServicesOfferChange = (item) => {
+  handleServicesOfferChange = item => {
     this.setState({ activeCategoryServices: item });
   };
 
-  handleSingleServiceOffer = (id) => {
+  handleSingleServiceOffer = id => {
     window.scrollTo(0, 0);
-    const service = this.state.servicesOffer.find(
-      (service) => service.id === id
-    );
+    const service = this.state.servicesOffer.find(service => service.id === id);
 
     this.setState(
       () => {
@@ -405,7 +403,7 @@ class ProductProvider extends Component {
   };
   setServicesOffer = () => {
     let tempServices = [];
-    slservices.forEach((item) => {
+    slservices.forEach(item => {
       const singleItem = { ...item };
       tempServices = [...tempServices, singleItem];
     });
@@ -417,7 +415,7 @@ class ProductProvider extends Component {
     const { slSelectedCategory, getSlServices } = this.state;
     const filtered =
       slSelectedCategory && slSelectedCategory._id
-        ? getSlServices.filter((g) => g.category._id === slSelectedCategory._id)
+        ? getSlServices.filter(g => g.category._id === slSelectedCategory._id)
         : getSlServices;
     const servicesOffers = paginate(
       filtered,
@@ -449,7 +447,7 @@ class ProductProvider extends Component {
           getFullDetail: this.getFullDetail,
           handleCloseModalBookNow: this.handleCloseModalBookNow,
           handleGetContactFullDetail: this.handleGetContactFullDetail,
-          handleCloseModalContactModal: this.handleCloseModalContactModal,
+          handleCloseModalContactModal: this.handleCloseModalContactModal
         }}
       >
         {this.props.children}

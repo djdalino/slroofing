@@ -44,128 +44,128 @@ import GAFTimberlineHDWILLIAMSBURGSLATE from "./roofing/GAF Timberline HD WILLIA
 export const roofingDetails = [
   {
     id: 1,
-    name: "Dark Wood",
+    name: "Barkwood",
     imgHouse: GAFTimberlineHDBarkWoodModel,
-    color: GAFTimberlineHDBarkWood,
+    color: GAFTimberlineHDBarkWood
   },
   {
     id: 2,
-    name: "Birch Wood",
+    name: "Birchwood",
     imgHouse: GAFTimberlineHDBIRCHWOODModel,
-    color: GAFTimberlineHDBIRCHWOOD,
+    color: GAFTimberlineHDBIRCHWOOD
   },
   {
     id: 3,
     name: "Biscayne Blue",
     imgHouse: GAFTimberlineHDBISCAYNEBLUEModel,
-    color: GAFTimberlineHDBISCAYNEBLUE,
+    color: GAFTimberlineHDBISCAYNEBLUE
   },
   {
     id: 4,
-    name: "Canadian Drift Wood",
+    name: "Canadian DriftWood",
     imgHouse: GAFTimberlineHDCANADIANDRIFTWOODModel,
-    color: GAFTimberlineHDCANADIANDRIFTWOOD,
+    color: GAFTimberlineHDCANADIANDRIFTWOOD
   },
   {
     id: 5,
     name: "Charcoal",
     imgHouse: GAFTimberlineHDCHARCOALModel,
-    color: GAFTimberlineHDCHARCOAL,
+    color: GAFTimberlineHDCHARCOAL
   },
   {
     id: 6,
     name: "Copper Canyon",
     imgHouse: GAFTimberlineHDCOPPERCANYONModel,
-    color: GAFTimberlineHDCOPPERCANYON,
+    color: GAFTimberlineHDCOPPERCANYON
   },
   {
     id: 7,
-    name: "Drift Wood",
+    name: "Driftwood",
     imgHouse: GAFTimberlineHDDRIFTWOODModel,
-    color: GAFTimberlineHDDRIFTWOOD,
+    color: GAFTimberlineHDDRIFTWOOD
   },
   {
     id: 8,
     name: "Fox Hollow Gray",
     imgHouse: GAFTimberlineHDFOXHOLLOWGRAYModel,
-    color: GAFTimberlineHDFOXHOLLOWGRAY,
+    color: GAFTimberlineHDFOXHOLLOWGRAY
   },
   {
     id: 9,
     name: "Golden Amber",
     imgHouse: GAFTimberlineHDGOLDENAMBERModel,
-    color: GAFTimberlineHDGOLDENAMBER,
+    color: GAFTimberlineHDGOLDENAMBER
   },
   {
     id: 10,
     name: "Hickory",
     imgHouse: GAFTimberlineHDHICKORYModel,
-    color: GAFTimberlineHDHICKORY,
+    color: GAFTimberlineHDHICKORY
   },
   {
     id: 11,
     name: "Hunter Green",
     imgHouse: GAFTimberlineHDHUNTERGREENModel,
-    color: GAFTimberlineHDHUNTERGREEN,
+    color: GAFTimberlineHDHUNTERGREEN
   },
   {
     id: 12,
     name: "Mission Brown",
     imgHouse: GAFTimberlineHDMISSIONBROWNModel,
-    color: GAFTimberlineHDMISSIONBROWN,
+    color: GAFTimberlineHDMISSIONBROWN
   },
   {
     id: 13,
     name: "Oyster Gray",
     imgHouse: GAFTimberlineHDOYSTERGRAYModel,
-    color: GAFTimberlineHDOYSTERGRAY,
+    color: GAFTimberlineHDOYSTERGRAY
   },
   {
     id: 14,
     name: "Patriot Red",
     imgHouse: GAFTimberlineHDPATRIOTREDModel,
-    color: GAFTimberlineHDPATRIOTRED,
+    color: GAFTimberlineHDPATRIOTRED
   },
   {
     id: 15,
     name: "Pewter Gray",
     imgHouse: GAFTimberlineHDPEWTERGRAYModel,
-    color: GAFTimberlineHDPEWTERGRAY,
+    color: GAFTimberlineHDPEWTERGRAY
   },
   {
     id: 16,
     name: "Shake Wood",
     imgHouse: GAFTimberlineHDSHAKEWOODModel,
-    color: GAFTimberlineHDSHAKEWOOD,
+    color: GAFTimberlineHDSHAKEWOOD
   },
   {
     id: 17,
     name: "Slate",
     imgHouse: GAFTimberlineHDSLATEModel,
-    color: GAFTimberlineHDSLATE,
+    color: GAFTimberlineHDSLATE
   },
   {
     id: 18,
     name: "Sunset Brick",
     imgHouse: GAFTimberlineHDSUNSETBRICKModel,
-    color: GAFTimberlineHDSUNSETBRICK,
+    color: GAFTimberlineHDSUNSETBRICK
   },
   {
     id: 19,
     name: "Weathered Wood",
     imgHouse: GAFTimberlineHDWEATHEREDWOODModel,
-    color: GAFTimberlineHDWEATHEREDWOOD,
+    color: GAFTimberlineHDWEATHEREDWOOD
   },
   {
     id: 20,
     name: "White",
     imgHouse: GAFTimberlineHDWHITEModel,
-    color: GAFTimberlineHDWHITE,
+    color: GAFTimberlineHDWHITE
   },
   {
     id: 21,
     name: "Williamsburg Slate",
     imgHouse: GAFTimberlineHDWILLIAMSBURGSLATEModel,
-    color: GAFTimberlineHDWILLIAMSBURGSLATE,
-  },
+    color: GAFTimberlineHDWILLIAMSBURGSLATE
+  }
 ];
