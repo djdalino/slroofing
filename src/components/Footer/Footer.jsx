@@ -35,10 +35,10 @@ class Footer extends Component {
               <h4 className="mainText text-uppercase ">
                 sl roofing & renovations
               </h4>
-              <h4 className="secondaryText">
+              {/* <h4 className="secondaryText">
                 Contact: 424-sl-roofs 424-757-6637
-              </h4>
-              <h4 className="secondaryText">712-898-0221</h4>
+              </h4> */}
+              <h4 className="secondaryText">Contact: 712-898-0221</h4>
               <h4 className="secondaryText ">
                 Email: SLROOFINGCOMPANY@gmail.com
               </h4>
