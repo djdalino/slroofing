@@ -25,7 +25,7 @@ class Services extends Component {
           <img
             src={img}
             alt={title}
-            height="200px"
+            height="100%"
             width="100%"
             className="mx-auto"
           />

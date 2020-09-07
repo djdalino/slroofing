@@ -4,7 +4,7 @@ const nodemailer = require("nodemailer");
 const mg = require("nodemailer-mailgun-transport");
 const cors = require("cors");
 const path = require("path");
-const db = require("./config/keys").mongoURI;
+// const db = require("./config/keys").mongoURI;
 require("dotenv").config();
 
 // set up express
@@ -34,8 +34,10 @@ app.listen(PORT, () => {
   console.log(`server is runnning on port: ${PORT}`);
 });
 // set up db connection
+const dbCon =
+  "mongodb+srv://djdalino:TpW5Z6aYjCENviOt@cluster3-hngry.mongodb.net/test?retryWrites=true&w=majority";
 mongoose.connect(
-  db || process.env.MONGODB_URL,
+  dbCon || process.env.MONGODB_URL,
   { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true },
   err => {
     if (err) return console.error(err);

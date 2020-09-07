@@ -3,8 +3,10 @@ import { ProductConsumer } from "../../stateManagement/context";
 class ListGroup extends Component {
   render() {
     return (
-      <React.Fragment>
-        <ProductConsumer>
+      <div>
+        <h2 className="text-uppercase mainText">Roofing</h2>
+
+        {/* <ProductConsumer>
           {(value) => {
             const {
               slservicesCategory,
@@ -32,8 +34,8 @@ class ListGroup extends Component {
               </React.Fragment>
             );
           }}
-        </ProductConsumer>
-      </React.Fragment>
+        </ProductConsumer> */}
+      </div>
     );
   }
 }

@@ -3,6 +3,7 @@ import ListGroup from "./ListGroup";
 import ServicesList from "./ServicesList";
 import RoofingCarousel from "./ServicesRoofingCarouse";
 import ServicesPagination from "./ServicesPagination";
+import OtherServices from "./OtherServices";
 class servicesOffer extends Component {
   render() {
     return (
@@ -13,7 +14,7 @@ class servicesOffer extends Component {
             Our services we offer
           </h2>
           <br />
-          <div className="row">
+          <div className="row justify-content-center">
             <ListGroup />
             {/* <ProductConsumer>
               {(value) => {
@@ -39,7 +40,9 @@ class servicesOffer extends Component {
             </ProductConsumer> */}
           </div>
         </div>
+
         <ServicesList />
+        <OtherServices />
         <ServicesPagination />
         <RoofingCarousel />
       </div>

@@ -33,7 +33,7 @@ class ProductProvider extends Component {
     adminPage: 1,
     //Pagination
     currentPage: 1,
-    pageSize: 5,
+    pageSize: 6,
     //End Pagination
     //SL Services
     getSlServices: JSON.parse(localStorage.getItem("getSlServices")) || [],
