@@ -2,16 +2,20 @@ import React from "react";
 
 const OtherServices = () => {
   return (
-    <div>
-      <h2 className="text-center">Other Services</h2>
+    <div className="otherServices">
+      <h5>We also specialize</h5>
+      <h2>Other Services</h2>
 
-      <ul className="text-center">
-        <li className="text-center">Sidings</li>
-        <li className="text-center">Gutters</li>
-        <li className="text-center">Soffits</li>
-        <li className="text-center">Facia</li>
-        <li className="text-center">Doors/Windows</li>
-      </ul>
+      <div className="otherDiv">
+        <ul>
+          <li>Sidings</li>
+          <li>Gutters</li>
+          <li>Soffits</li>
+          <li>Facia</li>
+          <li>Doors</li>
+          <li>Windows</li>
+        </ul>
+      </div>
     </div>
   );
 };

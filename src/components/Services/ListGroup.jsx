@@ -4,8 +4,7 @@ class ListGroup extends Component {
   render() {
     return (
       <div>
-        <h2 className="text-uppercase mainText">Roofing</h2>
-
+        <h2 className="text-center text-capitalize mainText">Roofing</h2>
         {/* <ProductConsumer>
           {(value) => {
             const {

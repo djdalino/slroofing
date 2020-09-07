@@ -125,8 +125,7 @@ body {
 .hold-services {
   position: relative;
   cursor: pointer;
-  max-height: 300px;
-  height: 320px;
+  height: 300px;
   margin: 15px 0;
 }
 
@@ -264,9 +263,12 @@ p.text-uppercase.mainText:hover {
   margin: auto !important;
 }
 .sl-nav-logo {
-  width: 110px;
-  margin-top: 10px;
+  width: 140px;
+  position: relative;
+  top: 6px;
+  margin: auto;
 }
+
 dl,
 ol,
 ul {
@@ -2024,6 +2026,69 @@ a.book-an-appointment.btn.btn-danger.text-uppercase:hover {
   border-color: #ffffff !important;
 }
 
+.otherServices {
+  background: url(/static/media/subscribe-bg.00e86b7d.jpg) center/cover
+    no-repeat;
+  color: #fff;
+  font-family: var(--mainText) !important;
+  text-transform: uppercase;
+  padding: 50px;
+}
+
+.otherServices h2 {
+  text-align: center;
+  width: 77%;
+  margin: auto;
+  margin-bottom: 30px;
+}
+.otherDiv {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  padding-left: 40px;
+}
+
+.otherDiv > ul {
+  margin-right: auto;
+  display: flex;
+  width: 70%;
+  padding: 0;
+  margin: auto !important;
+  font-size: 20px;
+}
+
+.otherDiv > ul > div {
+  width: fit-content;
+  margin: auto;
+}
+
+.otherServices h5 {
+  color: #fff;
+}
+
+.row.justify-content-center h2 {
+  font-size: 28px;
+}
+
+#root > div > div:nth-child(3) > div.container-fluid.mb-5.my-15 {
+  margin-top: 0px !important;
+}
+
+.otherDiv > ul {
+  margin-right: auto;
+  padding: 0;
+  margin: auto !important;
+  font-size: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(88px, 1fr));
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+}
+
+.sl-nav-logo {
+  width: 140px;
+}
+
 @media screen and (max-width: 1400px) {
   .banner-container {
     transform: translate(25%);
@@ -2122,6 +2187,10 @@ a.book-an-appointment.btn.btn-danger.text-uppercase:hover {
 
   button.navbar-toggler.rad.collapsed:hover {
     background: none !important;
+  }
+
+  .otherDiv > ul {
+    width: 100% !important;
   }
 
   .box-container p {
@@ -2445,11 +2514,6 @@ a.book-an-appointment.btn.btn-danger.text-uppercase:hover {
   nav.sl-navbar {
     background: #ffffff;
   }
-  .sl-nav-logo {
-    width: 78px;
-    position: relative;
-    top: -2px;
-  }
 
   #root > nav > div > ul > div > li > button {
     font-size: 1.2rem;
@@ -2501,6 +2565,10 @@ a.book-an-appointment.btn.btn-danger.text-uppercase:hover {
     display: none;
   }
 
+  .sl-nav-center i.fa.fa-phone {
+    transform: rotate(114deg);
+  }
+
   .fl-module-content {
     margin-bottom: 0 !important;
   }
@@ -2509,9 +2577,6 @@ a.book-an-appointment.btn.btn-danger.text-uppercase:hover {
   }
 
   .sl-nav-logo {
-    width: 81px;
-    position: relative;
-    top: 0px;
     margin: auto;
   }
 
@@ -2640,6 +2705,24 @@ a.book-an-appointment.btn.btn-danger.text-uppercase:hover {
 
   .box-container .button-container.book-an-appointment {
     display: none;
+  }
+  .container.vizual {
+    max-width: 100% !important;
+    background: none !important;
+  }
+  .defaultHero {
+    height: 629px;
+    width: 100%;
+    background: url("./img/sl-roof-banner0.jpg") center/cover no-repeat;
+  }
+  .banner {
+    background-color: #00000099 !important;
+  }
+  span.contact {
+    margin-left: auto;
+    color: #000000;
+    position: relative;
+    right: 20px;
   }
 }
 

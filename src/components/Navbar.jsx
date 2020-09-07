@@ -20,8 +20,10 @@ class Navbar extends React.Component {
           <div className="sl-nav-header">
             <Link to="/">
               <img className="sl-nav-logo" src={logo} alt="slroofing-logo" />
-              <span className="contact">712-898-0221</span>
             </Link>
+            <span className="contact">
+              <i class="fa fa-phone"></i>712-898-0221
+            </span>
             {/* Burger */}
             <div className="sl-nav-burger" onClick={() => this.handleToggle()}>
               <div className={this.state.isOpen ? "toggle line1" : "line1"} />
