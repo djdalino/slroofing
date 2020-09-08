@@ -5,16 +5,12 @@ import BookNowModal from "../Modal/BookNowModal";
 class Service extends Component {
   render() {
     const { title, img, category } = this.props.service;
-    const { handleSlCategorySelect } = this.props.value;
+    // const { handleSlCategorySelect } = this.props.value;
     return (
-      <Link
-        to="/services"
-        className="hold-services"
-        onClick={() => handleSlCategorySelect(category)}
-      >
+      <Link to="/services" className="hold-services">
         <Link to="#" className="hover-button">
           <ProductConsumer>
-            {(value) => {
+            {value => {
               const { isBookNow, handleBookNowModal } = value;
               return (
                 <React.Fragment>
@@ -31,11 +27,7 @@ class Service extends Component {
               );
             }}
           </ProductConsumer>
-          <Link
-            to="/services"
-            onClick={() => handleSlCategorySelect(category)}
-            className="slearn-more"
-          >
+          <Link to="/services" className="slearn-more">
             Learn more &nbsp;
           </Link>
         </Link>

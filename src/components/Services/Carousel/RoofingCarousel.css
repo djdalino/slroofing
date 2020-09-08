@@ -17,6 +17,7 @@
 .second-image {
   max-height: 768px;
   width: 924px;
+  overflow: hidden;
 }
 
 .second-image img {
