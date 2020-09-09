@@ -2089,9 +2089,19 @@ a.book-an-appointment.btn.btn-danger.text-uppercase:hover {
   width: 140px;
 }
 
+nav.sl-navbar i.fa.fa-phone {
+  display: none;
+}
+#root > div > div:nth-child(3) > div.container-fluid.mb-5.my-15 {
+  margin-bottom: 85px !important;
+}
 @media screen and (max-width: 1400px) {
   .banner-container {
     transform: translate(25%);
+  }
+
+  #root > div > div:nth-child(3) > div.container-fluid.mb-5.my-15 {
+    margin-bottom: 50px !important;
   }
 
   .center-map {
@@ -2723,6 +2733,15 @@ a.book-an-appointment.btn.btn-danger.text-uppercase:hover {
     color: #000000;
     position: relative;
     right: 20px;
+  }
+  .hold-services {
+    position: relative;
+    cursor: pointer;
+    height: 213px;
+    margin: 15px 0;
+  }
+  nav.sl-navbar i.fa.fa-phone {
+    display: inline-block;
   }
 }
 
