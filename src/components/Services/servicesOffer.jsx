@@ -9,9 +9,9 @@ class servicesOffer extends Component {
     return (
       <div>
         <div className="who-we-are">
-          <h5 className="text-uppercase">What services are you looking for?</h5>
+          <h5 className="text-uppercase">WE’VE GOT YOU COVERED!</h5>
           <h2 className="text-center text-capitalize mainText">
-            Our services we offer
+            ROOFING SERVICES WE OFFER
           </h2>
           <br />
           <div className="row justify-content-center">

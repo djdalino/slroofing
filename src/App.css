@@ -2095,6 +2095,24 @@ nav.sl-navbar i.fa.fa-phone {
 #root > div > div:nth-child(3) > div.container-fluid.mb-5.my-15 {
   margin-bottom: 85px !important;
 }
+
+p.text-center.text-capitalize.mainText {
+  font-size: 16px;
+  color: #222222!important;
+  text-align: justify!important;
+}
+
+.service-weOffer .service-gallery {
+  margin: auto;
+  width: 95%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr))!important;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+}
+
+
+
 @media screen and (max-width: 1400px) {
   .banner-container {
     transform: translate(25%);
@@ -2808,6 +2826,7 @@ nav.sl-navbar i.fa.fa-phone {
     height: 90%;
     padding-top: 30px;
   }
+
 }
 
 @media screen and (max-width: 1041px) and (min-width: 995px) {
@@ -2850,6 +2869,22 @@ nav.sl-navbar i.fa.fa-phone {
     grid-template-columns: repeat(auto-fit, minmax(50px, 100px));
     grid-row-gap: 12px;
     grid-auto-rows: 35px;
+  }
+
+  .gallery-container{
+    margin: auto;
+    width: 85%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+  
+  }
+  .gallery-box{
+    width: 320px;
+  }
+  .gallery-box img{
+    width:100%;
   }
 
   button.close {
@@ -3209,4 +3244,22 @@ nav.sl-navbar i.fa.fa-phone {
     grid-column-gap: 20px;
     grid-row-gap: 20px;
   }
+}
+
+
+@media screen and (max-width: 1000px) and (min-width: 745px){
+
+  .our-service-gallery {
+    margin: auto;
+    width: 85%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(233px, 1fr))!important;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+}
+
+p.text-center.mt-3.ourServicesFont {
+  bottom: 65px!important;
+}
+
 }

@@ -6,15 +6,13 @@ import Footer from "../components/Footer/Footer";
 class Services extends Component {
   render() {
     return (
-      <div>
+      <div className="service-weOffer">
         <Navbar />
         <Hero hero="blogHero">
           <div className="blogBanner">
             <div style={{ marginTop: "7rem " }}>
               <h1 className="text-uppercase text-center">our services</h1>
-              <h3 className="text-capitalize text-center">
-                We've got you covered
-              </h3>
+              <h3 className="text-capitalize text-center"></h3>
             </div>
           </div>
         </Hero>

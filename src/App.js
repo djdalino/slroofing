@@ -2,6 +2,7 @@ import React from "react";
 import "./App.css";
 import Home from "./pages/Home";
 import Blog from "./pages/Blog";
+import Gallery from "./components/Gallery/gallery";
 import About from "./pages/About";
 import Services from "./pages/Services";
 import Admin from "./pages/Admin";
@@ -16,6 +17,7 @@ function App() {
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/blog" component={Blog} />
+        <Route exact path="/gallery" component={Gallery} />
         <Route path="/about" component={About} />
         <Route path="/blog/:id" component={BlogPostView} />
         <Route path="/service-offer/:id" component={ServiceSingleView} />

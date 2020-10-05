@@ -8,7 +8,6 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer/Footer";
 import { ProductConsumer } from "../stateManagement/context";
 import BookNowModal from "../components/Modal/BookNowModal";
-import { Link } from "react-router-dom";
 const Home = () => {
   return (
     <React.Fragment>
@@ -27,7 +26,7 @@ const Home = () => {
             </p>
             <div className="button-container book-an-appointment">
               <ProductConsumer>
-                {(value) => {
+                {value => {
                   const { isBookNow, handleBookNowModal } = value;
                   return (
                     <React.Fragment>

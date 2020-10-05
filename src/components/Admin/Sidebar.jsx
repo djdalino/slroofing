@@ -44,6 +44,9 @@ class Sidebar extends Component {
                       <p onClick={() => handleAdminPage(2)}>Blog Post View</p>
                     </li>
                     <li onClick={() => this.handleToggle()}>
+                      <p onClick={() => handleAdminPage(6)}>Gallery Post</p>
+                    </li>
+                    <li onClick={() => this.handleToggle()}>
                       <p onClick={() => handleAdminPage(3)}>
                         List of Subcribers
                       </p>

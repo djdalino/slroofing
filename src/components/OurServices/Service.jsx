@@ -8,7 +8,7 @@ class Service extends Component {
     // const { handleSlCategorySelect } = this.props.value;
     return (
       <Link to="/services" className="hold-services">
-        <Link to="#" className="hover-button">
+        <Link to="/services" className="hover-button">
           <ProductConsumer>
             {value => {
               const { isBookNow, handleBookNowModal } = value;

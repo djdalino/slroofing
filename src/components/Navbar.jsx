@@ -22,7 +22,7 @@ class Navbar extends React.Component {
               <img className="sl-nav-logo" src={logo} alt="slroofing-logo" />
             </Link>
             <span className="contact">
-              <i class="fa fa-phone"></i>712-898-0221
+              <i className="fa fa-phone"></i>712-898-0221
             </span>
             {/* Burger */}
             <div className="sl-nav-burger" onClick={() => this.handleToggle()}>
@@ -48,6 +48,9 @@ class Navbar extends React.Component {
             </li>
             <li className="active" onClick={() => this.handleToggle()}>
               <Link to="/blog">Blog</Link>
+            </li>
+            <li className="active" onClick={() => this.handleToggle()}>
+              <Link to="/gallery">Gallery</Link>
             </li>
             <li className="active" onClick={() => this.handleToggle()}>
               <Link to="/contact">Contact Us</Link>
