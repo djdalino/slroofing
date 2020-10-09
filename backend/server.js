@@ -5,7 +5,6 @@ const mg = require("nodemailer-mailgun-transport");
 const cors = require("cors");
 const path = require("path");
 const uploadImg = path.join(__dirname, "../uploads/");
-const root = require("path").join(__dirname, "../build/");
 // const db = require("./config/keys").mongoURI;
 require("dotenv").config();
 
@@ -13,11 +12,6 @@ require("dotenv").config();
 
 const app = express();
 app.use("/uploads", express.static(uploadImg));
-
-app.use(express.static(root));
-app.get("*", (req, res) => {
-  res.sendFile("index.html", { root });
-});
 app.use(cors());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
