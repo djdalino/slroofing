@@ -11,8 +11,8 @@ const GallerPost = () => {
     const fd = new FormData();
     fd.append("photo", gallery);
     try {
-      const res = await axios.post(
-        `/sl/api/gallery/`,
+      await axios.post(
+        `http://slroofing.us/sl/api/gallery/`,
         fd,
         {
           onUploadProgress: progressEvent => {
@@ -28,9 +28,6 @@ const GallerPost = () => {
           }
         }
       );
-      if (res.status === 200) {
-        console.log(res);
-      }
     } catch (error) {
       alert(error);
     }
