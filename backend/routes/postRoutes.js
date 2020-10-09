@@ -2,12 +2,19 @@ const router = require("express").Router();
 const Post = require("../models/postModel");
 const multer = require("multer");
 const storage = multer.diskStorage({
-  destination: function (req, file, cb) {
+  destination: function(req, file, cb) {
     cb(null, "./uploads/");
   },
-  filename: function (req, file, cb) {
-    cb(null, Math.random().toString(36).substr(2, 9) + "-" + file.originalname);
-  },
+  filename: function(req, file, cb) {
+    cb(
+      null,
+      Math.random()
+        .toString(36)
+        .substr(2, 9) +
+        "-" +
+        file.originalname
+    );
+  }
 });
 
 const fileFilter = (req, file, cb) => {
@@ -24,13 +31,13 @@ const fileFilter = (req, file, cb) => {
 const upload = multer({
   storage: storage,
   limits: {
-    fileSize: 1024 * 1024 * 15,
+    fileSize: 1024 * 1024 * 30
   },
-  fileFilter: fileFilter,
+  fileFilter: fileFilter
 });
 var multiUpload = upload.fields([
   { name: "blogImage", maxCount: 1 },
-  { name: "articleImage", maxCount: 1 },
+  { name: "articleImage", maxCount: 1 }
 ]);
 
 router.get("/", async (req, res) => {
@@ -52,7 +59,7 @@ router.post("/", multiUpload, async (req, res) => {
     article,
     createdAt,
     blogImage: req.files.blogImage[0].path,
-    articleImage: req.files.articleImage[0].path,
+    articleImage: req.files.articleImage[0].path
   });
   try {
     const savedPost = await newPost.save();
