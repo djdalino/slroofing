@@ -1,10 +1,25 @@
 import React, { useState, useEffect } from "react";
 import "./gallery.css";
 import axios from "axios";
-import { Link } from "react-router-dom";
+import { paginate } from "../Utilities/paginate";
+import Pagination from "../Pagination";
+import { ProductConsumer } from "../../stateManagement/context";
+import GallerySingleView from "./gallerySingleView";
 const GalleryView = () => {
   const [gallery, setGallery] = useState([]);
-  console.log(gallery);
+  const [currentPage, setCurrentPage] = useState(1);
+  const pageSize = 8;
+  const filtered =
+    gallery && gallery._id
+      ? gallery.filter(g => g._id === gallery._id)
+      : gallery;
+  const galleryPaginate = paginate(filtered, currentPage, pageSize);
+  useEffect(() => {
+    getPhotos();
+  }, []);
+  const handlePageChange = page => {
+    setCurrentPage(page);
+  };
   useEffect(() => {
     getPhotos();
   }, []);
@@ -29,15 +44,37 @@ const GalleryView = () => {
     );
   } else {
     return (
-      <div className="gallery-container mt-5">
-        {gallery.map((data, id) => (
-          <div className="gallery-box" key={id}>
-            <Link to={`/gallery/${data._id}`}>
-              <img src={`${data.photo}`} />
-            </Link>
-          </div>
-        ))}
-      </div>
+      <React.Fragment>
+        <div className="gallery-container mt-5">
+          {galleryPaginate.map((data, id) => (
+            <div className="gallery-box" key={id}>
+              <ProductConsumer>
+                {value => {
+                  const { handleGalleryChangeView } = value;
+
+                  return (
+                    <React.Fragment>
+                      <img
+                        className="gallery-img"
+                        src={`${data.photo}`}
+                        alt={data._id}
+                        onClick={() => handleGalleryChangeView(id)}
+                      />
+                    </React.Fragment>
+                  );
+                }}
+              </ProductConsumer>
+            </div>
+          ))}
+        </div>
+        <Pagination
+          itemsCount={gallery.length}
+          pageSize={pageSize}
+          currentPage={currentPage}
+          onPageChange={handlePageChange}
+        />
+        <GallerySingleView />
+      </React.Fragment>
     );
   }
 };

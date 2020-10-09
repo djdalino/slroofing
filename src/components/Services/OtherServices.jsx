@@ -8,12 +8,15 @@ const OtherServices = () => {
 
       <div className="otherDiv">
         <ul>
-          <li>Sidings</li>
+          <li>Siding</li>
           <li>Gutters</li>
           <li>Soffits</li>
           <li>Facia</li>
           <li>Doors</li>
           <li>Windows</li>
+          <li>New Construction</li>
+          <li>Remodeling</li>
+          <li>Additions</li>
         </ul>
       </div>
     </div>

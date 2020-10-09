@@ -41,12 +41,14 @@ router.get("/", async (req, res) => {
   res.json(posts);
 });
 
+//View image
 router.get("/:id", async (req, res) => {
   const posts = await Gallery.findById(req.params.id);
   res.json(posts);
 });
+
+//Post image
 router.post("/", upload.single("photo"), async (req, res) => {
-  console.log("req file: " + req.file.path);
   const newPost = new Gallery({
     photo: req.file.path
   });
@@ -55,6 +57,16 @@ router.post("/", upload.single("photo"), async (req, res) => {
     res.json(savedPost);
   } catch (err) {
     res.status(400).send(err);
+  }
+});
+
+//Delete image
+router.delete("/:id", async (req, res) => {
+  try {
+    const removeImage = await Gallery.remove({ _id: req.params.id });
+    res.json(removeImage);
+  } catch (error) {
+    res.json(error);
   }
 });
 

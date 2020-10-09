@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { ProductConsumer } from "../../stateManagement/context";
 import BookNowModal from "../Modal/BookNowModal";
+import Gaf from "../../img/gaf.jpg";
+import Corning from "../../img/corning.png";
 import axios from "axios";
 class Footer extends Component {
   state = {
@@ -32,16 +34,13 @@ class Footer extends Component {
         <div className="footer-box-container">
           <div className="container-box text-light">
             <div className="column footer-box">
-              <h4 className="mainText text-uppercase ">
-                sl roofing & renovations
+              <h4 className="mainText text-uppercase compet">
+                Top competitors for roofing products:
               </h4>
-              {/* <h4 className="secondaryText">
-                Contact: 424-sl-roofs 424-757-6637
-              </h4> */}
-              <h4 className="secondaryText">Contact: 712-898-0221</h4>
-              <h4 className="secondaryText ">
-                Email: SLROOFINGCOMPANY@gmail.com
-              </h4>
+              <div className="footer-logo-img">
+                <img src={Gaf} />
+                <img src={Corning} />
+              </div>
             </div>
             <div className="column footer-box">
               <h4 className="mainText text-uppercase ">
@@ -66,6 +65,16 @@ class Footer extends Component {
               </div>
             </div>
             <div className="column footer-box">
+              <h4 className="mainText text-uppercase ">
+                sl roofing & renovations
+              </h4>
+              {/* <h4 className="secondaryText">
+                Contact: 424-sl-roofs 424-757-6637
+              </h4> */}
+              <h4 className="secondaryText">Contact: 712-898-0221</h4>
+              <h4 className="secondaryText ">
+                Email: SLROOFINGCOMPANY@gmail.com
+              </h4>
               <h4 className="text-uppercase mainText">
                 stay connected with us
               </h4>

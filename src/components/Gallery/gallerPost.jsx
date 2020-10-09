@@ -1,9 +1,13 @@
 import React, { useState } from "react";
+import "./gallery.css";
 import axios from "axios";
-import GalleryView from "./galleryView";
+import AdminViewGallery from "../Admin/AdminViewGallery";
 const GallerPost = () => {
   const [gallery, setGallery] = useState("");
   const handleSubmitPost = async e => {
+    if (gallery === "") {
+      alert("Select Image");
+    }
     const fd = new FormData();
     fd.append("photo", gallery);
     try {
@@ -45,8 +49,8 @@ const GallerPost = () => {
         />
         <input type="submit" value="Post" />
       </form>
-      <div>
-        <GalleryView />
+      <div className="admin-gallery-view">
+        <AdminViewGallery />
       </div>
     </div>
   );

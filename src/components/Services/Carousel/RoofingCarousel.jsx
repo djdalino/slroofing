@@ -6,7 +6,7 @@ class RoofingCarousel extends Component {
   state = {
     step: 1,
     roofing: [],
-    carouselImage: [],
+    carouselImage: []
   };
   componentDidMount() {
     this.setRoofingDetails();
@@ -14,7 +14,7 @@ class RoofingCarousel extends Component {
   setRoofingDetails = () => {
     let tempData = [];
 
-    roofingDetails.forEach((data) => {
+    roofingDetails.forEach(data => {
       const singleData = { ...data };
       tempData = [...tempData, singleData];
     });
@@ -23,8 +23,8 @@ class RoofingCarousel extends Component {
       return { roofing: tempData };
     });
   };
-  handleRoofingGetId = (id) => {
-    const item = this.state.roofing.find((data) => data.id === id);
+  handleRoofingGetId = id => {
+    const item = this.state.roofing.find(data => data.id === id);
     this.setState({ carouselImage: item });
   };
 
@@ -47,7 +47,7 @@ class RoofingCarousel extends Component {
     if (this.state.carouselImage.length === 0) {
       return (
         <div>
-          <p>Dark Wood</p>
+          <p>Bark Wood</p>
         </div>
       );
     } else {
@@ -62,7 +62,7 @@ class RoofingCarousel extends Component {
     return (
       <React.Fragment>
         <div className="container vizual">
-          <h5 className="text-uppercase">How it looks like?</h5>
+          <h5 className="text-uppercase">How it looks</h5>
           <h2 className="text-center text-capitalize mainText">
             Vizualize the product
           </h2>
@@ -70,7 +70,7 @@ class RoofingCarousel extends Component {
             <br />
             <div className="default-cover">{this.getImageCarousel()}</div>
             <div className="roofing-list">
-              {this.state.roofing.map((item) => {
+              {this.state.roofing.map(item => {
                 return (
                   <React.Fragment key={item.id}>
                     <div

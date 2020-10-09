@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Owner from "../../img/slroofing-owners.png";
-import Covered from "../../img/covered.jpg";
+import Covered from "../../img/slroofingpips.png";
 import OwnerSecond from "../../img/owner-second.png";
 import Testimonial from "../../components/Testimonial/Testimonial";
 
@@ -27,23 +27,27 @@ export default class AboutSLroofing extends Component {
         <div className="ownerCover">
           <div className="the-owner">
             <div className="owner-description">
-              <h3>Lorem Ipsum doliere</h3>
+              <h3>SL Roofing</h3>
               <p>
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-                quae ab illo inventore veritatis et quasi architecto beatae
-                vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia
-                voluptas sit aspernatur aut odit aut fugit, sed quia
-                consequuntur magni dolores eos qui ratione voluptatem sequi
-                nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor
-                sit amet, consectetur, adipisci velit, sed quia non numquam eius
-                modi tempora incidunt ut labore et dolore magnam aliquam quaerat
-                voluptatem. Ut enim ad minima veniam, quis nostrum
-                exercitationem ullam corporis suscipit laboriosam, nisi ut
-                aliquid ex ea commodi consequatur? Quis autem vel eum iure
-                reprehenderit qui in ea voluptate velit esse quam nihil
-                molestiae consequatur, vel illum qui dolorem eum fugiat quo
-                voluptas nulla pariatur
+                Shaun Lake began to form the establishment of his business in
+                2008. SL ROOFING was created to deliver dedication to quality
+                and honesty through the roofing and construction industry to
+                their clientele and employees. Shaun had spent his earlier years
+                working and learning a multitude of trades in construction.
+                While gaining knowledge through first hand experience and
+                understanding the value of hard work, dedication to quality and
+                an appreciation to the results manual labor provides, had
+                applied these principals into the businesses focus on affordable
+                quality and its goals of guaranteed complete customer
+                satisfaction.
+              </p>
+              <p style={{ marginTop: "10px" }}>
+                “There’s something about building things that I’ve always been
+                drawn to. Whether it’s composing music, creating art, or
+                designing a construction project, I am completely invested! You
+                get to see and feel accomplishments throughout its progress.
+                Your time and effort creates a products value, Passion is key to
+                what drives amazing results!
               </p>
             </div>
             <div className="owner-image">

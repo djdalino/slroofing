@@ -51,8 +51,12 @@ class ProductProvider extends Component {
     //ContactModal
     contactData: [],
     contactFullDetail: [],
-    contactModal: false
+    contactModal: false,
     //End of ContactModal
+
+    //Gallery
+    galleryCount: null
+    //End of Gallery
   };
   componentDidMount() {
     this.setService();
@@ -411,6 +415,13 @@ class ProductProvider extends Component {
       return { servicesOffer: tempServices };
     });
   };
+
+  // Gallery View
+  handleGalleryChangeView = item => {
+    console.log(item);
+    this.setState({ galleryCount: item });
+  };
+  // End of Gallery View
   render() {
     const { slSelectedCategory, getSlServices } = this.state;
     const filtered =
@@ -447,7 +458,8 @@ class ProductProvider extends Component {
           getFullDetail: this.getFullDetail,
           handleCloseModalBookNow: this.handleCloseModalBookNow,
           handleGetContactFullDetail: this.handleGetContactFullDetail,
-          handleCloseModalContactModal: this.handleCloseModalContactModal
+          handleCloseModalContactModal: this.handleCloseModalContactModal,
+          handleGalleryChangeView: this.handleGalleryChangeView
         }}
       >
         {this.props.children}

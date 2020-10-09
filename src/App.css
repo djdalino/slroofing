@@ -494,14 +494,14 @@ nav .show-nav {
 }
 
 .aboutBan {
-  background: url("./img/covered.jpg") center/cover no-repeat;
+  background: url("./img/covered.png") center/cover no-repeat;
 }
 .blogHero {
   height: 350px;
   width: 100%;
   background-color: var(--mainDark) !important;
   background-position-y: 47% !important;
-  background: url("./img/our-blog-banner.jpg") center/cover no-repeat;
+  background: url("./img/our-services.png") center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2042,7 +2042,7 @@ a.book-an-appointment.btn.btn-danger.text-uppercase:hover {
   margin-bottom: 30px;
 }
 .otherDiv {
-  width: 100%;
+  width: 88%;
   margin: auto;
   display: flex;
   padding-left: 40px;
@@ -2098,19 +2098,75 @@ nav.sl-navbar i.fa.fa-phone {
 
 p.text-center.text-capitalize.mainText {
   font-size: 16px;
-  color: #222222!important;
-  text-align: justify!important;
+  color: #222222 !important;
+  text-align: justify !important;
 }
 
 .service-weOffer .service-gallery {
   margin: auto;
   width: 95%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr))!important;
+  grid-template-columns: repeat(auto-fit, minmax(331px, 1fr)) !important;
   grid-column-gap: 20px;
   grid-row-gap: 20px;
 }
 
+.otherDiv {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  padding-left: 0px;
+}
+
+.otherDiv li {
+  font-size: 15px;
+}
+
+.otherDiv > ul {
+  margin-right: auto;
+  padding: 0;
+  margin: auto !important;
+  font-size: 17px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(88px, 1fr));
+  grid-column-gap: 15px;
+  grid-row-gap: 0px;
+}
+
+.service-weOffer .service-gallery {
+  grid-row-gap: 48px;
+}
+
+.footer-logo-img img{
+  width:40px;
+  display:inline-block;
+}
+
+uppercase.compet {
+  font-size: 18px;
+}
+
+.footer-logo-img img:nth-child(2) {
+  width: 80px;
+  position: relative;
+  top: -10px;
+}
+
+.footer-logo-img img {
+  width: 65px;
+  display: inline-block;
+  margin-right: 15px;
+}
+
+h4.mainText.text-uppercase.compet {
+  font-size: 17px;
+}
+
+#root > div.gallery-container.mt-5 > div {
+  width: 100%;
+  height: 184px;
+  overflow: hidden;
+}
 
 
 @media screen and (max-width: 1400px) {
@@ -2219,6 +2275,9 @@ p.text-center.text-capitalize.mainText {
 
   .otherDiv > ul {
     width: 100% !important;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(131px, 1fr));
+    align-items: center;
   }
 
   .box-container p {
@@ -2586,6 +2645,12 @@ p.text-center.text-capitalize.mainText {
   form.subscribe-container button {
     padding: 7px !important;
   }
+  .otherDiv {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    padding-left: 50px;
+  }
 }
 
 @media screen and (max-width: 1200px) {
@@ -2761,6 +2826,9 @@ p.text-center.text-capitalize.mainText {
   nav.sl-navbar i.fa.fa-phone {
     display: inline-block;
   }
+  .otherDiv li {
+    font-size: 16px;
+  }
 }
 
 @media screen and (max-width: 1400px) and (min-width: 1200px) {
@@ -2826,7 +2894,9 @@ p.text-center.text-capitalize.mainText {
     height: 90%;
     padding-top: 30px;
   }
-
+  .service-weOffer .service-gallery {
+    grid-template-columns: repeat(auto-fit, minmax(277px, 1fr)) !important;
+  }
 }
 
 @media screen and (max-width: 1041px) and (min-width: 995px) {
@@ -2871,20 +2941,19 @@ p.text-center.text-capitalize.mainText {
     grid-auto-rows: 35px;
   }
 
-  .gallery-container{
+  .gallery-container {
     margin: auto;
     width: 85%;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
     grid-column-gap: 20px;
     grid-row-gap: 20px;
-  
   }
-  .gallery-box{
+  .gallery-box {
     width: 320px;
   }
-  .gallery-box img{
-    width:100%;
+  .gallery-box img {
+    width: 100%;
   }
 
   button.close {
@@ -3178,6 +3247,18 @@ p.text-center.text-capitalize.mainText {
   .sl-admin-links {
     width: 48% !important;
   }
+  .otherDiv > ul {
+    width: 100% !important;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(98px, 1fr)) !important;
+    align-items: center;
+    font-size: 14px;
+  }
+  .owner-image-two img {
+    width: 90%;
+    margin-top: 30px;
+    margin-left: 15px;
+  }
 }
 
 @media screen and (max-width: 476px) and (min-width: 393px) {
@@ -3246,20 +3327,17 @@ p.text-center.text-capitalize.mainText {
   }
 }
 
-
-@media screen and (max-width: 1000px) and (min-width: 745px){
-
+@media screen and (max-width: 1000px) and (min-width: 745px) {
   .our-service-gallery {
     margin: auto;
     width: 85%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(233px, 1fr))!important;
+    grid-template-columns: repeat(auto-fit, minmax(233px, 1fr)) !important;
     grid-column-gap: 20px;
     grid-row-gap: 20px;
-}
+  }
 
-p.text-center.mt-3.ourServicesFont {
-  bottom: 65px!important;
-}
-
+  p.text-center.mt-3.ourServicesFont {
+    bottom: 65px !important;
+  }
 }

@@ -9,6 +9,9 @@
   padding: 50px 10px;
   position: fixed;
 }
+#root > div > div.admin-blogpost > div.admin-subs > form {
+  margin-bottom: 10px;
+}
 
 .admin-sidebar p {
   cursor: pointer;
@@ -35,7 +38,12 @@
   border-radius: 5px;
   cursor: pointer;
 }
-
+.delete-one-photogallery {
+  position: absolute;
+  right: 0;
+  margin-right: 5px;
+  color: red;
+}
 .sl-admin-links {
   text-align: center;
   width: 100%;
@@ -354,12 +362,72 @@ span.gray {
   color: #ffffff;
 }
 
+#root > div > div.admin-blogpost > div.admin-subs > div > div > div {
+  width: 100%;
+  height: 185px;
+  overflow: hidden;
+}
+
+#root > div > div.admin-blogpost > div.admin-subs > form {
+  margin-bottom: 30px !important;
+  padding: 30px;
+  margin: auto;
+  text-align: center;
+  border: 1px solid #2222;
+  border-radius: 10px;
+}
+
+.admin-blogpost div {
+  margin: 0 !important;
+  text-align: justify !important;
+  justify-items: start !important;
+  align-items: start;
+  margin: auto !important;
+}
+
+.delete-one-photogallery {
+  position: absolute;
+  right: -6px;
+  margin-right: 5px;
+  color: #22222296;
+  background: #ffffff94;
+  padding: 3px 10px;
+}
+
+.react-confirm-alert-overlay {
+  background: rgb(255 255 255 / 30%) !important;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+}
+
+#root > div > div.admin-blogpost > div.admin-subs > form input[type="submit"] {
+  background: #ff0000;
+  margin-top: 15px;
+  font-size: 14px;
+  text-transform: uppercase;
+  padding: 5px 30px;
+  color: #ffffff;
+  border-color: transparent;
+  border-radius: 6px;
+}
+
 @media screen and (max-width: 1190px) {
   .booking-list h4:nth-child(3) {
     display: none;
   }
   .list-of-contacts > div > h4:nth-child(3) {
     display: none;
+  }
+  .react-confirm-alert-body {
+    text-align: center !important;
+    width: 100%;
+  }
+  .react-confirm-alert-button-group {
+    text-align: center;
+    width: 122px !important;
+    margin: auto;
+    margin-top: 20px;
   }
 }
 
@@ -376,9 +444,30 @@ span.gray {
   .booking-list h4:nth-child(4) {
     display: none;
   }
+  label {
+    display: block;
+  }
 
   .list-of-contacts > div > h4:nth-child(4) {
     display: none;
+  }
+  #root
+    > div
+    > div.admin-blogpost
+    > div.admin-subs
+    > form
+    input[type="submit"] {
+    position: absolute;
+    top: 100px;
+    right: 21px;
+  }
+
+  .admin-blogpost label {
+    font-weight: 600;
+    font-size: 15px;
+    font-family: var(--mainText);
+    color: #222222;
+    margin-top: 0px !important;
   }
 }
 
