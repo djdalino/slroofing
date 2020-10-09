@@ -103,7 +103,7 @@ class ProductProvider extends Component {
 
   //Modal Contact
   handleGetContact = async () => {
-    const res = await axios.get("sl/api/contactUs");
+    const res = await axios.get("/sl/api/contactUs");
 
     let tempData = [];
 
@@ -133,7 +133,7 @@ class ProductProvider extends Component {
   };
 
   handleGetBookings = async () => {
-    const res = await axios.get("sl/api/booknow", {
+    const res = await axios.get("/sl/api/booknow", {
       headers: {
         Accept: "application/json",
         "Content-Type": "application/json"
@@ -166,7 +166,7 @@ class ProductProvider extends Component {
   login = user => {
     return axios
       .post(
-        "sl/api/user/login/",
+        "/sl/api/user/login/",
         {
           email: user.email,
           password: user.password

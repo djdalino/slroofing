@@ -12,7 +12,7 @@ const GallerPost = () => {
     fd.append("photo", gallery);
     try {
       const res = await axios.post(
-        `http://localhost:5000/sl/api/gallery/`,
+        `/sl/api/gallery/`,
         fd,
         {
           onUploadProgress: progressEvent => {
