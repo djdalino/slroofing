@@ -28,7 +28,9 @@ class Navbar extends React.Component {
             <div className="sl-nav-burger" onClick={() => this.handleToggle()}>
               <div className={this.state.isOpen ? "toggle line1" : "line1"} />
               <div className={this.state.isOpen ? "toggle line2" : "line2"} />
-              <div className={this.state.isOpen ? "toggle line3" : "line3"} />
+              <div
+                className={this.state.isOpen ? "toggle line3 wew" : "line3"}
+              />
             </div>
           </div>
 

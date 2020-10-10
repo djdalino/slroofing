@@ -25,7 +25,7 @@ const GalleryView = () => {
   }, []);
   const getPhotos = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/sl/api/gallery", {
+      const res = await axios.get("/sl/api/gallery", {
         headers: {
           Accept: "application/json",
           "Content-Type": "application/json"

@@ -66,18 +66,13 @@ class Footer extends Component {
             </div>
             <div className="column footer-box">
               <h4 className="mainText text-uppercase ">
-                sl roofing & renovations
+                stay connected with us
               </h4>
               {/* <h4 className="secondaryText">
                 Contact: 424-sl-roofs 424-757-6637
               </h4> */}
               <h4 className="secondaryText">Contact: 712-898-0221</h4>
-              <h4 className="secondaryText ">
-                Email: SLROOFINGCOMPANY@gmail.com
-              </h4>
-              <h4 className="text-uppercase mainText">
-                stay connected with us
-              </h4>
+              <h4 className="secondaryText ">SLROOFINGCOMPANY@gmail.com</h4>
               <h4 className="text-capitalize secondaryText">follow us on:</h4>
               <div>
                 <i className="fab fa-linkedin-in mx-2" />

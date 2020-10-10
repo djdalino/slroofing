@@ -16,14 +16,24 @@ const Home = () => {
       <Hero>
         <div className="banner-container">
           <div className="box-container">
-            <h1 className="text-uppercase">Done right!</h1>
-            <h1 className="text-uppercase">Watertight!</h1>
+            <h1 className="text-uppercase">
+              AFFORDABLE - QUALITY - GUARANTEED
+            </h1>
             <p>
               <strong>COMMERCIAL - RESIDENTIAL ROOFING</strong>
-              <br /> <br />
-              Innovative solutions and design for all your roofing, restoration
-              and construction needs!
             </p>
+            <h2 className="text-uppercase">
+              ROOFING <br />
+              &amp; <br />
+              CONSTRUCTION
+            </h2>
+            <br />
+            <h2 className="text-uppercase">
+              DONE RIGHT!
+              <br />
+              WATERTIGHT!
+            </h2>
+            <br />
             <div className="button-container book-an-appointment">
               <ProductConsumer>
                 {value => {
