@@ -9,7 +9,7 @@ const GallerySingleView = () => {
   }, []);
   const handleGalleryData = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/sl/api/gallery");
+      const res = await axios.get("/sl/api/gallery");
       setGallery(res.data);
     } catch (error) {
       console.log(error);
@@ -51,14 +51,18 @@ const GallerySingleView = () => {
                   onClick={() => countMinus()}
                   disabled={galleryCount === 0 ? true : false}
                 >
-                  Prev
+                  &larr;
                 </button>
-                <img src={getPhoto(galleryCount)} alt="pishur" />
+                <img
+                  src={getPhoto(galleryCount)}
+                  alt="pishur"
+                  className="gallery-img-show"
+                />
                 <button
                   onClick={() => countAdd()}
                   disabled={galleryCount === gallery.length - 1 ? true : false}
                 >
-                  Next
+                  &rarr;
                 </button>
               </div>
             </React.Fragment>

@@ -39,3 +39,9 @@
 .gallery-img {
   cursor: pointer;
 }
+
+@media screen and (max-width: 550px) {
+  .gallery-img-show {
+    width: 70%;
+  }
+}
