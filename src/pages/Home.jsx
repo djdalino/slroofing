@@ -20,7 +20,7 @@ const Home = () => {
               AFFORDABLE - QUALITY - GUARANTEED
             </h1>
             <p>
-              <strong>COMMERCIAL - RESIDENTIAL ROOFING</strong>
+              <strong>COMMERCIAL - RESIDENTIAL</strong>
             </p>
             <h2 className="text-uppercase">
               ROOFING <br />
