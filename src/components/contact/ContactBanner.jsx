@@ -38,7 +38,7 @@ export default class ContactBanner extends Component {
                     <div className="uabb-info-list-content uabb-info-list-top info-list-content-dynamic0">
                       <h3 className="uabb-info-list-title">Phone</h3>
                       <div className="uabb-info-list-description uabb-text-editor info-list-description-dynamic0">
-                        <p>402-414-4000</p>
+                        <p>712-898-0221</p>
                       </div>
                     </div>
                   </div>
@@ -59,7 +59,7 @@ export default class ContactBanner extends Component {
                     <div className="uabb-info-list-content uabb-info-list-top info-list-content-dynamic1">
                       <h3 className="uabb-info-list-title">Email</h3>
                       <div className="uabb-info-list-description uabb-text-editor info-list-description-dynamic1">
-                        <p>slroofingllcs@gmail.com</p>
+                        <p>SLROOFINGCOMPANY@gmail.com</p>
                       </div>
                     </div>
                   </div>

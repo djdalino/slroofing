@@ -6,7 +6,9 @@ export default class Map extends Component {
       <div className="m-15">
         <div className="findLocation">
           <h5>Our service area</h5>
-          <h3>Trust Your next project with us</h3>
+          <h3>
+            Trust your next projects success with SL ROOFING & RENOVATIONS
+          </h3>
           <p>
             <center>
               {" "}
