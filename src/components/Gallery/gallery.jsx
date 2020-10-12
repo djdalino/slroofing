@@ -7,7 +7,7 @@ const Gallery = () => {
   return (
     <React.Fragment>
       <Navbar />
-      <Hero hero="blogHero">
+      <Hero hero="galleryHero">
         <div className="blogBanner">
           <div style={{ marginTop: "7rem " }}>
             <h1 className="text-uppercase text-center">photo gallery</h1>

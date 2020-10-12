@@ -508,6 +508,18 @@ nav .show-nav {
   position: relative;
   margin-top: 6rem;
 }
+.galleryHero{
+  height: 350px;
+  width: 100%;
+  background-color: var(--mainDark) !important;
+  background-position-y: 47% !important;
+  background: url("./img/gallery-featured.jpeg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-top: 6rem;
+}
 header.contactBan.banner-tempt {
   background: url("./img/contact-featured.png") center/cover no-repeat;
 }
@@ -925,7 +937,7 @@ h4.secondaryText {
 
 main {
   background-color: gray;
-  background: url(./img/contact-featured.jpg) center/cover no-repeat;
+  background: url(./img/contact-featured.png) center/cover no-repeat;
   width: 100%;
   height: 100vh;
   font-family: var(--mainText) !important;
@@ -2717,6 +2729,7 @@ h2.text-uppercase {
     display: flex;
     padding-left: 50px;
   }
+  
 }
 
 @media screen and (max-width: 1200px) {
