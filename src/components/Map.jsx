@@ -7,18 +7,16 @@ export default class Map extends Component {
         <div className="findLocation">
           <h5>Our service area</h5>
           <h3>
-            Trust your next projects success with SL ROOFING & RENOVATIONS
+            TRUST YOUR NEXT PROJECTS SUCCESS WITH <br />
+            SL ROOFING & RENOVATIONS
           </h3>
           <p>
             <center>
               {" "}
-              We will help guide you by choosing the right products for your
-              projects overall durability, longevity, and appearance saving you
-              both time and money.
               <br />
-              <br />
-              We service Iowa (IA) Minnesota (MN) Nebraska (NE) South Dakota
-              (SD) Missouri (MO) Kansas KS) and surrounding areas.
+              We Service Iowa (IA) Minnesota (MN) Nebraska (NE) South Dakota
+              (SD) Missouri (MO) Kansas (KS) Colorado (CO) Wyoming (WY) and
+              surrounding areas.
             </center>
           </p>
         </div>

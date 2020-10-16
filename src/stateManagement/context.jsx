@@ -67,6 +67,7 @@ class ProductProvider extends Component {
     this.handleGetBookings();
     this.handleGetContact();
   }
+
   //SL services
   setSlServices = () => {
     const category = [{ _id: "", name: "All" }, ...getSlCategory()];
