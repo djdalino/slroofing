@@ -9,10 +9,6 @@ export default class AboutBanner extends Component {
           <div className="blogBanner">
             <div style={{ marginTop: "7rem " }}>
               <h1 className="text-uppercase text-center">ABOUT US</h1>
-              <h3 className="text-capitalize text-center">
-                {" "}
-                DEDICATED ROOFING PROFESSIONALS
-              </h3>
             </div>
           </div>
         </Hero>
