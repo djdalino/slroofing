@@ -8,6 +8,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer/Footer";
 import { ProductConsumer } from "../stateManagement/context";
 import BookNowModal from "../components/Modal/BookNowModal";
+import Covered from "../img/coverd.png";
 const Home = () => {
   return (
     <React.Fragment>
@@ -34,6 +35,9 @@ const Home = () => {
               WATERTIGHT!
             </h2>
             <br />
+            <div className="wgy-covered">
+              <img src={Covered} alt="We've got you covered" />
+            </div>
             <div className="button-container book-an-appointment">
               <ProductConsumer>
                 {value => {

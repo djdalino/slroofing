@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Owner from "../../img/slroofing-owners.png";
-import Covered from "../../img/slroofingpips.png";
+import Covered from "../../img/slroofingpips.jpg";
 import OwnerSecond from "../../img/owner-second.png";
 import Testimonial from "../../components/Testimonial/Testimonial";
 
@@ -64,8 +64,7 @@ export default class AboutSLroofing extends Component {
             <img src={Covered} alt="" />
           </div>
           <div className="about-description">
-            <h5>We've got you covered!</h5>
-            <h3>Roofing Contractors</h3>
+            <h3 className="drp-main-blue">Dedicated Roofing Professionals</h3>
             <p>
               {" "}
               SL ROOFING &amp; RENOVATIONS helps our clients create ideas by
