@@ -1,7 +1,6 @@
 const express = require("express");
 const mongoose = require("mongoose");
-const nodemailer = require("nodemailer");
-const mg = require("nodemailer-mailgun-transport");
+
 const cors = require("cors");
 const path = require("path");
 const uploadImg = path.join(__dirname, "../uploads/");
