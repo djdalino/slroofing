@@ -1,6 +1,9 @@
 const express = require("express");
 const mongoose = require("mongoose");
+<<<<<<< HEAD
 
+=======
+>>>>>>> 8398cc07569d04b500c8dfcbe968e03275ab4ef6
 const cors = require("cors");
 const path = require("path");
 const uploadImg = path.join(__dirname, "../uploads/");

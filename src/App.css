@@ -1011,8 +1011,12 @@ h4.secondaryText {
 
 main {
   background-color: gray;
+<<<<<<< HEAD
   background: url("./img/contact-featured.png")
     center/cover no-repeat;
+=======
+  background: url('./img/contact-featured.png') center/cover no-repeat;
+>>>>>>> 8398cc07569d04b500c8dfcbe968e03275ab4ef6
   width: 100%;
   height: 100vh;
   font-family: var(
@@ -2234,8 +2238,13 @@ a.book-an-appointment.btn.btn-danger.text-uppercase:hover {
 }
 
 .otherServices {
+<<<<<<< HEAD
   background: url("./img/subscribe-bg.jpg")
     center/cover no-repeat;
+=======
+  background: url('./img/subscribe-bg.jpg') center/cover
+    no-repeat;
+>>>>>>> 8398cc07569d04b500c8dfcbe968e03275ab4ef6
   color: #fff;
   font-family: var(
     --mainText
@@ -2616,8 +2625,13 @@ h3.drp-main-blue {
   .defaultHero {
     height: 450px !important;
     width: 100%;
+<<<<<<< HEAD
     background: url("./img/sl-roof-banner.jpg")
       center/cover no-repeat;
+=======
+    background: url('./img/sl-roof-banner.jpg') center/cover
+      no-repeat;
+>>>>>>> 8398cc07569d04b500c8dfcbe968e03275ab4ef6
     display: flex;
     align-items: center;
     justify-content: center;
