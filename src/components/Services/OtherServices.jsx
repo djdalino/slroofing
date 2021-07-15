@@ -14,9 +14,9 @@ const OtherServices = () => {
           <li>Facia</li>
           <li>Doors</li>
           <li>Windows</li>
-          <li>New Construction</li>
           <li>Remodeling</li>
           <li>Additions</li>
+          <li>New Construction</li>
         </ul>
       </div>
     </div>
