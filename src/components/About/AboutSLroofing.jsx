@@ -75,7 +75,7 @@ export default class AboutSLroofing extends Component {
               incorporating your personality. We will help guide you by choosing
               the right products for your projects overall durability,
               longevity, and appearance saving you both time and money. There
-              are are many options to choose from these days to help create the
+              are many options to choose from these days to help create the
               perfect combination for your home or businesses inner and outter
               appearance.
             </p>
