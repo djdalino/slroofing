@@ -65,7 +65,7 @@ class BlogPostView extends Component {
                     />
                   </div>
 
-                  <p>{article}</p>
+                  <div dangerouslySetInnerHTML={{__html: article}} />
                 </div>
               </div>
               <Footer />
