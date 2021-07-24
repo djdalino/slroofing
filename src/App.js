@@ -9,11 +9,13 @@ import Admin from "./pages/Admin";
 import BlogPostView from "./components/Blog/BlogPostView";
 import ServiceSingleView from "./components/Services/ServicesSingleView";
 import Contact from "./pages/Contact";
+import ScrollToTop from './components/Utilities/scrollToTop'
 // import ScrollIntoView from "./ScrollIntoView";
 import { Switch, Route } from "react-router-dom";
 function App() {
   return (
     <React.Fragment>
+      <ScrollToTop />
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/blog" component={Blog} />
@@ -25,6 +27,7 @@ function App() {
         <Route path="/admin" component={Admin} />
         <Route path="/contact" component={Contact} />
       </Switch>
+      
     </React.Fragment>
   );
 }

@@ -391,7 +391,7 @@ class ProductProvider extends Component {
   };
 
   handleSingleServiceOffer = id => {
-    window.scrollTo(0, 0);
+    window.scrollTop = 0;
     const service = this.state.servicesOffer.find(service => service.id === id);
 
     this.setState(

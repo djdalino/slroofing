@@ -51,7 +51,7 @@ class BlogPostView extends Component {
                 <div className="my-15">
                   <h4 className="main-blue">{getDate(createdAt)}</h4>
                   <h1>{title}</h1>
-                  <p>{titleText}</p>
+                  <div dangerouslySetInnerHTML={{__html: titleText}} />
                   <div className="text-center">
                     <img
                       style={{
