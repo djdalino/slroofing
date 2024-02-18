@@ -30,7 +30,7 @@ app.use("/sl/api/booknow", bookNow);
 app.use("/sl/api/subscribe", subscribe);
 app.use("/sl/api/contactUs", contactUs);
 // set up server
-const PORT = 5000;
+const PORT = 8000;
 app.listen(PORT, () => {
   console.log(`server is runnning on port: ${PORT}`);
 });
