@@ -95,7 +95,7 @@ const mailOptions = {
         name: 'SL Roofing Booking',
         address: MY_EMAIL
       },
-      to: ['darrenjames.dalino@gmail.com'],
+      to: ['slroofingcompany@gmail.com'],
       subject,
       ...generateEmailContent(data)
     };
