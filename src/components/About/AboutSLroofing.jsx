@@ -79,7 +79,7 @@ export default class AboutSLroofing extends Component {
               perfect combination for your home or businesses inner and outter
               appearance.
             </p>
-            <button className="btn-book text-uppercase mx-3 rad">
+            <button className="btn-book btn-secondary text-uppercase mx-3 rad">
               book an appointment
             </button>
           </div>

@@ -45,7 +45,7 @@ const Home = () => {
                   return (
                     <React.Fragment>
                       <button
-                        className="book-an-appointment btn btn-danger text-uppercase"
+                        className="book-an-appointment btn-secondary btn btn-danger text-uppercase"
                         onClick={handleBookNowModal}
                       >
                         book an appointment

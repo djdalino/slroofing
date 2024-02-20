@@ -4,6 +4,7 @@
   --secondDark: #222222;
   --mainWhite: #ffffff;
   --secondarywhite: #ffffffeb;
+  --secondaryColor: #F58800;
   --mainRed: #ff0000;
   --mainText: "Fjalla One", sans-serif !important;
   --secondaryText: "Source Sans Pro" !important;
@@ -43,7 +44,7 @@ button {
 }
 
 a.sbook-now:hover {
-  background-color: #ff0000;
+  background-color: var(--secondaryColor);
   color: #ffffff !important;
   transition: all 0.5s linear;
 }
@@ -60,7 +61,7 @@ a.sbook-now {
 
 a.slearn-more:hover {
   text-decoration: none !important;
-  color: #ff0000 !important;
+  color: var(--secondaryColor) !important;
   transition: all 0.5s linear;
 }
 
@@ -148,15 +149,17 @@ a.nav-link {
     --firstFont
   ) !important;
 }
-
+.btn-secondary {
+  background: var(--secondaryColor) !important;
+}
 .btn-book {
   font-size: 1rem !important;
   padding: 0.5rem;
   width: 7rem !important;
-  background: var(--mainRed);
+  background: var(--secondaryColor);
   color: var(--mainWhite);
   font-family: var(--mainText);
-  border: 1px solid var(--mainRed);
+  border: 1px solid var(--secondaryColor);
   border-radius: 4px !important;
 }
 
@@ -219,8 +222,8 @@ p {
   align-items: center;
 }
 .btn-danger {
-  background-color: var(
-    --mainRed
+  background: var(
+    --secondaryColor
   ) !important;
 }
 .btn-book {
@@ -228,10 +231,10 @@ p {
   padding: 0.5rem;
   width: 12rem;
   border-radius: 4px !important;
-  background: var(--mainRed);
+  background: var(--secondaryColor);
   color: var(--mainWhite);
   font-family: var(--mainText);
-  border: 1px solid var(--mainRed);
+  border: 1px solid var(--secondaryColor);
   margin: auto !important;
 }
 
@@ -689,7 +692,6 @@ p {
   font-size: 0.9rem !important;
 }
 .btn-danger {
-  background-color: #ff0000 !important;
   font-size: 1.4rem;
   font-weight: 500;
   border-radius: 4px;
@@ -2057,7 +2059,6 @@ h3.white {
   > div
   > form
   > button {
-  background-color: #ff0000 !important;
   font-size: 1.4rem;
   font-weight: 500;
   border-radius: 4px;
@@ -2596,7 +2597,6 @@ h3.drp-main-blue {
   }
 
   .btn-danger {
-    background-color: #ff0000 !important;
     font-size: 0.9rem;
     font-weight: 500;
     text-align: center;

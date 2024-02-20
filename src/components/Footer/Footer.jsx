@@ -55,10 +55,10 @@ class Footer extends Component {
                   <input
                     type="text"
                     className="text-uppercase"
-                    placeholder="enter you email..."
+                    placeholder="enter your email..."
                     name="search"
                   />
-                  <button type="submit" className="text-uppercase bg">
+                  <button type="submit" className="text-uppercase btn-secondary bg">
                     subscribe
                   </button>
                 </form>

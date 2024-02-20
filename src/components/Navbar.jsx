@@ -64,7 +64,7 @@ class Navbar extends React.Component {
                   <div>
                     <li className="active">
                       <button
-                        className="btn-book text-uppercase mx-3 rad"
+                        className="btn-book btn-secondary text-uppercase mx-3 rad"
                         onClick={handleBookNowModal}
                       >
                         book now

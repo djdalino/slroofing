@@ -99,7 +99,7 @@ class BlogPost extends Component {
                   </div>
 
                   <div className="form-group">
-                    <button type="submit" className="btn btn-danger">
+                    <button type="submit" className="btn btn-danger btn-secondary">
                       Submit
                     </button>
                   </div>

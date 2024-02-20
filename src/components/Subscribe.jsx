@@ -42,11 +42,11 @@ class Subscribe extends Component {
             <input
               type="text"
               className="text-uppercase"
-              placeholder="enter you email..."
+              placeholder="enter you remail..."
               name="email"
               onChange={this.handleSubsribe}
             />
-            <button type="submit" className="text-uppercase">
+            <button type="submit" className="text-uppercase btn-secondary">
               subscribe
             </button>
           </form>
