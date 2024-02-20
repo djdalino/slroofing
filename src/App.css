@@ -3064,7 +3064,7 @@ h3.drp-main-blue {
     > div.footer-container
     > div.button-fixed
     > button {
-    background: #ff0000;
+    background: var(--secondaryColor);
     border: none;
     width: 90% !important;
     display: block;
