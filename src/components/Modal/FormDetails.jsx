@@ -33,6 +33,7 @@ class FormDetails extends Component {
           <input
             type="submit"
             value="submit"
+            className="book-now-submit-button "
             onClick={this.props.handleSubmitBookNow}
           />
         </div>
