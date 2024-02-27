@@ -91,7 +91,7 @@ a:hover {
 }
 
 button {
-  border-radius: 10px;
+  border-radius: 4px;
 }
 
 button.btn.btn-danger.text-uppercase:hover {
@@ -108,7 +108,6 @@ body {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  color: var(--mainDark) !important;
   overflow-x: hidden;
   color:#444 !important;
 }
@@ -287,7 +286,7 @@ p.text-uppercase.mainText:hover {
   position: relative;
   top: 6px;
   margin: auto;
-  opacity: 0.75;
+  opacity: 0.8;
 }
 
 .services-img {
@@ -1195,7 +1194,6 @@ nav.sl-navbar {
 }
 span.contact {
   margin-left: 8px;
-  color: #000000;
 }
 .container-fluid {
   padding: 0 !important;
