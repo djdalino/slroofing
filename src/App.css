@@ -110,6 +110,7 @@ body {
   box-sizing: border-box;
   color: var(--mainDark) !important;
   overflow-x: hidden;
+  color:#444 !important;
 }
 .bg-color-light {
   background-color: var(
@@ -286,6 +287,11 @@ p.text-uppercase.mainText:hover {
   position: relative;
   top: 6px;
   margin: auto;
+  opacity: 0.75;
+}
+
+.services-img {
+ opacity: 0.8;
 }
 
 dl,
@@ -503,6 +509,7 @@ nav .show-nav {
   position: relative;
   margin-top: 4rem;
   z-index: 0;
+  opacity: 0.9;
 }
 
 .ourServicesHero {
@@ -658,6 +665,7 @@ p {
   height: 629px;
   width: 100%;
   transform: translate(-25%);
+  opacity: 0.8;
 }
 
 .banner-container {
@@ -2421,6 +2429,7 @@ h2.text-uppercase {
 
 .footer-logo-img {
   margin-top: 15px;
+  opacity: 0.6;
 }
 
 .footer-box-container {

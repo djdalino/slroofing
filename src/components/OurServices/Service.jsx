@@ -7,6 +7,8 @@ class Service extends Component {
     const { title, img, category } = this.props.service;
     // const { handleSlCategorySelect } = this.props.value;
     return (
+      <>
+      
       <Link to="/services" className="hold-services">
         <Link to="/services" className="hover-button">
           <ProductConsumer>
@@ -31,9 +33,11 @@ class Service extends Component {
             Learn more &nbsp;
           </Link>
         </Link>
-        <img src={img} alt={title} className="mx-auto" />
+      
+        <img src={img} alt={title} className="mx-auto"/>
         <p className="text-center mt-3 ourServicesFont">{title}</p>
       </Link>
+      </>
     );
   }
 }
