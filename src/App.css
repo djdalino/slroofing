@@ -37,6 +37,7 @@ a:focus {
 
 a {
   transition: all 0.5s ease-in-out;
+  color: #444;
 }
 
 button {
@@ -85,9 +86,6 @@ a.slearn-more:hover {
 }
 .light-background {
   background: #ffffff;
-}
-a:hover {
-  color: var(--mainBlue) !important;
 }
 
 button {
@@ -163,9 +161,6 @@ a.nav-link {
   border-radius: 4px !important;
 }
 
-a:hover {
-  color: var(--mainBlue) !important;
-}
 .arrow {
   font-size: 1.4rem;
 }
@@ -380,16 +375,27 @@ ul {
   display: block;
   width: max-content;
   text-decoration: none;
-  color: var(--mainBlack);
   transition: all 0.3s ease;
   text-align: center;
   font-size: 1rem;
   font-weight: 600;
   text-transform: uppercase;
 }
+.sl-nav-links .nav-item-active {
+  color: var(--mainBlue);
+  font-size: 18px;
+}
 .sl-show-nav {
   transform: translate(0) !important;
-  transition: all 0.5s ease;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+ul.sl-show-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 
 #carouselExampleIndicators
@@ -3132,6 +3138,7 @@ h3.drp-main-blue {
   ul.sl-nav-links.sl-show-nav
     button.btn-book.text-uppercase.mx-3.rad {
     display: none;
+    
   }
 
   .box-container
@@ -3155,7 +3162,6 @@ h3.drp-main-blue {
   }
   span.contact {
     margin-left: auto;
-    color: #000000;
     position: relative;
     right: 20px;
   }
@@ -3224,12 +3230,12 @@ h3.drp-main-blue {
   li.active {
     text-align: center !important;
   }
-  .sl-nav-links a {
+  .sl-nav-links .nav-item {
     display: block;
     width: max-content;
     text-decoration: none;
-    color: var(--mainBlack);
     transition: all 0.3s ease;
+    color: var(--mainDark) !important;
     font-size: 1rem;
     font-weight: 600;
     margin: auto;
@@ -3262,12 +3268,12 @@ h3.drp-main-blue {
   li.active {
     text-align: center !important;
   }
-  .sl-nav-links a {
+  .sl-nav-links .nav-item {
     display: block;
     width: max-content;
     text-decoration: none;
-    color: var(--mainBlack);
     transition: all 0.3s ease;
+    color: var(--mainDark);
     font-size: 1rem;
     font-weight: 600;
     margin: auto;
@@ -3443,21 +3449,26 @@ h3.drp-main-blue {
     transform: translate(100%);
   } */
 
+  .nav-active {
+    color: var(--mainBlue) !important;
+    font-size: 18px !important;
+  }
   li.active {
     text-align: center !important;
   }
-  .sl-nav-links a {
+  .sl-nav-links .nav-item {
     display: block;
     width: max-content;
     text-decoration: none;
-    color: var(--mainBlack);
     transition: all 0.3s ease;
+    color: var(--mainDark);
     font-size: 1rem;
     font-weight: 600;
     margin: auto;
     text-align: center;
     padding-top: 15px;
   }
+ 
   #root
     > div:nth-child(2)
     > div:nth-child(3)
